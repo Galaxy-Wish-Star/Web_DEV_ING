@@ -13,10 +13,13 @@
         }
         /* *通用配置选择器，设定清零*/
         body {
-            height: 920px;
-            width: 880px;
+            height: 1000px;
+            /*高度过小 原代码 height: 920px;*/
+            width: 100%;
+            /*宽度应该自适应 原代码  width: 880px;*/
             background: url(../media_file/img/博鳌页面框架.png) no-repeat;
-            background-size: 1500px;
+            background-size: 100%;
+            /*尺寸应该自适应 原代码   background-size: 1500px;*/
         }
         
         .header {
@@ -24,7 +27,7 @@
         }
 
         .new h1{
-        width: 1430px;
+        width: 1230px;
         margin: 0 auto;
         font-size: 35px;
         /* 文字大小*/
@@ -49,7 +52,7 @@
             padding: 5px;
             font-size: 18px;
             font-family: 'Courier New', Courier, monospace;
-            
+            text-align: center;
         }
         /* 空格表示选择后代*/
 
