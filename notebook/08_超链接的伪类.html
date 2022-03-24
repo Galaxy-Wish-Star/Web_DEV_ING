@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :link 用来表示没有访问过的链接（正常链接）
+        */
+        a:link{
+            color: green;
+        }
+
+
+        /* 
+            :visited 用来表示访问过的链接
+                -由于隐私的原因，所以visited这个伪类只能修改链接的颜色
+        */
+        a:visited{
+            color: red;
+        }
+
+
+        /* 
+            :hover 用来表示鼠标移入的状态
+            transition: all 0.5s; 悬停，延迟
+        */
+        a:hover{
+            color: aqua;
+            font-size: 40px;
+            transition: all 0.5s;
+        }
+
+
+        /* 
+            :active 用来表示鼠标点击时状态
+        */
+        a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1.没有访问过的链接
+        2.访问过的链接
+    -->
+    <a href="08_超链接的伪类.html">访问过的链接</a>
+    <br><br>
+    <a href="https://www.bing.com">没有访问过的链接</a>
+</body>
+</html>
