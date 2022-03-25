@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻列表页</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    
+    img {
+        width: 101%;
+    }
+    
+    .box {
+        width: 1000px;
+        margin: 20px auto;
+        /* margin 如果有四个参数，则分别代表上、右，下、左外边距 margin: 20px auto代表上下边距为20，左右水平对齐*/
+        font-size: 15px;
+        color: rgb(255, 0, 179);
+    }
+    
+    .title {
+        font-size: 25px;
+        font-weight: bold;
+        color: brown;
+        line-height: 50px;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+        /* 去掉无序列表左边的小圆点*/
+    }
+    
+    a {
+        text-decoration: none;
+        /* 取消默认的下划线*/
+        color: dimgray;
+        font-size: 20px;
+    }
+    
+    .news_list ul li {
+        border-bottom: 1px dashed rgb(59, 59, 59);
+        padding: 5px 0px 5px 5px;
+        background: url(images/list_dot.jpg) no-repeat left center;
+        text-align: right;
+    }
+    
+    .news_list ul li a {
+        float: left;
+        /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+    }
+    
+    .news_list ul li span {}
+</style>
+
+<body>
+    <div class="header">
+        <img src="images/博鳌页面-页头.png">
+    </div>
+    <div class="box">
+        <div class="title">新闻</div>
+        <hr>
+        <div class="news_list">
+            <ul>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+                <li><a href="">哇哦，好神奇</a><span>2022-03-17</span></li>
+            </ul>
+        </div>
+        <div class="page">
+            <ul>
+                <li><a href="">首页|</a> <a href="">上一页| </a> <a href="">下一页|</a> <a href="">尾页| </a> 跳转到第<input type="text" style="width: 20px;"> 页 |当前第 <span style="color: rgb(233, 16, 16);">3</span> 页| 共99页 </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="images/博鳌页面-页尾.png" alt="">
+    </div>
+
+</body>
+
+</html>
