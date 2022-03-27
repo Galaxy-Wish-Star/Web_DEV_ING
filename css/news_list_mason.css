@@ -42,7 +42,7 @@ h1{
     color: rgb(18, 88, 192);
     font-size: 40px;    
     line-height: 75px;  /*线高度*/
-    border-bottom: 5px solid #288bb9; /*下划线：像素 虚线 颜色*/
+    border-bottom: 5px solid #288bb9; /*下划线：像素 实线 颜色*/
 }
 
 ul,li{
