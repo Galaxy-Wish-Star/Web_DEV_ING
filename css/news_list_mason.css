@@ -4,7 +4,7 @@
     font-size: 18px;    /* 字体大小 */
 }
 
-a:hover{    /* 用来表示鼠标移入的状态 */
+a:hover {    /* 用来表示鼠标移入的状态 */
     color: aqua;      
     font-size: 25px;
     transition: all 0.5s;  /*悬停，延迟*/
