@@ -4,8 +4,8 @@
     font-size: 18px;    /* 字体大小 */
 }
 
-a:hover{
-    color: aqua;        
+a:hover{    /* 用来表示鼠标移入的状态 */
+    color: aqua;      
     font-size: 25px;
     transition: all 0.5s;  /*悬停，延迟*/
 }
@@ -18,11 +18,16 @@ a:visited{
     color: green;
 }
 
+
 .box{
     width: 1300px;
     margin: 25px auto;  /*上下外边距20，左右居中/
     /* margin如果有四个参数则代表上、右、下、左边距 */
 }
+
+    .pages{
+        margin: 40px;
+    }
 
 img{
     width: 100%;
@@ -53,7 +58,7 @@ a{
     text-decoration: none;  /*：去除效果*/
 }
 
-a:active{
+a:active{       /*表示鼠标点击时*/
     color: yellow;
     transition: none;
 }
