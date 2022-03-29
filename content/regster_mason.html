@@ -28,6 +28,7 @@
         font-size: 30px;    
         line-height: 70px;  /*线高度*/
         border-bottom: 5px solid #288bb9; /*下划线：像素 实线 颜色*/
+        text-align: left;
     }
     li{
         list-style: none;
@@ -41,14 +42,20 @@
         <img src="../media_file/img/博鳌页面-页头.png" alt="这是一张页头图片，改图片没有正常显示">
     </div>
 
-    <form action="">
+<form action="">    <!-- 表单 -->
     <div class="regster">
         <h1>用户注册</h1>
-        <ul>
-        <li>用户名<input type="text"></li>
-        <li>密码<input type="text"></li>
-        <li>确认密码<input type="text"></li>
-    </ul>
+        <div>
+            <ul>
+                <li><span>昵称</span><input type="text"></li>
+                <li><span>姓名</span><input type="text"></li>
+                <li><span>密码</span><input type="password"></li>
+                <li><span>确认密码</span><input type="password"></li>
+                <li><span>出生年月日</span><input type="date" max="2222-12-31"  min="1999-01-02"></li>
+                <li><span>性别</span><input type="radio" name="sex">男<input type="radio" name="sex">女</li>
+                <li><input type="checkbox"><span>同意</span><a href="">注册协议</a><input type="submit" value="注册"></li>
+            </ul>
+        </div>
     </div>
 </form>
 
