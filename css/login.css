@@ -44,6 +44,7 @@
             background: none;
             color:#fff;
             font-size: 15px;
+            
         }
         /* 设置文本框提示文本的样式 */
         .container form .tbx::placeholder{

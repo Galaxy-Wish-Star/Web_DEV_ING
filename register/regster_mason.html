@@ -16,11 +16,9 @@
         margin-left: -10px;
     }   /* 选中img，设置图片 */
     .regster{
-        border: solid;
         height: 800px;
-        width: 1000px;
+        width: 900px;
         margin: 0 auto;
-        text-align: center;
     }
     h1{
         color: rgb(18, 88, 192);
@@ -29,10 +27,72 @@
         border-bottom: 5px solid #288bb9; /*下划线：像素 实线 颜色*/
         text-align: left;
     }
-    li{
+
+li{
         list-style: none;
         margin-top: 20px;
+        
     }
+
+
+
+     h1{
+        color: #538aff;
+        font-size: 50px;
+        letter-spacing: 5px;
+        font-weight: 100;
+        /* 文字阴影 */
+        text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
+        z-index: 1;
+        }
+    
+    .l{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .formm{
+        background-color: rgb(90, 156, 255);
+        height:70vh;/* 设置高度为100%窗口高度 */
+        display: flex; /* 弹性盒子模型 */
+        justify-content: center;/* 限免属性是让regster里的子类居中 */
+        align-items: center;
+        height: 600px;
+        width: 750px;
+        margin: 40px auto;
+        box-shadow: 15px 15px 10px rgba(33,45,58,0.3);/* 盒子阴影 */
+        text-shadow: 5px 5px 5px rgba(33,45,58,0.3);/* 文字阴影 */
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color:#fff;
+    }
+    
+    .sub{
+        width: 250px;
+        height: 40px;
+        outline: none;
+        border:1px solid #fff;
+        border-radius: 20px;
+        letter-spacing: 5px;
+        color:#fff;
+        background: none;
+        cursor: pointer;
+        margin-top: 20px;
+        }
+    .tex{
+        width: 250px;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: none;
+        color:#fff;
+        font-size: 15px;
+        }
 
     </style>
 </head>
@@ -44,15 +104,16 @@
 <form action="">    <!-- 表单 -->
     <div class="regster">
         <h1>用户注册</h1>
-        <div>
+        <div class="formm">
             <ul>
-                <li><span>昵称</span><input type="text"></li>
-                <li><span>姓名</span><input type="text"></li>
-                <li><span>密码</span><input type="password"></li>
-                <li><span>确认密码</span><input type="password"></li>
+                <li class="l"><span>昵称</span><input type="text" value="" class="tex" ></li>
+                <li class="l"><span>姓名</span><input type="text" value="" class="tex"></li>
+                <li class="l"><span>密码</span><input type="password" class="tex"></li>
+                <li class="l"><span>确认密码</span><input type="password" class="tex"></li>
                 <li><span>出生年月日</span><input type="date" max="2222-12-31"  min="1999-01-02"></li>
                 <li><span>性别</span><input type="radio" name="sex">男<input type="radio" name="sex">女</li>
-                <li><input type="checkbox"><span>同意</span><a href="">注册协议</a><input type="submit" value="注册"></li>
+                <li><input type="checkbox"><span>同意</span><a href="">注册协议</a></li>
+                <li class="l"><input type="submit" value="注册" class="sub"></li>
             </ul>
         </div>
     </div>
