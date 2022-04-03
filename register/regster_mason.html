@@ -15,28 +15,19 @@
         width: 100%;
         margin-left: -10px;
         }   /* 选中img，设置图片 */
+
     .regster{
         height: 880px;
         width: 900px;
         margin: 0 auto;
         }
+
     h1{
         color: rgb(18, 88, 192);
         font-size: 30px;    
         line-height: 70px;  /*线高度*/
         border-bottom: 5px solid #288bb9; /*下划线：像素 实线 颜色*/
         text-align: left;
-        }
-
-    li{
-        list-style: none;
-        margin-top: 20px;
-        
-        }
-
-
-
-     h1{
         color: #538aff;
         font-size: 50px;
         letter-spacing: 5px;
@@ -44,6 +35,12 @@
         /* 文字阴影 */
         text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
         z-index: 1;
+        }
+
+    li{
+        list-style: none;
+        margin-top: 20px;
+        
         }
     
     .l{
@@ -83,6 +80,7 @@
         cursor: pointer;
         margin-top: 20px;
         }
+
     .tex{
         width: 250px;
         height: 40px;
@@ -106,11 +104,11 @@
         <h1>用户注册</h1>
         <div class="formm">
             <ul>
-                <li class="l"><span>昵称</span><input type="text" value="" class="tex" ></li>
-                <li class="l"><span>姓名</span><input type="text" value="" class="tex"></li>
-                <li class="l"><span>密码</span><input type="password" class="tex"></li>
-                <li class="l"><span>确认密码</span><input type="password" class="tex"></li>
-                <li class="l"><span>电子邮件</span><input type="text" class="tex"></li>
+                <li class="l"><span>昵称</span><input type="text" placeholder="请输入昵称" class="tex" ></li>
+                <li class="l"><span>姓名</span><input type="text" placeholder="请输入姓名" class="tex"></li>
+                <li class="l"><span>电子邮件</span><input type="text" class="tex" placeholder="请输入电子邮件"></li>
+                <li class="l"><span>密码</span><input type="password" class="tex" placeholder="请输入密码"></li>
+                <li class="l"><span>确认密码</span><input type="password" class="tex" placeholder="请确认密码"></li>
                 <li><span>出生年月日</span><input type="date" max="2222-12-31"  min="1999-01-02"></li>
                 <li><span>性别</span><input type="radio" name="sex">男<input type="radio" name="sex">女</li>
                 <li><input type="checkbox"><span>同意</span><a href="">注册协议</a></li>
