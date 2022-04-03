@@ -8,7 +8,34 @@
     <title>新闻</title>
 </head>
 <style>
-
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    img {
+        width: 101%;
+        height: 200px;
+    }
+    
+    .header {
+        height: 230px;
+    }
+    
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 25px;
+    }
+    
+    .box {
+        margin: 0px 500px 50px 400px;
+    }
+    
+    ul li {
+        list-style: none;
+        padding: 10px 0px 10px 5px;
+    }
 </style>
 
 <body>
@@ -16,18 +43,19 @@
         <img src="../media_file/img/博鳌页面-页头.png">
     </div>
 
-    <form action="">
+    <form class="form-inline">
         <div class="box">
             <div class="title">用户注册</div>
+            <hr>
             <div class="reg">
                 <ul>
                     <li><span>用户名</span><input type="text" name="" id=""><span>请输入</span></li>
                     <li><span>密码</span><input type="text" name="" id=""><span>请输入</span></li>
                     <li><span>密码确认</span><input type="text" name="" id=""><span>请输入</span></li>
                     <li><span>性别</span><input type="radio" name="sex" id="">男<input type="radio" name="sex" id="">女<span>请输入</span>
-                    <li><span>美食</span><input type="checkbox" name="sex" id="">蛋糕<input type="checkbox" name="sex" id="">饼干<input type="checkbox" name="sex" id="">牛奶<span>请输入</span>
-                    <li><span>学历</span><select name="" id=""><option value="">小学<option value="">中学<option value="">本科</option></option></select></li>
-
+                        <li><span>美食</span><input type="checkbox" name="sex" id="">蛋糕<input type="checkbox" name="sex" id="">饼干<input type="checkbox" name="sex" id="">牛奶<span>请输入</span>
+                            <li><span>学历</span><select name="" id=""><option value="">小学<option value="">中学<option value="">本科</option></option></select></li>
+                            <li class="1"><input type="reset" value="立刻注册" name=""> </li>
                 </ul>
             </div>
         </div>
