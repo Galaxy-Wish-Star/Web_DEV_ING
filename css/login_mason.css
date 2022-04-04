@@ -1,0 +1,14 @@
+*{/* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;  /* 100%窗口高度 */
+    display: flex;  /* 弹性布局 居中 */
+    align-items: center;    /* 垂直居中 */
+    justify-content: center;    /* 水平居中 */
+    background: linear-gradient(200deg,#e3c5eb,#a9c1ed);  /* 渐变背景 */
+    overflow: hidden;   /* 溢出隐藏 */
+
+}
