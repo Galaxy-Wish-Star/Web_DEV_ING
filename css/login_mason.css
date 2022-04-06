@@ -10,5 +10,17 @@ body{
     justify-content: center;    /* 水平居中 */
     background: linear-gradient(200deg,#e3c5eb,#a9c1ed);  /* 渐变背景 */
     overflow: hidden;   /* 溢出隐藏 */
+}
 
+.container{
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
