@@ -1,0 +1,9 @@
+*{
+    margin: 0;  /*外边距 */
+    padding: 0; /*内边距 */
+    }
+
+img{
+    width: 100%;
+    margin-left: -10px;
+    }   /* 选中img，设置图片 */
