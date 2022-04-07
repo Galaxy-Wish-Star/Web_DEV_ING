@@ -26,7 +26,7 @@ body{
     justify-content: center;    /* 水平居中 */
     align-items: center;    /* 垂直居中 */
     width: 620px;
-    height: 780px;  
+    height: 750px;  
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);/* 阴影 */
 }
 
