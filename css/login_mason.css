@@ -37,7 +37,7 @@ body{
     text-indent: 8px;   
     border: none;
     border-bottom: 1px solid #ddd;  /*下划线：大小、实线、颜色*/
-    outline: none;  
+    outline: none;  /* 在一条声明中设置多个轮廓属性的简写属性  */
     margin: 12px auto;
 }
 
