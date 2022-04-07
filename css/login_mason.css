@@ -13,17 +13,17 @@ body{
 }
 
 .container{
-    position: relative;
+    position: relative;     /* 相对定位 */
     z-index: 1;
-    background-color: #fff;
-    border-radius: 15px;
-    display: flex;  /* 弹性布局 垂直排列 */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #fff;     /* 设置背景为白色 */
+    border-radius: 15px;    /* 设置边框为圆角 */
+    display: flex;    /* 弹性布局 */
+    flex-direction: column;     /* 垂直排列 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
     width: 350px;
-    height: 500px;  /* 阴影 */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    height: 500px;  
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);/* 阴影 */
 }
 
 .container .tit{
@@ -34,10 +34,10 @@ body{
 .container input{
     width: 280px;
     height: 30px;
-    text-indent: 8px;
+    text-indent: 8px;   
     border: none;
-    border-bottom: 1px solid #ddd;
-    outline: none;
+    border-bottom: 1px solid #ddd;  /*下划线：大小、实线、颜色*/
+    outline: none;  
     margin: 12px auto;
 }
 
@@ -46,18 +46,18 @@ body{
     height: 40px;
     margin: 35px auto 40px auto;
     border: none;
-    background: linear-gradient(-200deg,#fac0e7,#aac2ee);
+    background: linear-gradient(-200deg,#fac0e7,#aac2ee); /* 渐变背景：角度、颜色、颜色*/
     color: #fff;
-    font-weight: bold;
-    letter-spacing: 8px;
+    font-weight: bold;  /* 字体粗细 */
+    letter-spacing: 8px;/* 设置字间距 */
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
     transition: 0.5s;   /* 动画过渡 */
 }
 
 .container button:hover{
     background: linear-gradient(-200deg,#aac2ee,#fac0e7);
-    background-position-x: -280px;
+    background-position-x: -280px;/*  设置水平方向的位置 */
 }
 
 .container span{
