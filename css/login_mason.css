@@ -66,5 +66,98 @@ body{
 
 .container a{
     color: plum;
-    text-decoration: none;
+    text-decoration: none;  /* 去除a标签的效果 */
+}
+
+ul li{
+    position: absolute;
+    border: 1px solid rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    opacity: 0;
+    background-color: #fff;
+}
+
+.square ul li{
+    top: 40vh;
+    left: 60vw;
+    animation: square 10s linear infinite;  /* 执行动画：动画名 时常 线性 无限 次播放 */
+}
+
+.sqare ul li:nth-child(2){
+    top: 80vh;
+    left: 10vw;
+    animation-delay: 2s;    /* 动画延迟时间 */
+}
+
+.sqare ul li:nth-child(3){
+    top: 80vh;
+    left: 85vw;
+    animation-delay: 4s;    /* 动画延迟时间 */
+}
+
+.sqare ul li:nth-child(4){
+    top: 50vh;
+    left: 70vw;
+    animation-delay: 6s;    /* 动画延迟时间 */
+}
+
+.sqare ul li:nth-child(5){
+    top: 10vh;
+    left: 15vw;
+    animation-delay: 8s;    /* 动画延迟时间 */
+}
+
+.circle li{
+    bottom: 0;
+    left: 15vw;
+    animation: circle 10s linear infinite;/* 执行动画 */
+}
+
+.circle li:nth-child(2){
+    left: 35vw;
+    animation-delay: 2s;    /* 动画延迟时间 */
+}
+
+.circle li:nth-child(3){
+    left: 55vw;
+    animation-delay: 6s;    /* 动画延迟时间 */
+}
+
+.circle li:nth-child(4){
+    left: 75vw;
+    animation-delay: 4s;    /* 动画延迟时间 */
+}
+
+.circle li:nth-child(5){
+    left: 90vw;
+    animation-delay: 8s;    /* 动画延迟时间 */
+}
+
+
+@keyframes square {  /* 定义动画 */
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+    }
+}
+
+@keyframes square {  /* 定义动画 */
+    0%{
+        transform: scale(0) rotateY(1000deg);
+        opacity: 1;
+        bottom: 0;
+        border-radius: 0;
+    }
+    100%{
+        transform: scale(5) rotateY(0deg);
+        opacity: 0;
+        bottom: 90vh;
+        border-radius: 50%;
+    }
 }
