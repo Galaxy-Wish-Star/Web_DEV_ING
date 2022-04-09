@@ -76,34 +76,34 @@ ul li{
     height: 30px;
     list-style: none;
     opacity: 0;
-    background-color: #fff;
-}
+    background-color: rgb(255, 255, 255);
+} 
 
 .square ul li{
     top: 40vh;
     left: 60vw;
-    animation: square 10s linear infinite;  /* 执行动画：动画名 时常 线性 无限 次播放 */
+    animation: square 8s linear infinite;  /* 执行动画：动画名 时常 线性 无限 次播放 */
 }
 
-.sqare ul li:nth-child(2){
+.square li:nth-child(2){
     top: 80vh;
     left: 10vw;
     animation-delay: 2s;    /* 动画延迟时间 */
 }
 
-.sqare ul li:nth-child(3){
+.square li:nth-child(3){
     top: 80vh;
     left: 85vw;
     animation-delay: 4s;    /* 动画延迟时间 */
 }
 
-.sqare ul li:nth-child(4){
-    top: 50vh;
+.square ul li:nth-child(4){
+    top: 10vh;
     left: 70vw;
     animation-delay: 6s;    /* 动画延迟时间 */
 }
 
-.sqare ul li:nth-child(5){
+.square li:nth-child(5){
     top: 10vh;
     left: 15vw;
     animation-delay: 8s;    /* 动画延迟时间 */
@@ -160,4 +160,4 @@ ul li{
         bottom: 90vh;
         border-radius: 50%;
     }
-}
+} 
