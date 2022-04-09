@@ -34,7 +34,7 @@ body{
 .container input{
     width: 280px;
     height: 30px;
-    text-indent: 8px;   
+    text-indent: 8px;   /* 首行缩进 */
     border: none;
     border-bottom: 1px solid #ddd;  /*下划线：大小、实线、颜色*/
     outline: none;  /* 在一条声明中设置多个轮廓属性的简写属性  */
@@ -55,7 +55,7 @@ body{
     transition: 0.5s;   /* 动画过渡 */
 }
 
-.container button:hover{
+.container button:hover{    /* 鼠标移入的状态 */
     background: linear-gradient(-200deg,#aac2ee,#fac0e7);
     background-position-x: -280px;/*  设置水平方向的位置 */
 }
@@ -136,7 +136,7 @@ ul li{
 }
 
 
-@keyframes square {  /* 定义动画 */
+@keyframes square {  /* 定义动画 关键帧*/
     0%{
         transform: scale(0) rotateY(0deg);
         opacity: 1;
@@ -147,7 +147,7 @@ ul li{
     }
 }
 
-@keyframes square {  /* 定义动画 */
+@keyframes square {  /* 定义动画 关键帧*/
     0%{
         transform: scale(0) rotateY(1000deg);
         opacity: 1;
