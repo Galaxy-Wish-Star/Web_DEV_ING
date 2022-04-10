@@ -4,122 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../register/">
     <title>登录</title>
-    <style>
-    *{
-        margin: 0;  /*外边距 */
-        padding: 0; /*内边距 */
-        }
-
-    img{
-        width: 100%;
-        margin-left: -10px;
-        }   /* 选中img，设置图片 */
-
-    .regster{
-        height: 880px;
-        width: 900px;
-        margin: 0 auto;
-        }
-
-    h1{
-        color: rgb(18, 88, 192);
-        font-size: 30px;    
-        line-height: 70px;  /*线高度*/
-        border-bottom: 5px solid #288bb9; /*下划线：像素 实线 颜色*/
-        text-align: left;
-        color: #538aff;
-        font-size: 50px;
-        letter-spacing: 5px;
-        font-weight: 100;
-        /* 文字阴影 */
-        text-shadow: 5px 5px 5px rgba(33,45,58,0.3);
-        z-index: 1;
-        }
-
-    li{
-        list-style: none;
-        margin-top: 20px;
-        
-        }
-    
-    .l{
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        flex-direction: column;
-        }
-
-    .formm{
-        background-color: rgb(90, 156, 255);
-        height:70vh;/* 设置高度为100%窗口高度 */
-        display: flex; /* 弹性盒子模型 */
-        justify-content: center;/* 限免属性是让regster里的子类居中 */
-        align-items: center;
-        height: 700px;
-        width: 800px;
-        margin: 40px auto;
-        box-shadow: 15px 15px 10px rgba(33,45,58,0.3);/* 盒子阴影 */
-        text-shadow: 5px 5px 5px rgba(33,45,58,0.3);/* 文字阴影 */
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #fff;
-        color:#fff;
-    }
-    
-    .sub{
-        width: 250px;
-        height: 40px;
-        outline: none;
-        border:1px solid #fff;
-        border-radius: 20px;
-        letter-spacing: 5px;
-        color:#fff;
-        background: none;
-        cursor: pointer;
-        margin-top: 20px;
-        }
-
-    .tex{
-        width: 250px;
-        height: 40px;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #fff;
-        background: none;
-        color:#fff;
-        font-size: 15px;
-        }
-
-    </style>
 </head>
 <body>
-    <div class="header">
-        <img src="../media_file/img/博鳌页面-页头.png" alt="这是一张页头图片，改图片没有正常显示">
-    </div>
-
-<form action="">    <!-- 表单 -->
+   
     <div class="regster">
-        <h1>用户注册</h1>
         <div class="formm">
+            <h1>创建您的博鳌Web账号</h1>
             <ul>
-                <li class="l"><span>昵称</span><input type="text" placeholder="请输入昵称" class="tex" ></li>
-                <li class="l"><span>姓名</span><input type="text" placeholder="请输入姓名" class="tex"></li>
-                <li class="l"><span>电子邮件</span><input type="text" class="tex" placeholder="请输入电子邮件"></li>
-                <li class="l"><span>密码</span><input type="password" class="tex" placeholder="请输入密码"></li>
-                <li class="l"><span>确认密码</span><input type="password" class="tex" placeholder="请确认密码"></li>
-                <li><span>出生年月日</span><input type="date" max="2222-12-31"  min="1999-01-02"></li>
-                <li><span>性别</span><input type="radio" name="sex">男<input type="radio" name="sex">女</li>
-                <li><input type="checkbox"><span>同意</span><a href="">注册协议</a></li>
-                <li class="l"><input type="submit" value="注册" class="sub"></li>
+                <li><input  type="text" placeholder="姓氏" class="tex" ></li>
+                <li ><input type="text" pla
+                    ceholder="名字" class="tex"></li>
+                <li><input type="text" class="tex" placeholder="用户名" style="width:170px;"><span class="tishi" >@boaoweb.com</span></li>
+                <li class="sm">您可以使用字母、数字和英文句点</li>
+                <li><a href="#">改用我当前的电子邮件地址</a></li>
+                <br>
+                <li><input type="password" class="tex" placeholder="密码"></li>
+                <li><input type="password" class="tex" placeholder="确认密码"></li>
+                <li class="sm">使用 8 个或更多字符（字母、数字和符号的组合）</li>
+                <li><input type="checkbox"><span>显示密码</span></li>
+                <li><input type="text" placeholder="电话号码(可选)" class="tex"></li>
+                <li class="sm">我们将使用它来确保您的账号安全</li>
+                <li  class="yy"><span>您的性别：</span>男<input type="radio" name="sex">女<input type="radio" name="sex"></li>
+                <br>
+                <li  class="yy"><a href="#">我们要求提供这些信息的原因</a></li>
+                <li class="yy"><input type="checkbox"><span>同意</span><a href="">注册协议</a></li>
+                <li class="b"><button>提交</button></li>
             </ul>
         </div>
     </div>
-</form>
-
-    <div class="footer">
-        <img src="../media_file/img/博鳌页面-页尾.png" alt="这是一张页尾图片，改图片没有正常显示">
-    </div>
+   
+ 
 </body>
 </html>
