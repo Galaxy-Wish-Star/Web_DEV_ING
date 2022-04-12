@@ -72,5 +72,12 @@ input{
 }
 
 .banner{
+    height: 150px;
     background-color: #30B1C0;
+}
+.nav{
+    background-color: #236c96;
+}
+.nav ul li{
+    float: left;
 }
