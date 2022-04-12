@@ -5,7 +5,7 @@
 
 body{
     margin: 0 auto;
-    background-image: linear-gradient(200deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
+    background-image: linear-gradient(181deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
     font-family: Arial, Helvetica,"宋体";
     font-size: 14px;
 }
@@ -27,3 +27,49 @@ input{
     width: 1000px;
     margin: 0 auto;
 }
+
+/* 清除浮动 */
+.cleargfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+
+/* 头部模块 */
+.logo{
+    float: left;
+}
+.login{
+    float: right;
+    margin-top: 10px;
+}
+
+.login ul li{
+    float: right;
+    margin-left: 15px;
+}
+.login ul li span{
+    color: #4a7afd;
+    font-weight: bold;
+}
+.login input{
+    width: 50px;
+}
+.login ul li a{
+    font-weight: bold;
+}
+.login ul li a:hover{
+    color: aqua;
+}
+
+.top img{
+    width: 100%;
+    margin-top: -3px;
+}   /* 选中img，设置图片 */
