@@ -6,39 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <style>
-        *{
-    margin: 0;  /*外边距 */
-    padding: 0; /*内边距 */
-    }
+* {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 1000px;
+            margin: 0 auto;
 
-img{
-    width: 100%;
-    margin-left: -10px;
-    }   /* 选中img，设置图片 */
-
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="../media_file/img/博鳌页面-页头.png" alt="这是一张页头图片，改图片没有正常显示">
+    <!--头部模块-->
+<div class="box" style="height: 40px;background-color: cornflowerblue;">网站LOGO</div>
+    <div class="" style="height: 180px;background-color: rgb(132, 157, 240);">Banner</div>
+    <div class="box" style="height: 60px;background-color: rgb(44, 86, 223);">导航</div>
+    <!--新闻模块-->
+    <div class="box">
+        <div class="left" style="height: 240px; width: 440px; background-color: rgb(164, 181, 255); float: left;">新闻图片浏览</div>
+        <div class="right" style="height: 240px; width: 540px; background-color: #9baaff; float: right;">新闻列表</div>
     </div>
-
-    <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">新闻</a></li>
-        <li><a href="#">教育</a></li>
-        <li><a href="#">人才</a></li>
-        <li><a href="#">企业</a></li>
-        <li><a href="#">房产</a></li>
-        <li><a href="#">家居</a></li>
-        <li><a href="#">商店</a></li>
-        <li><a href="#">美食</a></li>
-        <li><a href="#">旅游</a></li>
-    </ul>
-
+    <!--房产教育板块-->
+    <div class="box">
+        <div class="toppic" style="height: 100px; background-color: rgb(121, 132, 233); margin-top: 250px;">板块图片</div>
+        <div class="btmbox" style="margin-top: 10px;">
+            <div class="left" style="height: 240px; width: 440px; background-color: rgb(101, 108, 204); float: left;">房产</div>
+            <div class="right" style="height: 240px; width: 540px; background-color: rgb(120, 109, 216); float: right;">教育</div>
+        </div>
+    </div>
+        <!--房产教育板块-->
+    <div class="box">
+        <div class="toppic" style="height: 100px; background-color: rgb(121, 132, 233); margin-top: 250px;">板块图片</div>
+        <div class="btmbox" style="margin-top: 10px;">
+            <div class="left" style="height: 240px; width: 440px; background-color: rgb(101, 108, 204); float: left;">房产</div>
+            <div class="right" style="height: 240px; width: 540px; background-color: rgb(120, 109, 216); float: right;">教育</div>
+        </div>
+    </div>
+    <div class="copyright" style="height: 140px;background-color: rgb(132, 157, 240);margin-top: 250px;">版权所有</div>
+</div>
     
-    <div class="footer">
-        <img src="../media_file/img/博鳌页面-页尾.png" alt="这是一张页尾图片，改图片没有正常显示">
-    </div>
 </body>
 </html>
