@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(240, 242, 244);
+    font-size: 14px;
+    font-family: Arial, Helvetica, "微软雅黑", "宋体";
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    padding: 2px;
+}
+
+.box {
+    width: 1000px;
+    margin: 0 auto;
+    /* border: 1px solid rgb(120, 120, 120);*/
+}
+
+
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/*头部模块*/
+
+.logo {
+    float: left;
+}
+
+.login {
+    float: right;
+    margin-top: 10px;
+}
+
+.login ul li {
+    float: left;
+    margin-left: 15px;
+    line-height: 24px;
+}
+
+.login ul li span {
+    color: orange;
+    font-weight: bold;
+}
+
+.login input {
+    width: 60px;
+}
+
+.login ul li a {
+    font-weight: bold;
+}
+
+.login ul li a:hover {
+    color: orange
+}
+
+.banner {
+    background-color: #4eb4d3;
+    height: 150px;
+}
+
+.nav {
+    background-color: #055f98;
+}
+
+.nav ul li {
+    float: left;
+}
