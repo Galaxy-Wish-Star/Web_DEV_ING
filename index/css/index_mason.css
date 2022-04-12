@@ -3,8 +3,27 @@
     padding: 0;
 }
 
+body{
+    margin: 0 auto;
+    background-image: linear-gradient(200deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
+    font-family: Arial, Helvetica,"宋体";
+    font-size: 14px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(144, 143, 226);
+}
+
+input{
+    padding: 2px;
+}
+
 .box {
     width: 1000px;
     margin: 0 auto;
-
 }
