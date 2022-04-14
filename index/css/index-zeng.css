@@ -5,7 +5,7 @@
 
 body {
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(252, 250, 250);
     font-size: 14px;
     font-family: Arial, Helvetica, "微软雅黑";
 }
@@ -17,7 +17,7 @@ li {
 
 a {
     text-decoration: none;
-    color: rgb(45, 44, 44);
+    color: rgb(222, 105, 27);
 }
 
 input {
@@ -28,7 +28,7 @@ input {
     width: 1000px;
     margin: 0 auto;
     clear: both;
-    /* */
+    /*清除浮动 */
 }
 
 
@@ -53,17 +53,16 @@ input {
 
 .logo {
     float: left;
-    margin-top: 10px;
 }
 
 .login {
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .login ul li {
     float: left;
-    margin-left: 12px;
+    margin-left: 10px;
     line-height: 24px;
 }
 
@@ -73,7 +72,7 @@ input {
 }
 
 .login input {
-    width: 60px;
+    width: 50px;
 }
 
 .login ul li a {
@@ -90,9 +89,21 @@ input {
 }
 
 .nav {
+    height: 40px;
     background-color: #055f98;
 }
 
 .nav ul li {
     float: left;
+    line-height: 40px;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: rgb(252, 252, 252);
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    color: rgb(250, 134, 19);
 }
