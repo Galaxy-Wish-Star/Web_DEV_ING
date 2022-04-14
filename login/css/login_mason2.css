@@ -34,10 +34,11 @@ section .color {
 /* :nth-child(n) 选择器匹配父元素中的第 n 个子元素 */
 
 section .color:nth-child(1) {
-    top: -350px;
-    width: 600px;
-    height: 600px;
-    background: #ff359b;
+    top: -250px;
+    width: 700px;
+    height: 500px;
+    margin-right: 900px;
+    background: #6940fc;
 }
 
 section .color:nth-child(2) {
@@ -45,15 +46,22 @@ section .color:nth-child(2) {
     left: 100px;
     width: 500px;
     height: 500px;
-    background: #fffd87;
+    background: #41ffc9;
 }
 
 section .color:nth-child(3) {
-    bottom: 50px;
-    right: 100px;
+    bottom: -200px;
+    right: 10px;
     width: 500px;
     height: 500px;
-    background: #00d2ff;
+    background: #ff6607;
+}
+section .color:nth-child(4) {
+    bottom: 400px;
+    right: 50px;
+    width: 500px;
+    height: 500px;
+    background: #ff76f8;
 }
 
 .box {
@@ -218,10 +226,14 @@ section .color:nth-child(3) {
 .form .inputBox input[type="submit"] {
     background: #fff;
     color: #666;
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 20px;
     font-weight: 600;
     cursor: pointer;
+    margin-left: 95px;
+}
+.form .inputBox input[type="submit"]:hover{
+    color:#193569;
 }
 
 .forget {
