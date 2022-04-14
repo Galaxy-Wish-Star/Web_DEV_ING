@@ -7,13 +7,13 @@ img{
     width: 100%;
     }   /* 选中img，设置图片 */
 
-body{
+.bodyy{
     height: 100vh;  /* 100%窗口高度 */
     display: flex;  /* 弹性布局 居中 */
     align-items: center;    /* 垂直居中 */
     justify-content: center;    /* 水平居中 */
     background: linear-gradient(200deg,#055F98,#4EB4D3);  /* 渐变背景 */
-
+    margin-top: -4px;
 }
 
 .regster{
