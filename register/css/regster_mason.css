@@ -57,7 +57,7 @@ a{
 button{
     width: 280px;
     height: 40px;
-    margin: 28px auto 40px auto;
+    margin: 10px auto 40px auto;
     border: none;
     background: linear-gradient(-200deg,#055F98,#4EB4D3); /* 渐变背景：角度、颜色、颜色*/
     color: #fff;
@@ -83,6 +83,6 @@ button:hover{
 }
 
 .yy{
-    line-height: 180%;
+    line-height: 150%;
     text-align: center;
 }
