@@ -23,9 +23,9 @@ input{
     padding: 2px;
 }
 
-.box {
+.box {  /* 居中 */
     width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 /* 清除浮动 */
@@ -70,14 +70,33 @@ input{
 .login ul li a:hover{
     color: aqua;
 }
-
+.nav{
+    height: 48px;
+    background-color: #055F98;
+}
 .banner{
     height: 150px;
     background-color: #30B1C0;
 }
-.nav{
-    background-color: #236c96;
-}
 .nav ul li{
     float: left;
+    line-height: 47px;
+}
+.nav ul li a{
+    display: block;/* 将a转换为块元素 */
+    padding: 0 17px;    /* 控制左右内边距 */
+    color: #fff;
+    font-weight: bold;  /* 字体加粗 */
+    font-size: 18px;
+}
+.nav ul li:first-child{ /* 选中指定路径的第一个元素 */
+    margin-left: -10px;
+}
+
+.nav ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 24px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
 }
