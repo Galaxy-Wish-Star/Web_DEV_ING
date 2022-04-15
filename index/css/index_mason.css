@@ -16,7 +16,7 @@ li{
 
 a{
     text-decoration: none;
-    color: rgb(144, 143, 226);
+    color: rgb(150, 148, 235);
 }
 
 input{
@@ -99,4 +99,51 @@ input{
     transition: 0.3s;
     font-size: 24px;
     cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
+
+.copyright{
+    height: 30px;
+    background-color: #33106B;
+}
+.copyright .copy{
+    color: rgb(212, 212, 212);
+    width: 315px;
+    margin: 6px auto;
+}
+.foolter{
+    margin-top: 270px;
+    height: 110px;
+    background-color: #324587;
+}
+.item1{
+    float: left;
+    margin: 12.5px auto;
+    padding-left: 330px;
+    padding-right: 120px;
+}
+.item2{
+    margin: 12.5px auto;
+    float: left;
+    padding-right: 120px;
+}
+.item3{
+    margin: 12.5px auto;
+    float: left;
+    padding-right: 120px;
+}
+.item4{
+    margin: 12.5px auto;
+    float: left;
+    padding-right: 120px;
+}
+.item5{
+    margin: 12.5px auto;
+    float: left;
+}
+.item a{
+    display: inline-block;
+    line-height: 21px;
+}
+.item a:hover{
+    color: #FE700C;
 }
