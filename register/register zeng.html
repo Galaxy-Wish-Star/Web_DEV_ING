@@ -14,66 +14,159 @@
     }
     
     img {
-        width: 101%;
+        width: 100%;
         height: 200px;
     }
     
-    .header {
-        height: 230px;
+    .box {
+        width: 800px;
+        margin: 30px auto;
     }
     
     .title {
-        font-size: 20px;
+        font-style: 26px;
         font-weight: bold;
-        line-height: 25px;
+        color: rgb(86, 86, 86);
         padding-bottom: 5px;
+        border-bottom: 2px solid rgb(47, 46, 46);
     }
     
-    .box {
-        margin: 0px 500px 50px 400px;
+    .registform {
+        width: 400px;
+        margin: 30px;
     }
     
-    ul li {
+    ul,
+    li {
         list-style: none;
-        padding: 10px 0px 10px 5px;
+    }
+    
+    .registform ul li {
+        float: left;
+    }
+    
+    .registform ul {
+        clear: both;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .ts1 {
+        font-style: 18px;
+        font-weight: bold;
+        font-family: "微软雅黑";
+        width: 80px;
+        text-align: right;
+        color: rgb(128, 127, 127);
+        margin-right: 15px;
+    }
+    
+    .ts2 {
+        font-style: 14px;
+        color: rgb(105, 105, 105);
+        margin-left: 10px;
+    }
+    
+    input,
+    select {
+        padding: 4px;
+        background-repeat: 5px;
+        margin-left: 5px;
+    }
+    
+    .yzm {
+        width: 80px;
+        height: 28px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    
+    .zc {
+        font-size: 18px;
+        font-weight: bold;
+        width: 240px;
+        height: 40px;
+        margin-left: 80px;
+        background-repeat: 5px;
+    }
+    
+    .ty {
+        margin-left: 30px;
     }
 </style>
 
 <body>
-    <div class="header">
+    <div class="hearter">
         <img src="../media_file/img/博鳌页面-页头.png">
     </div>
+    <div class="box">
+        <div class="title">用户注册</div>
+        <form class="registform">
+            <ul>
+                <li class="ts1">用户名</li>
+                <li><input type="text"></li>
+                <li class="ts2">请输入用户名</li>
+            </ul>
+            <ul>
+                <li class="ts1">密码</li>
+                <li><input type="password"></li>
+                <li class="ts2">请输入密码</li>
+            </ul>
+            <ul>
+                <li class="ts1">确认密码</li>
+                <li><input type="password"></li>
+                <li class="ts2">请再次确认密码</li>
+            </ul>
+            <ul>
+                <li class="ts1">性别</li>
+                <li><input type="radio" name="sex">&nbsp;男&nbsp;&nbsp;&nbsp;<input type="radio" name="sex">&nbsp;女</li>
+                <!-- /* radio单选按钮 &nbsp空格 */ -->
+            </ul>
+            <ul>
+                <li class="ts1">所在地区</li>
+                <li><select name="" id="">
+                    <option value="">四川</option>
+                    <option value="">重庆</option>
+                    <option value="">贵州</option>
+                    <option value="">北京</option>
+                    <option value="">上海</option>
+                    <option value="">深圳</option>
+                </select>省
+                    <!-- select下拉 option选择 -->
+                    <select name="" id="">
+                    <option value="">成都</option>
+                    <option value="">绵阳</option>
+                    <option value="">南充</option>
+                    <option value="">广安</option>
+                    <option value="">遂宁</option>
+                    <option value="">攀枝花</option>
+                </select>市
+                </li>
+            </ul>
+            <ul>
+                <li class="ts1">手机号</li>
+                <li><input type="text"></li>
+                <li><button class="yzm">获取验证码</button></li>
+            </ul>
+            <ul>
+                <li class="ts1">验证码</li>
+                <li><input type="text"></li>
+                <li class="ts2">请输入验证码</li>
+            </ul>
+            <ul>
+                <li><input type="checkbox" class="ty">&nbsp;同一用户注册协议，</li>
 
-    <form class="form-inline">
-        <div class="box">
-            <div class="title">用户注册</div>
-            <hr>
-            <div class="reg">
+            </ul>
+            <div class="zc">
                 <ul>
-                    <li><span>用户名</span><input type="text" name="" id=""><span>&nbsp&nbsp&nbsp请输入姓名</span></li>
-                    <li><span>密码</span><input type="text" name="" id=""><span>&nbsp&nbsp&nbsp请输入密码</span></li>
-                    <li><span>密码确认</span><input type="text" name="" id=""> <span>&nbsp&nbsp请在次输入密码</span></li>
-                    <li><span>手机号码</span><input type="text" name="" id="">&nbsp&nbsp<input type="button" value="获取短信验证码"><span></span></li>
-                    <li><span>性别</span>&nbsp&nbsp<input type="radio" name="sex" id="">男&nbsp&nbsp<input type="radio" name="sex" id="">女&nbsp&nbsp<span>&nbsp&nbsp&nbsp请选择</span>
-                        <li><span>婚姻</span>&nbsp&nbsp<input type="radio" name="sex" id="">未婚&nbsp&nbsp<input type="radio" name="sex" id="">已婚&nbsp&nbsp<input type="radio" name="sex">离婚<span>&nbsp&nbsp&nbsp请选择</span>
-                            <li><span>美食</span>&nbsp&nbsp<input type="checkbox" name="sex" id="">蛋糕&nbsp&nbsp<input type="checkbox" name="sex" id="">面包&nbsp&nbsp
-                                <type="checkbox" name="sex" id="">饼干&nbsp&nbsp<span>&nbsp&nbsp&nbsp请选择</span></li>
-
-                            <li>
-                                <spanc>学历</span>&nbsp&nbsp<select name="" id=""><option value="">小学<option value="">中学<option value="">专科</option><option value="">本科</option></option></select></li>
-
-
-                            <li>
-                                <button style="width: 100px; color: rgb(236, 30, 30);">登 &nbsp 录</button>
-                                <input type="button" value="立即注册">
-                            </li>
+                    <li><button style="width: 100px; color: rgb(36, 153, 243);">登&nbsp;&nbsp;录</button>
+                        <input type="button" value="立即注册">
+                    </li>
                 </ul>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
     <div class="footer">
         <img src="../media_file/img/博鳌页面-页尾.png" alt="">
     </div>
 </body>
-
-</html>
