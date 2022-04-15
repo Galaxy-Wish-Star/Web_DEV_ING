@@ -82,31 +82,31 @@ ul li{
 .square ul li{
     top: 40vh;
     left: 60vw;
-    animation: square 8s linear infinite;  /* 执行动画：动画名 时常 线性 无限 次播放 */
+    animation: square 6s linear infinite;  /* 执行动画：动画名 时常 线性 无限 次播放 */
 }
 
 .square li:nth-child(2){
     top: 80vh;
     left: 10vw;
-    animation-delay: 2s;    /* 动画延迟时间 */
+    animation-delay: 1s;    /* 动画延迟时间 */
 }
 
 .square li:nth-child(3){
     top: 80vh;
     left: 85vw;
-    animation-delay: 4s;    /* 动画延迟时间 */
+    animation-delay: 2s;    /* 动画延迟时间 */
 }
 
 .square ul li:nth-child(4){
     top: 10vh;
     left: 70vw;
-    animation-delay: 6s;    /* 动画延迟时间 */
+    animation-delay: 3s;    /* 动画延迟时间 */
 }
 
 .square li:nth-child(5){
     top: 10vh;
     left: 15vw;
-    animation-delay: 8s;    /* 动画延迟时间 */
+    animation-delay: 4s;    /* 动画延迟时间 */
 }
 
 .circle li{
@@ -117,22 +117,22 @@ ul li{
 
 .circle li:nth-child(2){
     left: 35vw;
-    animation-delay: 2s;    /* 动画延迟时间 */
+    animation-delay: 1s;    /* 动画延迟时间 */
 }
 
 .circle li:nth-child(3){
     left: 55vw;
-    animation-delay: 6s;    /* 动画延迟时间 */
+    animation-delay: 2s;    /* 动画延迟时间 */
 }
 
 .circle li:nth-child(4){
     left: 75vw;
-    animation-delay: 4s;    /* 动画延迟时间 */
+    animation-delay: 3s;    /* 动画延迟时间 */
 }
 
 .circle li:nth-child(5){
     left: 90vw;
-    animation-delay: 8s;    /* 动画延迟时间 */
+    animation-delay: 4s;    /* 动画延迟时间 */
 }
 
 
