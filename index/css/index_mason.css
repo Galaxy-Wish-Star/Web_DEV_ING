@@ -8,6 +8,7 @@ body{
     background-image: linear-gradient(181deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
     font-family: "微软雅黑";
     font-size: 14px;
+    background-repeat: no-repeat;
 }
 
 li{
@@ -104,42 +105,29 @@ input{
 .copyright{
     height: 30px;
     background-color: #33106B;
+    margin-top: 10px;
 }
 .copyright .copy{
     color: rgb(212, 212, 212);
     width: 315px;
-    margin: 6px auto;
+    margin: 10px auto;
 }
 .foolter{
-    margin-top: 270px;
     height: 110px;
     background-color: #324587;
+    margin: 270px auto auto ;
+}
+.fuwu{
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 200px;
 }
 .item1{
     float: left;
     margin: 12.5px auto;
-    padding-left: 330px;
     padding-right: 120px;
 }
-.item2{
-    margin: 12.5px auto;
-    float: left;
-    padding-right: 120px;
-}
-.item3{
-    margin: 12.5px auto;
-    float: left;
-    padding-right: 120px;
-}
-.item4{
-    margin: 12.5px auto;
-    float: left;
-    padding-right: 120px;
-}
-.item5{
-    margin: 12.5px auto;
-    float: left;
-}
+
 .item a{
     display: inline-block;
     line-height: 21px;
@@ -147,3 +135,5 @@ input{
 .item a:hover{
     color: #FE700C;
 }
+
+/* 新闻模块 */
