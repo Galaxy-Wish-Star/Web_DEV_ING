@@ -175,10 +175,5 @@ input{
 .box .left img{
 width: 440px;
 height: 240px;
-}
-.xinwenmokuai{
-    position: absolute;
-    top: 100px;
-    left: 1000px;
-    float: right;
+float: left;
 }
