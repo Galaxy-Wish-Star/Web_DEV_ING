@@ -76,7 +76,7 @@ input{
     font-weight: bold;
 }
 .login ul li a:hover{
-    color: aqua;
+    color: #FE700C;
 }
 .nav{
     height: 49px;
@@ -103,7 +103,7 @@ input{
 
 .nav ul li a:hover{ /* 当鼠标移入时 */
     background-color: #044369;
-    color: #30B1C0;
+    color: #FE700C;
     transition: 0.3s;
     font-size: 24px;
     cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
@@ -146,6 +146,7 @@ input{
 /* 新闻模块 */
 .right {
     height: 240px; width: 540px; float: right;
+    position: relative;
 }
 .box .left .right .xinwen.h2{
     position: absolute;/* 绝对定位 */
@@ -153,12 +154,12 @@ input{
     height: 27.4px;
     width: 50px;
 }
+
 .right .more{
     float: right;
     position: absolute;/* 绝对定位 */
-    right: 100px;
-    top: 250px;
-    left: 1196px;
+    left: 494px;
+    top: 4px;
 }
 .right ul li span{
     float: right;
@@ -183,26 +184,56 @@ input{
 width: 440px;
 height: 240px;
 float: left;
-box-shadow: 11px 11px 11px rgba(0, 0, 0, 0.5);/* 设置图片阴影 */
+box-shadow: 11px 11px 11px rgba(0, 0, 0, 0.3);/* 设置图片阴影 */
 }
 .box .img img{
     margin-top: 12px;
 }
 .box .leftt {
-    height: 240px; width: 440px; background-color: rgb(164, 181, 255); float: left;margin-top: 14px;
-
+    height: 320px; width: 440px; background-color: rgb(164, 181, 255); float: left;margin-top: 14px;
 }
 
 .box .leftt .xinwen.h2{
 float: left;
 }
+.box .leftt{
+position: relative;
+}
 .box .leftt .more{
 position: absolute;
-top: 620px;
-left: 630px;
+top: 6px;
+left: 390px;
+}
+
+.box .left {
+    position: relative;
+}
+.box .left .yy{
+    position: absolute;
+    top: 188px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 90px 5px 14px;
+}
+.box .left .yy p{
+    margin-bottom: -16px;
+    color: aliceblue;
+}
+.box .left .yy a{
+    color: aliceblue;
 }
 .box .leftt .fangchan img{
     width: 100px;
     height: 100px;
     float: left;
+    padding: 6px;
+    border:1px solid rgb(94, 94, 94);
+    margin: 12px 12px 0 12px;
+}
+.box .leftt .con{
+    margin: 12px;color: rgb(94, 94, 94);
+    line-height: 22px;
+}
+.box .leftt .con p{
+    font-weight: bold;
+    color:#144bff;
 }
