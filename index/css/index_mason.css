@@ -165,4 +165,20 @@ input{
 .right ul li{
     padding-top: 5px;
 }
-
+.right ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 20px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
+.box .left img{
+width: 440px;
+height: 240px;
+}
+.xinwenmokuai{
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+    float: right;
+}
