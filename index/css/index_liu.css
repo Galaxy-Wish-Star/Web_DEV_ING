@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif,"微软雅黑";
+}
+ul,
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+input{
+    padding: 2px;
+}
+.box{
+    width: 1000px;
+    margin: 0 auto;
+    /* border: 1px red; */
+}
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after{
+ content: "";
+ display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+/* 头部登陆部分 */
+.logo{
+    float: left;
+}
+.login{
+    float: right;
+    margin-top: 10px;
+}
+.login ul li{
+    float: left;
+    margin-left: 10px;
+}
+.login ul li span{
+    color: rgb(230, 159, 52);
+    font-weight: bold;
+}
+.login input{
+    width: 100px;
+}
+.login ul li a{
+    font-weight: bold;
+}
+.login ul li a:hover{
+    color: rgb(216, 149, 49);
+}
+.banner{
+    height: 150px;
+    background-color: #4eb4d3;
+}
+.nav{
+    height: 40px;
+    background-color: #055f98;
+}
+.nav ul li {
+    float: left;
+    line-height: 40px;
+    margin-right: 25px;
+}
+.nav ul li a{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.nav ul li a:hover{
+    color: rgb(230, 151, 48);
+    cursor: pointer;
+}

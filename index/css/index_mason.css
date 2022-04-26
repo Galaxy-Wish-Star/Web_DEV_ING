@@ -6,8 +6,9 @@
 body{
     margin: 0 auto;
     background-image: linear-gradient(181deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
-    font-family: Arial, Helvetica,"宋体";
+    font-family: "微软雅黑";
     font-size: 14px;
+    background-repeat: no-repeat;
 }
 
 li{
@@ -16,16 +17,16 @@ li{
 
 a{
     text-decoration: none;
-    color: rgb(144, 143, 226);
+    color: rgb(150, 148, 235);
 }
 
 input{
     padding: 2px;
 }
 
-.box {
+.box {  /* 居中 */
     width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 /* 清除浮动 */
@@ -70,7 +71,69 @@ input{
 .login ul li a:hover{
     color: aqua;
 }
-
-.banner{
-    background-color: #30B1C0;
+.nav{
+    height: 49px;
+    background-color: #055F98;
 }
+.banner{
+    height: 150px;
+    background-color:#4EB4D3;
+}
+.nav ul li{
+    float: left;
+    line-height: 49px;
+}
+.nav ul li a{
+    display: block;/* 将a转换为块元素 */
+    padding: 0 17px;    /* 控制左右内边距 */
+    color: #fff;
+    font-weight: bold;  /* 字体加粗 */
+    font-size: 18px;
+}
+.nav ul li:first-child{ /* 选中指定路径的第一个元素 */
+    margin-left: -10px;
+}
+
+.nav ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 24px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
+
+.copyright{
+    height: 30px;
+    background-color: #33106B;
+    margin-top: 10px;
+}
+.copyright .copy{
+    color: rgb(212, 212, 212);
+    width: 315px;
+    margin: 10px auto;
+}
+.foolter{
+    height: 110px;
+    background-color: #324587;
+    margin: 270px auto auto ;
+}
+.fuwu{
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 200px;
+}
+.item1{
+    float: left;
+    margin: 12.5px auto;
+    padding-right: 120px;
+}
+
+.item a{
+    display: inline-block;
+    line-height: 21px;
+}
+.item a:hover{
+    color: #FE700C;
+}
+
+/* 新闻模块 */
