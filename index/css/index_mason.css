@@ -188,15 +188,21 @@ box-shadow: 11px 11px 11px rgba(0, 0, 0, 0.5);/* 设置图片阴影 */
 .box .img img{
     margin-top: 12px;
 }
-.box .left {
+.box .leftt {
     height: 240px; width: 440px; background-color: rgb(164, 181, 255); float: left;margin-top: 14px;
 
 }
 
-.box .left .xinwen.h2{
+.box .leftt .xinwen.h2{
 float: left;
 }
-.box .left .more{
-    float: right;
-
+.box .leftt .more{
+position: absolute;
+top: 620px;
+left: 630px;
+}
+.box .leftt .fangchan img{
+    width: 100px;
+    height: 100px;
+    float: left;
 }
