@@ -118,3 +118,29 @@ h6 img {
     height: 100px;
     margin-top: 260px;
 }
+.y1 .more{
+    float: right;
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    left: 1196px;
+}
+.y1 ul li span{
+    float: right;
+}
+.y1 ul li a{
+    color: rgb(32, 32, 32);
+}
+.y1 ul li {
+    color: rgb(76, 76, 76);
+}
+.y1 ul li{
+    padding-top: 5px;
+}
+.y1 ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 20px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
