@@ -17,7 +17,14 @@ li{
 
 a{
     text-decoration: none;
-    color: rgb(150, 148, 235);
+    background-image: linear-gradient(to right, orange, rgb(165, 101, 165));
+    -webkit-background-clip: text;
+    color: transparent;
+    /*  background-image 属性为该文字区域设置一个渐变的背景色
+color:transparent把该区域的文字颜色设置为透明
+background-clip:text将背景裁剪成文字的前景色
+需要注意的是，background-clip:text 还只是一个实验中的属性，Chrome、FireFox等多数浏览器较新的版本已经实现了，但是IE不行。
+ */
 }
 
 input{
@@ -141,14 +148,14 @@ input{
     height: 240px; width: 540px; float: right;
 }
 .box .left .right .xinwen.h2{
-    position: absolute;
+    position: absolute;/* 绝对定位 */
     float: left;
     height: 27.4px;
     width: 50px;
 }
 .right .more{
     float: right;
-    position: absolute;
+    position: absolute;/* 绝对定位 */
     right: 100px;
     top: 250px;
     left: 1196px;
@@ -176,5 +183,20 @@ input{
 width: 440px;
 height: 240px;
 float: left;
+box-shadow: 11px 11px 11px rgba(0, 0, 0, 0.5);/* 设置图片阴影 */
+}
+.box .img img{
+    margin-top: 12px;
+}
+.box .left {
+    height: 240px; width: 440px; background-color: rgb(164, 181, 255); float: left;margin-top: 14px;
+
+}
+
+.box .left .xinwen.h2{
+float: left;
+}
+.box .left .more{
+    float: right;
 
 }
