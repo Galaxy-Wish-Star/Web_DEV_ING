@@ -150,6 +150,19 @@ input{
     float: right;
     position: absolute;
     right: 100px;
-    top: 240px;
-    left: 1200px;
+    top: 250px;
+    left: 1196px;
 }
+.right ul li span{
+    float: right;
+}
+.right ul li a{
+    color: rgb(32, 32, 32);
+}
+.right ul li {
+    color: rgb(76, 76, 76);
+}
+.right ul li{
+    padding-top: 5px;
+}
+
