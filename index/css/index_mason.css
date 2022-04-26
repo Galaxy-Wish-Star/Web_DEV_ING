@@ -137,3 +137,19 @@ input{
 }
 
 /* 新闻模块 */
+.right {
+    height: 240px; width: 540px; float: right;
+}
+.box .left .right .xinwen.h2{
+    position: absolute;
+    float: left;
+    height: 27.4px;
+    width: 50px;
+}
+.right .more{
+    float: right;
+    position: absolute;
+    right: 100px;
+    top: 240px;
+    left: 1200px;
+}
