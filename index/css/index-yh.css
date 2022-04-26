@@ -97,6 +97,12 @@ input{
     cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
 }
 .h2 img{
-    height: 400px;
-    width: 500px;
+    height: 240px;
+    width: 440px;
+    float: left;
+    margin-top: 10px;
+}
+h3 img {
+    height: 100px;
+    margin-top: 260px;
 }
