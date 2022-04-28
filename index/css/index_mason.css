@@ -4,19 +4,19 @@
 }
 
 body{
-    margin: 0 auto;
+    margin: 0 auto; /* 居中 */
     background-image: linear-gradient(181deg, #30cfd0 0%, #330867 100%);  /* 渐变背景 */
-    font-family: "微软雅黑";
-    font-size: 14px;
-    background-repeat: no-repeat;
+    font-family: "微软雅黑";    /* 字体 */
+    font-size: 14px;    /* 字体大小 */
+    background-repeat: no-repeat;   /* 背景不重复 */
 }
 
-li{
+li{ /* 去除li样式 */
     list-style: none;
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none;/* 去除a标签样式和下划线 */
     background-image: linear-gradient(to right, orange, rgb(165, 101, 165));
     -webkit-background-clip: text;
     color: transparent;
@@ -27,34 +27,35 @@ background-clip:text将背景裁剪成文字的前景色
  */
 }
 
-input{
+.login  input{  /* 
+    20行左右
+    */
     padding: 2px;
+    width: 50px;
 }
 
-.box {  /* 居中 */
+.box {  /* 母盒居中 */
     width: 1000px;
     margin: 0 auto; 
 }
 
-/* 清除浮动 */
-.cleargfix:before,
+.cleargfix:before,/* 清除浮动 */
 .clearfix:after{
     content: "";
     display: table;
-}
-.clearfix:after{
     clear: both;
-}
-.clearfix{
     zoom: 1;
 }
 
-
 /* 头部模块 */
-.logo{
+.logo{  /* 
+    14行左右
+    */
     float: left;
 }
-.login{
+.login{     /* 
+    16行左右
+    */
     float: right;
     margin-top: 8px;
 }
@@ -67,11 +68,8 @@ input{
 .login ul li span{
     color: #4a7afd;
     font-weight: bold;
+}
 
-}
-.login input{
-    width: 50px;
-}
 .login ul li a{
     font-weight: bold;
 }
@@ -161,6 +159,16 @@ input{
     left: 494px;
     top: 4px;
 }
+.box .bold{ /* 设置标题下划线 
+    160行左右
+    132行左右
+    62行左右    
+    */
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid rgb(140, 140, 140);
+    padding-bottom: 7px;
+}
 .right ul li span{
     float: right;
 }
@@ -168,10 +176,7 @@ input{
     color: rgb(32, 32, 32);
 }
 .right ul li {
-    color: rgb(76, 76, 76);
-}
-.right ul li{
-    padding-top: 5px;
+    color: rgb(76, 76, 76);padding-top: 5px;
 }
 .right ul li a:hover{ /* 当鼠标移入时 */
     background-color: #044369;
@@ -227,7 +232,7 @@ left: 390px;
     height: 100px;
     float: left;
     padding: 6px;
-    border:1px solid rgb(94, 94, 94);
+    border:1px solid rgb(138, 138, 138);
     margin: 12px 12px 0 12px;
 }
 .box .leftt .con{
@@ -239,7 +244,7 @@ left: 390px;
     color:#144bff;
 }
 .box .leftt .hrr{
-    border:1px dashed;
+    border-bottom:2px dashed;
     color: #858585;
 }
 .box .jiaoyu{
@@ -270,12 +275,20 @@ left: 390px;
 .box .jiaoyu .newslistbox li img{
     margin-left: 7px;
 }
-.box .jiaoyulist span{
-    
+.box .right .jiaoyulist span{
+    float: right;
+    display: inline;
+    color: #b8b8b8;
+    margin-top: 14px;
 }
 .box .jiaoyu ul li:last-child a{
     padding-left: 16px;
 }
 .box .jiaoyu ul li:nth-child(3) a{
     padding-left: 9px;
+}
+.box .right .jiaoyulist div{
+
+    margin-top: 14px;
+    border-bottom: rgb(137, 137, 137) 2px dashed;
 }
