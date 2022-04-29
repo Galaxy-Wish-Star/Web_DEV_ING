@@ -342,6 +342,7 @@ background-clip:text将背景裁剪成文字的前景色
   color: rgb(94, 94, 94);
   line-height: 22px;
 }
+
 .box .leftt .con p {    /* 
     137行左右
     */
@@ -429,6 +430,36 @@ border-bottom: rgb(231, 231, 231) 2px dashed;
 .jiaoyulist a:hover{
   color: orange;
 }
-.box .lvyou{
-
+.lefttttt .more{
+  /* 257行左右 */
+  position: absolute;
+  top:6px;
+  left: 490px;
+}
+.lefttttt{
+  /* 257 */
+  position: relative;
+}
+.rightttttt{
+  /* 256 */
+  margin-top: 14px;
+  height: 340px;
+  width: 540px;
+  float: right;
+}
+.qiyelist div{/* 
+    269行左右
+    */
+  margin-top: 11.8px;
+  padding-bottom: 2px;
+  border-bottom: 2px dashed rgb(231, 231, 231);
+}
+.qiyelist span{
+  /* 270 */
+display: block;
+color: #b8b8b8;
+float: right;
+}
+.qiyelist a:hover{
+  color: orange;
 }
