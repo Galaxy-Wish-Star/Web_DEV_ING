@@ -1,0 +1,168 @@
+/* 去除样式 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 设置背景颜色 */
+body{
+    background-color: rgb(10,15,48); 
+}
+
+/* 表单主体 */
+.interface{
+    position: absolute;
+    border-radius: 10%;
+    top: 50px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    position: relative;     /* 相对定位 */
+    background-color: #fff;     /* 设置背景为白色 */
+    float: left;
+    
+}
+/* 表单标题 */
+.title {
+    color: rgb(10,15,48);
+    text-align: center;
+    margin: 30px;
+    height: 50px;
+    font-size: 30px;
+    display: block;
+}
+/* 为span标签设置基本样式，本程序span标签用于文字或设置文件 */
+span {
+    margin: 10px;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+}
+
+/* 设置登录按钮的input标签的相关属性 */
+.login input {
+    color:#000;
+    border-radius: 12px;    /* 框边圆弧 */
+    font-size: 20px;
+    position: absolute;
+    left: 70px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color:  rgb(90, 200, 250);
+}
+.register input {
+    color:#000;
+    border-radius: 12px;    /* 框边圆弧 */
+    font-size: 20px;
+    position: absolute;
+    left: 70px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color:  rgb(90, 200, 250);
+}
+
+/* 为input标签设置相关属性 */
+input {
+    color: #999;
+    border-radius : 12px ;
+    width: 200px;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 3px;
+    border-color: #e6e6e6;
+    border-style: solid;
+
+}
+
+/* 登录按钮部分 */
+.login {
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 20px;
+  
+}
+/* 注册按钮部分 */
+.register {
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 20px;
+  
+}
+
+/* 鼠标挪上登录按钮，变色 */
+.register>input:hover {
+    background-color:  rgb(0, 174, 255);
+}
+
+/* 鼠标挪上登录按钮，变色 */
+.login>input:hover {
+    background-color:  rgb(0, 174, 255);
+}
+
+/* 用户名 */
+.namesvg {
+    margin-top: 3px;
+    float: left;
+    width: 30px;
+}
+/* 密码 */
+.passwordsvg {
+    margin-top: 3px;
+    float: left;
+    width: 30px;
+}
+
+/* 真实姓名 */
+.truenamesvg {
+    margin-top: 3px;
+    float: left;
+    width: 30px;
+}
+
+/* 电子邮件 */
+.emailsvg {
+    margin-top: 3px;
+    float: left;
+    width: 30px;
+}
+
+/* 电话号码 */
+.phonenumbersvg {
+    margin-top: 3px;
+    float: left;
+    width: 30px;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(200deg,#13769e,#056e78);
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sm{
+    font-size: 13px;
+    color: rgb(110, 110, 110);
+}
+
+.yy{
+    line-height: 150%;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    }   /* 选中img，设置图片 */
+
+.bodyy{
+    height: 100vh;  /* 100%窗口高度 */
+    display: flex;  /* 弹性布局 居中 */
+    align-items: center;    /* 垂直居中 */
+    justify-content: center;    /* 水平居中 */
+    background: linear-gradient(200deg,#055F98,#4EB4D3);  /* 渐变背景 */
+    margin-top: -4px;
+}
