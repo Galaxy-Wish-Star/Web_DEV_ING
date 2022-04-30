@@ -287,6 +287,7 @@ input {
     background: url(../media_file/img/list_dot.jpg) no-repeat left center;
     text-align: right;
     font-size: 14px;
+    line-height: 14px;
 }
 
 .news_list2 ul li a {
