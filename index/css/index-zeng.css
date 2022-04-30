@@ -157,6 +157,22 @@ input {
     /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
 }
 
+.news_list a:link {
+    color: rgb(185, 31, 31);
+}
+
+.news_list a:visited {
+    color: rgb(231, 105, 103);
+}
+
+.news_list a:hover {
+    color: #000;
+}
+
+.news_list a:active {
+    color: rgb(198, 30, 145);
+}
+
 .s1 {
     border-bottom: 1px dashed #000;
 }
@@ -176,6 +192,22 @@ input {
     color: #000;
 }
 
+.f2 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.f2 a:visited {
+    color: rgb(40, 111, 177);
+}
+
+.f2 a:hover {
+    color: #000;
+}
+
+.f2 a:active {
+    color: rgb(198, 30, 145);
+}
+
 .kuo1 img {
     width: 110px;
     height: 60px;
@@ -186,19 +218,32 @@ input {
     text-align: center;
 }
 
-a:link {
+.news_list1 ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5px 0px 5px 5px;
+    background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    text-align: right;
+    font-size: 14px;
+}
+
+.news_list1 ul li a {
+    float: left;
+    /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+}
+
+.news_list1 a:link {
     color: rgb(185, 31, 31);
 }
 
-a:visited {
-    color: rgb(40, 111, 177);
+.news_list1 a:visited {
+    color: rgb(21, 21, 21);
 }
 
-a:hover {
-    color: #000;
+.news_list1 a:hover {
+    color: rgb(220, 36, 36);
 }
 
-a:active {
+.news_list1 a:active {
     color: rgb(198, 30, 145);
 }
 
@@ -218,4 +263,49 @@ a:active {
     width: 110px;
     height: 60px;
     float: left;
+}
+
+.wen a:link {
+    color: rgb(185, 31, 31);
+}
+
+.wen a:visited {
+    color: rgb(40, 111, 177);
+}
+
+.wen a:hover {
+    color: #000;
+}
+
+.wen a:active {
+    color: rgb(198, 30, 145);
+}
+
+.news_list2 ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5px 0px 5px 5px;
+    background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    text-align: right;
+    font-size: 14px;
+}
+
+.news_list2 ul li a {
+    float: left;
+    /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+}
+
+.news_list2 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.news_list2 a:visited {
+    color: rgb(19, 122, 225);
+}
+
+.news_list2 a:hover {
+    color: rgb(14, 14, 14);
+}
+
+.news_list2 a:active {
+    color: rgb(198, 30, 145);
 }
