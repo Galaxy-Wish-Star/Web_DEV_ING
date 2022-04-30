@@ -104,7 +104,7 @@ background-clip:text将背景裁剪成文字的前景色
   background-color: #4eb4d3;
 }
 .nav ul li {
-  /* 、
+  /* 
     31行左右
     */
   float: left;
@@ -125,7 +125,7 @@ background-clip:text将背景裁剪成文字的前景色
   /* 
         32行左右
     */
-  margin-left: -10px;
+  margin-left: -18px;
 }
 
 .nav ul li a:hover {
@@ -279,7 +279,7 @@ background-clip:text将背景裁剪成文字的前景色
 .box .leftt {   /* 
     123行左右
     */
-  height: 320px;
+  height: 316px;
   width: 440px;
 
   float: left;
@@ -332,7 +332,7 @@ background-clip:text将背景裁剪成文字的前景色
   height: 100px;
   float: left;
   padding: 6px;
-  border: 1px solid rgb(138, 138, 138);
+  border: 1.5px solid rgb(218, 218, 218);
   margin: 12px 12px 0 12px;
 }
 .box .leftt .con {  /* 
@@ -425,7 +425,7 @@ border-bottom: rgb(231, 231, 231) 2px dashed;
     */
   height: 110px;
   background-color: #505050;
-  margin-top: 260px;
+  margin-top: 335px;
 }
 .jiaoyulist a:hover{
   color: orange;
@@ -443,9 +443,10 @@ border-bottom: rgb(231, 231, 231) 2px dashed;
 .rightttttt{
   /* 256 */
   margin-top: 14px;
-  height: 340px;
+  height: 316px;
   width: 540px;
   float: right;
+  
 }
 .qiyelist div{/* 
     269行左右
@@ -462,4 +463,9 @@ float: right;
 }
 .qiyelist a:hover{
   color: orange;
+}
+.box .toppicccc{
+  height: 100px;
+  background-color: rgb(121, 132, 233);
+  margin-top: 330px;
 }
