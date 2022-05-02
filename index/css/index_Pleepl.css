@@ -170,3 +170,31 @@ input {
     transition: all 0.5s;
     /*悬停，延迟*/
 }
+
+
+/* 房产教育 */
+
+.fc1 {
+    float: left;
+    border-bottom: 1px dashed rgb(204, 204, 204);
+}
+
+.fc1 img {
+    margin: 5px;
+    float: left;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.fc_left {
+    height: 220px;
+}
+
+.fc_left h3 {
+    padding-top: 5px;
+}
+
+.jytp img {
+    padding: 0px 4px;
+}
