@@ -22,7 +22,7 @@ li {
 
 a {
   text-decoration: none; /* 去除a标签样式和下划线 */
-  background-image: linear-gradient(to right, orange, rgb(165, 101, 165));
+  background-image: linear-gradient(to right, rgb(165, 101, 165), #055f98);
   -webkit-background-clip: text;
   color: transparent;
   /*  background-image 属性为该文字区域设置一个渐变的背景色
@@ -347,7 +347,7 @@ background-clip:text将背景裁剪成文字的前景色
     137行左右
     */
   font-weight: bold;
-  color: #144bff;
+  color: #4974ff;
 }
 .box .leftt .hrr {  /* 
     143行左右
