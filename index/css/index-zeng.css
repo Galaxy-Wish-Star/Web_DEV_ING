@@ -6,7 +6,7 @@
 body {
     margin: 0 auto;
     background-color: rgb(252, 250, 250);
-    font-size: 14px;
+    font-size: 15px;
     font-family: Arial, Helvetica, "微软雅黑";
 }
 
@@ -17,7 +17,7 @@ li {
 
 a {
     text-decoration: none;
-    color: rgb(222, 105, 27);
+    color: rgb(21, 21, 20);
 }
 
 input {
@@ -106,4 +106,207 @@ input {
 
 .nav ul li a:hover {
     color: rgb(250, 134, 19);
+}
+
+.left {
+    width: 450px;
+}
+
+.left img {
+    float: left;
+    height: 240px;
+    width: 400px;
+}
+
+.right {
+    height: 240px;
+    width: 570px;
+    margin: px auto;
+    /* margin 如果有四个参数，则分别代表上、右，下、左外边距 margin: 20px auto代表上下边距为20，左右水平对齐*/
+    font-size: 15px;
+    color: rgb(135, 134, 134);
+}
+
+.toptitle {
+    line-height: 25px;
+    border-bottom: 1px solid #000;
+}
+
+.title {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+}
+
+.more {
+    float: right;
+    font-size: 15px;
+}
+
+.news_list ul li {
+    /* border-bottom: 1px dashed rgb(59, 59, 59); */
+    padding: 5px 0px 5px 5px;
+    background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    text-align: right;
+    font-size: 14px;
+}
+
+.news_list ul li a {
+    float: left;
+    /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+}
+
+.news_list a:link {
+    color: rgb(185, 31, 31);
+}
+
+.news_list a:visited {
+    color: rgb(231, 105, 103);
+}
+
+.news_list a:hover {
+    color: #000;
+}
+
+.news_list a:active {
+    color: rgb(198, 30, 145);
+}
+
+.s1 {
+    border-bottom: 1px dashed #000;
+}
+
+.s1 .f1 img {
+    width: 90px;
+    height: 85px;
+    float: left;
+    margin: 1px;
+    border: 1px solid rgb(24, 24, 24);
+    padding: 2px;
+}
+
+.zw {
+    font-size: 10px;
+    line-height: 20px;
+    color: #000;
+}
+
+.f2 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.f2 a:visited {
+    color: rgb(40, 111, 177);
+}
+
+.f2 a:hover {
+    color: #000;
+}
+
+.f2 a:active {
+    color: rgb(198, 30, 145);
+}
+
+.kuo1 img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.wen {
+    text-align: center;
+}
+
+.news_list1 ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5px 0px 5px 5px;
+    background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    text-align: right;
+    font-size: 14px;
+}
+
+.news_list1 ul li a {
+    float: left;
+    /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+}
+
+.news_list1 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.news_list1 a:visited {
+    color: rgb(21, 21, 21);
+}
+
+.news_list1 a:hover {
+    color: rgb(220, 36, 36);
+}
+
+.news_list1 a:active {
+    color: rgb(198, 30, 145);
+}
+
+.kuo2 img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.kuo3 img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.kuo4 img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.wen a:link {
+    color: rgb(185, 31, 31);
+}
+
+.wen a:visited {
+    color: rgb(40, 111, 177);
+}
+
+.wen a:hover {
+    color: #000;
+}
+
+.wen a:active {
+    color: rgb(198, 30, 145);
+}
+
+.news_list2 ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5px 0px 5px 5px;
+    background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    text-align: right;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.news_list2 ul li a {
+    float: left;
+    /*元素的浮动：float :left 左浮动，float:right 右浮动，超链接a标签是行类元素，不能设置大小，不会自动换行;*/
+}
+
+.news_list2 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.news_list2 a:visited {
+    color: rgb(19, 122, 225);
+}
+
+.news_list2 a:hover {
+    color: rgb(14, 14, 14);
+}
+
+.news_list2 a:active {
+    color: rgb(198, 30, 145);
 }

@@ -3,10 +3,11 @@
     padding: 0;
 }
 body{
+    /* width: 100%; */
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif,"΢���ź�";
+    font-family: Arial, Helvetica, sans-serif,"Î¢ÈíÑÅºÚ";
 }
 ul,
 li{
@@ -24,7 +25,7 @@ input{
     margin: 0 auto;
     /* border: 1px red; */
 }
-/* ������� */
+/* 清楚浮动 */
 .clearfix:before,
 .clearfix:after{
  content: "";
@@ -36,7 +37,8 @@ input{
 .clearfix{
     zoom: 1;
 }
-/* ͷ����½���� */
+/* 头部登陆部分 */
+/* 头部 */
 .logo{
     float: left;
 }
@@ -65,6 +67,7 @@ input{
     height: 150px;
     background-color: #4eb4d3;
 }
+/* 导航栏 */
 .nav{
     height: 40px;
     background-color: #055f98;
@@ -82,4 +85,295 @@ input{
 .nav ul li a:hover{
     color: rgb(230, 151, 48);
     cursor: pointer;
+}
+/* 新闻 */
+.pict img{
+    width: 440px;
+    height: 240px;
+    float: left;
+    margin-top: 10px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+}
+.box .pict{
+    position: relative;
+    width: 440px;
+}
+.box .pict .tx1{
+    width: 440px;
+    height: 53px;
+    position: absolute;
+    top: 198px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.box .pict .tx1 p{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: aliceblue;
+    padding-left: 10px;
+    margin-top: 8px;
+}
+.box .pict .tx1 a{
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: aliceblue;
+    padding-left: 10px;
+    text-decoration: underline;
+}
+.new_list{
+    width: 540px;
+    height: 240px;
+    float: right;
+    margin-top: 10px;
+}
+.nest{
+    color: rgb(1, 1, 1);
+    font-size: 18px;
+}
+.more{
+    color: black;
+    float: right
+}
+a{
+    color: black;
+    font-size: 14px;
+}
+li a:hover{
+    color: red;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+ul span{
+    float: right;
+    color: darkgray;
+}
+.new_list ul li{
+    padding: 3.5px 0 3.5px 4px;
+}
+/* 房产 */
+.toppic img{
+    height: 100px;
+    margin-top: 10px;
+}
+.btmbox{
+    width: 440px;
+    height: 260px;
+    float: left;
+}
+.more1{
+    float: right;
+}
+.nest{
+    width: 440px;
+    font-size: 14px;
+}
+.x1{
+    width: 440px;
+}
+.fc{
+    width: 440px;
+    float: left;
+    display: block;
+}
+.t1 img{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.t1{
+    padding: 4px;
+    border:1px solid rgb(138, 138, 138);
+    margin: 5px 5px 0px 5px;
+    float: left;
+}
+.tx2{
+    color: #055f98;
+    font-size: 16px;
+    margin-top: 4px;
+}
+.tx3{
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.k{
+   border-bottom: 2px dotted  #4eb4d3;
+   margin-top: 10px;
+}
+.t2 img{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.t2{
+    padding: 4px;
+    border:1px solid rgb(138, 138, 138);
+    margin: 5px 5px 0px 5px;
+    float: left;
+}
+.tx4{
+    color: #055f98;
+    font-size: 16px;
+    margin-top: 4px;
+}
+.tx5{
+    color: black;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.k1{
+    border-bottom: 2px dotted  #4eb4d3;
+    margin-top: 24px;
+}
+.educat{
+    width: 540px;
+    height: 260px;
+    float: right;
+    margin-top: 10px;
+}
+.nest1{
+    width: 540px;
+}
+.more2{
+    float: right;
+}
+.x2{
+    width: 540px;
+}
+.tp1 ul li img{
+    display: block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.txo1{
+    float: left;
+    color: #4eb4d3;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.txo2{
+    float: left;
+    color: #4eb4d3;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 45px;
+}
+.txo3{
+    float: left;
+    color: #4eb4d3;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 26px;
+}
+.txo4{
+    float: left;
+    color: #4eb4d3;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 28px;
+}
+.new_list1{
+    width: 540px;
+    float: right;
+    margin-top: 6px;
+    font-weight: 500;
+}
+.new_list1 ul li{
+    padding: 5.3px 0 5.3px 4px;
+    border-bottom: 1px dashed rgb(180, 178, 178);
+}
+/* 旅游 */
+.travel img{
+    height: 100px;
+    margin-top:10px;
+}
+.enter{
+   width: 440px;
+   height: 260px;
+   float: left;
+}
+.qy{
+    width: 540px;
+    height: 260px;
+    float: right;
+    margin-top: 10px;
+}
+.new_list2{
+    width: 540px;
+    float: right;
+    margin-top: 2px;
+    font-weight: 500;
+}
+.new_list2 ul li{
+    padding: 4.5px 0 4.5px 4px;
+    border-bottom: 1px dashed rgb(180, 178, 178);
+}
+/* 家居 */
+.fame img{
+    height: 100px;
+    margin-top: 10px;
+}
+.jiaren{
+    width: 440px;
+    height: 260px;
+    float: left;
+}
+.ren{
+    width: 540px;
+    height: 260px;
+    float: right;
+    margin-top: 10px;
+}
+/* 美食 */
+.food img{
+    height: 100px;
+    margin-top: 10px;
+}
+.foodhotel{
+    width: 440px;
+    height: 260px;
+    float: left;
+}
+.hotel{
+    width: 540px;
+    height: 260px;
+    float: right;
+    margin-top: 10px;
+}
+/* 页尾 */
+.footer{ 
+    height: 110px; 
+    margin-top: 280px; 
+} 
+.fuwu{
+    height: 110px;
+    background-color: #4eb4d3;
+    margin: 0 auto;
+    margin-top: 260px;
+    padding-left: 380px;
+}
+.item1{
+    float: left;
+    margin: 12.5px auto;
+    margin-right: 100px;
+}
+.item a{
+    display: inline-block;
+    line-height: 21px;
+}
+.item a:hover{
+    color: rgb(222, 28, 122);
+} 
+/* 版权 */
+.copyright{
+    height: 30px;
+    background-color: rgb(207, 152, 70);
+}
+.copyright .copy{
+    color: rgb(41, 118, 185);
+    width: 315px;
+    margin: 10px auto;
 }
