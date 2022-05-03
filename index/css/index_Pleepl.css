@@ -75,6 +75,10 @@ input {
     width: 60px;
 }
 
+h2 {
+    color: rgb(81, 81, 81);
+}
+
 
 /* .login ul li a {
     font-weight: bold;
@@ -126,10 +130,6 @@ input {
     height: 250px;
 }
 
-.link {
-    padding-left: 48px;
-}
-
 .b_link {
     width: 180px;
     float: left;
@@ -176,7 +176,7 @@ input {
 
 .fc1 {
     float: left;
-    border-bottom: 1px dashed rgb(204, 204, 204);
+    border-bottom: 1px dashed #999898;
 }
 
 .fc1 img {
@@ -195,6 +195,56 @@ input {
     padding-top: 5px;
 }
 
-.jytp img {
-    padding: 5px 4px;
+.jy {
+    height: 120px;
+}
+
+.jy img {
+    width: 125px;
+    padding: 5px 0px;
+}
+
+.jy ul li {
+    height: 100px;
+    width: 135px;
+    float: left;
+}
+
+.jy ul li a {
+    color: #144bff;
+    font-size: 11px;
+    padding-left: 6px;
+}
+
+.jylist {
+    padding-top: 5px;
+}
+
+.jylist li {
+    padding-left: 4px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px dashed #999898;
+}
+
+.jylist li span {
+    padding-right: 10px;
+    float: right;
+}
+
+.footer {
+    background-color: #055f98;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.link1 {
+    /* background-color: #055f98; */
+    padding-left: 220px;
+    width: 1000px;
+    margin: 0 auto
+}
+
+.copyright {
+    line-height: center;
 }
