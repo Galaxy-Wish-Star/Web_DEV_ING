@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(203, 231, 248);
+    font-size: 14px;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+
+input {
+    padding: 4px;
+    size: 20px;
+}
+
+.top,
+.box {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/* 头部 */
+
+.logo {
+    float: left;
+}
+
+.login {
+    float: right;
+    margin-top: 1.2px;
+}
+
+.login ul li {
+    float: left;
+    margin-left: 10px;
+    line-height: 39px;
+    height: 39px;
+}
+
+.login ul li span {
+    color: rgb(225, 138, 17);
+    font-weight: bold;
+}
+
+.login input {
+    width: 60px;
+}
+
+h2 {
+    color: rgb(81, 81, 81);
+}
+
+
+/* .login ul li a {
+    font-weight: bold;
+} */
+
+.login ul li a:hover {
+    color: rgb(225, 138, 17);
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #4eb4d3;
+}
+
+.nav {
+    height: 48px;
+    background: #055f98;
+}
+
+.nav .box ul li {
+    float: left;
+    line-height: 48px;
+    margin: 0px 10px;
+}
+
+.nav .box ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav .box ul li a:hover {
+    font-weight: bold;
+    color: rgb(225, 138, 17);
+}
+
+
+/* 新闻 */
+
+.xw_left,
+.fc_left,
+.ly_left,
+.jj_left,
+.ms_left {
+    float: left;
+}
+
+.xw_left img {
+    width: 445px;
+    height: 250px;
+}
+
+.b_link {
+    width: 180px;
+    float: left;
+    margin: 12.5px auto;
+}
+
+.link a {
+    display: inline-block;
+    line-height: 21px;
+}
+
+.link a:hover {
+    color: #FE700C;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.news_list a {
+    font-weight: bold;
+    /* line-height: 30px;
+    font-size: 20px; */
+    text-decoration: none;
+    color: rgb(61, 60, 60);
+}
+
+.news_list ul li {
+    list-style: none;
+    border-bottom: 1px dashed #999898;
+    padding: 6px 0px 6px 14px;
+}
+
+.news_list a:hover {
+    color: rgb(0, 134, 252);
+    /* font-size: 28px; */
+    font-weight: bold;
+    transition: all 0.5s;
+    /*悬停，延迟*/
+}
+
+
+/* 房产教育 */
+
+.fc1 {
+    float: left;
+    border-bottom: 1px dashed #999898;
+}
+
+.fc1 img {
+    margin: 5px;
+    float: left;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.fc_left {
+    height: 220px;
+}
+
+.fc_left h3 {
+    padding-top: 5px;
+}
+
+.jy {
+    height: 120px;
+}
+
+.jy img {
+    width: 125px;
+    padding: 5px 0px;
+}
+
+.jy ul li {
+    height: 100px;
+    width: 135px;
+    float: left;
+}
+
+.jy ul li a {
+    color: #144bff;
+    font-size: 11px;
+    padding-left: 6px;
+}
+
+.jylist {
+    padding-top: 5px;
+}
+
+.jylist li {
+    padding-left: 4px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px dashed #999898;
+}
+
+.jylist li span {
+    padding-right: 10px;
+    float: right;
+}
+
+.footer {
+    background-color: #055f98;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.link1 {
+    /* background-color: #055f98; */
+    padding-left: 220px;
+    width: 1000px;
+    margin: 0 auto
+}
+
+.copyright {
+    line-height: center;
+}
