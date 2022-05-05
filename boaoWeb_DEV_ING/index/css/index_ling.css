@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0 auto;
+    background-image: linear-gradient(181deg, #ffffff 0%, #ababab 100%);  /* 渐变背景 */
+    font-family: "微软雅黑";
+    font-size: 14px;
+    background-repeat: no-repeat;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 187, 0);
+}
+
+.news_list a:hover {
+    color: rgb(255, 0, 0);      
+    font-size: 18px;
+    transition: all 0.6s;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+/*新闻内容*/
+.news_list ul li{
+    /* letter-spacing:2px; */
+    border-bottom: 2px dashed #c4c4c4;
+    padding: 6px 0px 6px 14px;
+    background: url(../media_file/img/博鳌页面-页尾.png) no-repeat left center;
+}
+
+a.newcr{
+    color:#000;
+    text-decoration: none;
+}
+
+/*页脚*/
+a.asd{
+    text-decoration: none;
+    color: rgb(255, 85, 0);
+}
+
+/*新闻文字渲染*/
+a.news{
+    text-decoration: none;
+    color: rgb(111, 0, 255);
+}
+
+
+
+input{
+    padding: 2px;
+}
+
+.box {  /* 居中 */
+    width: 1000px;
+    margin: 0 auto; 
+}
+
+/* 清除浮动 */
+.cleargfix:before,
+
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+hr{ 
+    line-height: 20px;  /*线高度*/
+    margin-top: 5px;
+    width: 440px;
+    border-bottom: 3px solid #969696; /*下划线：像素 实线 颜色*/
+}
+
+.right hr{
+        line-height: 20px;  /*线高度*/
+        margin-top: 5px;
+        width: 540px;
+        border-bottom: 3px solid #969696; /*下划线：像素 实线 颜色*/
+}
+
+/* 头部模块 */
+.logo{
+    float: left;
+}
+.login{
+    float: right;
+    margin-top: 12px;
+}
+
+.login ul li{
+    float: right;
+    margin-left: 15px;
+    line-height: 23px;
+}
+.login ul li span{
+    color: #fdbb4a;
+    font-weight: bold;
+
+}
+.login input{
+    width: 50px;
+}
+.login ul li a{
+    font-weight: bold;
+}
+.login ul li a:hover{
+    color: aqua;
+}
+.nav{
+    height: 50px;
+    background-color: #05987f;
+}
+.banner{
+    height: 150px;
+    background-color:#4EB4D3;
+}
+.nav ul li{
+    float: left;
+    line-height: 49px;
+}
+.nav ul li a{
+    display: block;/* 将a转换为块元素 */
+    padding: 0 30px;    /* 控制左右内边距 */
+    color: #fff;
+    font-weight: bold;  /* 字体加粗 */
+    font-size: 18px;
+}
+.nav ul li:first-child{ /* 选中指定路径的第一个元素 */
+    margin-left: -10px;
+}
+
+.nav ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 24px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
+
+.copyright{
+    height: 30px;
+    background-color: #0c55f2;
+    margin-top: 10px;
+}
+.copyright .copy{
+    color: rgb(212, 212, 212);
+    width: 315px;
+    margin: 10px auto;
+}
+.foolter{
+    height: 110px;
+    background-color: #5c00fb;
+    margin: 270px auto auto ;
+}
+.fuwu{
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 200px;
+}
+.item1{
+    float: left;
+    margin: 12.5px auto;
+    padding-right: 120px;
+}
+
+.item a{
+    display: inline-block;
+    line-height: 21px;
+}
+.item a:hover{
+    color: #FE700C;
+}
+
+/* 新闻模块 */
