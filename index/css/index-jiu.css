@@ -315,8 +315,37 @@ a:active {
 }
 
 .footer {
-    width: 1000px;
     height: 130px;
     background-color: grey;
     margin: 10px auto;
+}
+
+.table a:visited {
+    color: #fff;
+}
+
+.table a:hover {
+    color: black;
+}
+
+.link {
+    height: 130px;
+    color: grey;
+}
+
+.footer {
+    height: 120px;
+    margin-top: 770PX;
+    background-color: grey;
+}
+
+.table {
+    width: 1000px;
+    margin: 0 auto;
+    margin-left: 400px;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
 }
