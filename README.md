@@ -1,5 +1,5 @@
 # Web_DEV_ING
-Galaxy-Wish-Star团队的学习进程，开发一个类似博鳌论坛的web界面
+Galaxy-Wish-Star团队的学习进程，开发web界面专用
 
 此仓库为web开发存储，当创建与修改仓库内容时应遵循以下几点：
 
