@@ -186,7 +186,11 @@ input {
     padding: 2px;
 }
 
-.zw {
+.f2 .bt {
+    line-height: 30px;
+}
+
+.f2 .zw {
     font-size: 10px;
     line-height: 20px;
     color: #000;
@@ -216,6 +220,11 @@ input {
 
 .wen {
     text-align: center;
+}
+
+.wen a {
+    display: block;
+    line-height: 35px;
 }
 
 .news_list1 ul li {
@@ -309,4 +318,32 @@ input {
 
 .news_list2 a:active {
     color: rgb(198, 30, 145);
+}
+
+.y1 ul li a {
+    /* color: rgb(251, 240, 240); */
+    line-height: 25px;
+    margin: 10px 30px;
+}
+
+.y1 a:link {
+    color: rgb(185, 31, 31);
+}
+
+.y1 a:visited {
+    color: rgb(243, 244, 246);
+}
+
+.y1 a:hover {
+    color: rgb(49, 107, 193);
+}
+
+.y1 a:active {
+    color: rgb(198, 30, 145);
+}
+
+.copyright {
+    text-align: center;
+    color: rgb(135, 133, 133);
+    font-size: 15px;
 }
