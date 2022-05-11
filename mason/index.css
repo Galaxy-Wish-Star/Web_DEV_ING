@@ -1,0 +1,61 @@
+@font-face {
+    /* 指定字体的名字 */
+font-family:'myfont' ;
+/* 服务器中字体的路径 */
+src: url('./font/FZSuHJW.TTF') format("truetype");
+
+}
+body {
+  background-color: rgb(246, 246, 246);
+}
+.welcome ul li {
+  float: left;
+  margin: 0 4px;
+}
+.right-welcome ul li {
+  float: right;
+  margin: 0 4px;
+}
+.welcome {
+  float: left;
+}
+.banner {
+  background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
+  height: 30px;
+  border-bottom: 1px solid rgb(13, 100, 197);
+}
+.center {
+  width: 1226px;
+  margin: 0 auto;
+}
+.center a,
+.line,
+li {
+  color: #fff;
+  line-height: 30px;
+  margin: 0 10px;
+  font-size: 12px;
+}
+.welcome ul li:first-child {
+  line-height: 30px;
+  font-size: 12px;
+}
+.banner2 {
+  height: 100px;
+  background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
+}
+
+.banner2 .center .logo-left ul li{
+  float: left;
+}
+
+.banner2 .center .logo-left ul li:first-child{
+margin-top: 6px;
+border-right: 1px solid rgb(13, 100, 197);;
+}
+.banner2 .center .logo-left ul li:last-child{
+    line-height: 100px;
+    margin-left: 20px;
+    font-family: 'myfont';
+    font-size: 20px;
+}
