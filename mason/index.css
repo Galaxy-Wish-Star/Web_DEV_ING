@@ -1,9 +1,8 @@
 @font-face {
-    /* 指定字体的名字 */
-font-family:'myfont' ;
-/* 服务器中字体的路径 */
-src: url('./font/FZSuHJW.TTF') format("truetype");
-
+  /* 指定字体的名字 */
+  font-family: "myfont";
+  /* 服务器中字体的路径 */
+  src: url("./font/FZSuHJW.TTF") format("truetype");
 }
 body {
   background-color: rgb(246, 246, 246);
@@ -45,17 +44,115 @@ li {
   background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
 }
 
-.banner2 .center .logo-left ul li{
+.banner2 .center .logo-left ul li {
   float: left;
+  margin: 0 0 0 -9px;
 }
 
-.banner2 .center .logo-left ul li:first-child{
-margin-top: 6px;
-border-right: 1px solid rgb(13, 100, 197);;
+.banner2 .center .logo-left ul li:first-child {
+  margin-top: 6px;
+  border-right: 1px solid rgb(13, 100, 197);
 }
-.banner2 .center .logo-left ul li:last-child{
-    line-height: 100px;
-    margin-left: 20px;
-    font-family: 'myfont';
-    font-size: 20px;
+.banner2 .center .logo-left ul li:last-child {
+  line-height: 100px;
+  margin-left: 20px;
+  font-family: "myfont";
+  font-size: 20px;
+}
+.search-wrapper {
+  float: right;
+  margin-top: 40px;
+}
+.search-wrapper .search-inp {
+  box-sizing: border-box;
+  width: 264px;
+  border: none;
+  float: left;
+  padding: 0 10px;
+  height: 32px;
+  font-size: 16px;
+  border: 1px solid rgb(224, 224, 224);
+  outline: none;
+}
+.search-wrapper .search-btn {
+  float: left;
+  height: 32px;
+  width: 52px;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  color: #616161;
+  font-size: 16px;
+  border: 1px solid rgb(224, 224, 224);
+  border-left: none;
+}
+
+/* 设置input获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button {
+  border-color: rgb(13, 100, 197);
+}
+.search-box .search-wrapper .search .search-btn i {
+  height: 32px;
+}
+.box .nav ul li {
+  float: left;
+  padding: 0 61px;
+  font-size: 20px;
+  color: #616161;
+  border-right: 1px solid #616161;
+}
+.box .nav ul li:last-child {
+  border-right: none;
+}
+
+a:hover {
+  color: rgb(134, 191, 50);
+}
+
+.nav {
+  line-height: 60px;
+}
+.box .nav ul li:hover {
+  background-color: #1d99e3;
+}
+.img2 img {
+  width: 100%;
+}
+.img2 {
+  width: 100%;
+}
+
+.img-info p:first-child {
+  font-family: "myfont";
+  font-size: 45px;
+  color: rgb(104, 150, 36);
+  position: relative;
+  top: -350px;
+  left: 398px;
+}
+.img-info p:not(fist-child) {
+  color: rgb(134, 191, 50);
+  font-size: 12px;
+  position: relative;
+  top: -340px;
+  left: 350px;
+}
+.img-info p:last-child {
+  top: -350px;
+  left: 290px;
+}
+.mother-box .sever h1 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+}
+.mother-box .sever p {
+  font-size: 14px;
+  color: #616161;
+}
+.severr{
+    width: 1000px;
+    height: 700px;
+    background-color: #1d99e3;
 }

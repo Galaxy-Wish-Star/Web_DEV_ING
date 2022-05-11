@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta chadrset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>新闻列表页</title>
+    <style>
+    *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+    }
+    a:hover{
+        color: rgb(230, 8, 8);
+        font-size: 18px;
+        transition: all 0.4s;
+    }
+        
+    img{
+    height:0 auto;
+    width: 100%;
+       }
+    .box{
+        width: 1000px;
+        margin: 20px auto;
+        /* margin如果有四个参数，则分别表示上，右，下，左外边距；auto 代表上下外边距为20  左右居中*/
+        background-color:rgb(255, 255, 255);
+        /* 背景颜色 */
+
+    }   
+    .page{
+        text-align: center;
+    }
+    ul span{
+        float: right;
+    }
+    .title{
+        font-size: 30px;
+        color: blue;
+        line-height: 60px;
+    }
+    ul,
+    li{
+        list-style: none;
+        /* 去掉无序列表左边的小圆点 */
+    }
+    a{
+        text-decoration: none;
+        /* 去掉默认的下划线 */
+        color: black;
+        font-size: 14px;
+    }
+    li {
+        border-bottom: 1px dashed rgb(180, 178, 178);
+        padding: 5px 0 5px 8px;
+        background: url(../media_file/img/list_dot.jpg) no-repeat left center;
+    }
+    
+</style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../media_file/img/博鳌页面-页头.png" alt="">
+    </div>
+    <div class="box">
+        <div class="title">新闻</div>
+        <hr class="o">
+        <div class="new.list">
+            <ul>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+                <li><a href="">为了美好的明天</a><span>2022-03-17</span></li>
+            </ul>
+        </div>
+        <div class="page">
+            <a href="">首页|</a>
+            <a href="">下一页|</a>
+            <a href="">上一页|</a>
+            <a href="">尾页|</a>跳转到 <input type="text" style="width: 20px;"> 页|当前第<span style="color: black;">1</span>页|共50页
+        </div>
+
+    </div>
+    <div class="footer">
+        <img src="../media_file/img/博鳌页面-页尾.png" alt="">
+    </div>
+</body>
+
+</html>

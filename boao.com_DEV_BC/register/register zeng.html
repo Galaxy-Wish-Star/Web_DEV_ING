@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .box {
+        width: 800px;
+        margin: 20px auto;
+    }
+    
+    .title {
+        font-size: 26px;
+        font-weight: bold;
+        color: rgb(16, 15, 15);
+        padding-bottom: 5px;
+        border-bottom: 2px solid rgb(47, 46, 46);
+    }
+    
+    .registform {
+        width: 400px;
+        margin: 10px auto;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    .registform ul li {
+        float: left;
+    }
+    
+    .registform ul {
+        clear: both;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .ts1 {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "微软雅黑";
+        width: 80px;
+        text-align: right;
+        color: rgb(31, 30, 30);
+        margin-right: 15px;
+    }
+    
+    .ts2 {
+        font-size: 14px;
+        color: rgb(105, 105, 105);
+        margin-left: 10px;
+    }
+    
+    input,
+    select {
+        padding: 4px;
+        border-radius: 5px;
+        background-repeat: 5px;
+        margin-right: 5px;
+    }
+    
+    .yzm {
+        width: 80px;
+        height: 28px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    
+    .zc {
+        font-size: 18px;
+        font-weight: bold;
+        width: 240px;
+        height: 40px;
+        margin-left: 120px;
+        background-repeat: 5px;
+    }
+    
+    .ty {
+        margin-left: 30px;
+    }
+</style>
+
+<body>
+    <div class="hearter">
+        <img src="../media_file/img/博鳌页面-页头.png">
+    </div>
+    <div class="box">
+        <div class="title">用户注册</div>
+        <form class="registform">
+            <ul>
+                <li class="ts1">用户名</li>
+                <li><input type="text"></li>
+                <li class="ts2">请输入用户名</li>
+            </ul>
+            <ul>
+                <li class="ts1">密码</li>
+                <li><input type="password"></li>
+                <li class="ts2">请输入密码</li>
+            </ul>
+            <ul>
+                <li class="ts1">确认密码</li>
+                <li><input type="password"></li>
+                <li class="ts2">请再次确认密码</li>
+            </ul>
+            <ul>
+                <li class="ts1">性别</li>
+                <li><input type="radio" name="sex">&nbsp;男&nbsp;&nbsp;&nbsp;<input type="radio" name="sex">&nbsp;女</li>
+                <!-- /* radio单选按钮 &nbsp空格 */ -->
+            </ul>
+            <ul>
+                <li class="ts1">所在地区</li>
+                <li><select name="" id="">
+                    <option value="">四川</option>
+                    <option value="">重庆</option>
+                    <option value="">贵州</option>
+                    <option value="">北京</option>
+                    <option value="">上海</option>
+                    <option value="">深圳</option>
+                </select>&nbsp;省
+                    <!-- select下拉 option选择 -->
+                    <select name="" id="">
+                    <option value="">成都</option>
+                    <option value="">绵阳</option>
+                    <option value="">南充</option>
+                    <option value="">广安</option>
+                    <option value="">遂宁</option>
+                    <option value="">攀枝花</option>
+                </select>&nbsp;市
+                </li>
+            </ul>
+            <ul>
+                <li class="ts1">手机号</li>
+                <li><input type="text"></li>
+                <li><button class="yzm">获取验证码</button></li>
+            </ul>
+            <ul>
+                <li class="ts1">验证码</li>
+                <li><input type="text"></li>
+                <li class="ts2">请输入验证码</li>
+            </ul>
+            <ul>
+                <li><input type="checkbox" class="ty">&nbsp;同一用户注册协议</li>
+
+            </ul>
+            <div class="zc">
+                <ul>
+                    <input type="button" value="登&nbsp;&nbsp;&nbsp;&nbsp;录">
+                    <input type="button" value="立即注册">
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <img src="../media_file/img/博鳌页面-页尾.png" alt="">
+    </div>
+</body>

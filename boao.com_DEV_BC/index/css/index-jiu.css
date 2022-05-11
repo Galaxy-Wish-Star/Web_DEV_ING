@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(240, 242, 244);
+    font-size: 15px;
+    font-family: Arial, Helvetica, "微软雅黑", "宋体";
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    padding: 2px;
+}
+
+.box {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both
+    /* border: 1px solid rgb(120, 120, 120);*/
+}
+
+
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/*头部模块*/
+
+.logo {
+    float: left;
+}
+
+.login {
+    float: right;
+    margin-top: 10px;
+}
+
+.login ul li {
+    float: left;
+    margin: 10px;
+    line-height: 24px;
+}
+
+.login ul li span {
+    color: orange;
+    font-weight: bold;
+}
+
+.login input {
+    width: 60px;
+}
+
+.login ul li a {
+    font-weight: bold;
+}
+
+.login ul li a:hover {
+    color: orange
+}
+
+.banner {
+    background-color: #4eb4d3;
+    height: 150px;
+}
+
+.nav {
+    height: 48px;
+    background-color: #055f98;
+}
+
+.nav ul li {
+    float: left;
+    line-height: 48px;
+    margin-right: 30px;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    color: yellow;
+}
+
+.left {
+    height: 240px;
+    width: 440px;
+    float: left;
+    margin-top: 10px;
+}
+
+.left img {
+    height: 240px;
+    width: 440px;
+}
+
+.right {
+    height: 240px;
+    width: 540px;
+    margin: 20px auto;
+    /*margin 如果有四个参数，则分别代表上、右、下、左外边距 margin：20px auto代表上下边距20，左右水平对齐*/
+    font-size: 10px;
+    float: right;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    float: left;
+}
+
+.more {
+    float: right;
+    font-size: 18px;
+    margin-left: 15px;
+    line-height: 24px;
+}
+
+.news_list ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5px 0px 5px 5px;
+    height: 14px;
+}
+
+.news_list ul li a {
+    float: left;
+    font-size: 14px;
+    /*元素浮动：float:left—左浮动，float：right—右浮动 超链接a标签是行内元素，不能设置大小，不会自动换行*/
+}
+
+.news_list ul li span {
+    float: right;
+}
+
+.toptitle {
+    border-bottom: 1px solid #000;
+}
+
+.s1 .f1 img {
+    width: 90px;
+    height: 85px;
+    float: left;
+    margin: 1px;
+    border: 1px solid rgb(24, 24, 24);
+    padding: 2px;
+}
+
+.s1 {
+    width: 440px;
+    height: 100px;
+    margin: 5px;
+    border-bottom: 1px dashed #000;
+}
+
+.wz {
+    font-size: 10px;
+    line-height: 20px;
+    color: #000;
+}
+
+.right {
+    height: 240px;
+    width: 540px;
+    float: right;
+    margin-top: 10px;
+}
+
+.b {
+    width: 500px;
+    height: 90px;
+    float: left;
+    margin: 10px auto;
+}
+
+.s {
+    width: 110px;
+    height: 90px;
+    float: left;
+    margin: auto 10px;
+}
+
+.s img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.wen {
+    text-align: center;
+    font-size: 13px;
+}
+
+.q {
+    width: 110px;
+    height: 90px;
+    float: left;
+    margin: auto 10px;
+}
+
+.q img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.c {
+    width: 110px;
+    height: 90px;
+    float: left;
+    margin: auto 10px;
+}
+
+.c img {
+    width: 110px;
+    height: 60px;
+    float: left;
+}
+
+.g {
+    width: 110px;
+    height: 90px;
+    float: left;
+}
+
+.g img {
+    width: 110px;
+    height: 60px;
+    float: right;
+}
+
+.news_list {
+    width: 540px;
+    height: 110px;
+    float: left;
+    margin: 2px auto;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: pink;
+}
+
+.news_list a:visited {
+    color: #000
+}
+
+.news_list a:hover {
+    color: blue;
+}
+
+.new_list ul li {
+    border-bottom: 1px dashed rgb(59, 59, 59);
+    padding: 5.3px 0px 5.3px 5.3px;
+    height: 15px;
+}
+
+.new_list ul li a {
+    float: left;
+    font-size: 16px;
+    /*元素浮动：float:left—左浮动，float：right—右浮动 超链接a标签是行内元素，不能设置大小，不会自动换行*/
+}
+
+.new_list ul li span {
+    float: right;
+}
+
+.toptitle {
+    border-bottom: 1px solid #000;
+}
+
+.new_list a:visited {
+    color: #000;
+}
+
+.new_list a:hover {
+    color: blue;
+}
+
+.footer {
+    height: 130px;
+    background-color: grey;
+    margin: 10px auto;
+}
+
+.table a:visited {
+    color: #fff;
+}
+
+.table a:hover {
+    color: black;
+}
+
+.link {
+    height: 130px;
+    color: grey;
+}
+
+.footer {
+    height: 120px;
+    margin-top: 770PX;
+    background-color: grey;
+}
+
+.table {
+    width: 1000px;
+    margin: 0 auto;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}

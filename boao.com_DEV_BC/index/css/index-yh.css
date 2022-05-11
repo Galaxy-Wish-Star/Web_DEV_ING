@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 auto;
+    border-color: aliceblue;
+    font-size: 14px;
+    font-family: Arial,Helvetica,;
+}
+.box {
+    width: 1000px;
+}
+.login ul li{
+    list-style: none;
+}
+a{
+  text-decoration: none;  
+  color: rgb(0, 0, 0);
+}
+input{
+    padding: 2px;
+}
+.box{
+    width: 1000px;
+    margin: 0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+.logo{
+    float: left;
+}
+.login{
+    float: right;
+    line-height: 14px;
+}
+.login ul li {
+    float: left;
+    margin-left: 15px;
+}
+.login ul li span{
+    color: rgb(0, 0, 0);
+   font-weight: bold;
+}
+.login input{
+    width: 60px;
+}
+.login ul li a{
+    font-weight: bold;
+}
+.login ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+.banner{
+    height: 150px;
+    background-color: aqua;
+
+}
+.nav{
+    height: 49px;
+    background-color: #055F98;
+}
+.nav ul li{
+   float: left;
+   line-height: 49px;
+   list-style: none;
+}
+.h1{
+    height: 150px;
+    background-color: #30B1C0;
+}
+.nav ul li a{
+    display: block;
+    padding: 0 17px;   
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.nav ul li:first-child{ /* 选中指定路径的第一个元素 */
+    margin-left: -10px;
+}
+.nav ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 24px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}
+.h2 img{
+    height: 240px;
+    width: 440px;
+    float: left;
+    margin-top: 10px;
+}
+h3 img {
+    height: 100px;
+    margin-top: 260px;
+}
+h4 img {
+    height: 100px;
+    margin-top: 260px;
+}
+h5 img {
+    height: 100px;
+    margin-top: 260px;
+}
+h6 img {
+    height: 100px;
+    margin-top: 260px;
+}
+.y1 .more{
+    float: right;
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    left: 1196px;
+}
+.y1 ul li span{
+    float: right;
+}
+.y1 ul li a{
+    color: rgb(32, 32, 32);
+}
+.y1 ul li {
+    color: rgb(76, 76, 76);
+}
+.y1 ul li{
+    padding-top: 5px;
+}
+.y1 ul li a:hover{ /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #30B1C0;
+    transition: 0.3s;
+    font-size: 20px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+}

@@ -1,0 +1,75 @@
+*{
+    margin: 0;  /*外边距 */
+    padding: 0; /*内边距 */
+    font-size: 18px;    /* 字体大小 */
+}
+
+/* 鼠标悬浮 */
+a:hover {
+    color: aqua;      
+    font-size: 25px;
+    transition: all 0.6s;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:link{
+    color: #001aff;
+}
+
+a:visited{
+    color: rgb(119, 0, 255);
+    transition: none;
+}
+
+.box{
+    width: 1300px;
+    margin: 25px auto;  /*上下外边距20，左右居中/
+    /* margin如果有四个参数则代表上、右、下、左边距 */
+}
+
+    .pages{
+        margin: 40px;
+    }
+
+img{
+    width: 100%;
+    margin-left: -10px;
+}   /* 选中img，设置图片 */
+
+.pages{
+    text-align: center; /*字体：居中*/
+}
+
+.news_list span{
+    float: right;   /* 元素浮动：left right */
+    color: rgb(161, 161, 161);
+}
+
+h1{
+    color: rgb(18, 88, 192);
+    font-size: 40px;    
+    line-height: 70px;  /*线高度*/
+    border-bottom: 5px solid #2e8cff;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;  
+}
+/*：去除下划线效果*/
+
+a:active{
+    color: rgb(255, 0, 0);
+    transition: none;
+}
+
+.news_list ul li{
+    /* letter-spacing:2px; */
+    border-bottom: 2px dashed #c4c4c4;
+    padding: 6px 0px 6px 14px;
+    background: url(../media_file/img/博鳌页面-页尾.png) no-repeat left center;
+}
