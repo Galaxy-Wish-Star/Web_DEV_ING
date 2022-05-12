@@ -11,6 +11,9 @@
 padding: 0;
 font-size: 18px;
 }
+body{
+    background: linear-gradient(200deg,#b1f4cf,#9890e3);
+}
 img{
 height:0 auto;
 width: 100%;
@@ -18,30 +21,43 @@ width: 100%;
 .box{
  width: 400px;
  margin: 20px auto;
- background-color:rgb(238, 238, 238);
  border-radius: 20px;
+ background: linear-gradient(200deg,#b1f4cf,#9890e3);
 }
 .reg{
 text-align: left;
 display: flex;  /* 弹性布局 居中 */
 align-items: center;    /* 垂直居中 */
-justify-content: center;    /* 水平居中 */
 color: rgb(32, 32, 32);
 }
 ul li {
 list-style: none;
 } 
 .dis{
+    margin-bottom: 30px;
+    margin-left: 55px;
     text-align: center;
     color: rgb(27, 27, 28);
-}
-.nice{
-    text-align: center;
 }
 .hie{
-    font-size: 30px;
-    color: rgb(27, 27, 28);
+    font-size: 25px;
+    color: rgb(61, 61, 61);
     margin: 10px 10px ;
+    text-align: center;
+
+}
+.reg ul li span {
+    display: block;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+.reg ul li input{
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 8px;
 }
 </style>
 </head>
@@ -55,13 +71,12 @@ list-style: none;
    <div class="reg">
    <ul>
        <br>
-    <li><span>创建用户</span><input type="text" name="用户名" placeholder="请输入用户名"></li><br>
-    <li><span>创建密码</span><input type="password" name="密码" placeholder="请输入密码"></li><br>
-    <li><span>确认密码</span><input type="password" name="确认密码" placeholder="请确认密码"></li><br>
-    <li>手机号验证<input type="text" style="width: 200px;" class=""placeholder="请输入手机号码"></li><br>
-    <li class="nice"><span>性别</span><input type="radio" name="sex">男<input type="radio" name="sex">女</li><br>
-    <li><span>出生年月日</span><input type="date" max="2222-12-31"  min="1999-01-02"></li><br>
-    <li class="dis"><span><input type="submit" value="注 &nbsp; 册"></span></li>
+    <li><span>创建用户:</span><input type="text" name="用户名" placeholder="请输入用户名"></li><br>
+    <li><span>创建密码:</span><input type="password" name="密码" placeholder="请输入密码"></li><br>
+    <li><span>确认密码:</span><input type="password" name="确认密码" placeholder="请确认密码"></li><br>
+    <li><span>手机号验证:</span><input type="text"  class=""placeholder="请输入手机号码"></li><br>
+    <li><span>验证码:</span><input type="text"  name="验证码" placeholder="验证码"></li><br>
+    <li class="dis"><span><input class="dis" width="10px" type="submit" value="注 &nbsp; 册"></span></li>
     </ul>
    </div>
   </div>
