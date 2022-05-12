@@ -101,6 +101,10 @@ li {
   font-size: 20px;
   color: #616161;
   border-right: 1px solid #616161;
+  font-family: "myfont";
+}
+.box .nav ul li:first-child {
+  margin-left: 47px;
 }
 .box .nav ul li:last-child {
   border-right: none;
@@ -121,6 +125,9 @@ a:hover {
 }
 .img2 {
   width: 100%;
+}
+.img-info {
+  margin-left: 25px;
 }
 
 .img-info p:first-child {
@@ -145,20 +152,263 @@ a:hover {
   left: 245px;
 }
 .mother-box .sever h1 {
-  display: inline-block;
+  display: block;
   font-weight: bold;
   font-size: 20px;
+  margin-left: 260px;
+  color: rgb(134, 191, 50);
 }
 .mother-box .sever p {
-    
+  display: block;
   font-size: 14px;
   color: #616161;
+  margin-left: 425px;
+  color: rgb(134, 191, 50);
 }
-.severr{
-    width: 1000px;
-    height: 700px;
-    background-color: #1d99e3;
-    position: relative;
-    top: -140px;
-    left: 110px;
+
+.jieshao img {
+  width: 100%;
+  margin-top: -85px;
+}
+.jieshao-head {
+  float: left;
+  position: relative;
+  top: -300px;
+  left: 20px;
+}
+.jieshao-tex {
+  float: left;
+  position: relative;
+  top: -250px;
+  left: 20px;
+}
+.jieshao-info {
+  position: relative;
+  width: 200px;
+  top: -75px;
+  left: -680px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d99e3;
+}
+.jieshao-info a {
+  padding: 22px 67px;
+}
+.jieshao-head h1 {
+  color: rgb(134, 191, 50);
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "myfont";
+}
+.jieshao-head h2 {
+  color: rgb(134, 191, 50);
+  margin: 10px 0;
+}
+.jieshao-head h3 {
+  color: #616161;
+  width: 700px;
+  font-size: 14px;
+  line-height: 45px;
+}
+.news-wrapper {
+  /* 设置宽度 */
+  width: 300px;
+  /* 设置高度 */
+  height: 357px;
+  /*设置居中  */
+  margin: 50px auto;
+  /* 设置背景颜色，显示轮廓 */
+  background-color: #fff;
+
+  /* 设置上边框 */
+  border-top: 1px solid #ddd;
+}
+.news-title {
+  /* 为了边框和文字宽度一致，需要将h2转换为行内块元素 */
+  display: inline-block;
+  /* 设置高度 */
+  height: 30px;
+  /* 设置上边框  */
+  border-top: 1px red solid;
+  /* 通过margin-top将h2上移，盖住上边框 */
+  margin-top: -1px;
+
+  padding-top: 10px;
+}
+.news-title a {
+  /* 设置颜色 */
+  color: #40406b;
+  /* 设置文字的加粗效果 */
+  font-weight: bold;
+}
+
+/* 设置图片容器的高度  */
+.news-img img {
+  height: 150px;
+  width: 300px;
+}
+
+.news-img .img-title {
+  /* 向上移动文字 */
+  margin-top: -30px;
+  /* 设置字体颜色 */
+  color: #fff;
+  /* 设置加粗 */
+  font-weight: bold;
+  /* 设置padding */
+  padding-left: 30px;
+}
+.news-list {
+  /* 设置上外边距 */
+  margin-top: 22px;
+  /* 设置左侧的padding */
+  padding-left: 14px;
+
+  /* 设置项目符号 */
+  list-style: square;
+}
+.news-list li {
+  /*设置下外边距  */
+  margin-bottom: 17px;
+}
+.news-list li::before {
+  content: "■";
+  color: rgb(218, 218, 218);
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+/* 设置li中文字 */
+.news-list li a {
+  /* 设置字体大小 */
+  font-size: 14px;
+  /* 设置字体颜色 */
+  color: #666;
+}
+
+/* 设置超链接的鼠标移入的样式 */
+.news-list li a:hover {
+  color: rgb(134, 191, 50);
+}
+.newslistt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
+  border-bottom: 1px solid #666;
+}
+.news-center1 {
+  border-top: 1px solid #666;
+}
+.news-center h1 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: -100px;
+  font-family: "myfont";
+}
+
+.news-center h2 {
+  font-size: 15px;
+  position: relative;
+  top: -60px;
+  text-align: center;
+  color: rgb(117, 117, 117);
+  font-family: "myfont";
+}
+.newslistt {
+  position: relative;
+  top: -60px;
+}
+
+.fuwu {
+  /* 
+      292行左右
+      */
+  width: 1300px;
+  margin: 0px auto;
+  padding-left: 140px;
+  margin-top: 45px;
+}
+.fuwuu .fuwu .item1:not(:nth-child(1)) {
+  padding-left: 100px;
+  border-left: 1px solid #ddd;
+}
+.item1 {
+  /* 
+      293行左右
+      */
+  float: left;
+  margin: 45.5px auto;
+  padding-right: 95px;
+}
+
+.item a {
+  /* 
+      293行左右
+      */
+  color: rgb(179, 179, 179);
+  display: inline-block;
+  line-height: 30px;
+}
+.item a:hover {
+  color: rgb(134, 191, 50);
+}
+.copyright {
+  /* 
+    325行左右
+    */
+  height: 30px;
+  background-color: #d4d4d4;
+}
+.copyright .copy {
+  /* 
+    326行左右
+    */
+  color: rgb(31, 31, 31);
+  width: 315px;
+  margin: 0px auto;
+  padding-top: 6px;
+}
+.foolter {
+  background-color: rgb(37, 37, 37);
+}
+.inof h1{
+color: rgb(134, 191, 50);
+font-family: 'myfont';
+text-align: center;
+font-size: 40px;
+}
+.inof h2{
+  margin-top: 14px;
+  color: #666;
+  font-family: 'myfont';
+  text-align: center;
+
+  }
+.sver-foure{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+.sver-foure .severssss{
+  margin-top: 20px;
+  height: 250px;
+  width: 380px;
+  background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
+}
+.sver-foure .severssss h3{
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.sver-foure .severssss p{
+  font-size: 12px;
 }

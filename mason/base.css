@@ -24,7 +24,7 @@ body{
 /* 设置一个类，用来表示中间容器的宽度 */
 .mother-box{
     /* 固定容器的宽度 */
-    width: 1226px;
+    width: 1300px;
     /* 设置容器居中 */
     margin: 0 auto;
 }
