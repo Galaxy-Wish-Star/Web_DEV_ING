@@ -63,38 +63,98 @@ window.onload = function () {
     }
   });
   // 密码验证
-  //1.获取元素 =表示赋值 右边给左边
-  var password = document.querySelector("#password");
-  var sjts3 = document.querySelector("#sjt3");
-  var wzts3 = document.querySelector("#wzts3");
-  // 2.设置密码验证规则-正则表达式(/^开始 $/结束)
-  var gz3 = /d{8,20}$/;
-  var gz4 = /^[A-z0-9~!@#$%^&()_+`-={};',.]{8,20}$/;
-  var gz5 = /^(=.[a-zA-Z])(=.d).{8,20}$;/
-  var gz6 = /^(=.d)(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/;
-  var gz7 = /^(=.[a-zA-Z])(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/;
-  var gz8 = /^(=.[a-zA-Z])(=.d)(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/;
-  // 3.密码文本框获取焦点或失去焦点时的提示事件
-  password.addEventListener("focus", function () {
-    if (this.value == "") {
-      sjts3.style.display = "block";
-      wzts3.innerText = "请输入密码！";
-    } else {
-      sjts3.style.display = "none";
-    }
-  });
-  // focus 获得焦点
-  password.addEventListener("blur", function () {
-    // sjts.style.display = 'none';
-    if (this.value == "") {
-      wzts3.innerText = "密码不能为空！";
-    } else {
-      if (gz3.test(this.value) === true) {
-        sjts3.style.display = "none";
+  var password = document.querySelector('#password');
+  var sjts2 = document.querySelector('#sjts2');
+  var wzts3 = document.querySelector('#wzts3');
+  var grade1 = document.querySelector('#grade1');
+  var grade2 = document.querySelector('#grade2');
+  var grade3 = document.querySelector('#grade3');
+  var n = 0;
+  var rag3 = /^d{8,20}$/; 
+  var rag4 = /^[A-z0-9~!@#$%^&()_+`-={};',.]{8,20}$/;
+  var rag5 = /^(=.[a-zA-Z])(=.d).{8,20}$/;
+  var rag6 = /^(=.d)(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/; 
+  var rag7 = /^(=.[a-zA-Z])(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/; 
+  var rag8 = /^(=.[a-zA-Z])(=.d)(=.[~!@#$%^&()_+`-={};',.]).{8,20}$/;
+
+  function checkStrong(password) {
+      if (rag8.test(password.value) == true) {
+          n = 3;
       } else {
-        sjts3.style.display = "block";
-        wzts3.innerText = "密码格式错误！";
+          if (rag5.test(password.value) == true &&  rag6.test(password.value) == true && rag7.test(password.value) == true) {
+              n = 2;
+          } else {
+              if (rag4.test(password.value) == true) {
+                  if (rag3.test(password.value) == true) {
+                      n = 0;
+                  } else {
+                      n = 1;
+                  }
+              } else {
+                  n = -1;
+              }
+          }
       }
-    }
-  });
+      return n;
+  }
+  password.addEventListener('focus', function() {
+      if (this.value == '') {
+          sjts2.style.display = 'block';
+          wzts3.innerText = '请输入8-20位密码';
+          wzts3.style.width = '216px';
+          grade1.style.backgroundColor = '#f1eace';
+          grade2.style.backgroundColor = '#f1eace';
+          grade3.style.backgroundColor = '#f1eace';
+      }
+      else {
+                 wzts3.style.display = 'none';
+             }
+  })
+  password.addEventListener('blur', function() {
+      if (this.value == '') {
+          wzts3.innerText = '密码不能为空';
+          sjts2.style.width = '216px';
+          grade1.style.backgroundColor = '#f1eace';
+          grade2.style.backgroundColor = '#f1eace';
+          grade3.style.backgroundColor = '#f1eace';
+      } else {
+          pwdlevel = checkStrong(password);
+          switch (pwdlevel) {
+              case 0:
+                  sjts2.style.display = 'block';
+                  wzts3.innerText = '密码过于简单有被盗风险';
+                  sjts2.style.width = '216px';
+                  grade1.style.backgroundColor = '#016941';
+                  grade2.style.backgroundColor = '#f1eace';
+                  grade3.style.backgroundColor = '#f1eace';
+                  break;
+              case 1:
+                  sjts2.style.display = 'none';
+                  grade1.style.backgroundColor = '#016941';
+                  grade2.style.backgroundColor = '#f1eace';
+                  grade3.style.backgroundColor = '#f1eace';
+                  break;
+              case 2:
+                  sjts2.style.display = 'none';
+                  grade1.style.backgroundColor = '#016941';
+                  grade2.style.backgroundColor = '#016941';
+                  grade3.style.backgroundColor = '#f1eace';
+                  break;
+              case 3:
+                  sjts2.style.display = 'none';
+                  grade1.style.backgroundColor = '#016941';
+                  grade2.style.backgroundColor = '#016941';
+                  grade3.style.backgroundColor = '#016941';
+                  break;
+              default:
+                  sjts2.style.display = 'block';
+                  wzts3.innerText = '密码需为8-20个字符,由字母、数字或符号组成';
+                  sjts2.style.width = '300px';
+                  grade1.style.backgroundColor = '#f1eace';
+                  grade2.style.backgroundColor = '#f1eace';
+                  grade3.style.backgroundColor = '#f1eace';
+                  break;
+          }
+      }
+  })
 };
