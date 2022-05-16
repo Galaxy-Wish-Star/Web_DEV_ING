@@ -74,6 +74,123 @@ window.onload = function() {
 
     })
 
+    // 密码验证
+    //1.获取元素 =表示赋值 右边给左边
+    var password = document.querySelector('#password');
+    var mmts = document.querySelector('#mmts');
+    var wzts3 = document.querySelector('#wzts3');
+    var grade1 = document.querySelector('#grade1');
+    var grade2 = document.querySelector('#grade2');
+    var grade3 = document.querySelector('#grade3');
+    // 声明密码强度级别n
+    var n = 0;
+    var passwordjb = 0;
+    // querySelector 获取
+    // 2.设置密码验证规则-正则表达式(/^开始 $/结束)
+    //全数字(8-20位)
+    var gz3 = /^\d{8,20}$/;
+    //全字母(8-20位)
+    var gz4 = /^[A-Za-z]{8,20}$/;
+    // 全符号(8-20位)
+    var gz5 = /^[!@#$%^&*-=<>{};:'".,?/|`~]{8,20}$/;
+    // 数字+字母
+    var gz6 = /^(?=.*(?=.*\d)[^a-zA-Z]).{8,20}$/;
+    // 数字+符号
+    var gz7 = /^(?=.*\d)(?=.*[!@#$%^&*-=<>{};:'".,?/|`~]).{8,20}$/;
+    // 字母+符号
+    var gz8 = /^[A-Za-z][!@#$%^&*-=<>{};:'".,?/|`~].{8,20}$/;
+    // 数字+字母+符号(?=)正向肯定
+    var gz9 = /^.*(?=.{8,20})(?=.*\d)(?=.*[A-Za-z])(?=.*[!@#$%^&*-=<>{};:'".,?/|`~]).*$/;
+    // 3.定义返回密码n的强度级别的函数
+    function testStrong(password) {
+        if (gz9.test(password.value) == true) {
+            n = 3;
+        } else {
+            if (gz8.test(password.value) == true || gz7.test(password.value) == true || gz6.test(password.value) == true) {
+                n = 2;
+            } else {
+                if (gz5.test(password.value) == true || gz4.test(password.value) == true) {
+                    n = 1;
+                } else {
+                    if (gz3.test(password.value) == true) {
+                        n = 0;
+                    } else {
+                        n = -1;
+                    }
+
+                }
+            }
+        }
+        return n;
+    }
+    // 4.密码框获取焦点或失去焦点时的提示事件
+    password.addEventListener('focus', function() {
+            if (this.value == '') {
+                mmts.style.display = 'block';
+                wzts3.innerText = '请输入8-20的密码！';
+            } else {
+                mmts.style.display = 'none';
+            }
+        })
+        // focus 获得焦点
+    password.addEventListener('blur', function() {
+        // sjts.style.display = 'none';
+        if (this.value == '') {
+            wzts3.innerText = '密码不能为空！';
+        } else {
+            // if (gz9.test(this.value) === true) {
+            //     mmts.style.display = 'none';
+            // } else {
+            //     mmts.style.display = 'block';
+            //     wzts3.innerText = '密码格式错误';
+            // }
+            passwordjb = testStrong(password);
+            switch (passwordjb) {
+                case 0:
+                    mmts.style.display = 'block';
+                    wzts3.innerText = '密码过于简单,有被盗风险！';
+                    grade1.style.backgroundColor = 'red';
+                    grade2.style.backgroundColor = '#elaeab';
+                    grade3.style.backgroundColor = '#elaeab';
+                    break;
+                    // case 1:
+                    //     grade1.style.backgroundColor = 'red';
+                    //     grade2.style.backgroundColor = '#elaeab';
+                    //     grade3.style.backgroundColor = '#elaeab';
+
+                    //     break;
+                case 1:
+                    grade1.style.backgroundColor = 'red';
+                    grade2.style.backgroundColor = '#elaeab';
+                    grade3.style.backgroundColor = '#elaeab';
+
+                    break;
+                case 2:
+                    grade1.style.backgroundColor = 'red';
+                    grade2.style.backgroundColor = 'red';
+                    grade3.style.backgroundColor = '#elaeab';
+                    break;
+                case 3:
+                    grade1.style.backgroundColor = 'red';
+                    grade2.style.backgroundColor = 'red';
+                    grade3.style.backgroundColor = 'red';
+                    break;
+
+                default:
+                    mmts.style.display = 'block';
+                    wzts3.innerText = '密码不符合要求！';
+                    grade1.style.backgroundColor = '#elaeab';
+                    grade2.style.backgroundColor = '#elaeab';
+                    grade3.style.backgroundColor = '#elaeab';
+                    break;
+            }
+        }
+
+
+    })
+
+
+
 
 
 
