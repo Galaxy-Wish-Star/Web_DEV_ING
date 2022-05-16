@@ -85,35 +85,31 @@ window.onload = function() {
     // 声明密码强度级别n
     var n = 0;
     var passwordjb = 0;
-    // querySelector 获取
-    // 2.设置密码验证规则-正则表达式(/^开始 $/结束)
-    //全数字(8-20位)
-    var gz3 = /^\d{8,20}$/;
-    //全字母(8-20位)
-    var gz4 = /^[A-Za-z]{8,20}$/;
-    // 全符号(8-20位)
-    var gz5 = /^[!@#$%^&*-=<>{};:'".,?/|`~]{8,20}$/;
-    // 数字+字母
-    var gz6 = /^(?=.*(?=.*\d)[^a-zA-Z]).{8,20}$/;
+    // 全数字
+    var gz3 = /^\d{8,20}$/; //3密码强度为0
+    // 全字母
+    var gz4 = /^[A-z0-9~!@#$%^&*()_+`\-={}:";'<>?,.\/]{8,20}$/; //4密码强度为0
+    // 字母+数字
+    var gz5 = /^(?=.*[a-zA-Z])(?=.*\d).{8,20}$/;
     // 数字+符号
-    var gz7 = /^(?=.*\d)(?=.*[!@#$%^&*-=<>{};:'".,?/|`~]).{8,20}$/;
+    var gz6 = /^(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //43组合密码强度为一
     // 字母+符号
-    var gz8 = /^[A-Za-z][!@#$%^&*-=<>{};:'".,?/|`~].{8,20}$/;
+    var gz7 = /^(?=.*[a-zA-Z])(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //567组合密码强度为二
     // 数字+字母+符号(?=)正向肯定
-    var gz9 = /^.*(?=.{8,20})(?=.*\d)(?=.*[A-Za-z])(?=.*[!@#$%^&*-=<>{};:'".,?/|`~]).*$/;
+    var gz8 = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //判断密码最高强度三
     // 3.定义返回密码n的强度级别的函数
-    function testStrong(password) {
-        if (gz9.test(password.value) == true) {
+    function textStrong(password) {
+        if (gz8.test(password.value) == true) {
             n = 3;
         } else {
-            if (gz8.test(password.value) == true || gz7.test(password.value) == true || gz6.test(password.value) == true) {
+            if (gz7.test(password.value) == true || gz6.test(password.value) == true || gz5.test(password.value) == true) {
                 n = 2;
             } else {
-                if (gz5.test(password.value) == true || gz4.test(password.value) == true) {
-                    n = 1;
+                if (gz4.test(password.value) == true) {
+                    n = 0;
                 } else {
                     if (gz3.test(password.value) == true) {
-                        n = 0;
+                        n = 1;
                     } else {
                         n = -1;
                     }
@@ -137,14 +133,11 @@ window.onload = function() {
         // sjts.style.display = 'none';
         if (this.value == '') {
             wzts3.innerText = '密码不能为空！';
+            grade1.style.backgroundColor = '#f1eace';
+            grade2.style.backgroundColor = '#f1eace';
+            grade3.style.backgroundColor = '#f1eace';
         } else {
-            // if (gz9.test(this.value) === true) {
-            //     mmts.style.display = 'none';
-            // } else {
-            //     mmts.style.display = 'block';
-            //     wzts3.innerText = '密码格式错误';
-            // }
-            passwordjb = testStrong(password);
+            passwordjb = textStrong(password);
             switch (passwordjb) {
                 case 0:
                     mmts.style.display = 'block';
@@ -153,12 +146,6 @@ window.onload = function() {
                     grade2.style.backgroundColor = '#elaeab';
                     grade3.style.backgroundColor = '#elaeab';
                     break;
-                    // case 1:
-                    //     grade1.style.backgroundColor = 'red';
-                    //     grade2.style.backgroundColor = '#elaeab';
-                    //     grade3.style.backgroundColor = '#elaeab';
-
-                    //     break;
                 case 1:
                     grade1.style.backgroundColor = 'red';
                     grade2.style.backgroundColor = '#elaeab';
