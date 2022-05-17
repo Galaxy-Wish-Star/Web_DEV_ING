@@ -6,6 +6,8 @@
 body {
     background: rgb(203, 231, 248);
     font-size: 14px;
+    position: absolute;
+    width: 100%;
 }
 
 ul,
@@ -76,7 +78,7 @@ input {
 }
 
 h2 {
-    color: rgb(81, 81, 81);
+    color: rgb(41, 41, 41);
 }
 
 
@@ -96,17 +98,20 @@ h2 {
 .nav {
     height: 48px;
     background: #055f98;
+    position: sticky;
+    top: 0px;
 }
 
 .nav .box ul li {
     float: left;
     line-height: 48px;
-    margin: 0px 10px;
+    font-size: 18px;
+    margin: 0px 30px 0px 30px;
+    letter-spacing: 1px;
 }
 
 .nav .box ul li a {
     color: #fff;
-    font-size: 16px;
 }
 
 .nav .box ul li a:hover {
@@ -169,6 +174,34 @@ h2 {
     font-weight: bold;
     transition: all 0.5s;
     /*悬停，延迟*/
+}
+
+.jylist a {
+    font-weight: bold;
+    /* line-height: 30px;
+    font-size: 20px; */
+    text-decoration: none;
+    color: rgb(61, 60, 60);
+}
+
+.jylist a:hover {
+    color: rgb(0, 134, 252);
+    /* font-size: 28px; */
+    font-weight: bold;
+    transition: all 0.5s;
+    /*悬停，延迟*/
+}
+
+.jylist span {
+    margin-right: 30px;
+}
+
+.fcjy p {
+    color: #404040;
+}
+
+.fc1 h3 {
+    color: #0977d1;
 }
 
 

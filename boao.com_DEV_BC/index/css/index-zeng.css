@@ -109,19 +109,44 @@ input {
 }
 
 .left {
-    width: 450px;
+    width: 400px;
+    position: relative;
+    float: left;
 }
 
 .left img {
-    float: left;
+    /* float: left; */
     height: 240px;
     width: 400px;
+}
+
+.wzsm {
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(87, 86, 86);
+    opacity: 0.7;
+}
+
+.wzsm p,
+.wzsm a {
+    color: rgb(242, 238, 238);
+    margin-top: 8px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.wzsm a {
+    text-decoration: underline;
+    line-height: 30px;
 }
 
 .right {
     height: 240px;
     width: 570px;
-    margin: px auto;
+    float: right;
     /* margin 如果有四个参数，则分别代表上、右，下、左外边距 margin: 20px auto代表上下边距为20，左右水平对齐*/
     font-size: 15px;
     color: rgb(135, 134, 134);
@@ -180,7 +205,6 @@ input {
 .s1 .f1 img {
     width: 90px;
     height: 85px;
-    float: left;
     margin: 1px;
     border: 1px solid rgb(24, 24, 24);
     padding: 2px;
@@ -215,7 +239,6 @@ input {
 .kuo1 img {
     width: 110px;
     height: 60px;
-    float: left;
 }
 
 .wen {
@@ -224,6 +247,7 @@ input {
 
 .wen a {
     display: block;
+    /* 将元素显示为块级元素 */
     line-height: 35px;
 }
 
@@ -259,19 +283,16 @@ input {
 .kuo2 img {
     width: 110px;
     height: 60px;
-    float: left;
 }
 
 .kuo3 img {
     width: 110px;
     height: 60px;
-    float: left;
 }
 
 .kuo4 img {
     width: 110px;
     height: 60px;
-    float: left;
 }
 
 .wen a:link {
@@ -320,10 +341,15 @@ input {
     color: rgb(198, 30, 145);
 }
 
+.y1 ul {
+    /* width: 160px; */
+    margin: 0 40px;
+}
+
 .y1 ul li a {
     /* color: rgb(251, 240, 240); */
     line-height: 25px;
-    margin: 10px 30px;
+    /* margin: 10px 30px; */
 }
 
 .y1 a:link {
@@ -346,4 +372,9 @@ input {
     text-align: center;
     color: rgb(135, 133, 133);
     font-size: 15px;
+}
+
+.yewei {
+    width: 760px;
+    margin: 0 auto;
 }

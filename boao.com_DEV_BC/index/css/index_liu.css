@@ -142,12 +142,12 @@ a{
 }
 li a:hover{
     color: red;
-    font-size: 16px;
-    transition: all 0.5s;
+    /* font-size: 16px; */
+    /* transition: all 0.5s; */
 }
 ul span{
     float: right;
-    color: darkgray;
+    color: black;
 }
 .new_list ul li{
     padding: 3.5px 0 3.5px 4px;
@@ -219,16 +219,15 @@ ul span{
 .tx4{
     color: #055f98;
     font-size: 16px;
-    margin-top: 4px;
 }
 .tx5{
     color: black;
-    font-size: 13px;
-    margin-top: 5px;
+    font-size: 14px;
+    margin-top: 8px;
 }
 .k1{
     border-bottom: 2px dotted  #4eb4d3;
-    margin-top: 24px;
+    margin-top: 13px;
 }
 .educat{
     width: 540px;
@@ -256,28 +255,28 @@ ul span{
 }
 .txo1{
     float: left;
-    color: #4eb4d3;
+    color: black;
     font-size: 10px;
     margin-top: 5px;
     margin-left: 30px;
 }
 .txo2{
     float: left;
-    color: #4eb4d3;
+    color: black;
     font-size: 10px;
     margin-top: 5px;
     margin-left: 45px;
 }
 .txo3{
     float: left;
-    color: #4eb4d3;
+    color: black;
     font-size: 10px;
     margin-top: 5px;
     margin-left: 26px;
 }
 .txo4{
     float: left;
-    color: #4eb4d3;
+    color: black;
     font-size: 10px;
     margin-top: 5px;
     margin-left: 28px;
@@ -381,10 +380,10 @@ ul span{
 /* 版权 */
 .copyright{
     height: 30px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(41, 118, 185);
 }
 .copyright .copy{
-    color: rgb(41, 118, 185);
+    color: rgb(255, 255, 255);
     width: 315px;
     margin: 10px auto;
 }
