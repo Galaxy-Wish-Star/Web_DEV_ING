@@ -28,7 +28,7 @@ input {
     width: 1000px;
     margin: 0 auto;
     clear: both
-    /* border: 1px solid rgb(120, 120, 120);*/
+    /*border: 1px solid rgb(120, 120, 120);*/
 }
 
 
@@ -113,11 +113,33 @@ input {
     width: 440px;
     float: left;
     margin-top: 10px;
+    position: relative;
 }
 
 .left img {
     height: 240px;
     width: 440px;
+}
+
+.xwsm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 440px;
+    height: 60px;
+    background: black;
+    opacity: 0.5;
+    /*background: rgba(0,0,0,0.5);*/
+}
+
+.xwsm p,
+.xwsm a {
+    color: white;
+    margin-top: 8px;
+}
+
+.xwsm a {
+    text-decoration: underline;
 }
 
 .right {
@@ -262,19 +284,19 @@ input {
     margin: 2px auto;
 }
 
-a:link {
+.f2 a:link {
     color: red;
 }
 
-a:visited {
+.f2 a:visited {
     color: blue;
 }
 
-a:hover {
+.f2 a:hover {
     color: black;
 }
 
-a:active {
+.f2 a:active {
     color: pink;
 }
 
@@ -348,4 +370,8 @@ a:active {
 
 .copyright {
     text-align: center;
+}
+
+.line {
+    height: 130px;
 }
