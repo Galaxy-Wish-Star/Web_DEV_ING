@@ -72,6 +72,7 @@ window.onload = function() {
   var rag6 = /^(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //43组合密码强度为一
   var rag7 = /^(?=.*[a-zA-Z])(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //567组合密码强度为二
   var rag8 = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //判断密码最高强度三
+    var rag9;
 
   function checkStrong(password) {
       if (rag8.test(password.value) == true) {
@@ -98,9 +99,9 @@ window.onload = function() {
           sjts2.style.display = 'block';
           wzts3.innerText = '请输入8-20位密码';
           wzts3.style.width = '216px';
-          grade1.style.backgroundColor = '#f1eace';
-          grade2.style.backgroundColor = '#f1eace';
-          grade3.style.backgroundColor = '#f1eace';
+          grade1.style.backgroundColor = '#e1aeab';
+          grade2.style.backgroundColor = '#e1aeab';
+          grade3.style.backgroundColor = '#e1aeab';
       }
       /*else {
                  wzts3.style.display = 'none';
@@ -110,9 +111,9 @@ window.onload = function() {
       if (this.value == '') {
           wzts3.innerText = '密码不能为空';
           sjts2.style.width = '216px';
-          grade1.style.backgroundColor = '#f1eace';
-          grade2.style.backgroundColor = '#f1eace';
-          grade3.style.backgroundColor = '#f1eace';
+          grade1.style.backgroundColor = '#e1aeab';
+          grade2.style.backgroundColor = '#e1aeab';
+          grade3.style.backgroundColor = '#e1aeab';
       } else {
           pwdlevel = checkStrong(password);
           switch (pwdlevel) {
@@ -121,20 +122,20 @@ window.onload = function() {
                   wzts3.innerText = '密码过于简单有被盗风险';
                   sjts2.style.width = '216px';
                   grade1.style.backgroundColor = '#016941';
-                  grade2.style.backgroundColor = '#f1eace';
-                  grade3.style.backgroundColor = '#f1eace';
+                  grade2.style.backgroundColor = '#e1aeab';
+                  grade3.style.backgroundColor = '#e1aeab';
                   break;
               case 1:
                   sjts2.style.display = 'none';
                   grade1.style.backgroundColor = '#016941';
-                  grade2.style.backgroundColor = '#f1eace';
-                  grade3.style.backgroundColor = '#f1eace';
+                  grade2.style.backgroundColor = '#e1aeab';
+                  grade3.style.backgroundColor = '#e1aeab';
                   break;
               case 2:
                   sjts2.style.display = 'none';
                   grade1.style.backgroundColor = '#016941';
                   grade2.style.backgroundColor = '#016941';
-                  grade3.style.backgroundColor = '#f1eace';
+                  grade3.style.backgroundColor = '#e1aeab';
                   break;
               case 3:
                   sjts2.style.display = 'none';
@@ -146,13 +147,27 @@ window.onload = function() {
                   sjts2.style.display = 'block';
                   wzts3.innerText = '密码需为8-20个字符,由字母、数字或符号组成';
                   sjts2.style.width = '300px';
-                  grade1.style.backgroundColor = '#f1eace';
-                  grade2.style.backgroundColor = '#f1eace';
-                  grade3.style.backgroundColor = '#f1eace';
+                  grade1.style.backgroundColor = '#e1aeab';
+                  grade2.style.backgroundColor = '#e1aeab';
+                  grade3.style.backgroundColor = '#e1aeab';
                   break;
           }
       }
   })
+
+    password1.addEventListener('blur', function() {
+        if (this.value == '') {
+            sjts3.style.display = 'block';
+            wzts4.innerText = '请确认密码！！';
+        } else {
+            if (this.value==password.value) {
+                sjts3.style.display = 'none';
+            } else {
+                sjts3.style.display = 'block';
+                wzts4.innerText = '密码不一致!';
+            }
+        }
+    });
 
 
 }
