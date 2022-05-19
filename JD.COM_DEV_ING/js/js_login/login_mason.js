@@ -1,6 +1,6 @@
 window.onload = function () {
-    var qrcode = document.querySelector('#qrcode');
-    var zhanghu = document.querySelector('#zhanghu');
+    var qrcode = document.querySelector('.login-tab-l');
+    var zhanghu = document.querySelector('.login-tab-r');
     var saoma = document.querySelector('.qrcode-login');
     var zh = document.querySelector('.login-box');
 
@@ -9,7 +9,7 @@ window.onload = function () {
         zh.style.display = 'none';
     })
     zhanghu.addEventListener('click', function () {
-        zhanghu.style.display = 'block';
+       zh.style.display = 'block';
         saoma.style.display = 'none';
     })
 
