@@ -200,8 +200,9 @@ window.onload = function() {
 
     // 验证按钮
     var btn = document.querySelector('#btn');
+    var check = document.querySelector('#check');
     btn.addEventListener('click', function() {
-        if (phone.value == '' || Emails.value == '' || password.value == '' || password1.value == '') {
+        if (phone.value == '' || Emails.value == '' || password.value == '' || password1.value == '' || check.checked == false) {
             alert('信息不能为空！');
         } else {
             if (gz1.test(phone.value) == true && gz2.test(Emails.value) == true && n != -1 && password.value === password1.value) {
@@ -211,9 +212,9 @@ window.onload = function() {
             }
         }
 
-
-
     })
+
+
 
 
 
