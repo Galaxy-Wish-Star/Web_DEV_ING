@@ -77,12 +77,18 @@
         <!--确认密码框-->
         <div class="input">
             <span class="name">确认密码</span>
-            <input type="password" id="password1" class="text" placeholder=" 再次输入密码" />
+            <input type="password" id="password1" onkeyup="checkpassword()" class="text" placeholder=" 再次输入密码" />
         </div>
+        <!-- 确认密码验证提示 -->
+        <div class="prompt" id="mmyz" style="display: none;">
+            <img src="images/tip.png" alt=""><span id="wzts4"></span>
+        </div>
+
         <label id="check"><input type="checkbox" checked="checked"><a>同意<span>《京东服务协议》</span></a></label><br />
         <input id="btn" type="button" value="下一步，验证" /><br />
         <span id="next_step">注册遇到问题？</span>
     </div>
+
     <!--底部-->
     <div id="button">
         <span>

@@ -78,7 +78,11 @@ window.onload = function() {
     //1.获取元素 =表示赋值 右边给左边
     var password = document.querySelector('#password');
     var mmts = document.querySelector('#mmts');
+    var mmyz = document.querySelector('#mmyz');
     var wzts3 = document.querySelector('#wzts3');
+    var wzts4 = document.querySelector('#wzts4');
+    // var password = document.getElementById("pw").value;
+    // var repassword = document.getElementById("repw").value;
     var grade1 = document.querySelector('#grade1');
     var grade2 = document.querySelector('#grade2');
     var grade3 = document.querySelector('#grade3');
@@ -88,15 +92,15 @@ window.onload = function() {
     // 全数字
     var gz3 = /^\d{8,20}$/; //3密码强度为0
     // 全字母
-    var gz4 = /^[A-z0-9~!@#$%^&*()_+`\-={}:";'<>?,.\/]{8,20}$/; //4密码强度为0
+    var gz4 = /^[A-z0-9~!@#$%^&*()_+`\-={}:";'<>?,./'|]{8,20}$/; //4密码强度为0
     // 字母+数字
     var gz5 = /^(?=.*[a-zA-Z])(?=.*\d).{8,20}$/;
     // 数字+符号
-    var gz6 = /^(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //43组合密码强度为一
+    var gz6 = /^(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,./'|]).{8,20}$/; //43组合密码强度为一
     // 字母+符号
-    var gz7 = /^(?=.*[a-zA-Z])(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //567组合密码强度为二
+    var gz7 = /^(?=.*[a-zA-Z])(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,./'|]).{8,20}$/; //567组合密码强度为二
     // 数字+字母+符号(?=)正向肯定
-    var gz8 = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/; //判断密码最高强度三
+    var gz8 = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,./'|]).{8,20}$/; //判断密码最高强度三
     // 3.定义返回密码n的强度级别的函数
     function textStrong(password) {
         if (gz8.test(password.value) == true) {
@@ -147,17 +151,20 @@ window.onload = function() {
                     grade3.style.backgroundColor = '#elaeab';
                     break;
                 case 1:
+                    mmts.style.display = 'none';
                     grade1.style.backgroundColor = 'red';
                     grade2.style.backgroundColor = '#elaeab';
                     grade3.style.backgroundColor = '#elaeab';
 
                     break;
                 case 2:
+                    mmts.style.display = 'none';
                     grade1.style.backgroundColor = 'red';
                     grade2.style.backgroundColor = 'red';
                     grade3.style.backgroundColor = '#elaeab';
                     break;
                 case 3:
+                    mmts.style.display = 'none';
                     grade1.style.backgroundColor = 'red';
                     grade2.style.backgroundColor = 'red';
                     grade3.style.backgroundColor = 'red';
@@ -172,6 +179,39 @@ window.onload = function() {
                     break;
             }
         }
+
+
+    })
+
+
+    // 再次输入密码验证
+    password1.addEventListener('blur', function() {
+        if (this.value == '') {
+            mmyz.style.display = 'block';
+            wzts4.innerText = '请再次确认密码！';
+        } else {
+            if (this.value === password.value) {
+                mmyz.style.display = 'none';
+            } else {
+                mmyz.style.display = 'block';
+                wzts4.innerText = '密码不一致!';
+            }
+        }
+    })
+
+    // 验证按钮
+    var btn = document.querySelector('#btn');
+    btn.addEventListener('click', function() {
+        if (phone.value == '' || Emails.value == '' || password.value == '' || password1.value == '') {
+            alert('信息不能为空！');
+        } else {
+            if (gz1.test(phone.value) == true && gz2.test(Emails.value) == true && n != -1 && password.value === password1.value) {
+                alert('注册成功！');
+            } else {
+                alert('信息填写不正确，请重新修改')
+            }
+        }
+
 
 
     })
