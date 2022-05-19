@@ -3,7 +3,7 @@ window.onload = function () {
     var zhanghu = document.querySelector('.login-tab-r');
     var saoma = document.querySelector('.qrcode-login');
     var zh = document.querySelector('.login-box');
-
+    var phoneorg=document.querySelector('#phone-org');
     qrcode.addEventListener('click', function () {
         saoma.style.display = 'block';
         zh.style.display = 'none';
@@ -11,6 +11,9 @@ window.onload = function () {
     zhanghu.addEventListener('click', function () {
        zh.style.display = 'block';
         saoma.style.display = 'none';
+    })
+    saoma.addEventListener('mouseenter', function () {
+
     })
 
 }
