@@ -77,6 +77,7 @@ window.onload = function() {
     // 密码验证
     //1.获取元素 =表示赋值 右边给左边
     var password = document.querySelector('#password');
+    var password1 = document.querySelector('#password1');
     var mmts = document.querySelector('#mmts');
     var mmyz = document.querySelector('#mmyz');
     var wzts3 = document.querySelector('#wzts3');
@@ -147,21 +148,20 @@ window.onload = function() {
                     mmts.style.display = 'block';
                     wzts3.innerText = '密码过于简单,有被盗风险！';
                     grade1.style.backgroundColor = 'red';
-                    grade2.style.backgroundColor = '#elaeab';
-                    grade3.style.backgroundColor = '#elaeab';
+                    grade2.style.backgroundColor = '#e1aeab';
+                    grade3.style.backgroundColor = '#e1aeab';
                     break;
                 case 1:
                     mmts.style.display = 'none';
                     grade1.style.backgroundColor = 'red';
-                    grade2.style.backgroundColor = '#elaeab';
-                    grade3.style.backgroundColor = '#elaeab';
-
+                    grade2.style.backgroundColor = '#e1aeab';
+                    grade3.style.backgroundColor = '#e1aeab';
                     break;
                 case 2:
                     mmts.style.display = 'none';
                     grade1.style.backgroundColor = 'red';
                     grade2.style.backgroundColor = 'red';
-                    grade3.style.backgroundColor = '#elaeab';
+                    grade3.style.backgroundColor = '#e1aeab';
                     break;
                 case 3:
                     mmts.style.display = 'none';
@@ -169,13 +169,12 @@ window.onload = function() {
                     grade2.style.backgroundColor = 'red';
                     grade3.style.backgroundColor = 'red';
                     break;
-
                 default:
                     mmts.style.display = 'block';
                     wzts3.innerText = '密码不符合要求！';
-                    grade1.style.backgroundColor = '#elaeab';
-                    grade2.style.backgroundColor = '#elaeab';
-                    grade3.style.backgroundColor = '#elaeab';
+                    grade1.style.backgroundColor = '#e1aeab';
+                    grade2.style.backgroundColor = '#e1aeab';
+                    grade3.style.backgroundColor = '#e1aeab';
                     break;
             }
         }
