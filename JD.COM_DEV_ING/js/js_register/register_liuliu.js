@@ -55,16 +55,19 @@ window.onload=function(){
     })
     // 密码验证
     var password=document.querySelector('#password');
+    var password1=document.querySelector('#password1');
     var mmts=document.querySelector('#mmts');
+    var mmyz=document.querySelector('#mmyz');
     var wzts3=document.querySelector('#wzts3');
+    var wzts4=document.querySelector('#wzts4');
     var grade1=document.querySelector('#grade1');
     var grade2=document.querySelector('#grade2');
     var grade3=document.querySelector('#grade3');
     // 声明变量
     var n=0;
-    var pwd=0;
+    var linses=0;
     // 全数字8-20
-    var mm=/^\d{8,20}$/;
+    var mm2=/^\d{8,20}$/;
     // 全字母8-20
     var mm1=/^[A-Za-z]{8,20}$/;
     // 数字+字母
@@ -75,20 +78,20 @@ window.onload=function(){
     var mm5=/^(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/;
     // 数字+字母+符号
     var mm6=/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,20}$/;
-    function textStrong(pwd){
-        if(mm6.test(pwd.value)==true){
+    function textStrong(password){
+        if(mm6.test(password.value)==true){
             n=3;
         }else{
-            if(mm3.test(pwd.value)==true||mm4.test(pwd.value)==true||mm5.test(pwd.value)==true){
+            if(mm3.test(password.value)==true||mm4.test(password.value)==true||mm5.test(password.value)==true){
                 n=2;
             }else{
-                if(mm1.test(pwd.value)==true){
+                if(mm1.test(password.value)==true){
                     n=1;
                 }else{
-                    if(mm.test(pwd.value)==true){
+                    if(mm2.test(password.value)==true){
                         n=0;
                     }else{
-                        n=-1;
+                        n==-1;
                     }
                 }
             }
@@ -98,7 +101,7 @@ window.onload=function(){
     password.addEventListener('focus',function(){
         if(this.value==''){
             mmts.style.display='block';
-            wzts3.innerText='请输入数字与字母组合的密码！';
+            wzts3.innerText='请输入密码！';
         }else{
             mmts.style.display='none';
         }
@@ -107,14 +110,14 @@ window.onload=function(){
         if(this.value==''){
             wzts3.innerText='密码不能为空！';
         }else{
-            if(mm.test(this.value)===true){
-                mmts.style.display='none';
-            }else{
-                mmts.style.display='block';
-                wzts3.innerText='密码格式错误！';
-            }
-            pwdsp=textStrong(pwd);
-            switch(pwdsp){
+            // if(mm.test(this.value)===true){
+            //     mmts.style.display='none';
+            // }else{
+            //     mmts.style.display='block';
+            //     wzts3.innerText='密码格式错误！';
+            // }
+            linses=textStrong(password);
+            switch(linses){
                 case 0:
                     mmts.style.display='block';
                     wzts3.innerText='密码过于简单！';
@@ -148,5 +151,30 @@ window.onload=function(){
             }
         }
     })
-
+    // 再次输入密码
+    password1.addEventListener('blur',function(){
+        if(this.value==''){
+            mmyz.style.display='block';
+            wzts4.innerText='请再次确认密码！';
+        }else{
+            if(this.value===password.value){
+                mmyz.style.display='none';
+            }else{
+                mmyz.style.display='block';
+                wzts4.innerText='密码不一致！';
+            }
+        }
+    })
+    var btn=document.querySelector('#btn');
+    btn.addEventListener('click',function(){
+        if(phone.value==''||email.value==''||password.value==''||password1.value==''){
+            alert('信息不能为空！');
+        }else{
+            if(reg1.test(phone.value)==true && yx.test(email.value)==true && n!=-1 && password.value===password1.value){
+                alert('注册成功！');
+            }else{
+                alert('信息填写不正确，请重新填写！');
+            }
+        }
+    })
 }
