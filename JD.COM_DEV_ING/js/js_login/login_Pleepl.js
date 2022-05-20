@@ -5,12 +5,22 @@ window.onload = function() {
     var sm = document.querySelector('.qrcode-login ');
     var zh = document.querySelector('.login-box');
     var mc = document.querySelector('.mc');
+    var hoer = document.querySelector('#orgg')
+    var phoneorg = document.querySelector('#qrcodee');
+    phoneorg.addEventListener('mouseenter', function() {
+        hoer.style.display = 'block';
+    })
+    phoneorg.addEventListener('mousestate', function() {
+        hoer.style.display = 'none';
+    })
+
     smdl.addEventListener('click', function() {
         sm.style.display = 'block';
         zh.style.diasplay = 'none';
         mc.style.display = 'none';
         smdl.style.color = 'red';
-        smdl.style.fontweight = 'bold';
+        smdl.style.fontWeight = 'bold';
+        zhdl.style.fontWeight = 'normal';
         zhdl.style.color = '#666';
     })
 
@@ -19,6 +29,8 @@ window.onload = function() {
             zh.style.diasplay = 'block';
             mc.style.display = 'block';
             zhdl.style.color = 'red';
+            zhdl.style.fontWeight = 'bold';
+            smdl.style.fontWeight = 'normal';
             smdl.style.color = '#666';
         })
         // 账户验证
