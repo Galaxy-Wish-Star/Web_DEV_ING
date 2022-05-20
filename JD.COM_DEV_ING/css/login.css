@@ -32,9 +32,14 @@
 
 #phone-org {
     position: relative;
-    left: 95px;
+    left: 90px;
     top: -145px;
 }
+#phone-org{
+    padding: -250px;
+
+}
+
 
 a img {
     border: 0;
