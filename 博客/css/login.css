@@ -1,37 +1,112 @@
-#logo {
+body,
+div,
+img,
+h1,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+}
+
+.js {
+    color: rgba(214, 42, 42, 0.884);
+    text-align: left;
+    line-height: 25px;
+    margin: 0 50px;
+}
+
+.box {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.banner {
     position: relative;
-    width: 300px;
-    margin: 10px 0;
-    height: 60px;
+    width: 950px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.banner img {
+    position: absolute;
+    width: 950px;
+    height: 270px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: linear 1s;
+}
+
+.banner .show {
+    opacity: 1;
+}
+
+.meun {
+    line-height: 40px;
+    height: 40px;
+    background: url("../images/navbg.gif") repeat-x;
+}
+
+.nav a {
+    width: 50px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(15, 148, 55);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.nav a:hover {
+    background: url("../images/navbghover.gif")
+}
+
+.nav {
     float: left;
 }
 
-#logo b {
-    display: block;
-    width: 110px;
+.ss {
+    float: left;
+    margin-left: 150px;
+    color: rgb(16, 168, 97);
+}
+
+.ss #ssbtn {
+    background: rgb(16, 168, 97);
+}
+
+.dlzc {
+    float: right;
+}
+
+.dlzc a {
+    width: 50px;
     height: 40px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background: url(../images/l-icon.png) no-repeat;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(16, 168, 97);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
 }
 
-#qrcodelog{
-    position: relative;
-
-}
-#qrcodelog:hover{
-     margin-left: -150px;
-     transition:1000ms margin-left 1ms  ;
- }
-#phone-org{
-    position: relative;
-    left: 95px;
-    top: -145px;
-
+.dlzc a:hover {
+    color: rgb(253, 173, 8);
+    font-weight: 700;
 }
 
-
+a {
+    color: rgb(73, 73, 73);
+    text-decoration: none;
+}
 
 a img {
     border: 0;
@@ -41,96 +116,21 @@ img {
     vertical-align: middle;
 }
 
-.q-link {
-    position: relative;
-    color: #999;
-    float: right;
-    top: 52px;
-}
-
-.q-link b {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    width: 18px;
-    height: 14px;
-    margin: 0 5px;
-    background: url(../images/q-icon.png) no-repeat;
-    overflow: hidden;
-    vertical-align: middle
-}
-
-.m,
-.mb,
 .mc,
 .mt,
-.sm,
-.smb,
-.smc,
-.smt {
+.smb {
     overflow: hidden;
     zoom: 1
 }
 
-#content {
-    clear: both
-}
-
-#content .tips-wrapper {
-    background: #fff8f0;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-#content .tips-wrapper .cont-wrapper {
-    display: inline-block;
-    width: 90%;
-}
-
-#content .tips-wrapper .icon-tips {
-    background: url(../images/icon-tips.png);
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-#content .tips-wrapper .tips-inner p {
-    vertical-align: middle;
-    color: #999;
-    font-size: 12px;
-    display: inline-block;
-}
-
-#content .tips-wrapper .tips-inner .black {
-    color: #333;
-}
-
-#content .login-wrap {
-    margin-top: 0;
-}
-
-.login-wrap {
-    position: relative;
-    height: 475px;
-    margin: 10px 0 20px;
-    z-index: 5;
-}
-
-.login-wrap .login-form {
-    float: right;
-    top: 10px;
-}
-
 .login-form {
     position: relative;
-    z-index: 4;
-    background: #fff;
+    /* height: 475px; */
     overflow: visible;
     width: 346px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px #ebebeb;
 }
 
 .login-form .login-tab-l,
@@ -149,14 +149,10 @@ img {
     display: block;
 }
 
-.login-form .login-tab a:hover {
+.login-form .login-tab a:hover,
+.login-form .login-tab a.checked {
     font-weight: 700;
-    color: #e4393c;
-}
-
-.login-form .login-tab a:focus {
-    outline: 0!important;
-    -moz-outline: 0!important;
+    color: #016941;
 }
 
 .login-form .login-tab a {
@@ -165,8 +161,11 @@ img {
     position: absolute;
     left: 0;
     top: 18px;
-    border-right: 1px solid #f4f4f4;
     text-decoration: none;
+}
+
+.login-form .login-tab-l a {
+    border-right: 1px solid #e4e3e3;
 }
 
 .login-form .login-tab-r {
@@ -176,16 +175,13 @@ img {
 .login-form .login-box {
     width: 306px;
     padding: 20px;
-    /* visibility: hidden; */
 }
 
-.mt,
-.smt {
+.mt {
     cursor: default;
 }
 
 .login-form .login-box .mt {
-    display: inline-block;
     display: block;
     width: 306px;
     overflow: visible;
@@ -244,6 +240,7 @@ img {
 .form .item {
     position: relative;
     margin-bottom: 20px;
+    height: 18px;
     z-index: 1;
 }
 
@@ -341,29 +338,6 @@ img {
     margin-bottom: 0;
 }
 
-.form #o-authcode.item {
-    border: 0;
-}
-
-.form .itxt02 {
-    padding: 10px 5px;
-    width: 150px;
-    text-align: center;
-}
-
-.form .item-vcode .itxt02,
-.form .item-vcode .verify-code {
-    float: left;
-}
-
-.form #o-authcode.item .itxt {
-    border: 1px solid #bdbdbd;
-    font-size: 14px;
-    padding: 7px 5px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
 .login-form .login-box .safe {
     position: relative;
     color: #666;
@@ -386,25 +360,10 @@ img {
 }
 
 .login-form .login-box .login-btn {
-    border: 1px solid #cb2a2d;
     margin: 0 auto;
     height: 32px;
     width: 100%;
     position: relative;
-}
-
-.form .item-vcode a {
-    display: inline-block;
-    width: 38px;
-}
-
-.form .item-vcode:after {
-    display: block;
-    content: "clear";
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
 }
 
 .btn-img,
@@ -418,13 +377,12 @@ img {
 }
 
 .login-form .login-box .login-btn .btn-img {
-    border: 1px solid #e85356;
     display: block;
     width: 305px;
-    background: #e4393c;
-    height: 31px;
-    line-height: 31px;
-    color: #fff;
+    background: #FCEAA9;
+    height: 34px;
+    line-height: 34px;
+    color: #016941;
     font-size: 20px;
     font-family: 'Microsoft YaHei';
 }
@@ -459,9 +417,6 @@ img {
     height: 147px;
 }
 
-.qrcode-img .gj{
-    margin-left: 20px;
-}
 .login-form .qrcode-login .qrcode-panel {
     width: 257px;
     margin: 18px auto 14px;
@@ -605,39 +560,4 @@ img {
     background: url(../images/pwd-icons-new.png) -104px -75px no-repeat;
     vertical-align: middle;
     margin-right: 5px;
-}
-
-.login-wrap .login-banner {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 475px;
-    background: #e93854;
-}
-
-.login-wrap .i-inner {
-    position: relative;
-    z-index: 3;
-    height: 475px;
-    background: url(../images/bj.png) 0px 0px no-repeat;
-    background-color: #FFFFFF;
-}
-
-#footer {
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-#footer .links a,
-#footer .links span {
-    margin: 0 10px;
-}
-
-#footer .copyright {
-    margin: 10px 0;
-}
-.login-tab .current {
-    font-weight: 700;
-    color: #cb2a2d;
 }

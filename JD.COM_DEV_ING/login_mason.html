@@ -8,13 +8,14 @@
     <link type="text/css" rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
+    <script src="./js/js_login/login_mason.js"></script>
 </head>
 
 <body>
     <div class="w">
         <div id="logo">
             <a>
-                <img src="images/logo-201305-b.png" alt="京东" width="170" height="60">
+                <img src="../images/logo-201305-b.png" alt="京东" width="170" height="60">
             </a>
             <b></b>
         </div>
@@ -39,12 +40,12 @@
                         </div>
                     </div>
                     <div class="login-tab login-tab-l">
-                        <a href="javascript:;">扫码登录</a>
+                        <a href="javascript:;" id="smdl">扫码登录</a>
                     </div>
                     <div class="login-tab login-tab-r">
-                        <a href="javascript:;">账户登录</a>
+                        <a href="javascript:;" id="zhdl">账户登录</a>
                     </div>
-                    <div class="login-box">
+                    <div class="login-box" style="display: none">
                         <div class="mt tab-h">
                         </div>
                         <div class="msg-wrap">
@@ -82,11 +83,12 @@
                         </div>
                     </div>
 
-                    <!-- <div class="qrcode-login">
+                  <div class="qrcode-login">
                         <div class="mc">
                             <div class="qrcode-main">
                                 <div class="qrcode-img">
-                                    <img src="./images/show.png" alt="">
+                                    <img src="./images/show.png" alt="" id="qrcodelog">
+                                    <img src="./images/phone-orange.png" alt="" style="display: none" id="phone-org">
                                 </div>
                             </div>
                             <div class="qrcode-panel">
@@ -107,7 +109,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="coagent" id="kbCoagent">
                         <ul>
                             <li>
