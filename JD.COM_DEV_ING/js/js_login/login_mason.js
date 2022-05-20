@@ -4,7 +4,7 @@ window.onload = function () {
     var saoma = document.querySelector('.qrcode-login');
     var zh = document.querySelector('.login-box');
     var hoer = document.querySelector('#phone-org')
-    var phoneorg = document.querySelector('#phone-org');
+    var phoneorg = document.querySelector('#qrcodelog');
     var smdl = document.querySelector('#smdl');
     var zhdl = document.querySelector('#zhdl');
 
@@ -27,7 +27,7 @@ window.onload = function () {
     phoneorg.addEventListener('mouseenter', function () {
         hoer.style.display = 'block';
     })
-    phoneorg.addEventListener('mousestate', function () {
+    phoneorg.addEventListener('mouseleave', function () {
         hoer.style.display = 'none';
     })
     var pwd = document.querySelector('#nloginpwd');

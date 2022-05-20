@@ -16,6 +16,23 @@
     background: url(../images/l-icon.png) no-repeat;
 }
 
+#qrcodelog{
+    position: relative;
+
+}
+#qrcodelog:hover{
+     margin-left: -150px;
+     transition:1000ms margin-left 1ms  ;
+ }
+#phone-org{
+    position: relative;
+    left: 95px;
+    top: -145px;
+
+}
+
+
+
 a img {
     border: 0;
 }
