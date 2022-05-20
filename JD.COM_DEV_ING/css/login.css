@@ -16,22 +16,25 @@
     background: url(../images/l-icon.png) no-repeat;
 }
 
-#qrcodelog{
+#qrcodelog {
     position: relative;
-
 }
-#qrcodelog:hover{
-     margin-left: -150px;
-     transition:1000ms margin-left 1ms  ;
- }
-#phone-org{
+
+#qrcodelog:hover {
+    margin-left: -150px;
+    transition: 1000ms margin-left 1ms;
+}
+
+#qrcodelog {
+    transition-delay: 2s;
+    transition: 1000ms margin-left 1ms;
+}
+
+#phone-org {
     position: relative;
     left: 95px;
     top: -145px;
-
 }
-
-
 
 a img {
     border: 0;
@@ -459,9 +462,10 @@ img {
     height: 147px;
 }
 
-.qrcode-img .gj{
+.qrcode-img .gj {
     margin-left: 20px;
 }
+
 .login-form .qrcode-login .qrcode-panel {
     width: 257px;
     margin: 18px auto 14px;
@@ -637,6 +641,7 @@ img {
 #footer .copyright {
     margin: 10px 0;
 }
+
 .login-tab .current {
     font-weight: 700;
     color: #cb2a2d;
