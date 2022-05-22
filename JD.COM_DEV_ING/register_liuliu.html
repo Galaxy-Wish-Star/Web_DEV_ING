@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>京东-会员注册</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
-    <script src="../JD.COM_DEV_ING/js/js_register/register_liuliu.js"></script>
+    <script src="./js/register.js"></script>
 </head>
 
 <body>
@@ -79,6 +79,11 @@
         <div class="input">
             <span class="name">确认密码</span>
             <input type="password" id="password1" class="text" placeholder=" 再次输入密码" />
+        </div>
+        <!-- 密码验证 -->
+        <div class="prompt" id="mmyz" style="display: none;">
+            <img src="./images/tip.png" alt="">
+            <span id="wzts4"></span>
         </div>
         <label id="check"><input type="checkbox" checked="checked"><a>同意<span>《京东服务协议》</span></a></label><br />
         <input id="btn" type="button" value="下一步，验证" /><br />
