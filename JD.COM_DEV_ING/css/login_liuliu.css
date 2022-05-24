@@ -16,30 +16,29 @@
     background: url(../images/l-icon.png) no-repeat;
 }
 
-#qrcodelog {
+#pt1 {
     position: relative;
 }
 
-#qrcodelog:hover {
+#pt1:hover {
     margin-left: -150px;
-    transition: 1000ms margin-left 1ms;
+    transition: 500ms margin-left 0.5ms;
 }
 
-#qrcodelog {
+#pt1 {
     transition-delay: 2s;
-    transition: 1000ms margin-left 1ms;
+    transition: 500ms margin-left 0.5ms;
 }
 
-#phone-org {
+#pt2 {
     position: relative;
     left: 90px;
     top: -145px;
 }
-#phone-org{
+#pt2{
     padding: -250px;
 
 }
-
 
 a img {
     border: 0;
@@ -467,10 +466,9 @@ img {
     height: 147px;
 }
 
-.qrcode-img .gj {
+.qrcode-img .gj{
     margin-left: 20px;
 }
-
 .login-form .qrcode-login .qrcode-panel {
     width: 257px;
     margin: 18px auto 14px;
@@ -646,7 +644,6 @@ img {
 #footer .copyright {
     margin: 10px 0;
 }
-
 .login-tab .current {
     font-weight: 700;
     color: #cb2a2d;

@@ -172,9 +172,28 @@ window.onload=function(){
         }else{
             if(reg1.test(phone.value)==true && yx.test(email.value)==true && n!=-1 && password.value===password1.value){
                 alert('注册成功！');
+                window.location.href='login.html';
             }else{
                 alert('信息填写不正确，请重新填写！');
             }
         }
     })
 }
+// $(function(){
+//     var $check=$("#check");
+//     $(".submit").click(function(){
+//         if($check.is(':checked')){
+//             alert('提交成功！');
+//         }else{
+//             alert('请仔细阅读协议！');
+//         }
+//         return false;
+//     });
+// });
+// $("#check").click(function(){
+//     if($(this)[0].checked==true){
+//         $('#btn').prop('disabled,false');
+//     }else{
+//         $('#btn').prop('disabled',true);
+//     }
+// })
