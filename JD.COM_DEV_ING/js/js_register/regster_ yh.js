@@ -167,6 +167,20 @@ window.onload = function() {
             }
         }
     })
+    var btn = document.querySelector('#btn');
+    btn.addEventListener('click', function() {
+        if (phone.value == '' || Emails.value == '' || password1.value == '' || password == '') {
+            alert('信息不为空');
+        } else {
+            if (gz1.test(phone.value) == true && reg2.test(Emails.value) == true && n != -1 && password.value == password1.value) {
+                alert('注册成功');
+            } else {
+                alert('信息填写不正确，请重新填写');
+            }
+        }
+
+    })
+
 
 
 }

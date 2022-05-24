@@ -1,9 +1,10 @@
-$(function () {
-    // var menu = document.querySelector('.top .menu')顶部菜单
-    $('.top .menu').mouseenter(function () {
+$(function() {
+
+    var menu = document.querySelector('.top .menu')
+    $('.top .menu').mouseenter(function() {
         $(this).children('.dd').show();
     })
-    $('.top .menu').mouseleave(function () {
+    $('.top .menu').mouseleave(function() {
         $(this).children('.dd').hide();
     })
 
@@ -23,6 +24,10 @@ $(function () {
         $('#J_popCtn').hide();
         $('#J_popCtn .cate_part').eq($(this).index()).hide();
     })
+
+
+
+
 
 
 })
