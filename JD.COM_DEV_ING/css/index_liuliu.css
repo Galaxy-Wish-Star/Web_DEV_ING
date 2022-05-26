@@ -480,12 +480,19 @@
     top: 0;
     /* 透明度 */
     opacity: 0;
+    transition: all 1.5s;
 }
+
 .banner .two .show{
     opacity: 1;
 }
+
 .banner .two{
     position: relative;
+}
+
+.banner:hover{
+    cursor: pointer;
 }
 
 .header>.banner .inner .three {
