@@ -44,7 +44,6 @@
             } else {
                 index++;
             }
-
             for (var n = 0; n <= 3; n++) {
                 bannerImg[n].className = '';
             }
@@ -52,13 +51,23 @@
         }, 2000)
         //鼠标移入轮播图区域，轮播图播放暂停
         banner.addEventListener('mouseenter', function () {
+        clearInterval(t)
 
         })
         //鼠标移出或不在轮播图区域，轮播图恢复播放
         banner.addEventListener('mouseleave', function () {
             t = setInterval(function () {
+                if (index == 3) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+                for (var n = 0; n <= 3; n++) {
+                    bannerImg[n].className = '';
+                }
+                bannerImg[index].className = 'show';
+            }, 2000)
 
-            })
         })
         //点击左右按钮轮播
         //鼠标移入左下方小圆点
