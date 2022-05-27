@@ -5,12 +5,12 @@ window.onload = function() {
     var sm = document.querySelector('.qrcode-login ');
     var zh = document.querySelector('.login-box');
     var mc = document.querySelector('.mc');
-    var hoer = document.querySelector('#orgg')
-    var phoneorg = document.querySelector('#qrcodee');
+    var hoer = document.querySelector('#phone-org')
+    var phoneorg = document.querySelector('#qrcodelog');
     phoneorg.addEventListener('mouseenter', function() {
         hoer.style.display = 'block';
     })
-    phoneorg.addEventListener('mousestate', function() {
+    phoneorg.addEventListener('mouseleave', function() {
         hoer.style.display = 'none';
     })
 

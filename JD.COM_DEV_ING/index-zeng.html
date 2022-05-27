@@ -12,26 +12,20 @@
     <!-- 引入在线的字体图标 -->
     <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
-    <script src="js/js_index/jquery-3.6.0_Pleep.js"></script>
-    <script src="js/js_index/index_Pleep.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index-zeng.js"></script>
     <style>
-        .banner .two img {
+        .banner.two img {
             position: absolute;
             left: 0;
             top: 0;
             opacity: 0;
-            transition: all 2s;
         }
         
-        .banner .two .show {
-            opacity: 1;
-        }
-        
-        .banner .two {
+        .banner.two {
             position: relative;
         }
     </style>
-
 </head>
 
 <body>
@@ -47,8 +41,8 @@
                 <div class="right">
                     <ul>
                         <li class="text">
-                            <a href="login_Pleepl.html">你好，请登录 </a>
-                            <a href="register_Pleepl.html" class="red">免费注册</a>
+                            <a href="#">你好，请登录 </a>
+                            <a href="#" class="red">免费注册</a>
                         </li>
                         <li class="border">
 
@@ -205,7 +199,7 @@
             <div class="inner">
                 <div class="one cate">
                     <ul>
-                        <li><a>家用电器</a></li>
+                        <li>家用电器</li>
                         <li>
                             <a href="#">手机</a>
                             <span>/</span>
@@ -325,7 +319,7 @@
                             <span>/</span>
                             <a href="#">二手</a>
                         </li>
-                        <li><a>工艺品</a></li>
+                        <li>工艺品</li>
 
                     </ul>
                     <div id="J_popCtn" class="JS_popCtn cate_pop" style="top: 0px; display: none;">
@@ -1636,81 +1630,13 @@
                 </div>
 
                 <div class="two" id='banner'>
-                    <img src="images/banner1.jpg" class="show">
+                    <img src="images/banner1.jpg">
                     <img src="images/banner2.jpg">
                     <img src="images/banner3.jpg">
                     <img src="images/banner4.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
                 </div>
-                <script>
-                    // 1.渐变轮播图（定时器：炸弹定时器；闹钟定时器）
-                    var banner = document.querySelector('#banner');
-                    var bannerimg = document.querySelectorAll('#banner img');
-                    var index = 0;
-
-                    // (1)鼠标不在轮播图区域，轮播图正常播放
-                    t = setInterval(function() {
-                        if (index == 3) {
-                            index = 0;
-                        } else {
-                            index++;
-                        }
-                        for (var n = 0; n <= 3; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                    }, 1500)
-
-                    // (2)鼠标移入轮播图区域，轮播图停止切换
-                    banner.addEventListener('mouseenter', function() {
-                        clearInterval(t);
-
-                    })
-
-                    // (3)鼠标移出轮播图区域，轮播图恢复切换
-                    banner.addEventListener('mouseleave', function() {
-                        t = setInterval(function() {
-                            if (index == 3) {
-                                index = 0;
-                            } else {
-                                index++;
-                            }
-                            for (var n = 0; n <= 3; n++) {
-                                bannerimg[n].className = '';
-                            }
-                            bannerimg[index].className = 'show';
-                        }, 1500)
-                    })
-
-                    // 2.点击左右按钮轮换
-                    var bannerLeft = document.querySelector('#bannerLeft')
-                    var bannerrRight = document.querySelector('#bannerRight')
-                    bannerLeft.addEventListener('click', function() {
-                        if (index == 0) {
-                            index = 3;
-                        } else {
-                            index--;
-                        }
-                        for (var n = 0; n <= 3; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                    })
-                    bannerRight.addEventListener('click', function() {
-                        if (index == 3) {
-                            index = 0;
-                        } else {
-                            index++;
-                        }
-                        for (var n = 0; n <= 3; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                    })
-
-                    // 3.移到小圆点切换
-                </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
                 </div>

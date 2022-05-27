@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>京东-欢迎登录</title>
-    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <link type="text/css" rel="stylesheet" href="css/login_liuliu.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
-    <script src="js/js_login/login_Pleepl.js"></script>
+    <script src="./js/js_login/login_liuliu.js"></script>
 </head>
 
 <body>
@@ -40,18 +40,18 @@
                         </div>
                     </div>
                     <div class="login-tab login-tab-l">
-                        <a href="javascript:;" id="smdl">扫码登录</a>
+                        <a id="smdl1" href="javascript:;">扫码登录</a>
                     </div>
                     <div class="login-tab login-tab-r">
-                        <a href="javascript:;" id="zhdl">账户登录</a>
+                        <a id="zhdl1" href="javascript:;">账户登录</a>
                     </div>
-                    <div class="login-box">
+                    <div class="login-box" style="display:none ;">
                         <div class="mt tab-h">
                         </div>
-                        <div class="msg-wrap" style="display: none;">
+                        <div class="msg-wrap">
                             <div class="msg-error hide"><b></b></div>
                         </div>
-                        <div class="mc" style="display: none;">
+                        <div class="mc">
                             <div class="form">
                                 <form id="formlogin" method="post" onsubmit="return false;">
                                     <div class="item item-fore1">
@@ -85,10 +85,10 @@
 
                     <div class="qrcode-login">
                         <div class="mc">
-                            <div class="qrcode-main" style="margin-top: 0px;">
+                            <div class="qrcode-main">
                                 <div class="qrcode-img">
-                                    <img src="./images/show.png" alt="" id="qrcodelog">
-                                    <img src="./images/phone-orange.png" alt="" style="display: none" id="phone-org">
+                                    <img src="./images/show.png" alt="" id="pt1">
+                                    <img src="./images/phone-orange.png" alt="" style="display: none ;" id="pt2">
                                 </div>
                             </div>
                             <div class="qrcode-panel">
@@ -180,6 +180,5 @@
         </div>
     </div>
 </body>
-
 
 </html>

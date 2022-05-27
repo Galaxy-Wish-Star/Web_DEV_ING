@@ -12,16 +12,16 @@ window.onload = function () {
         saoma.style.display = 'block';
         zh.style.display = 'none';
         smdl.style.color = '#E4393C';
-        smdl.style.fontWeight='bold';
-        zhdl.style.fontWeight='normal';
+        smdl.style.fontWeight = 'bold';
+        zhdl.style.fontWeight = 'normal';
         zhdl.style.color = '#746666';
     })
     zhanghu.addEventListener('click', function () {
         zh.style.display = 'block';
         saoma.style.display = 'none';
         zhdl.style.color = '#E4393C';
-        zhdl.style.fontWeight='bold';
-        smdl.style.fontWeight='normal';
+        zhdl.style.fontWeight = 'bold';
+        smdl.style.fontWeight = 'normal';
         smdl.style.color = '#746666';
     })
     phoneorg.addEventListener('mouseenter', function () {
@@ -30,15 +30,16 @@ window.onload = function () {
     phoneorg.addEventListener('mouseleave', function () {
         hoer.style.display = 'none';
     })
+
     var pwd = document.querySelector('#nloginpwd');
     var zhangh = document.querySelector('#loginname');
     var gz1 = /^\d{8,20}$/;
     var btn = document.querySelector('#loginsubmit');
     btn.addEventListener('click', function () {
-        if (zhangh.value == '' || pwd.value == '') {
+        if (zhangh.value === '' || pwd.value === '') {
             alert('账号密码不能为空');
         } else {
-            if (gz1.test(zhangh.value) == false || gz1.test(pwd.value) == false) {
+            if (gz1.test(zhangh.value) === false || gz1.test(pwd.value) == false) {
                 alert('账号密码格式错误');
             } else {
                 if (loginname.value == '11111111' && pwd.value == '11111111') {

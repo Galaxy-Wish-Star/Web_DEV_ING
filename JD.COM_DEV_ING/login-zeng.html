@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
-    <script src="js/js_login/login_Pleepl.js"></script>
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -40,18 +40,18 @@
                         </div>
                     </div>
                     <div class="login-tab login-tab-l">
-                        <a href="javascript:;" id="smdl">扫码登录</a>
+                        <a href="javascript:;">扫码登录</a>
                     </div>
                     <div class="login-tab login-tab-r">
-                        <a href="javascript:;" id="zhdl">账户登录</a>
+                        <a href="javascript:;">账户登录</a>
                     </div>
-                    <div class="login-box">
+                    <div class="login-box" style="display:none;">
                         <div class="mt tab-h">
                         </div>
-                        <div class="msg-wrap" style="display: none;">
+                        <div class="msg-wrap">
                             <div class="msg-error hide"><b></b></div>
                         </div>
-                        <div class="mc" style="display: none;">
+                        <div class="mc">
                             <div class="form">
                                 <form id="formlogin" method="post" onsubmit="return false;">
                                     <div class="item item-fore1">
@@ -61,7 +61,7 @@
                                     </div>
                                     <div id="entry" class="item item-fore2" style="visibility: visible;">
                                         <label class="login-label pwd-label" for="nloginpwd"></label>
-                                        <input type="password" id="loginpwd" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" _input="true" placeholder="密码">
+                                        <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" _input="true" placeholder="密码">
                                         <span class="clear-btn" style="display: none;"></span>
                                         <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
                                     </div>
@@ -85,12 +85,13 @@
 
                     <div class="qrcode-login">
                         <div class="mc">
-                            <div class="qrcode-main" style="margin-top: 0px;">
+                            <div class="qrcode-main">
                                 <div class="qrcode-img">
-                                    <img src="./images/show.png" alt="" id="qrcodelog">
-                                    <img src="./images/phone-orange.png" alt="" style="display: none" id="phone-org">
+                                    <img src="./images/show.png" alt="">
+                                    <img src="./images/phone-orange.png" alt="" style="display: none;" id="aaa">
                                 </div>
                             </div>
+
                             <div class="qrcode-panel">
                                 <ul>
                                     <li class="fore1">
@@ -180,6 +181,5 @@
         </div>
     </div>
 </body>
-
 
 </html>

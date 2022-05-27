@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>京东-会员注册</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
-    <script src="./js/register.js"></script>
+    <script src="js/register.js"></script>
 </head>
 
 <body>
@@ -47,9 +47,10 @@
             <span class="name">手机号</span>
             <input type="text" id="phone" class="text" placeholder=" 可用作登录名" />
         </div>
-        <!-- 手机号验证 -->
-        <div class="prompt" id="sjts" style="display: none;">
-            <img src="./images/tip.png" alt="">
+        <!--手机号验证提示-->
+        <div class="prompt" id="ts1" style="display: none;">
+            <!-- 默认不显示 -->
+            <img src="../JD.COM(下发)/images/tip.png" alt="">
             <span id="wzts1"></span>
         </div>
         <!--Email文本框-->
@@ -57,9 +58,9 @@
             <span class="name">Email</span>
             <input type="text" id="Emails" class="text" placeholder=" 可用作登录名" />
         </div>
-        <!-- Email验证提示 -->
-        <div class="prompt" id="yxts" style="display: none;">
-            <img src="./images/tip.png" alt="">
+        <!--Email文本框提示-->
+        <div class="prompt" id="ts2" style="display: none;">
+            <img src="../JD.COM(下发)/images/tip.png" alt="">
             <span id="wzts2"></span>
         </div>
         <!--密码文本框-->
@@ -70,9 +71,9 @@
             <span class="grade" id="grade2">中</span>
             <span class="grade" id="grade3">强</span>
         </div>
-        <!-- 密码验证 -->
-        <div class="prompt" id="mmts" style="display: none;">
-            <img src="./images/tip.png" alt="">
+        <!--请输入密码提示框-->
+        <div class="prompt" id="ts3" style="display: none;">
+            <img src="../JD.COM(下发)/images/tip.png" alt="">
             <span id="wzts3"></span>
         </div>
         <!--确认密码框-->
@@ -80,10 +81,10 @@
             <span class="name">确认密码</span>
             <input type="password" id="password1" class="text" placeholder=" 再次输入密码" />
         </div>
-        <!-- 密码验证 -->
-        <div class="prompt" id="mmyz" style="display: none;">
-            <img src="./images/tip.png" alt="">
-            <span id="wzts4"></span>
+        <!--请再次确认密码提示框-->
+        <div class="prompt" id="ts10" style="display: none;">
+            <img src="../JD.COM(下发)/images/tip.png" alt="">
+            <span id="wzts10"></span>
         </div>
         <label id="check"><input type="checkbox" checked="checked"><a>同意<span>《京东服务协议》</span></a></label><br />
         <input id="btn" type="button" value="下一步，验证" /><br />
