@@ -12,6 +12,26 @@
     <!-- 引入在线的字体图标 -->
     <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
+    <style>
+        .banner .two img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 1.5s;
+        }
+        
+        .banner .two .show {
+            opacity: 1;
+        }
+        
+        .banner .two {
+            position: relative;
+        }
+    </style>
+    <script src="../JD.COM_DEV_ING/js/jquery-3.6.0.min.js"></script>
+    <script src="../JD.COM_DEV_ING/js/js_index/index-jiu.js"></script>
+
 
 </head>
 
@@ -1617,10 +1637,76 @@
                 </div>
 
                 <div class="two" id='banner'>
-                    <img src="images/banner1.jpg">
+                    <img src="images/banner1.jpg" class="show">
+                    <img src="images/banner2.jpg">
+                    <img src="images/banner3.jpg">
+                    <img src="images/banner4.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
                 </div>
+                <script>
+                    // 1.渐变的轮播图
+                    var banner = document.querySelector('#banner');
+                    var bannerImg = document.querySelectorAll('#banner img');
+                    var index = 0;
+                    // (1)鼠标不在轮播图区域的时候，轮播图正常波放
+                    var t = setInterval(function() {
+                            if (index == 3) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = '';
+                            }
+                            bannerImg[index].className = 'show';
+                        }, 2000)
+                        // (2)鼠标移到轮播图区域，轮播图播放暂停
+                    banner.addEventListener('mouseenter', function() {
+                            clearInterval(t)
+                        })
+                        // (3)鼠标移除轮播图区域，轮播图恢复播放
+                    banner.addEventListener('mouseleave', function() {
+                            t = setInterval(function() {
+                                if (index == 3) {
+                                    index = 0;
+                                } else {
+                                    index++;
+                                }
+                                for (var n = 0; n <= 3; n++) {
+                                    bannerImg[n].className = '';
+                                }
+                                bannerImg[index].className = 'show';
+                            }, 2000)
+                        })
+                        // 2.点击左右按钮分别切换到上一张或下一张图片
+                    var bannerLeft = document.querySelector('#bannerLeft');
+                    var bannerRight = document.querySelector('#bannerRight');
+                    bannerLeft.addEventListener('click', function() {
+                        if (index == 0) {
+                            index = 3;
+                        } else {
+                            index--;
+                        }
+                        for (var n = 0; n <= 3; n++) {
+                            bannerImg[n].className = '';
+                        }
+                        bannerImg[index].className = 'show';
+                    })
+
+                    bannerRight.addEventListener('click', function() {
+                            if (index == 3) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = '';
+                            }
+                            bannerImg[index].className = 'show';
+                        })
+                        // 3.鼠标移到左下方导航（小圆点）切换到对应的图片
+                </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
                 </div>
