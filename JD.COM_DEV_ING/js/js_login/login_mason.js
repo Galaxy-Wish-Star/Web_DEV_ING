@@ -30,6 +30,7 @@ window.onload = function () {
     phoneorg.addEventListener('mouseleave', function () {
         hoer.style.display = 'none';
     })
+
     var pwd = document.querySelector('#nloginpwd');
     var zhangh = document.querySelector('#loginname');
     var gz1 = /^\d{8,20}$/;
