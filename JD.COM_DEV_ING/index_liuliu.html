@@ -10,50 +10,10 @@
     <!-- 样式的初始化 -->
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1623622_8k99cg4suag.css">
     <!-- 引入在线的字体图标 -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_liuliu.css">
     <!-- 当前页面的css -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/js_index/index_Pleep.js"></script>
-    <style>
-        .banner .two img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            transition: all 2s;
-        }
-        
-        .banner .two .show {
-            opacity: 1;
-        }
-        
-        .banner .two {
-            position: relative;
-        }
-        
-        .bannernav {
-            position: absolute;
-            left: 28px;
-            bottom: 20px;
-        }
-        
-        .bannernav li {
-            width: 8px;
-            height: 8px;
-            background-color: rgba(247, 247, 247, 0.5);
-            float: left;
-            margin-right: 2px;
-            border-radius: 100%;
-            border: 3px solid transparent;
-            background-clip: content-box;
-        }
-        
-        .bannernav .active {
-            background-color: #fff;
-            border: 3px solid rgba(247, 247, 247, 0.5);
-        }
-    </style>
-
+    <script src="../JD.COM_DEV_ING/js/jquery-3.6.0.min.js"></script>
+    <script src="../JD.COM_DEV_ING/js/js_index/index_liuliu.js"></script>
 </head>
 
 <body>
@@ -69,8 +29,8 @@
                 <div class="right">
                     <ul>
                         <li class="text">
-                            <a href="login_Pleepl.html">你好，请登录 </a>
-                            <a href="register_Pleepl.html" class="red">免费注册</a>
+                            <a href="#">你好，请登录 </a>
+                            <a href="#" class="red">免费注册</a>
                         </li>
                         <li class="border">
 
@@ -187,8 +147,8 @@
                         <div class="search">
                             <input type="text" placeholder="挂烫机">
                             <span>
-                             <i class="icon iconfont icon-changyongtubiao_yonghusousuo"></i>
-                          </span>
+                                <i class="icon iconfont icon-changyongtubiao_yonghusousuo"></i>
+                            </span>
                         </div>
                         <div class="goods">
                             <i class="icon iconfont icon-gouwuche"></i>
@@ -227,7 +187,7 @@
             <div class="inner">
                 <div class="one cate">
                     <ul>
-                        <li><a>家用电器</a></li>
+                        <li>家用电器</li>
                         <li>
                             <a href="#">手机</a>
                             <span>/</span>
@@ -347,7 +307,7 @@
                             <span>/</span>
                             <a href="#">二手</a>
                         </li>
-                        <li><a>工艺品</a></li>
+                        <li>工艺品</li>
 
                     </ul>
                     <div id="J_popCtn" class="JS_popCtn cate_pop" style="top: 0px; display: none;">
@@ -1662,119 +1622,71 @@
                     <img src="images/banner2.jpg">
                     <img src="images/banner3.jpg">
                     <img src="images/banner4.jpg">
-                    <img src="images/banner5.jpg">
-                    <img src="images/banner6.jpg">
-                    <img src="images/banner7.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
-                    <ul class="bannernav">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
                 </div>
                 <script>
-                    // 1.渐变轮播图（定时器：炸弹定时器；闹钟定时器）
-                    var banner = document.querySelector('#banner');
-                    var bannerimg = document.querySelectorAll('#banner img');
-                    var bannernav = document.querySelectorAll('.bannernav li');
-                    var index = 0;
-
-                    // (1)鼠标不在轮播图区域，轮播图正常播放
-                    t = setInterval(function() {
-                        if (index == 6) {
-                            index = 0;
-                        } else {
-                            index++;
-                        }
-                        for (var n = 0; n <= 6; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                        for (var n = 0; n <= 6; n++) {
-                            bannernav[n].className = '';
-                        }
-                        bannernav[index].className = 'active';
-                    }, 2500)
-
-                    // (2)鼠标移入轮播图区域，轮播图停止切换
-                    banner.addEventListener('mouseenter', function() {
-                        clearInterval(t);
-
-                    })
-
-                    // (3)鼠标移出轮播图区域，轮播图恢复切换
-                    banner.addEventListener('mouseleave', function() {
-                        t = setInterval(function() {
-                            if (index == 6) {
-                                index = 0;
-                            } else {
-                                index++;
-                            }
-                            for (var n = 0; n <= 6; n++) {
-                                bannerimg[n].className = '';
-                            }
-                            bannerimg[index].className = 'show';
-                            for (var n = 0; n <= 6; n++) {
-                                bannernav[n].className = '';
-                            }
-                            bannernav[index].className = 'active';
-                        }, 2500)
-                    })
-
-                    // 2.点击左右按钮轮换
-                    var bannerLeft = document.querySelector('#bannerLeft')
-                    var bannerrRight = document.querySelector('#bannerRight')
-                    bannerLeft.addEventListener('click', function() {
-                        if (index == 0) {
-                            index = 6;
-                        } else {
-                            index--;
-                        }
-                        for (var n = 0; n <= 6; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                        for (var n = 0; n <= 6; n++) {
-                            bannernav[n].className = '';
-                        }
-                        bannernav[index].className = 'active';
-                    })
-                    bannerRight.addEventListener('click', function() {
-                        if (index == 6) {
-                            index = 0;
-                        } else {
-                            index++;
-                        }
-                        for (var n = 0; n <= 6; n++) {
-                            bannerimg[n].className = '';
-                        }
-                        bannerimg[index].className = 'show';
-                        for (var n = 0; n <= 6; n++) {
-                            bannernav[n].className = '';
-                        }
-                        bannernav[index].className = 'active';
-                    })
-
-                    // 3.移到小圆点切换
-                    for (var n = 0; n <= 6; n++) {
-                        bannernav[n].index = n;
-                        bannernav[n].addEventListener('mouseenter', function() {
-                            for (var n = 0; n <= 6; n++) {
-                                bannerimg[n].className = '';
-                            }
-                            index = this.index;
-                            for (var n = 0; n <= 6; n++) {
-                                bannernav[n].className = '';
-                            }
-                            bannerimg[index].className = 'show';
-                            bannernav[index].className = 'active';
-                        })
+                    // 渐变的轮播图
+                var banner=document.querySelector('#banner');
+                var bannerImg=document.querySelectorAll('#banner img');
+                var index=0;
+                //  (1.鼠标不在轮播图区域的时候 轮播图正常播放)
+                var t=setInterval(function(){
+                    if(index==3){
+                        index=0;
+                    }else{
+                        index++;
                     }
+                    for(var n=0;n<=3;n++){
+                        bannerImg[n].className='';
+                    }
+                    bannerImg[index].className='show';
+                }, 2000)
+                //  (2.鼠标移入轮播图区域 轮播图播放暂停)
+                banner.addEventListener('mouseenter',function(){
+                    clearInterval(t);
+                })
+                //  (3.鼠标移出轮播图区域 轮播图恢复播放)
+                banner.addEventListener('mouseleave',function(){
+                    t=setInterval(function(){
+                        if(index==3){
+                        index=0;
+                    }else{
+                        index++;
+                    }
+                    for(var n=0;n<=3;n++){
+                        bannerImg[n].className='';
+                    }
+                    bannerImg[index].className='show';
+                    },2000)
+                })
+                // 点击左右按钮轮播
+                var bannerLeft=document.querySelector('#bannerLeft');
+                var bannerRight=document.querySelector('#bannerRight');
+                bannerLeft.addEventListener('click',function(){
+                    if(index==0){
+                        index=3;
+                    }else{
+                        index--;
+                    }
+                    for(var n=0;n<=3;n++){
+                        bannerImg[n].className='';
+                    }
+                    bannerImg[index].className='show';
+                })
+                bannerRight.addEventListener('click',function(){
+                    if(index==3){
+                        index=0;
+                    }else{
+                        index++;
+                    }
+                    for(var n=0;n<=3;n++){
+                        bannerImg[n].className='';
+                    }
+                    bannerImg[index].className='show';
+                })
+                // 鼠标移入左下方导航（小圆点）切换到对应的图片
+
                 </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
