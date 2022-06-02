@@ -12,6 +12,47 @@
     <!-- 引入在线的字体图标 -->
     <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js_index/index_Pleep.js"></script>
+    <style>
+        .banner .two img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 2s;
+        }
+        
+        .banner .two .show {
+            opacity: 1;
+        }
+        
+        .banner .two {
+            position: relative;
+        }
+        
+        .bannernav {
+            position: absolute;
+            left: 28px;
+            bottom: 20px;
+        }
+        
+        .bannernav li {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(247, 247, 247, 0.5);
+            float: left;
+            margin-right: 2px;
+            border-radius: 100%;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannernav .active {
+            background-color: #fff;
+            border: 3px solid rgba(247, 247, 247, 0.5);
+        }
+    </style>
 
 </head>
 
@@ -28,8 +69,8 @@
                 <div class="right">
                     <ul>
                         <li class="text">
-                            <a href="#">你好，请登录 </a>
-                            <a href="#" class="red">免费注册</a>
+                            <a href="login_Pleepl.html">你好，请登录 </a>
+                            <a href="register_Pleepl.html" class="red">免费注册</a>
                         </li>
                         <li class="border">
 
@@ -186,7 +227,7 @@
             <div class="inner">
                 <div class="one cate">
                     <ul>
-                        <li>家用电器</li>
+                        <li><a>家用电器</a></li>
                         <li>
                             <a href="#">手机</a>
                             <span>/</span>
@@ -306,7 +347,7 @@
                             <span>/</span>
                             <a href="#">二手</a>
                         </li>
-                        <li>工艺品</li>
+                        <li><a>工艺品</a></li>
 
                     </ul>
                     <div id="J_popCtn" class="JS_popCtn cate_pop" style="top: 0px; display: none;">
@@ -1617,10 +1658,124 @@
                 </div>
 
                 <div class="two" id='banner'>
-                    <img src="images/banner1.jpg">
+                    <img src="images/banner1.jpg" class="show">
+                    <img src="images/banner2.jpg">
+                    <img src="images/banner3.jpg">
+                    <img src="images/banner4.jpg">
+                    <img src="images/banner5.jpg">
+                    <img src="images/banner6.jpg">
+                    <img src="images/banner7.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
+                    <ul class="bannernav">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
+                <script>
+                    // 1.渐变轮播图（定时器：炸弹定时器；闹钟定时器）
+                    var banner = document.querySelector('#banner');
+                    var bannerimg = document.querySelectorAll('#banner img');
+                    var bannernav = document.querySelectorAll('.bannernav li');
+                    var index = 0;
+
+                    // (1)鼠标不在轮播图区域，轮播图正常播放
+                    t = setInterval(function() {
+                        if (index == 6) {
+                            index = 0;
+                        } else {
+                            index++;
+                        }
+                        for (var n = 0; n <= 6; n++) {
+                            bannerimg[n].className = '';
+                        }
+                        bannerimg[index].className = 'show';
+                        for (var n = 0; n <= 6; n++) {
+                            bannernav[n].className = '';
+                        }
+                        bannernav[index].className = 'active';
+                    }, 2500)
+
+                    // (2)鼠标移入轮播图区域，轮播图停止切换
+                    banner.addEventListener('mouseenter', function() {
+                        clearInterval(t);
+
+                    })
+
+                    // (3)鼠标移出轮播图区域，轮播图恢复切换
+                    banner.addEventListener('mouseleave', function() {
+                        t = setInterval(function() {
+                            if (index == 6) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            for (var n = 0; n <= 6; n++) {
+                                bannerimg[n].className = '';
+                            }
+                            bannerimg[index].className = 'show';
+                            for (var n = 0; n <= 6; n++) {
+                                bannernav[n].className = '';
+                            }
+                            bannernav[index].className = 'active';
+                        }, 2500)
+                    })
+
+                    // 2.点击左右按钮轮换
+                    var bannerLeft = document.querySelector('#bannerLeft')
+                    var bannerrRight = document.querySelector('#bannerRight')
+                    bannerLeft.addEventListener('click', function() {
+                        if (index == 0) {
+                            index = 6;
+                        } else {
+                            index--;
+                        }
+                        for (var n = 0; n <= 6; n++) {
+                            bannerimg[n].className = '';
+                        }
+                        bannerimg[index].className = 'show';
+                        for (var n = 0; n <= 6; n++) {
+                            bannernav[n].className = '';
+                        }
+                        bannernav[index].className = 'active';
+                    })
+                    bannerRight.addEventListener('click', function() {
+                        if (index == 6) {
+                            index = 0;
+                        } else {
+                            index++;
+                        }
+                        for (var n = 0; n <= 6; n++) {
+                            bannerimg[n].className = '';
+                        }
+                        bannerimg[index].className = 'show';
+                        for (var n = 0; n <= 6; n++) {
+                            bannernav[n].className = '';
+                        }
+                        bannernav[index].className = 'active';
+                    })
+
+                    // 3.移到小圆点切换
+                    for (var n = 0; n <= 6; n++) {
+                        bannernav[n].index = n;
+                        bannernav[n].addEventListener('mouseenter', function() {
+                            for (var n = 0; n <= 6; n++) {
+                                bannerimg[n].className = '';
+                            }
+                            index = this.index;
+                            for (var n = 0; n <= 6; n++) {
+                                bannernav[n].className = '';
+                            }
+                            bannerimg[index].className = 'show';
+                            bannernav[index].className = 'active';
+                        })
+                    }
+                </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
                 </div>
