@@ -23,9 +23,16 @@ $(function() {
         $(this).show();
     })
     $(".banner .one .cate_part").mouseout(function() {
-        //    console.log($(this).index());
-        $(".JS_popCtn").hide();
+            //    console.log($(this).index());
+            $(".JS_popCtn").hide();
+            $(this).hide();
+        })
+        // 广告
+    $('.guanggao').fadeIn(2000).delay(3000).animate({
+        opacity: '0',
+        height: '1000',
+        width: '5000'
+    }, 2000, function() {
         $(this).hide();
     })
-
 })
