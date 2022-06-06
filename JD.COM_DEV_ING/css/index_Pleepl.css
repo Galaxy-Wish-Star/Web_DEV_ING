@@ -620,7 +620,7 @@
 }
 
 .main .inner .one .left {
-    width: 209px;
+    /* width: 209px; */
     height: 290px;
     float: left;
     background-image: url(../images/ms.png);
@@ -647,7 +647,8 @@
 .main .inner .one .left .time {
     text-align: center;
     color: white;
-    font-size: 26px;
+    font-size: 24px;
+    width: 220px;
 }
 
 .main .inner .one .left .time .num {
@@ -1505,8 +1506,9 @@
     width: 80px;
     height: 520px;
     position: absolute;
-    top: 32px;
+    top: 749px;
     margin-left: 1320px;
+    /* padding-top: 717px; */
 }
 
 .elevator li {
@@ -1533,4 +1535,25 @@
 
 .elevator .active {
     color: red
+}
+
+.elevator_fix {
+    position: fixed;
+    top: 45px;
+    animation: e_show 2s;
+}
+
+@Keyframes e_show {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 15px
+    }
+    50% {
+        top: 30px
+    }
+    100% {
+        top: 45px;
+    }
 }
