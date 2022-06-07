@@ -172,7 +172,7 @@ window.onload=function(){
         }else{
             if(reg1.test(phone.value)==true && yx.test(email.value)==true && n!=-1 && password.value===password1.value){
                 alert('注册成功！');
-                window.location.href='../JD.COM_DEV_ING/login_liuliu.html';
+                window.location.href='login.html';
             }else{
                 alert('信息填写不正确，请重新填写！');
             }
