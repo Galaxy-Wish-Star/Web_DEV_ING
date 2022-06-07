@@ -10,7 +10,7 @@
     <!-- 样式的初始化 -->
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1623622_8k99cg4suag.css">
     <!-- 引入在线的字体图标 -->
-    <link rel="stylesheet" href="css/index_Pleepl.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/js_index/index_Pleep.js"></script>
@@ -30,11 +30,12 @@
         .banner .two {
             position: relative;
         }
-        /* .bannernav {
+        
+        .bannernav {
             position: absolute;
             left: 28px;
             bottom: 20px;
-        } */
+        }
         
         .bannernav li {
             width: 8px;
@@ -51,57 +52,11 @@
             background-color: #fff;
             border: 3px solid rgba(247, 247, 247, 0.5);
         }
-        
-        .ggtc img {
-            display: none;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -193px;
-            /* 高度的一半 */
-            margin-left: -640px;
-            /* 宽度的一半 */
-            z-index: 100000;
-        }
-        /* 广告弹出样式 */
-        /* 添加动画 */
-        /* .ggtc img {
-            -webkit-animation-name: zoom;
-            -webkit-animation-duration: 1s;
-            animation-name: zoom;
-            animation-duration: 1s;
-        }
-        
-        @-webkit-keyframes zoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-            to {
-                -webkit-transform: scale(1)
-            }
-        }
-        
-        @keyframes zoom {
-            from {
-                transform: scale(0)
-            }
-            to {
-                transform: scale(1)
-            }
-        } */
     </style>
 
 </head>
 
 <body>
-    <div class="ggtc"> <img src="/gg_PLeepl.png" alt=""></div>
-
-    <!-- <script type="text/javascript">
-        setTimeout(function() { //定时器 
-                $(".ggtc img").css("display", "none"); //将图片的display属性设置为none
-            },
-            5000); //设置三千毫秒即3秒
-    </script> -->
 
     <div class="header">
         <div class="top">
@@ -1918,10 +1873,8 @@
             <div class="one leval">
                 <div class="left">
                     <h4>京东秒杀</h4>
-                    <p class="text"><span>20:00</span>场 倒计时</p>
+                    <p class="text"><span>22:00</span>场 倒计时</p>
                     <p class="time">
-                        <span class="num day">00</span>
-                        <span>天</span>
                         <span class="num hour">00</span>
                         <span>:</span>
                         <span class="num minute">00</span>
@@ -1930,49 +1883,6 @@
                     </p>
 
                 </div>
-                <script>
-                    //1、获取元素
-                    var day = document.querySelector('.day');
-                    var hour = document.querySelector('.hour');
-                    var minute = document.querySelector('.minute');
-                    var second = document.querySelector('.second');
-                    countDown(); //先调用一次这个函数 防止第一次刷新页面有空白
-
-                    //2、倒计时-时分秒函数
-                    function countDown() {
-                        var inputTime = +new Date('2022-6-6 20:00:00').getTime(); //倒计时的结束时间，自己设置时间
-                        var nowTime = +new Date().getTime(); //返回的是当前时间的总的毫秒数
-                        var times = (inputTime - nowTime) / 1000; // times是剩余时间的总的毫秒数
-                        // 定义变量,用于存放倒计时中的时：分：秒
-                        var d = h = m = s = 0;
-
-
-
-
-                        if (times >= 0) {
-                            var d = parseInt(times / 60 / 60 / 24); //%取模。除商之后得到的余数
-                            day.innerHTML = d < 10 ? '0' + d : d;
-                            var h = parseInt(times / 60 / 60 % 24); //%取模。除商之后得到的余数
-                            hour.innerHTML = h < 10 ? '0' + h : h; //更改div里面的内容 把h给获取元素hour的内容
-                            // h = h < 10 ? '0' + h : h; //判断数值小于10的情况 如 0-9改为 00-09
-                            var m = parseInt(times / 60 % 60);
-                            minute.innerHTML = m < 10 ? '0' + m : m;
-                            var s = parseInt(times % 60);
-                            second.innerHTML = s < 10 ? '0' + s : s;
-                            // s = s < 10 ? '0' + s : s; //三目运算符 条件预算符
-                        } else {
-                            clearInterval(countDown);
-                            document.querySelector('.time').innerHTML = '秒杀已结束！';
-
-                        }
-
-                        //3、开启定时器
-                        setInterval(countDown, 1000); //1000毫秒，每一秒钟调用一次函数
-                    }
-
-                    //广告图片弹出
-                </script>
-
                 <div class="center">
                     <ul>
                         <li>
