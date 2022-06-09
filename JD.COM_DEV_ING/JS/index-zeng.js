@@ -44,6 +44,39 @@ $(function() {
 
 
 
+    // $(document).ready(function() {
+    //     $("banner.cate.li").hover(function() {
+    //             $("cate_detail_con_lk").show("show");
+    //         },
+    //         function() {
+    //             $("cate_detail_con_lk").hide("fast");
+    //         }
+    //     );
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

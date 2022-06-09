@@ -12,11 +12,81 @@
     <!-- 引入在线的字体图标 -->
     <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
+    <style>
+        .banner .two img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 1.5s;
+        }
+        
+        .banner .two .show {
+            opacity: 1;
+        }
+        
+        .banner .two {
+            position: relative;
+        }
+        
+        .bannerNav {
+            position: absolute;
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .guanggao {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: none;
+        }
+        
+        .gg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .guanggao img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+    <script src="../JD.COM_DEV_ING/js/jquery-3.6.0.min.js"></script>
+    <script src="../JD.COM_DEV_ING/js/js_index/index-jiu.js"></script>
+
 
 </head>
 
 <body>
-
+    <div class="guanggao">
+        <div class="gg"><img src="../JD.COM_DEV_ING/images/jingdong.jpg" alt=""></div>
+    </div>
     <div class="header">
         <div class="top">
             <div class="inner">
@@ -1617,10 +1687,113 @@
                 </div>
 
                 <div class="two" id='banner'>
-                    <img src="images/banner1.jpg">
+                    <img src="images/banner1.jpg" class="show">
+                    <img src="images/banner2.jpg">
+                    <img src="images/banner3.jpg">
+                    <img src="images/banner4.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
+                    <ul class="bannerNav">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
+                <script>
+                    // 1.渐变的轮播图
+                    var banner = document.querySelector('#banner');
+                    var bannerImg = document.querySelectorAll('#banner img');
+                    var bannerNavlis = document.querySelectorAll('.bannerNav li');
+                    var index = 0;
+                    // (1)鼠标不在轮播图区域的时候，轮播图正常波放
+                    var t = setInterval(function() {
+                            if (index == 3) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = '';
+                            }
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        }, 2000)
+                        // (2)鼠标移到轮播图区域，轮播图播放暂停
+                    banner.addEventListener('mouseenter', function() {
+                            clearInterval(t)
+                        })
+                        // (3)鼠标移除轮播图区域，轮播图恢复播放
+                    banner.addEventListener('mouseleave', function() {
+                            t = setInterval(function() {
+                                if (index == 3) {
+                                    index = 0;
+                                } else {
+                                    index++;
+                                }
+                                for (var n = 0; n <= 3; n++) {
+                                    bannerImg[n].className = '';
+                                }
+                                bannerImg[index].className = 'show';
+                                for (var n = 0; n <= 3; n++) {
+                                    bannerNavlis[n].className = '';
+                                }
+                                bannerNavlis[index].className = 'active';
+                            }, 2000)
+                        })
+                        // 2.点击左右按钮分别切换到上一张或下一张图片
+                    var bannerLeft = document.querySelector('#bannerLeft');
+                    var bannerRight = document.querySelector('#bannerRight');
+                    bannerLeft.addEventListener('click', function() {
+                        if (index == 0) {
+                            index = 3;
+                        } else {
+                            index--;
+                        }
+                        for (var n = 0; n <= 3; n++) {
+                            bannerImg[n].className = '';
+                        }
+                        bannerImg[index].className = 'show';
+                        for (var n = 0; n <= 3; n++) {
+                            bannerNavlis[n].className = '';
+                        }
+                        bannerNavlis[index].className = 'active';
+                    })
+
+                    bannerRight.addEventListener('click', function() {
+                            if (index == 3) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = '';
+                            }
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        })
+                        // 3.鼠标移到左下方导航（小圆点）切换到对应的图片
+                    for (var n = 0; n <= 3; n++) {
+                        bannerNavlis[n].index = n;
+                        bannerNavlis[n].addEventListener('mouseenter', function() {
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = "";
+                            }
+                            this.className = "active";
+                            index = this.index;
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = "";
+                            }
+                            bannerImg[index].className = "show";
+                        })
+                    }
+                </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
                 </div>
@@ -1720,6 +1893,8 @@
                     <h4>京东秒杀</h4>
                     <p class="text"><span>22:00</span>场 倒计时</p>
                     <p class="time">
+                        <span class="num day">00</span>
+                        <span>天</span>
                         <span class="num hour">00</span>
                         <span>:</span>
                         <span class="num minute">00</span>
@@ -1728,6 +1903,34 @@
                     </p>
 
                 </div>
+                <script>
+                    function countDown() {
+                        //    获取当前时间
+                        var nowTime = new Date().getTime();
+                        // 设置秒杀开始/截止时间
+                        var killTime = new Date('2022-5-1 20:00:00').getTime();
+                        // 时间的差值
+                        var restTime = (killTime - nowTime) / 1000;
+                        // 定义h、m、s用于存放小时，分钟，秒
+                        var d = h = m = s = 0;
+                        if (restTime >= 0) {
+                            d = parseInt(restTime / 60 / 60 / 24);
+                            h = parseInt(restTime / 60 / 60 % 24); //时   取模  除商以后得到的余数                   
+                            m = parseInt(restTime / 60 % 60); //分
+                            s = parseInt(restTime % 60); //秒
+                            document.querySelector('.day').innerHTML = d < 10 ? '0' + d : d;
+                            document.querySelector('.hour').innerHTML = h < 10 ? '0' + h : h;
+                            document.querySelector('.minute').innerHTML = m < 10 ? '0' + m : m;
+                            document.querySelector('.second').innerHTML = s < 10 ? '0' + s : s;
+                            // h = h < 10 ? '0' + h : h;     三目运算 条件运算符 ？ ：
+                        } else {
+                            clearInterval(ms);
+                            document.querySelector('.time').innerHTML = '秒杀已结束'
+                        }
+                    }
+                    // 每秒调运countDown()函数，显示动态时间效果
+                    var ms = setInterval(countDown, 1000);
+                </script>
                 <div class="center">
                     <ul>
                         <li>
