@@ -23,8 +23,4 @@ $(function(){
         $('#J_popCtn').hide();
         $('#J_popCtn .cate_part').eq($(this).index()).hide();
     })
-    $('span').click(function(){
-        $('.advert').remove()
-    })
-    $('.advert').stop().slideDown(1000).fadeOut.dadeln(1000)
 })
