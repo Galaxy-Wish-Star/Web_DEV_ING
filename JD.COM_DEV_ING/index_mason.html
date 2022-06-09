@@ -10,19 +10,34 @@
     <!-- 样式的初始化 -->
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1623622_8k99cg4suag.css">
     <!-- 引入在线的字体图标 -->
-    <link rel="stylesheet" href="css/index_liuliu.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
-    <script src="../JD.COM_DEV_ING/js/jquery-3.6.0.min.js"></script>
-    <script src="../JD.COM_DEV_ING/js/js_index/index_liuliu.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/js_index/index_mason.js"></script>
+    <style>
+        .banner .two img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 2s;
+        }
+
+        .banner .two .show {
+            opacity: 1;
+        }
+
+        .banner .two {
+            position: relative;
+        }
+    </style>
+
 </head>
 
 <body>
-<div class="advert">
-    <img src="../JD.COM_DEV_ING/images/R-C.jpg" alt="">
-    <span></span>
-</div>
 
 <div class="header">
+
     <div class="top">
         <div class="inner">
             <!-- 水平居中的div -->
@@ -33,8 +48,8 @@
             <div class="right">
                 <ul>
                     <li class="text">
-                        <a href="../JD.COM_DEV_ING/login_liuliu.html">你好，请登录 </a>
-                        <a href="../JD.COM_DEV_ING/register_liuliu.html" class="red">免费注册</a>
+                        <a href="login_Pleepl.html">你好，请登录 </a>
+                        <a href="register_Pleepl.html" class="red">免费注册</a>
                     </li>
                     <li class="border">
 
@@ -151,8 +166,8 @@
                     <div class="search">
                         <input type="text" placeholder="挂烫机">
                         <span>
-                                <i class="icon iconfont icon-changyongtubiao_yonghusousuo"></i>
-                            </span>
+                             <i class="icon iconfont icon-changyongtubiao_yonghusousuo"></i>
+                          </span>
                     </div>
                     <div class="goods">
                         <i class="icon iconfont icon-gouwuche"></i>
@@ -191,7 +206,7 @@
         <div class="inner">
             <div class="one cate">
                 <ul>
-                    <li>家用电器</li>
+                    <li><a>家用电器</a></li>
                     <li>
                         <a href="#">手机</a>
                         <span>/</span>
@@ -311,7 +326,7 @@
                         <span>/</span>
                         <a href="#">二手</a>
                     </li>
-                    <li>工艺品</li>
+                    <li><a>工艺品</a></li>
 
                 </ul>
                 <div id="J_popCtn" class="JS_popCtn cate_pop" style="top: 0px; display: none;">
@@ -1628,105 +1643,74 @@
                 <img src="images/banner4.jpg">
                 <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                 <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
-                <ul class="bannerNav">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
             <script>
-                // 渐变的轮播图
-                var banner=document.querySelector('#banner');
-                var bannerImg=document.querySelectorAll('#banner img');
-                var bannerlist=document.querySelectorAll('.bannerNav li');
-                var index=0;
-                //  (1.鼠标不在轮播图区域的时候 轮播图正常播放)
-                var t=setInterval(function(){
-                    if(index==3){
-                        index=0;
-                    }else{
+                // 1.渐变轮播图（定时器：炸弹定时器；闹钟定时器）
+                var banner = document.querySelector('#banner');
+                var bannerimg = document.querySelectorAll('#banner img');
+                var index = 0;
+
+                // (1)鼠标不在轮播图区域，轮播图正常播放
+                t = setInterval(function() {
+                    if (index == 3) {
+                        index = 0;
+                    } else {
                         index++;
                     }
-                    for(var n=0;n<=3;n++){
-                        bannerImg[n].className='';
+                    for (var n = 0; n <= 3; n++) {
+                        bannerimg[n].className = '';
                     }
-                    bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
-                        bannerlist[n].className='';
-                    }
-                    bannerlist[index].className='active';
-                }, 2000)
-                //  (2.鼠标移入轮播图区域 轮播图播放暂停)
-                banner.addEventListener('mouseenter',function(){
+                    bannerimg[index].className = 'show';
+                }, 1500)
+
+                // (2)鼠标移入轮播图区域，轮播图停止切换
+                banner.addEventListener('mouseenter', function() {
                     clearInterval(t);
+
                 })
-                //  (3.鼠标移出轮播图区域 轮播图恢复播放)
-                banner.addEventListener('mouseleave',function(){
-                    t=setInterval(function(){
-                        if(index==3){
-                            index=0;
-                        }else{
+
+                // (3)鼠标移出轮播图区域，轮播图恢复切换
+                banner.addEventListener('mouseleave', function() {
+                    t = setInterval(function() {
+                        if (index == 3) {
+                            index = 0;
+                        } else {
                             index++;
                         }
-                        for(var n=0;n<=3;n++){
-                            bannerImg[n].className='';
+                        for (var n = 0; n <= 3; n++) {
+                            bannerimg[n].className = '';
                         }
-                        bannerImg[index].className='show';
-                        for(var n=0;n<=3;n++){
-                            bannerlist[n].className='';
-                        }
-                        bannerlist[index].className='active';
-                    },2000)
+                        bannerimg[index].className = 'show';
+                    }, 1500)
                 })
-                // 点击左右按钮轮播
-                var bannerLeft=document.querySelector('#bannerLeft');
-                var bannerRight=document.querySelector('#bannerRight');
-                bannerLeft.addEventListener('click',function(){
-                    if(index==0){
-                        index=3;
-                    }else{
+
+                // 2.点击左右按钮轮换
+                var bannerLeft = document.querySelector('#bannerLeft')
+                var bannerrRight = document.querySelector('#bannerRight')
+                bannerLeft.addEventListener('click', function() {
+                    if (index == 0) {
+                        index = 3;
+                    } else {
                         index--;
                     }
-                    for(var n=0;n<=3;n++){
-                        bannerImg[n].className='';
+                    for (var n = 0; n <= 3; n++) {
+                        bannerimg[n].className = '';
                     }
-                    bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
-                        bannerlist[n].className='';
-                    }
-                    bannerlist[index].className='active';
+                    bannerimg[index].className = 'show';
                 })
-                bannerRight.addEventListener('click',function(){
-                    if(index==3){
-                        index=0;
-                    }else{
+                bannerRight.addEventListener('click', function() {
+                    if (index == 3) {
+                        index = 0;
+                    } else {
                         index++;
                     }
-                    for(var n=0;n<=3;n++){
-                        bannerImg[n].className='';
+                    for (var n = 0; n <= 3; n++) {
+                        bannerimg[n].className = '';
                     }
-                    bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
-                        bannerlist[n].className='';
-                    }
-                    bannerlist[index].className='active';
+                    bannerimg[index].className = 'show';
                 })
-                // 鼠标移入左下方导航（小圆点）切换到对应的图片
-                for(var n=0;n<=3;n++){
-                    bannerlist[n].index=n;
-                    bannerlist[n].addEventListener('mouseenter',function(){
-                        for(var n=0;n<=3;n++){
-                            bannerImg[n].className='';
-                        }
-                        index=this.index;
-                        for(var n=0;n<=3;n++){
-                            bannerlist[n].className='';
-                        }
-                        bannerImg[index].className='show';
-                        bannerlist[index].className='active';
-                    })
-                }
+
+                // 3.移到小圆点切换
             </script>
             <div class="three">
                 <img src="images/banner_03.png" alt="">
@@ -1827,51 +1811,14 @@
                 <h4>京东秒杀</h4>
                 <p class="text"><span>22:00</span>场 倒计时</p>
                 <p class="time">
-                    <span class="num day">00</span>
-                    <span>天</span>
                     <span class="num hour">00</span>
                     <span>:</span>
                     <span class="num minute">00</span>
                     <span>:</span>
                     <span class="num second">00</span>
                 </p>
+
             </div>
-            <script>
-                // 获取元素
-                var day=document.querySelector('.day');
-                var hour=document.querySelector('.hour');
-                var minute=document.querySelector('.minute');
-                var second=document.querySelector('.second');
-                countDown();   // 先调用函数，防止刷新页面空白
-                function countDown(){
-                    // 获取当前时间
-                    var inputTime = + new Date('2022/6/20 22:00:00');
-                    var nowTime = + new Date().getTime(); //返回的是当前时间总的毫秒数
-                    var times = (inputTime-nowTime)/1000; //times是剩余时间的总的毫秒数
-                    // 定义变量，用于存放倒计时中的 时 分 秒
-                    var d = h = m = s = 0;
-                    if (times>=0){
-                        var d = parseInt(times/60/60/24); // % 取模 除商之后得到的余数
-                        // 三目运算 条件运算符 ?
-                        // d = d < 10 ? '0' + d:d; 判断数值小于10的情况 如 0-9 改为 00-09
-                        day.innerHTML= d < 10 ? '0' + d:d;
-                        var h = parseInt(times/60/60%24);  // % 取模 除商之后得到的余数
-                        // h = h < 10 ? '0' + h : h;
-                        hour.innerHTML= h< 10 ? '0' + h : h;
-                        var m = parseInt(times/60%60);
-                        // m = m < 10 ? '0' + m:m;
-                        minute.innerHTML = m< 10 ? '0' + m:m;
-                        var s =parseInt(times%60);
-                        // s = s < 10 ? '0' + s:s;
-                        second.innerHTML = s < 10 ? '0' + s:s;
-                    }else{
-                        clearInterval(countDown);
-                        document.querySelector('.time').innerHTML='秒杀已结束!';
-                    }
-                    // 开启定时器
-                    setInterval(countDown,1000);  //1000毫秒 每一秒钟调用一次函数
-                }
-            </script>
             <div class="center">
                 <ul>
                     <li>

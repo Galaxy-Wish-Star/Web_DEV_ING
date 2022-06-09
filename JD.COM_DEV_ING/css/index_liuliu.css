@@ -8,38 +8,6 @@
     height: 717px;
 }
 
-.advert{
-    z-index: 999;
-    /* width: 100%;
-    height: 100%; */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -500px; 
-    display: none;
-}
-
-.advert img{
-    width: 1000px;
-    height: 500px;
-    /* position: absolute; */
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.advert>span{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 .inner {
     width: 1310px;
     margin: 0 auto;
@@ -523,30 +491,8 @@
     position: relative;
 }
 
-.banner li:hover{
+.banner:hover{
     cursor: pointer;
-}
-
-.bannerNav{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
-
-.bannerNav li{
-    width: 15px;
-    height: 15px;
-    background-color: rgb(255, 255, 255,0.5);
-    float: left;
-    margin-left: 10px;
-    border-radius: 50%;
-    border: 2.5px solid transparent;
-    background-clip: content-box;
-}
-
-.bannerNav .active{
-    background-color: rgb(255, 255, 255);
-    border: 2.5px solid rgb(0,0,0,0.2);
 }
 
 .header>.banner .inner .three {
@@ -695,7 +641,7 @@
 }
 
 .main .inner .one .left {
-    width: 220px;
+    width: 209px;
     height: 290px;
     float: left;
     background-image: url(../images/ms.png);
@@ -722,7 +668,7 @@
 .main .inner .one .left .time {
     text-align: center;
     color: white;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .main .inner .one .left .time .num {
