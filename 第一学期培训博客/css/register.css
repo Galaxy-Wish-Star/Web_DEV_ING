@@ -1,0 +1,263 @@
+body,
+div,
+img,
+h1,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+}
+
+.js {
+    color: rgba(214, 42, 42, 0.884);
+    text-align: left;
+    line-height: 25px;
+    margin: 0 50px;
+}
+
+.box {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.banner {
+    position: relative;
+    width: 950px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.banner img {
+    position: absolute;
+    width: 950px;
+    height: 270px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: linear 1s;
+}
+
+.banner .show {
+    opacity: 1;
+}
+
+.meun {
+    line-height: 40px;
+    height: 40px;
+    background: url("../images/navbg.gif") repeat-x;
+}
+
+.nav a {
+    width: 50px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(15, 148, 55);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.nav a:hover {
+    background: url("../images/navbghover.gif")
+}
+
+.nav {
+    float: left;
+}
+
+.ss {
+    float: left;
+    margin-left: 150px;
+    color: rgb(16, 168, 97);
+}
+
+.ss #ssbtn {
+    background: rgb(16, 168, 97);
+}
+
+.dlzc {
+    float: right;
+}
+
+.dlzc a {
+    width: 50px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(16, 168, 97);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.dlzc a:hover {
+    color: rgb(253, 173, 8);
+    font-weight: 700;
+}
+
+body {
+    margin: 0px auto;
+    height: 650px;
+}
+
+#center {
+    width: 500px;
+    height: 450px;
+    border: 0px solid red;
+    margin-left: 270px;
+    margin-top: 46px;
+}
+
+#zc {
+    width: 724px;
+    height: 33px;
+    margin-top: 24px;
+}
+
+#zc span {
+    color: rgb(105, 105, 105);
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 34px;
+    margin-left: 150px;
+}
+
+#input {
+    width: 724px;
+    height: 52px;
+    border: 0px solid red;
+    margin-top: 10px;
+}
+
+.input {
+    width: 724px;
+    height: 52px;
+    border: 0px solid red;
+}
+
+.name {
+    width: 88px;
+    height: 32px;
+    border: 0px solid red;
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    line-height: 32px;
+    text-align: right;
+}
+
+.text {
+    width: 216px;
+    height: 28px;
+    border: 1px solid #ddd;
+    margin-left: 4px;
+}
+
+.prompt {
+    width: 220px;
+    height: 24px;
+    border: 1px solid #ffb533;
+    background-color: #fff5D1;
+    margin-left: 96px;
+}
+
+.prompt img {
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+.prompt span {
+    font-size: 12px;
+    color: #333;
+    position: relative;
+    top: -2px;
+}
+
+#email {
+    font-size: 14px;
+    color: #666;
+}
+
+#email font {
+    color: #10a200;
+    font-weight: bold;
+}
+
+.grade {
+    width: 45px;
+    height: 26px;
+    background-color: #f1eace;
+    display: inline-block;
+    position: relative;
+    left: 8px;
+    right: -16px;
+    color: #ffffffc7;
+    line-height: 26px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#check a {
+    font-size: 12px;
+    color: #333;
+}
+
+#check span {
+    color: #666;
+}
+
+#check a {
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+}
+
+#check {
+    margin-left: 94px;
+}
+
+#check:hover {
+    border-bottom: 1px dashed #aaa;
+    cursor: pointer;
+}
+
+#btn {
+    width: 220px;
+    height: 42px;
+    text-shadow: 1px 1px 0 #d1ab00;
+    background-color: #FCEAA9;
+    border: solid 1px rgb(245, 240, 177);
+    color: #016941;
+    font-size: 18px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(134, 114, 0, 0.7);
+    margin-left: 95px;
+    margin-top: 20px;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #016941;
+    color: white;
+}
+
+#next_step {
+    font-size: 12px;
+    color: #06c;
+    margin-left: 95px;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+#next_step:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

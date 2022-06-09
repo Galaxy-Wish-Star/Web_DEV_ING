@@ -1,0 +1,222 @@
+body,
+div,
+img,
+h1,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+}
+
+.js {
+    color: rgba(214, 42, 42, 0.884);
+    text-align: left;
+    line-height: 25px;
+    margin: 0 50px;
+}
+
+.box {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.banner {
+    position: relative;
+    width: 950px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.banner img {
+    position: absolute;
+    width: 950px;
+    height: 270px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: linear 1s;
+}
+
+.banner .show {
+    opacity: 1;
+}
+
+.meun {
+    line-height: 40px;
+    height: 40px;
+    background: url("../images/navbg.gif") repeat-x;
+}
+
+.nav a {
+    width: 50px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(15, 148, 55);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.nav a:hover {
+    background: url("../images/navbghover.gif")
+}
+
+.nav {
+    float: left;
+}
+
+.ss {
+    float: left;
+    margin-left: 150px;
+    color: rgb(16, 168, 97);
+}
+
+.ss #ssbtn {
+    background: rgb(16, 168, 97);
+}
+
+.dlzc {
+    float: right;
+}
+
+.dlzc a {
+    width: 50px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(16, 168, 97);
+    font-weight: 700;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.dlzc a:hover {
+    color: rgb(253, 173, 8);
+    font-weight: 700;
+}
+
+.conttent {
+    width: 950px;
+}
+
+.left {
+    float: left;
+    width: 350px;
+    background: white;
+}
+
+.left p {
+    text-align: center;
+}
+
+h1 {
+    font-family: "宋体";
+    font-size: 14px;
+    margin-top: auto;
+    padding: 5px;
+}
+
+.h1 {
+    border-bottom: 1px solid rgb(170, 202, 53);
+}
+
+.grz {
+    text-align: center;
+}
+
+.grz img {
+    width: 190px;
+    height: 240px;
+    margin-top: 20px;
+}
+
+p img {
+    width: 20px;
+    height: 17px;
+}
+
+.p1 {
+    color: crimson;
+}
+
+.right {
+    float: left;
+    margin-left: 40px;
+}
+
+.rz {
+    width: 540px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.hh {
+    background-color: darkkhaki;
+    margin-top: 0;
+}
+
+.rz ul {
+    margin: 8px 20px;
+}
+
+.rz ul li {
+    border-bottom: 1px dashed rgb(182, 159, 159);
+    padding: 3px 5px 3px 0;
+    height: 20px;
+    line-height: 20px;
+    background: url("../images/ico4.gif") no-repeat 0 -5px;
+}
+
+.rz ul li a {
+    font-size: 14px;
+    font-family: "宋体";
+    color: rgb(19, 31, 15);
+    padding-left: 5px;
+}
+
+.rz ul li a:hover {
+    color: rgb(9, 112, 126);
+}
+
+.rz ul li span {
+    float: right;
+}
+
+.xc {
+    width: 540px;
+    height: 230px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.h2 {
+    background-color: darkkhaki;
+}
+
+.ht img {
+    width: 170px;
+    height: 170px;
+    margin: 3px;
+}
+
+#footer {
+    background-image: url(../images/footer.gif);
+    width: 950px;
+    height: 50px;
+    margin-top: 500px;
+    text-align: center;
+    height: 20px;
+    padding-top: 34px;
+    display: block;
+}
