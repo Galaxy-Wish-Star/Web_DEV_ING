@@ -58,7 +58,7 @@ merge：合并分支操作
 ### 特别感谢：  
 [IntelliJ WebStorm](https://zh.wikipedia.org/zh-hans/IntelliJ_IDEA) 是一款在各方面最大限度地提高开发人员生产力的 IDE，适用于前端平台语言。
 
-[https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.svg?_gl=1*5exq0n*_ga*MTEwMzE4MDQwOS4xNjU0NzQ0NjIw*_ga_9J976DJZ68*MTY1NTA5NzcyOC4yLjEuMTY1NTA5Nzc0MC40OA..&_ga=2.239472064.294686240.1655097729-1103180409.1654744620](https://www.jetbrains.com/?from=mlpd)
+[](https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.svg?_gl=1*1gy6vzj*_ga*MTEwMzE4MDQwOS4xNjU0NzQ0NjIw*_ga_9J976DJZ68*MTY1NTA5NzcyOC4yLjEuMTY1NTA5ODEwMy42MA..&_ga=2.168159458.294686240.1655097729-1103180409.1654744620)
 
 ## 使用许可
 
