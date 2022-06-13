@@ -41,3 +41,19 @@ merge：合并分支操作
 >TST-BC——已完成的测试项目  
 >TST-SUS——被搁置的测试项目  
 >TST-ING——正在进行的测试项目  
+>
+### 贡献者
+
+参与学习的人：
+mason369[](https://github.com/mason369)  
+pLeepl[](https://github.com/pLeepl)  
+zenbing[](https://github.com/zenbing)  
+liusxs[](https://github.com/liusxs)  
+pujiurong[](https://github.com/pujiurong)  
+xiaokouhan[](https://github.com/xiaokouhan)  
+LingASDJ[](https://github.com/LingASDJ)  
+YUANYUAN04[](https://github.com/YUANYUAN04)  
+
+## 使用许可
+
+[MIT](LICENSE) © Richard Littauer
