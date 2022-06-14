@@ -24,6 +24,24 @@ $(function(){
             $(this).parent().parent('.cart-item').removeClass('check-cart-item')
         }
     })
+    // 点击增加按钮
+    $('.increment').click(function() {
+        // 增加商品数量
+        var n = $(this).siblings('.itxt').val();
+        n++;
+        if (n > 200) {
+            alert('商品不能大于200')
+        } else {
+
+            $(this).siblings('.itxt').val(n);
+        }
+        // 商品小计
+        // console.log($('.p-price').html().substr(1));
+        // 字符串. substr(2)
+        var price = ($(this).parents('.p-num').siblings('.p-price').html().substr(1) * n).toFixed(2);
+        $(this).parents('.p-num').siblings('.p-sum').html('￥' + price);
+
+    })
     // 商品数量的增加与单价的增加
     $('.increment').click(function(){
         var n=$(this).siblings('.itxt').val();
@@ -35,7 +53,10 @@ $(function(){
             $(this).parent().parent().siblings('.p-sum').html('￥'+sum);    
         }else{
             alert('商品数量已达上线!');
-            return true;
+            $(this).siblings('.itxt').val(1);
+            var p=$(this).parent().parent().siblings('.p-price').html().substr(1);
+            var sum=(p*n).toFixed(2);
+            $(this).parent().parent().siblings('.p-sum').html('￥'+p);
         }
     })
     // 商品数量的减少与单价的减少
