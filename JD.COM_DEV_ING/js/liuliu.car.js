@@ -55,7 +55,7 @@ $(function(){
             alert('商品数量已达上线!');
             $(this).siblings('.itxt').val(1);
             var p=$(this).parent().parent().siblings('.p-price').html().substr(1);
-            var sum=(p*n).toFixed(2);
+                var sum=(p*n).toFixed();
             $(this).parent().parent().siblings('.p-sum').html('￥'+p);
         }
     })
