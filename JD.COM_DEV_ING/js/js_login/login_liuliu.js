@@ -42,7 +42,7 @@ window.onload=function(){
             }else{
                 if(loginname.value=='15688889999'&&loginpwd.value=='liuliuliu'){
                     alert('登录成功!');
-                    window.location.href='index.html'
+                    window.location.href='../JD.COM_DEV_ING/index_liuliu.html'
                 }else{
                     alert('账号或者密码错误!');
                 }

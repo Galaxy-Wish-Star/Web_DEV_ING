@@ -12,18 +12,49 @@
     <!-- 引入在线的字体图标 -->
     <link rel="stylesheet" href="css/index.css">
     <!-- 当前页面的css -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index-zeng.js"></script>
     <style>
-        .banner.two img {
+        .banner .two img {
             position: absolute;
+            /* absolute绝对定位 */
             left: 0;
             top: 0;
             opacity: 0;
+            /* opacity不透明度 */
+            transition: all 1s;
+            /* transition 过度 */
         }
         
-        .banner.two {
+        .banner .two .show {
+            opacity: 1;
+        }
+        
+        .banner .two {
+<<<<<<< HEAD
             position: relative;
+            /* relative相对定位 */
+        }
+        
+        .bannerNav {
+            position: absolute;
+            /* 绝对定位，相对于父级定位 */
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.2);
         }
         
         .guanggao {
@@ -40,7 +71,33 @@
         .gg {
             width: 100%;
             height: 100%;
+=======
+>>>>>>> parent of 8e7e4f3 (Merge branch 'main' of https://github.com/Galaxy-Wish-Star/Web_DEV_ING)
             position: relative;
+            /* relative相对定位 */
+        }
+        
+        .bannerNav {
+            position: absolute;
+            /* 绝对定位，相对于父级定位 */
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.2);
         }
         
         .guanggao img {
@@ -52,6 +109,9 @@
             margin: auto;
         }
     </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index-zeng.js"></script>
+
 </head>
 
 <body>
@@ -1677,13 +1737,132 @@
                 </div>
 
                 <div class="two" id='banner'>
-                    <img src="images/banner1.jpg">
+                    <img src="images/banner1.jpg" class="show">
                     <img src="images/banner2.jpg">
                     <img src="images/banner3.jpg">
                     <img src="images/banner4.jpg">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
+                    <ul class="bannerNav">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
+                <script>
+                    // 1.渐变的轮播图
+                    var banner = document.querySelector('#banner');
+                    var bannerImg = document.querySelectorAll('#banner img');
+                    var bannerNavlis = document.querySelectorAll('.bannerNav li');
+                    var index = 0; // 初始值
+                    // （1）鼠标不在轮播图区域的时候，轮播图正常播放
+                    var t = setInterval(function() {
+                            //  setInterval定时器（定时调用的函数）
+                            if (index == 3) {
+                                index = 0;
+                                // 如果index等于3，立刻切换为0
+                            } else {
+                                index++;
+                                // 自增
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
+                                bannerImg[n].className = '';
+                            } //for 循环 全部清除样式
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        }, 2000) //给对应的元素设置样式
+                        //（2). 鼠标移入轮播图区域，轮播图播放暂停
+                    banner.addEventListener('mouseenter', function() {
+                        clearInterval(t)
+                    })
+
+
+                    // (3).鼠标移出轮播图区域,轮播图恢复播放
+                    banner.addEventListener('mouseleave', function() {
+                        t = setInterval(function() {
+                                if (index == 3) {
+                                    index = 0;
+                                    // 如果index等于3，立刻切换为0
+                                } else {
+                                    index++;
+                                    // 自增
+                                }
+                                for (var n = 0; n <= 3; n++) {
+                                    // n=0初始值；n<=3结果值;n++自增
+                                    bannerImg[n].className = '';
+                                } //for 循环 全部清除样式
+                                bannerImg[index].className = 'show';
+                                for (var n = 0; n <= 3; n++) {
+                                    bannerNavlis[n].className = '';
+                                }
+                                bannerNavlis[index].className = 'active';
+                            }, 1000) //给对应的元素设置样式
+                    })
+
+
+
+                    // 2.点击左右按钮分别切换到上一张或下一张
+                    var bannerLeft = document.querySelector('#bannerLeft');
+                    bannerLeft.addEventListener('click', function() {
+                            if (index == 0) {
+                                index = 3;
+                            } else {
+                                index--
+                            }
+                            console.log(index);
+                            for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
+                                bannerImg[n].className = '';
+                            } //for 循环 全部清除样式
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        }) //给对应的元素设置样式
+
+                    var bannerRight = document.querySelector('#bannerRight');
+                    bannerRight.addEventListener('click', function() {
+                            if (index == 3) {
+                                index = 0;
+                            } else {
+                                index++;
+                            }
+                            console.log(index);
+                            for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
+                                bannerImg[n].className = '';
+                            } //for 循环 全部清除样式
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        }) //给对应的元素设置样式
+
+
+
+                    // 3.鼠标移入左下方导航（小圆点 ）切换到对应的图片
+                    for (var n = 0; n <= 3; n++) {
+                        bannerNavlis[n].index = n;
+                        bannerNavlis[n].addEventListener('mouseenter', function() {
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = "";
+                            }
+                            this.className = "active";
+                            index = this.index;
+                            for (var n = 0; n <= 3; n++) {
+                                bannerImg[n].className = "";
+                            }
+                            bannerImg[index].className = "show";
+                        })
+                    }
+                </script>
                 <div class="three">
                     <img src="images/banner_03.png" alt="">
                 </div>
