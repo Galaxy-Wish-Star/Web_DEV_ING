@@ -129,7 +129,6 @@ background-clip:text将背景裁剪成文字的前景色
   background-color: #044369;
   color: #fe700c;
   transition: 0.3s;
-  font-size: 15px;
   cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
 }
 
@@ -253,7 +252,6 @@ background-clip:text将背景裁剪成文字的前景色
   background-color: #044369;
   color: orange;
   transition: 0.3s;
-  font-size: 15px;
   cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
 }
 .box .left .xw {
