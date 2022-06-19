@@ -206,7 +206,8 @@ window.onload = function() {
             alert('信息不能为空！');
         } else {
             if (gz1.test(phone.value) == true && gz2.test(Emails.value) == true && n != -1 && password.value === password1.value) {
-                alert('注册成功！');
+                alert('注册成功！请登录');
+                window.location.replace("/login_mason.html");
             } else {
                 alert('信息填写不正确，请重新修改')
             }
