@@ -15,10 +15,14 @@
     <style>
         .banner .two img {
             position: absolute;
+            /* absolute绝对定位 */
             left: 0;
             top: 0;
             opacity: 0;
             transition: all 1.5s;
+            /* opacity不透明度 */
+            transition: all 1s;
+            /* transition 过度 */
         }
         
         .banner .two .show {
@@ -27,6 +31,30 @@
         
         .banner .two {
             position: relative;
+            /* relative相对定位 */
+        }
+        
+        .bannerNav {
+            position: absolute;
+            /* 绝对定位，相对于父级定位 */
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.2);
         }
         
         .bannerNav {
@@ -66,6 +94,30 @@
             width: 100%;
             height: 100%;
             position: relative;
+            /* relative相对定位 */
+        }
+        
+        .bannerNav {
+            position: absolute;
+            /* 绝对定位，相对于父级定位 */
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0.2);
         }
         
         .guanggao img {
@@ -77,8 +129,13 @@
             margin: auto;
         }
     </style>
-    <script src="../JD.COM_DEV_ING/jquery-3.6.0.min.js"></script>
+    <script src="../JD.COM_DEV_ING/jquery-3.6.0.min.js">
+    </script>
     <script src="../JD.COM_DEV_ING/index-zeng.html"></script>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index-zeng.js"></script>
 
 
 </head>
@@ -1705,22 +1762,28 @@
                     var banner = document.querySelector('#banner');
                     var bannerImg = document.querySelectorAll('#banner img');
                     var bannerNavlis = document.querySelectorAll('.bannerNav li');
-                    var index = 0;
-                    // (1)鼠标不在轮播图区域的时候，轮播图正常波放
+                    var index = 0; // 初始值
+                    // （1）鼠标不在轮播图区域的时候，轮播图正常播放
                     var t = setInterval(function() {
+                            //  setInterval定时器（定时调用的函数）
                             if (index == 3) {
                                 index = 0;
+                                // 如果index等于3，立刻切换为0
                             } else {
                                 index++;
+                                // 自增
                             }
                             for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
                                 bannerImg[n].className = '';
-                            }
+                            } //for 循环 全部清除样式
+
                             bannerImg[index].className = 'show';
                             for (var n = 0; n <= 3; n++) {
                                 bannerNavlis[n].className = '';
                             }
                             bannerNavlis[index].className = 'active';
+
                         }, 2000)
                         // (2)鼠标移到轮播图区域，轮播图播放暂停
                     banner.addEventListener('mouseenter', function() {
@@ -1728,7 +1791,7 @@
                         })
                         // (3)鼠标移除轮播图区域，轮播图恢复播放
                     banner.addEventListener('mouseleave', function() {
-                            t = setInterval(function() {
+                        t = setInterval(function() {
                                 if (index == 3) {
                                     index = 0;
                                 } else {
@@ -1742,26 +1805,30 @@
                                     bannerNavlis[n].className = '';
                                 }
                                 bannerNavlis[index].className = 'active';
-                            }, 2000)
-                        })
-                        // 2.点击左右按钮分别切换到上一张或下一张图片
-                    var bannerLeft = document.querySelector('#bannerLeft');
-                    var bannerRight = document.querySelector('#bannerRight');
-                    bannerLeft.addEventListener('click', function() {
-                        if (index == 0) {
-                            index = 3;
-                        } else {
-                            index--;
-                        }
-                        for (var n = 0; n <= 3; n++) {
-                            bannerImg[n].className = '';
-                        }
-                        bannerImg[index].className = 'show';
-                        for (var n = 0; n <= 3; n++) {
-                            bannerNavlis[n].className = '';
-                        }
-                        bannerNavlis[index].className = 'active';
+
+                            }, 2000) //给对应的元素设置样式
                     })
+
+                    // 2.点击左右按钮分别切换到上一张或下一张
+                    var bannerLeft = document.querySelector('#bannerLeft');
+                    bannerLeft.addEventListener('click', function() {
+                            if (index == 0) {
+                                index = 3;
+                            } else {
+                                index--
+                            }
+                            for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
+                                bannerImg[n].className = '';
+                            } //for 循环 全部清除样式
+                            bannerImg[index].className = 'show';
+                            for (var n = 0; n <= 3; n++) {
+                                bannerNavlis[n].className = '';
+                            }
+                            bannerNavlis[index].className = 'active';
+                        }) //给对应的元素设置样式
+
+                    var bannerRight = document.querySelector('#bannerRight');
 
                     bannerRight.addEventListener('click', function() {
                             if (index == 3) {
@@ -1769,16 +1836,23 @@
                             } else {
                                 index++;
                             }
+
                             for (var n = 0; n <= 3; n++) {
                                 bannerImg[n].className = '';
                             }
                             bannerImg[index].className = 'show';
                             for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
                                 bannerNavlis[n].className = '';
-                            }
+                            } //for 循环 全部清除样式
                             bannerNavlis[index].className = 'active';
-                        })
-                        // 3.鼠标移到左下方导航（小圆点）切换到对应的图片
+
+                        }) //给对应的元素设置样式
+
+
+
+                    // 3.鼠标移入左下方导航（小圆点 ）切换到对应的图片
+
                     for (var n = 0; n <= 3; n++) {
                         bannerNavlis[n].index = n;
                         bannerNavlis[n].addEventListener('mouseenter', function() {

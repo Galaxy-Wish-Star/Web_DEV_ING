@@ -14,6 +14,15 @@ body {
   font-size: 14px; /* 字体大小 */
   background-repeat: no-repeat; /* 背景不重复 */
 }
+.fanhuidingbu{
+  position: fixed;
+  word-wrap: lr-tb;
+  left: 1459px;
+  top: 580px;
+  margin: 0 auto;  
+  width: 12px;
+}
+
 
 li {
   /* 去除li样式 */
@@ -57,6 +66,7 @@ background-clip:text将背景裁剪成文字的前景色
   /* 
     16行左右
     */
+    margin-top: -44px;
   height: 42.33px;
   float: right;
 }
@@ -129,7 +139,6 @@ background-clip:text将背景裁剪成文字的前景色
   background-color: #044369;
   color: #fe700c;
   transition: 0.3s;
-  font-size: 15px;
   cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
 }
 
@@ -253,7 +262,6 @@ background-clip:text将背景裁剪成文字的前景色
   background-color: #044369;
   color: orange;
   transition: 0.3s;
-  font-size: 15px;
   cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
 }
 .box .left .xw {
