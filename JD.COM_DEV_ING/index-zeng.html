@@ -19,6 +19,7 @@
             left: 0;
             top: 0;
             opacity: 0;
+            transition: all 1.5s;
             /* opacity不透明度 */
             transition: all 1s;
             /* transition 过度 */
@@ -29,7 +30,6 @@
         }
         
         .banner .two {
-<<<<<<< HEAD
             position: relative;
             /* relative相对定位 */
         }
@@ -57,10 +57,32 @@
             border: 2px solid rgba(0, 0, 0, 0.2);
         }
         
+        .bannerNav {
+            position: absolute;
+            left: 50px;
+            bottom: 80px;
+        }
+        
+        .bannerNav li {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+        
+        .bannerNav .active {
+            background-color: #fff;
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+        
         .guanggao {
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 0, 0, 0.5);
+            background-color: rgba(255, 0, 0, 0.3);
             position: absolute;
             top: 0;
             left: 0;
@@ -71,8 +93,6 @@
         .gg {
             width: 100%;
             height: 100%;
-=======
->>>>>>> parent of 8e7e4f3 (Merge branch 'main' of https://github.com/Galaxy-Wish-Star/Web_DEV_ING)
             position: relative;
             /* relative相对定位 */
         }
@@ -109,33 +129,21 @@
             margin: auto;
         }
     </style>
+    <script src="../JD.COM_DEV_ING/jquery-3.6.0.min.js">
+    </script>
+    <script src="../JD.COM_DEV_ING/index-zeng.html"></script>
+
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index-zeng.js"></script>
+
 
 </head>
 
 <body>
     <div class="guanggao">
-        <div class="gg">
-            <img src="images/jingdong.jpg" alt="">
-        </div>
+        <div class="gg"><img src="../JD.COM_DEV_ING/images/jingdong.jpg" alt=""></div>
     </div>
-    <!-- guanggao -->
-    <script>
-        // fadeIn淡入淡出.delay延长.fadOut淡出.animate自定义动画
-        $('.guanggao').fadeIn(2000).delay(3000).animate({
-                opacity: '0',
-                // 透明度
-                width: '2000',
-                // 1000以下向左划，2000以上向右划
-                height: '1000'
-            }, 2000, function() {
-                // 移出的速度2秒
-                $(this).hide();
-            })
-            // fadeOut(2000)
-    </script>
-
     <div class="header">
         <div class="top">
             <div class="inner">
@@ -257,7 +265,6 @@
                         <a href="#"></a>
                     </h1>
                 </div>
-
                 <div class="center">
                     <div class="top">
                         <div class="search_logo" style="display: none;">
@@ -1770,41 +1777,37 @@
                                 // n=0初始值；n<=3结果值;n++自增
                                 bannerImg[n].className = '';
                             } //for 循环 全部清除样式
+
                             bannerImg[index].className = 'show';
                             for (var n = 0; n <= 3; n++) {
                                 bannerNavlis[n].className = '';
                             }
                             bannerNavlis[index].className = 'active';
-                        }, 2000) //给对应的元素设置样式
-                        //（2). 鼠标移入轮播图区域，轮播图播放暂停
+
+                        }, 2000)
+                        // (2)鼠标移到轮播图区域，轮播图播放暂停
                     banner.addEventListener('mouseenter', function() {
-                        clearInterval(t)
-                    })
-
-
-                    // (3).鼠标移出轮播图区域,轮播图恢复播放
+                            clearInterval(t)
+                        })
+                        // (3)鼠标移除轮播图区域，轮播图恢复播放
                     banner.addEventListener('mouseleave', function() {
                         t = setInterval(function() {
                                 if (index == 3) {
                                     index = 0;
-                                    // 如果index等于3，立刻切换为0
                                 } else {
                                     index++;
-                                    // 自增
                                 }
                                 for (var n = 0; n <= 3; n++) {
-                                    // n=0初始值；n<=3结果值;n++自增
                                     bannerImg[n].className = '';
-                                } //for 循环 全部清除样式
+                                }
                                 bannerImg[index].className = 'show';
                                 for (var n = 0; n <= 3; n++) {
                                     bannerNavlis[n].className = '';
                                 }
                                 bannerNavlis[index].className = 'active';
-                            }, 1000) //给对应的元素设置样式
+
+                            }, 2000) //给对应的元素设置样式
                     })
-
-
 
                     // 2.点击左右按钮分别切换到上一张或下一张
                     var bannerLeft = document.querySelector('#bannerLeft');
@@ -1814,7 +1817,6 @@
                             } else {
                                 index--
                             }
-                            console.log(index);
                             for (var n = 0; n <= 3; n++) {
                                 // n=0初始值；n<=3结果值;n++自增
                                 bannerImg[n].className = '';
@@ -1827,27 +1829,30 @@
                         }) //给对应的元素设置样式
 
                     var bannerRight = document.querySelector('#bannerRight');
+
                     bannerRight.addEventListener('click', function() {
                             if (index == 3) {
                                 index = 0;
                             } else {
                                 index++;
                             }
-                            console.log(index);
+
                             for (var n = 0; n <= 3; n++) {
-                                // n=0初始值；n<=3结果值;n++自增
                                 bannerImg[n].className = '';
-                            } //for 循环 全部清除样式
+                            }
                             bannerImg[index].className = 'show';
                             for (var n = 0; n <= 3; n++) {
+                                // n=0初始值；n<=3结果值;n++自增
                                 bannerNavlis[n].className = '';
-                            }
+                            } //for 循环 全部清除样式
                             bannerNavlis[index].className = 'active';
+
                         }) //给对应的元素设置样式
 
 
 
                     // 3.鼠标移入左下方导航（小圆点 ）切换到对应的图片
+
                     for (var n = 0; n <= 3; n++) {
                         bannerNavlis[n].index = n;
                         bannerNavlis[n].addEventListener('mouseenter', function() {
@@ -1960,7 +1965,7 @@
             <div class="one leval">
                 <div class="left">
                     <h4>京东秒杀</h4>
-                    <p class="text"><span>20:00</span>场 倒计时</p>
+                    <p class="text"><span>22:00</span>场 倒计时</p>
                     <p class="time">
                         <span class="num day">00</span>
                         <span>天</span>
@@ -1969,42 +1974,37 @@
                         <span class="num minute">00</span>
                         <span>:</span>
                         <span class="num second">00</span>
-
                     </p>
-                    <script>
-                        // 倒计时
-                        function countDown() {
-                            // 获取当前时间
-                            var nowTime = new Date().getTime();
-                            // 设置秒杀开始/截至时间
-                            var killTime = new Date('2022/6/18 20:00:00').getTime();
-                            //  时间的差值
-                            var restTime = (killTime - nowTime) / 1000;
-                            //  定义变量h,m,s用于存放倒计时中的小时，分，秒
 
-                            var d = h = m = s = 0;
-                            if (restTime >= 0) {
-                                d = parseInt(restTime / 60 / 60 / 24); //时  % 取模 除商以后得到的余数  /除号
-                                h = parseInt(restTime / 60 / 60 % 24); //时  % 取模 除商以后得到的余数  /除号
-                                m = parseInt(restTime / 60 % 60); //分  % 取模 除商以后得到的余数  /除号
-                                s = parseInt(restTime % 60); // 秒      % 取模 除商以后得到的余数  /除号
-                                document.querySelector('.day').innerHTML = d < 10 ? '0' + d : d;
-                                document.querySelector('.hour').innerHTML = h < 10 ? '0' + h : h;
-                                document.querySelector('.minute').innerHTML = m < 10 ? '0' + m : m;
-                                document.querySelector('.second').innerHTML = s < 10 ? '0' + s : s;
-                                // h=h<10?'0'+h:h;          三目运算  调剂运算符  ？：
-                            } else {
-                                clearInterval(ms);
-                                document.querySelector('.time').innerHTML = '秒杀已结束'
-                            }
-
-
-                        }
-                        // 每秒调用conuntDown函数，显示动态时间效果
-                        var ms = setInterval(countDown, 1000);
-                    </script>
                 </div>
-
+                <script>
+                    function countDown() {
+                        //    获取当前时间
+                        var nowTime = new Date().getTime();
+                        // 设置秒杀开始/截止时间
+                        var killTime = new Date('2022-6-30 20:00:00').getTime();
+                        // 时间的差值
+                        var restTime = (killTime - nowTime) / 1000;
+                        // 定义h、m、s用于存放小时，分钟，秒
+                        var d = h = m = s = 0;
+                        if (restTime >= 0) {
+                            d = parseInt(restTime / 60 / 60 / 24);
+                            h = parseInt(restTime / 60 / 60 % 24); //时   取模  除商以后得到的余数                   
+                            m = parseInt(restTime / 60 % 60); //分
+                            s = parseInt(restTime % 60); //秒
+                            document.querySelector('.day').innerHTML = d < 10 ? '0' + d : d;
+                            document.querySelector('.hour').innerHTML = h < 10 ? '0' + h : h;
+                            document.querySelector('.minute').innerHTML = m < 10 ? '0' + m : m;
+                            document.querySelector('.second').innerHTML = s < 10 ? '0' + s : s;
+                            // h = h < 10 ? '0' + h : h;     三目运算 条件运算符 ？ ：
+                        } else {
+                            clearInterval(ms);
+                            document.querySelector('.time').innerHTML = '秒杀已结束'
+                        }
+                    }
+                    // 每秒调运countDown()函数，显示动态时间效果
+                    var ms = setInterval(countDown, 1000);
+                </script>
                 <div class="center">
                     <ul>
                         <li>
@@ -2426,62 +2426,6 @@
                     <li>返回顶部</li>
                 </ul>
             </div>
-            <script>
-                // console.log($('.main.inner.one').offset().top);
-                // 电梯导航
-                var elevator = $('.elevator');
-                // scroll 窗口滚动事件
-                $(window).scroll(function() {
-                        // console.log($(document).scrollTop());
-                        var h = $(document).scrollTop();
-                        // 获取滚动条滚动后面页面向上卷去的高
-                        var e_h = $('.main .one').offset().top; // 距离屏幕顶端的距离
-                        //    当滚动到对应位置时，将电梯导航的定位方式改编为固定定位
-
-                        if (h > e_h) {
-                            elevator.addClass('elevator_fix');
-                        } else {
-                            elevator.removeClass('elevator_fix');
-                        }
-                        // 页面滚动到某个区域，电梯导航相应位置文字颜色变红
-                        $('.main .inner .leval').each(function(i, e) {
-                            if (h >= $(e).offset().top) {
-                                $('.elevator>ul>li').eq(i).addClass('active').siblings().removeClass('active')
-                            } else {
-                                $('.elevator>ul>li').eq(i).removeClass('active')
-                            }
-                        })
-
-                        // 
-                        $('.elevator>ul>li').click(function() {
-                            var current;
-                            if ($(this).index() == 4) {
-                                current = 0;
-                            } else {
-                                current = $('.main .inner .leval').eq($(this).index()).offset().top;
-                            }
-                            $("html").stop().animate({
-                                scrollTop: current + 1
-                            });
-                            $(this).addClass('active').siblings().removeClass();
-                        })
-
-
-
-                    })
-                    // 点击电梯的某个位置，页面可以滚动到相应内容区域
-
-
-
-
-
-
-                //元素宽度  with()  innerwidth() outerWidth() outWidth(true)
-                // 元素距离浏览器的间距(上、左) offset（） top  left  offset().top    offset().left
-                // 元素在浏览器滚动条滚动时向上或向左卷去的距离  scrollTOP()  scrollLeft()
-                // 滚动条滚动的事件 scroll(function(){})
-                // 页面滚动到某个页面，电梯导航相应位置颜色变化
-            </script>
         </div>
     </div>
     <div class="foot">
