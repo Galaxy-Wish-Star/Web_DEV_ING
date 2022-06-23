@@ -23,7 +23,7 @@ window.onload = function() {
     phone.addEventListener('blur', function() {
         // sjts.style.display = 'none';
         if (this.value == '') {
-            wzts1.innerText = '手机号不能为空！';
+            wzts1.innerText = '请填写手机号！';
         } else {
             if (gz1.test(this.value) === true) {
                 sjts.style.display = 'none';
