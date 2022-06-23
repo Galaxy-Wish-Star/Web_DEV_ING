@@ -46,7 +46,7 @@ window.onload = function () {
                     alert('登陆成功！');
                     window.location.href = 'index_mason.html';
                 } else {
-                    alert('账号密码有错!')
+                    alert('账号密码错误!')
                 }
             }
         }
