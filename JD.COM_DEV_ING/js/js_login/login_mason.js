@@ -37,7 +37,7 @@ window.onload = function () {
     var btn = document.querySelector('#loginsubmit');
     btn.addEventListener('click', function () {
         if (zhangh.value === '' || pwd.value === '') {
-            alert('账号密码不能为空');
+            alert('请填写账号密码！');
         } else {
             if (gz1.test(zhangh.value) === false || gz1.test(pwd.value) == false) {
                 alert('账号密码格式错误');
