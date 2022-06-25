@@ -173,7 +173,7 @@ window.onload = function() {
     password1.addEventListener('blur', function() {
             if (this.value == '') {
                 ts4.style.display = 'block';
-                wzts4.innerText = '请确认密码！！';
+                wzts4.innerText = '请确认密码！';
             } else {
                 if (this.value == password.value) {
                     ts4.style.display = 'none';
@@ -189,21 +189,16 @@ window.onload = function() {
     var check = document.querySelector('#check')
         // 2.单击按钮时的提示事件
     btn.addEventListener('click', function() {
-        if (phone.value == '' || emails.value == '' || password.value == '' || password1.value == '') {
-            alert('信息不能为空');
+        if (phone.value == '' || Emails.value == '' || password1.value == '' || password == '') {
+            alert('信息不为空');
         } else {
-            if (reg1.test(phone.value) == true && reg2.test(emails.value) == true && n != -1 &&
-                password.value === password1.value) {
-                if (check == 'checked') {
-                    alert('请勾选协议')
-                } else {
-                    alert('注册成功');
-                }
+            if (gz1.test(phone.value) == true && reg2.test(Emails.value) == true && n != -1 && password.value == password1.value) {
+                alert('注册成功');
+
             } else {
-                alert('信息错误，请重新输入！')
+                alert('信息填写不正确，请重新填写');
             }
         }
+
     })
-
-
 }
