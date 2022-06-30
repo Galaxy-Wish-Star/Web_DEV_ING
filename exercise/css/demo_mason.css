@@ -20,17 +20,17 @@ html,body{
     padding: 1.5rem;
     z-index: 1;
 }
-.calendar_left.header{
+.calendar_left .header{
     display: flex;
     justify-content: space-around;
     margin-bottom: 2em;
     color: #fff;
     font-size: 0.7em;
 }
-.calendar_left.header h1{
+.calendar_left .header h1{
     line-height: 1em;
 }
-.calendar_left.header i{
+.calendar_left .header i{
     cursor: pointer;
 }
 .calendar_right{
@@ -158,6 +158,16 @@ html,body{
         transform:translateX(2px);
     }
 }
+@-webkit-keyframes bounce-button-in{
+    0%{
+        transform:translateZ(0) scale(0);
+    }
+
+    100%{
+        transform:translateZ(0) scale(0.7);
+    }
+}
+
 @-webkit-keyframes bounce-button-in{
     0%{
         transform:translateZ(0) scale(0);
