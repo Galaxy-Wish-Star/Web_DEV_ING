@@ -378,37 +378,36 @@ a:hover {
 .foolter {
   background-color: rgb(37, 37, 37);
 }
-.inof h1{
-color: rgb(134, 191, 50);
-font-family: 'myfont';
-text-align: center;
-font-size: 40px;
+.inof h1 {
+  color: rgb(134, 191, 50);
+  font-family: "myfont";
+  text-align: center;
+  font-size: 40px;
 }
-.inof h2{
+.inof h2 {
   margin-top: 14px;
   color: #666;
-  font-family: 'myfont';
+  font-family: "myfont";
   text-align: center;
-
-  }
-.sver-foure{
+}
+.sver-foure {
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: space-between;
 }
-.sver-foure .severssss{
+.sver-foure .severssss {
   margin-top: 20px;
   height: 250px;
   width: 380px;
   background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
 }
-.sver-foure .severssss h3{
+.sver-foure .severssss h3 {
   font-weight: bold;
   font-size: 18px;
   color: #fff;
   margin-bottom: 14px;
 }
-.sver-foure .severssss p{
+.sver-foure .severssss p {
   font-size: 12px;
 }

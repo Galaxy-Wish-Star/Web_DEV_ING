@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>我的购物车-京东商城</title>
+    <!-- 引入facicon.ico网页图标 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- 样式的初始化 -->
+    <link
+      rel="stylesheet"
+      href="http://at.alicdn.com/t/font_1623622_8k99cg4suag.css"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index_mason.css" />
+    <link rel="stylesheet" href="css/car_mason.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js_car/car_Pleep.js"></script>
+    <script src="js/js_index/index_Pleep.js"></script>
+  </head>
+
+  <body>
+    <!-- 顶部快捷导航start -->
+    <div class="header">
+      <div class="top">
+        <div class="inner w">
+          <!-- 水平居中的div -->
+          <div class="left">
+            <i class="icon iconfont icon-zuobiao"></i>
+            <span>四川</span>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="text">
+                <a href="#">我的订单</a>
+              </li>
+              <li class="border"></li>
+              <li class="text wrap menu">
+                <a href="#">我的京东</a>
+                <div class="dd dropdown-layer" style="display: none">
+                  <div class="dd-inner">
+                    <div class="item"><a href="">企业购</a></div>
+                    <div class="item"><a href="">商用场景馆</a></div>
+                    <div class="item"><a href="">工业品</a></div>
+                    <div class="item"><a href="">丰客多商城</a></div>
+                    <div class="item"><a href="">礼品卡</a></div>
+                    <div class="item"><a href="">微信企业购</a></div>
+                    <div class="item"><a href="">工品优选</a></div>
+                    <div class="item"><a href="">京东锦礼</a></div>
+                    <div class="item bottom"><a href="">大中型企业采购</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="border"></li>
+              <li class="text">
+                <a href="#">京东会员</a>
+              </li>
+              <li class="border"></li>
+              <li class="text wrap menu">
+                <a href="#">企业采购</a>
+                <div class="dd dropdown-layer" style="display: none">
+                  <div class="dd-inner">
+                    <div class="item"><a href="">企业购</a></div>
+                    <div class="item"><a href="">商用场景馆</a></div>
+                    <div class="item"><a href="">工业品</a></div>
+                    <div class="item"><a href="">丰客多商城</a></div>
+                    <div class="item"><a href="">礼品卡</a></div>
+                    <div class="item"><a href="">微信企业购</a></div>
+                    <div class="item"><a href="">工品优选</a></div>
+                    <div class="item"><a href="">京东锦礼</a></div>
+                    <div class="item bottom"><a href="">大中型企业采购</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="border"></li>
+              <li class="text wrap menu">
+                <a href="#">客户服务</a>
+                <div class="dd dropdown-layer" style="display: none">
+                  <div class="dd-inner">
+                    <div class="item"><a href="">企业购</a></div>
+                    <div class="item"><a href="">商用场景馆</a></div>
+                    <div class="item"><a href="">工业品</a></div>
+                    <div class="item"><a href="">丰客多商城</a></div>
+                    <div class="item"><a href="">礼品卡</a></div>
+                    <div class="item"><a href="">微信企业购</a></div>
+                    <div class="item"><a href="">工品优选</a></div>
+                    <div class="item"><a href="">京东锦礼</a></div>
+                    <div class="item bottom"><a href="">大中型企业采购</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="border"></li>
+              <li class="text wrap menu">
+                <a href="#">网站导航</a>
+                <div class="dd dropdown-layer" style="display: none">
+                  <div class="dd-inner">
+                    <div class="item"><a href="">企业购</a></div>
+                    <div class="item"><a href="">商用场景馆</a></div>
+                    <div class="item"><a href="">工业品</a></div>
+                    <div class="item"><a href="">丰客多商城</a></div>
+                    <div class="item"><a href="">礼品卡</a></div>
+                    <div class="item"><a href="">微信企业购</a></div>
+                    <div class="item"><a href="">工品优选</a></div>
+                    <div class="item"><a href="">京东锦礼</a></div>
+                    <div class="item bottom"><a href="">大中型企业采购</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class="border"></li>
+              <li class="text">
+                <a href="#">手机京东</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 顶部快捷导航end  -->
+
+    <div class="car-header">
+      <div class="w">
+        <div class="car-logo">
+          <img src="images/JDicon.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="c-container">
+      <div class="w">
+        <div class="cart-filter-bar">
+          <em>全部商品</em>
+        </div>
+        <!-- 购物车主要核心区域 -->
+        <div class="cart-warp">
+          <!-- 头部全选模块 -->
+          <div class="cart-thead">
+            <div class="t-checkbox">
+              <input type="checkbox" name="" id="" class="checkall" /> 全选
+            </div>
+            <div class="t-goods">商品</div>
+            <div class="t-price">单价</div>
+            <div class="t-num">数量</div>
+            <div class="t-sum">小计</div>
+            <div class="t-action">操作</div>
+          </div>
+          <!-- 商品详细模块 -->
+          <div class="cart-item-list">
+            <div class="cart-item check-cart-item">
+              <div class="p-checkbox">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  checked
+                  class="j-checkbox"
+                />
+              </div>
+              <div class="p-goods">
+                <div class="p-img">
+                  <img src="images/p1.jpg" alt="" />
+                </div>
+                <div class="p-msg">
+                  <a
+                    >【5本26.8元】经典儿童文学彩图青少版八十天环游地球中学生语文教学大纲</a
+                  >
+                </div>
+              </div>
+              <div class="p-price">￥12.60</div>
+              <div class="p-num">
+                <div class="quantity-form">
+                  <a href="javascript:;" class="decrement">-</a>
+                  <input type="text" class="itxt" value="1" />
+                  <a href="javascript:;" class="increment">+</a>
+                </div>
+              </div>
+              <div class="p-sum">￥12.60</div>
+              <div class="p-action"><a href="javascript:;">删除</a></div>
+            </div>
+            <div class="cart-item">
+              <div class="p-checkbox">
+                <input type="checkbox" name="" id="" class="j-checkbox" />
+              </div>
+              <div class="p-goods">
+                <div class="p-img">
+                  <img src="images/p2.jpg" alt="" />
+                </div>
+                <div class="p-msg">
+                  <a
+                    >【2000张贴纸】贴纸书 3-6岁 贴画儿童 贴画书全套12册 贴画
+                    贴纸儿童</a
+                  >
+                </div>
+              </div>
+              <div class="p-price">￥24.80</div>
+              <div class="p-num">
+                <div class="quantity-form">
+                  <a href="javascript:;" class="decrement">-</a>
+                  <input type="text" class="itxt" value="1" />
+                  <a href="javascript:;" class="increment">+</a>
+                </div>
+              </div>
+              <div class="p-sum">￥24.80</div>
+              <div class="p-action"><a href="javascript:;">删除</a></div>
+            </div>
+            <div class="cart-item">
+              <div class="p-checkbox">
+                <input type="checkbox" name="" id="" class="j-checkbox" />
+              </div>
+              <div class="p-goods">
+                <div class="p-img">
+                  <img src="images/p3.jpg" alt="" />
+                </div>
+                <div class="p-msg">
+                  <a
+                    >唐诗三百首+成语故事全2册 一年级课外书 精装注音儿童版
+                    小学生二三年级课外阅读书籍</a
+                  >
+                </div>
+              </div>
+              <div class="p-price">￥29.80</div>
+              <div class="p-num">
+                <div class="quantity-form">
+                  <a href="javascript:;" class="decrement">-</a>
+                  <input type="text" class="itxt" value="1" />
+                  <a href="javascript:;" class="increment">+</a>
+                </div>
+              </div>
+              <div class="p-sum">￥29.80</div>
+              <div class="p-action"><a href="javascript:;">删除</a></div>
+            </div>
+          </div>
+
+          <!-- 结算模块 -->
+          <div class="cart-floatbar">
+            <div class="select-all">
+              <input type="checkbox" name="" id="" class="checkall" />全选
+            </div>
+            <div class="operation">
+              <a href="javascript:;" class="remove-batch"> 删除选中的商品</a>
+              <a href="javascript:;" class="clear-all">清理购物车</a>
+            </div>
+            <div class="toolbar-right">
+              <div class="amount-sum">已经选<em>1</em>件商品</div>
+              <div class="price-sum">总价： <em>￥12.60</em></div>
+              <div class="btn-area">去结算</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer start -->
+    <div class="foot">
+      <div class="fotop">
+        <ul class="foul">
+          <li>
+            <img src="images/多_03.png" alt="" />
+            <p>品类齐全，轻松购物</p>
+          </li>
+          <li>
+            <img src="images/快_03.png" alt="" />
+            <p>多仓直发，极速配送</p>
+          </li>
+          <li>
+            <img src="images/好_03.png" alt="" />
+            <p>正品行货，精致服务</p>
+          </li>
+          <li>
+            <img src="images/省_03.png" alt="" />
+            <p>天天低价，畅选无忧</p>
+          </li>
+        </ul>
+      </div>
+      <div class="fomain">
+        <div>
+          <h3>购物指南</h3>
+          <ul>
+            <li><a href="#">购物流程</a></li>
+            <li><a href="#">会员介绍</a></li>
+            <li><a href="#">生活旅行</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">大家电</a></li>
+            <li><a href="#">联系客服</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>配送方式</h3>
+          <ul>
+            <li><a href="#">上门自提</a></li>
+            <li><a href="#">211限时达</a></li>
+            <li><a href="#">配送服务查询</a></li>
+            <li><a href="#">配送费收取标准</a></li>
+            <li><a href="#">海外配送</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>支付方式</h3>
+          <ul>
+            <li><a href="#">货到付款</a></li>
+            <li><a href="#">在线支付</a></li>
+            <li><a href="#">分期付款</a></li>
+            <li><a href="#">邮局汇款</a></li>
+            <li><a href="#">公司转账</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>售后服务</h3>
+          <ul>
+            <li><a href="#">售后政策</a></li>
+            <li><a href="#">价格保护</a></li>
+            <li><a href="#">退款说明</a></li>
+            <li><a href="#">返修/退换货</a></li>
+            <li><a href="#">取消订单</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>特色服务</h3>
+          <ul>
+            <li><a href="#">夺宝岛</a></li>
+            <li><a href="#">DIY装机</a></li>
+            <li><a href="#">延保服务</a></li>
+            <li><a href="#">京东E卡</a></li>
+            <li><a href="#">京东通信</a></li>
+            <li><a href="#">京东JD+</a></li>
+          </ul>
+        </div>
+        <div style="width: 200px" class="folast">
+          <h5>京东自营覆盖区县</h5>
+          <p class="lastp">
+            <span
+              >京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</span
+            >
+            <a href="#">查看详情></a>
+          </p>
+        </div>
+      </div>
+      <div class="fofoot">
+        <p>
+          <a href="#">关于我们</a>
+          <span>|</span>
+          <a href="#">联系我们</a>
+          <span>|</span>
+          <a href="#">联系客服</a>
+          <span>|</span>
+          <a href="#">合作招商</a>
+          <span>|</span>
+          <a href="#">商家帮助</a>
+          <span>|</span>
+          <a href="#">营销中心</a>
+          <span>|</span>
+          <a href="#">手机京东</a>
+          <span>|</span>
+          <a href="#">友情链接</a>
+          <span>|</span>
+          <a href="#">销售联盟</a>
+          <span>|</span>
+          <a href="#">京东社区</a>
+          <span>|</span>
+          <a href="#">风险监测</a>
+          <span>|</span>
+          <a href="#">隐私政策</a>
+          <span>|</span>
+          <a href="#">京东公益</a>
+          <span>|</span>
+          <a href="#">English Site</a>
+          <span>|</span>
+          <a href="#">Media & IR</a>
+        </p>
+        <div class="foinner">
+          <p>
+            <a href="#"> 京公网安备 11000002000088号 </a>
+            <span>|</span>
+            <a>京ICP证070359号</a>
+            <span>|</span>
+            <a href="#"> 互联网药品信息服务资格证编号(京)-经营性-2014-0008 </a>
+            <span>|</span>
+            <a>新出发京零 字第大120007号</a>
+          </p>
+          <p>
+            <a>互联网出版许可证编号新出网证(京)字150号</a>
+            <span>|</span>
+            <a href="#"> 出版物经营许可证 </a>
+            <span>|</span>
+            <a href="#"> 网络文化经营许可证京网文[2014]2148-348号 </a>
+            <span>|</span>
+            <a>违法和不良信息举报电话：4006561155</a>
+          </p>
+          <p>
+            <a>Copyright © 2004 - 2017 京东JD.com 版权所有</a>
+            <span>|</span>
+            <a>消费者维权热线：4006067733</a>
+            <span> </span>
+            <a href="#"> 经营证照 </a>
+          </p>
+          <p>
+            <a>京东旗下网站：京东支付</a>
+            <span>|</span>
+            <a href="#"> 京东云 </a>
+          </p>
+        </div>
+        <div class="laster">
+          <a href="#"><img src="images/last1 (1).png" alt="" /></a>
+          <a href="#"><img src="images/last1 (2).png" alt="" /></a>
+          <a href="#"><img src="images/last1 (3).png" alt="" /></a>
+          <a href="#"><img src="images/last1 (4).png" alt="" /></a>
+          <a href="#"><img src="images/last1 (5).png" alt="" /></a>
+          <a href="#"><img src="images/last1 (6).png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+    <!-- footer end -->
+  </body>
+</html>

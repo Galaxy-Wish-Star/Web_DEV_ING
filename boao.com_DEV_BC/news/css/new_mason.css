@@ -5,16 +5,7 @@
     }
     /* *通用配置选择器，设定清零*/
     
-    body {
-        height: 920px;
-        /*高度过小 原代码 height: 920px;*/
-        width: 100%;
-        /*宽度应该自适应 原代码  width: 880px;*/
-        background: url(../media_file/img/博鳌页面框架.png) no-repeat;
-        background-size: 100%;
-        /*尺寸应该自适应 原代码   background-size: 1500px;*/
-    }
-    
+
     .header {
         height: 260px;
     }
@@ -51,3 +42,498 @@
         font-family: "宋体";
     }
     /* 空格表示选择后代*/
+    .new{
+        margin-left:-105px ;
+    }
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0 auto; /* 居中 */
+    /* background-image: linear-gradient(
+      181deg,
+      #30cfd0 0%,
+      #330867 100%
+    ); 渐变背景 */
+    font-family: "微软雅黑"; /* 字体 */
+    font-size: 14px; /* 字体大小 */
+    background-repeat: no-repeat; /* 背景不重复 */
+  }
+  .fanhuidingbu{
+    position: fixed;
+    word-wrap: lr-tb;
+    left: 1459px;
+    top: 580px;
+    margin: 0 auto;  
+    width: 12px;
+  }
+  
+  
+  li {
+    /* 去除li样式 */
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none; /* 去除a标签样式和下划线 */
+    background-image: linear-gradient(to right, rgb(165, 101, 165), #055f98);
+    -webkit-background-clip: text;
+    color: transparent;
+    /*  background-image 属性为该文字区域设置一个渐变的背景色
+  color:transparent把该区域的文字颜色设置为透明
+  background-clip:text将背景裁剪成文字的前景色
+  需要注意的是，background-clip:text 还只是一个实验中的属性，Chrome、FireFox等多数浏览器较新的版本已经实现了，但是IE不行。
+   */
+  }
+  
+  .login input {
+    /* 
+      20行左右
+      */
+    padding: 2px;
+    width: 50px;
+  }
+  
+  .box {
+    /* 母盒居中 */
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* 头部模块 */
+  .logo {
+    /* 
+      14行左右
+      */
+    float: left;
+  }
+  .login {
+    /* 
+      16行左右
+      */
+      margin-top: -44px;
+    height: 42.33px;
+    float: right;
+  }
+  
+  .login ul li {
+    /* 
+      18行左右
+      */
+    font-weight: bold;
+    float: right;
+    margin-left: 15px;
+    line-height: 42.33px;
+  }
+  .login ul li span {
+    /* 
+      22行左右
+      */
+    color: #4a7afd;
+  }
+  .box .right .news_list ul li {
+    border-bottom: 2px dashed rgb(231, 231, 231);
+  }
+  .login ul li a:hover {
+    /* 
+      控制18行左右
+      */
+    color: #fe700c;
+  }
+  .nav {
+    /* 
+      29行左右
+      */
+    height: 49px;
+    background-color: #055f98;
+  }
+  .banner {
+    /* 
+      26行左右
+      */
+    height: 150px;
+    background-color: #4eb4d3;
+  }
+  .nav ul li {
+    /* 
+      31行左右
+      */
+    float: left;
+    line-height: 49px;
+  }
+  .nav ul li a {
+    /* 
+      32行左右
+      */
+    display: block; /* 将a转换为块元素 */
+    padding: 0 17px; /* 控制左右内边距 */
+    color: #fff;
+    font-weight: bold; /* 字体加粗 */
+    font-size: 18px;
+  }
+  .nav ul li:first-child {
+    /* 选中指定路径的第一个元素 */
+    /* 
+          32行左右
+      */
+    margin-left: -18px;
+  }
+  
+  .nav ul li a:hover {
+    /* 当鼠标移入时 */
+    background-color: #044369;
+    color: #fe700c;
+    transition: 0.3s;
+    cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
+  }
+  
+  .copyright {
+    /* 
+      325行左右
+      */
+    height: 30px;
+    background-color: #d4d4d4;
+  }
+  .copyright .copy {
+    /* 
+      326行左右
+      */
+    color: rgb(31, 31, 31);
+    width: 315px;
+    margin: 0px auto;
+    padding-top: 6px;
+  }
+  
+  .clearfix:before,/* 清除浮动 */
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    zoom: 1;
+  }
+  .foolter a {
+    /* 293行左右 */
+    color: rgb(192, 192, 192);
+  }
+  .fuwu {
+    /* 
+      292行左右
+      */
+    width: 1000px;
+    margin: 0px auto;
+    padding-left: 210px;
+  }
+  .item1 {
+    /* 
+      293行左右
+      */
+    float: left;
+    margin: 12.5px auto;
+    padding-right: 120px;
+  }
+  
+  .item a {
+    /* 
+      293行左右
+      */
+    display: inline-block;
+    line-height: 21px;
+  }
+  .item a:hover {
+    color: #fe700c;
+  }
+  
+  /* 新闻模块 */
+  .right {
+    /* 
+      54行左右
+      */
+    height: 240px;
+    width: 540px;
+    float: right;
+    position: relative;
+  }
+  .box .left .right .xinwen.h2 {
+    /* 
+      57行左右
+      */
+    position: absolute; /* 绝对定位 */
+    float: left;
+    height: 27.4px;
+    width: 50px;
+  }
+  
+  .right .more {
+    /* 
+      59行左右
+      */
+    float: right;
+    position: absolute; /* 绝对定位 */
+    left: 494px;
+    top: 4px;
+  }
+  .box .bold {
+    /* 设置标题下划线 
+      160行左右
+      132行左右
+      62行左右    
+      */
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid rgb(140, 140, 140);
+    padding-bottom: 7px;
+  }
+  .right ul li span {
+    /* 
+      64行左右
+      */
+    float: right;
+  }
+  .right ul li a {
+    /* 
+      65行左右
+      */
+    color: rgb(32, 32, 32);
+  }
+  .right ul li {
+    /* 
+      65行左右
+      */
+    color: rgb(76, 76, 76);
+    padding-top: 5px;
+  }
+  .right ul li a:hover {
+    /* 当鼠标移入时 */
+    background-color: #044369;
+    color: orange;
+    transition: 0.3s;
+    cursor: pointer; /* 设定网页浏览时用户鼠标指针的样式 */
+  }
+  .box .left .xw {
+    /* 
+      47行左右
+      */
+    width: 440px;
+    height: 240px;
+    float: left;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); /* 设置图片阴影 */
+  }
+  .box .img img {
+    /* 
+      120行左右
+      */
+    margin-top: 22px;
+  }
+  .box .leftt {
+    /* 
+      123行左右
+      */
+    height: 316px;
+    width: 440px;
+  
+    float: left;
+    margin-top: 14px;
+    position: relative;
+  }
+  
+  .box .leftt .xinwen.h2 {
+    /* 
+      125左右
+      */
+    float: left;
+  }
+  
+  .box .leftt .more {
+    /* 
+      127行左右
+      */
+    position: absolute;
+    top: 6px;
+    left: 390px;
+  }
+  
+  .box .left {
+    /* 
+      47行左右
+      */
+    position: relative;
+    margin-top: 14p;
+  }
+  .box .left .yy {
+    /* 
+      49行左右
+      */
+    position: absolute;
+    top: 188px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 90px 5px 14px;
+  }
+  .box .left .yy p {
+    /* 
+      50行左右
+      */
+    margin-bottom: -16px;
+    color: aliceblue;
+  }
+  .box .left .yy a {
+    /* 51行左右 */
+    color: aliceblue;
+    border-bottom: 1px aliceblue solid;
+  }
+  .box .leftt .fangchan img {
+    /* 
+      133行左右
+      */
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 6px;
+    border: 1.5px solid rgb(218, 218, 218);
+    margin: 12px 12px 0 12px;
+  }
+  .box .leftt .con {
+    /* 
+      136行左右
+      */
+    margin: 12px;
+    color: rgb(94, 94, 94);
+    line-height: 22px;
+  }
+  
+  .box .leftt .con p {
+    /* 
+      137行左右
+      */
+    font-weight: bold;
+    color: #4974ff;
+  }
+  .box .leftt .hrr {
+    /* 
+      143行左右
+      */
+    border-bottom: 2px dashed;
+    color: #bebebe;
+  }
+  .box .jiaoyu {
+    /* 
+      155行左右
+      */
+    height: 320px;
+    width: 540px;
+    float: right;
+    margin-top: 14px;
+  }
+  
+  .box .jiaoyu ul li {
+    /* 
+      164行左右
+      */
+    margin: 4px;
+    height: 100px;
+    width: 126px;
+    float: left;
+  }
+  .box .jiaoyu ul li a {
+    color: #144bff;
+    font-size: 11px;
+    padding-left: 6px;
+  }
+  .box .jiaoyu ul li a:hover {
+    color: crimson;
+  }
+  .box .jiaoyulist {
+    /* 
+      181行左右
+      */
+    height: 200px;
+  }
+  .box .jiaoyu .newslistbox li img {
+    margin-left: 7px;
+  }
+  .box .right .jiaoyulist span {
+    /* 
+    194行左右
+     */
+    float: right;
+    display: inline;
+    color: #b8b8b8;
+    margin-top: 2px;
+  }
+  .box .jiaoyu ul li:last-child a {
+    /* 
+    183行左右
+    */
+    padding-left: 16px;
+  }
+  .box .jiaoyu ul li:nth-child(3) a {
+    /* 
+    197行左右
+    */
+    padding-left: 9px;
+  }
+  .box .right .jiaoyulist div {
+    /* 
+    181行左右
+    */
+    margin-top: 9.4px;
+    padding-bottom: 6px;
+    border-bottom: rgb(231, 231, 231) 2px dashed;
+  }
+  .jiaoyulist {
+    /* 181行 */
+    margin-top: 140px;
+  }
+  
+  .foolter {
+    /* 
+      291行左右
+      */
+    height: 110px;
+    background-color: #505050;
+    margin-top: 30px;
+  }
+  .jiaoyulist a:hover {
+    color: orange;
+  }
+  .lefttttt .more {
+    /* 257行左右 */
+    position: absolute;
+    top: 6px;
+    left: 490px;
+  }
+  .lefttttt {
+    /* 257 */
+    position: relative;
+  }
+  .rightttttt {
+    /* 256 */
+    margin-top: 14px;
+    height: 316px;
+    width: 540px;
+    float: right;
+  }
+  .qiyelist div {
+    /* 
+      269行左右
+      */
+    margin-top: 11.8px;
+    padding-bottom: 2px;
+    border-bottom: 2px dashed rgb(231, 231, 231);
+  }
+  .qiyelist span {
+    /* 270 */
+    display: block;
+    color: #b8b8b8;
+    float: right;
+  }
+  .qiyelist a:hover {
+    color: orange;
+  }
+  .box .toppicccc {
+    height: 100px;
+    background-color: rgb(121, 132, 233);
+    margin-top: 330px;
+  }
+  
