@@ -16,6 +16,7 @@ body {
   align-items: center;
   height: 100vh;
 }
+
 .calendar_left {
   background: linear-gradient(#c4f185, #86d2f3);
   width: 400px;
