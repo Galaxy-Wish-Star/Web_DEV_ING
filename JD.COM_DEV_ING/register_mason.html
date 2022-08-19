@@ -1,144 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>京东-会员注册</title>
-    <link rel="stylesheet" type="text/css" href="css/register.css" />
-    <script src="js/js_register/register_Pleepl.js"></script>
-    <style>
-      #span1 {
-        background-color: rgb(218, 52, 52);
-      }
 
-      #span2 {
-        background-color: rgb(218, 52, 52);
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>京东-会员注册</title>
+  <link rel="stylesheet" type="text/css" href="css/register.css" />
+  <script src="js/js_register/register_Pleepl.js"></script>
+  <style>
+    #span1 {
+      background-color: rgb(218, 52, 52);
+    }
 
-  <body>
-    <div id="top">
-      <div id="logo">
-        <a><img src="images/JDicon.png" /></a>
+    #span2 {
+      background-color: rgb(218, 52, 52);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="top">
+    <div id="logo">
+      <a><img src="images/JDicon.png" /></a>
+    </div>
+    <div id="top-r">
+      <a id="login">登录</a>
+      <a>|</a>
+      <a id="a1">客服中心</a>
+    </div>
+  </div>
+  <!--填写部分-->
+  <div id="center" style="display: block">
+    <div id="center1">
+      <div class="center1-1">
+        <span class="span1" id="span1"></span>
+        <span class="span2" id="span2"></span>
+        <font id="font1">填写</font>
       </div>
-      <div id="top-r">
-        <a id="login">登录</a>
-        <a>|</a>
-        <a id="a1">客服中心</a>
+      <div class="center1-1">
+        <span class="span1" id="span3"></span>
+        <span class="span2" id="span4"></span>
+        <font id="font2">验证</font>
+      </div>
+      <div class="center1-2">
+        <span class="span1" id="span5"></span>
+        <span class="span2" id="span6"></span>
+        <font id="font3">注册成功</font>
       </div>
     </div>
-    <!--填写部分-->
-    <div id="center" style="display: block">
-      <div id="center1">
-        <div class="center1-1">
-          <span class="span1" id="span1"></span>
-          <span class="span2" id="span2"></span>
-          <font id="font1">填写</font>
-        </div>
-        <div class="center1-1">
-          <span class="span1" id="span3"></span>
-          <span class="span2" id="span4"></span>
-          <font id="font2">验证</font>
-        </div>
-        <div class="center1-2">
-          <span class="span1" id="span5"></span>
-          <span class="span2" id="span6"></span>
-          <font id="font3">注册成功</font>
-        </div>
-      </div>
 
-      <div id="center2">
-        <span>会员注册</span>
-      </div>
-      <!--手机号文本框-->
-      <div id="input">
-        <span class="name">手机号</span>
-        <input
-          type="text"
-          id="phone"
-          class="text"
-          placeholder=" 可用作登录名"
-        />
-      </div>
-      <!-- 手机号验证提示 -->
-      <div class="prompt" id="sjts" style="display: none">
-        <img src="images/tip.png" alt="" /><span id="wzts1"></span>
-      </div>
-      <!--Email文本框-->
-      <div class="input">
-        <span class="name">Email</span>
-        <input
-          type="text"
-          id="Emails"
-          class="text"
-          placeholder=" 可用作登录名"
-        />
-      </div>
-      <!-- 邮箱验证提示 -->
-      <div class="prompt" id="yxts" style="display: none">
-        <img src="images/tip.png" alt="" /><span id="wzts2"></span>
-      </div>
-
-      <!--密码文本框-->
-      <div class="input">
-        <span class="name">密码</span>
-        <input
-          type="password"
-          id="password"
-          class="text"
-          placeholder=" 8-20位字母、数字和符号"
-        />
-        <span class="grade" id="grade1">弱</span>
-        <span class="grade" id="grade2">中</span>
-        <span class="grade" id="grade3">强</span>
-      </div>
-      <!-- 密码验证提示 -->
-      <div class="prompt" id="mmts" style="display: none">
-        <img src="images/tip.png" alt="" /><span id="wzts3"></span>
-      </div>
-
-      <!--确认密码框-->
-      <div class="input">
-        <span class="name">确认密码</span>
-        <input
-          type="password"
-          id="password1"
-          onkeyup="checkpassword()"
-          class="text"
-          placeholder=" 再次输入密码"
-        />
-      </div>
-      <!-- 确认密码验证提示 -->
-      <div class="prompt" id="mmyz" style="display: none">
-        <img src="images/tip.png" alt="" /><span id="wzts4"></span>
-      </div>
-
-      <label id="check"
-        ><input type="checkbox" /><a
-          >同意<span>《京东服务协议》</span></a
-        ></label
-      ><br />
-      <input id="btn" type="button" value="下一步，验证" /><br />
-      <span id="next_step">注册遇到问题？</span>
+    <div id="center2">
+      <span>会员注册</span>
+    </div>
+    <!--手机号文本框-->
+    <div id="input">
+      <span class="name">手机号</span>
+      <input type="text" id="phone" class="text" placeholder=" 可用作登录名" />
+    </div>
+    <!-- 手机号验证提示 -->
+    <div class="prompt" id="sjts" style="display: none">
+      <img src="images/tip.png" alt="" /><span id="wzts1"></span>
+    </div>
+    <!--Email文本框-->
+    <div class="input">
+      <span class="name">Email</span>
+      <input type="text" id="Emails" class="text" placeholder=" 可用作登录名" />
+    </div>
+    <!-- 邮箱验证提示 -->
+    <div class="prompt" id="yxts" style="display: none">
+      <img src="images/tip.png" alt="" /><span id="wzts2"></span>
     </div>
 
-    <!--底部-->
-    <div id="button">
-      <span>
-        <a class="aa1">关于我们</a>
-        <a class="aa1">联系我们</a>
-        <a class="aa1">人才招聘</a>
-        <a class="aa1">商家入驻</a>
-        <a class="aa1">广告服务</a>
-        <a class="aa1">手机京东</a>
-        <a class="aa1">友情链接</a>
-        <a class="aa1" id="a6">企业礼品卡采购</a>
-        <a class="aa1">销售联盟</a>
-        <a class="aa1">京东社区</a>
-        <a class="aa1">京东公益</a>
-        <a class="aa1" id="a7">我要提建议</a>
-      </span>
-      <p>Copyright© 2004-2021 京东JD.com版权所有.</p>
+    <!--密码文本框-->
+    <div class="input">
+      <span class="name">密码</span>
+      <input type="password" id="password" class="text" placeholder=" 8-20位字母、数字和符号" />
+      <span class="grade" id="grade1">弱</span>
+      <span class="grade" id="grade2">中</span>
+      <span class="grade" id="grade3">强</span>
     </div>
-  </body>
+    <!-- 密码验证提示 -->
+    <div class="prompt" id="mmts" style="display: none">
+      <img src="images/tip.png" alt="" /><span id="wzts3"></span>
+    </div>
+
+    <!--确认密码框-->
+    <div class="input">
+      <span class="name">确认密码</span>
+      <input type="password" id="password1" onkeyup="checkpassword()" class="text" placeholder=" 再次输入密码" />
+    </div>
+    <!-- 确认密码验证提示 -->
+    <div class="prompt" id="mmyz" style="display: none">
+      <img src="images/tip.png" alt="" /><span id="wzts4"></span>
+    </div>
+
+    <label id="check"><input type="checkbox" /><a>同意<span>《京东服务协议》</span></a></label><br />
+    <input id="btn" type="button" value="下一步，验证" /><br />
+    <span id="next_step">注册遇到问题？</span>
+  </div>
+
+  <!--底部-->
+  <div id="button">
+    <span>
+      <a class="aa1">关于我们</a>
+      <a class="aa1">联系我们</a>
+      <a class="aa1">人才招聘</a>
+      <a class="aa1">商家入驻</a>
+      <a class="aa1">广告服务</a>
+      <a class="aa1">手机京东</a>
+      <a class="aa1">友情链接</a>
+      <a class="aa1" id="a6">企业礼品卡采购</a>
+      <a class="aa1">销售联盟</a>
+      <a class="aa1">京东社区</a>
+      <a class="aa1">京东公益</a>
+      <a class="aa1" id="a7">我要提建议</a>
+    </span>
+    <p>Copyright© 2004-2021 京东JD.com版权所有.</p>
+  </div>
+</body>
+
 </html>
