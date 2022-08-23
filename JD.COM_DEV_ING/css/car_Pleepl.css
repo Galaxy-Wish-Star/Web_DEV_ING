@@ -1,198 +1,197 @@
 .fl {
-    float: left;
+  float: left;
 }
 
 .fr {
-    float: right;
+  float: right;
 }
 
 a:hover {
-    color: red;
+  color: red;
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?7kkyc2');
-    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?7kkyc2");
+  src: url("../fonts/icomoon.eot?7kkyc2#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?7kkyc2") format("truetype"),
+    url("../fonts/icomoon.woff?7kkyc2") format("woff"),
+    url("../fonts/icomoon.svg?7kkyc2#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .fr .icomoon {
-    font-family: 'icomoon';
-    font-size: 16px;
-    line-height: 26px;
+  font-family: "icomoon";
+  font-size: 16px;
+  line-height: 26px;
 }
-
 
 /*版心*/
 
 .w {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .style-red {
-    color: #c81623;
+  color: #c81623;
 }
 
 .spacer {
-    width: 1px;
-    height: 12px;
-    background-color: #666;
-    margin: 9px 12px 0;
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 12px 0;
 }
-
 
 /*顶部快捷导航*/
 
 .shortcut {
-    height: 31px;
-    background-color: #f1f1f1;
-    line-height: 31px;
+  height: 31px;
+  background-color: #f1f1f1;
+  line-height: 31px;
 }
 
 .shortcut li {
-    float: left;
+  float: left;
 }
-
 
 /*header区域*/
 
 .header {
-    position: relative;
-    height: 50px;
+  position: relative;
+  height: 50px;
 }
 
-.header>.top {
-    height: 34px;
-    background-color: #e3e4e5;
+.header > .top {
+  height: 34px;
+  background-color: #e3e4e5;
 }
 
 .header .top .inner {
-    height: 34px;
+  height: 34px;
 }
 
 .header .top .inner .left {
-    width: 57px;
-    height: 24px;
-    float: left;
-    padding-left: 10px;
-    padding-top: 10px;
+  width: 57px;
+  height: 24px;
+  float: left;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .header .top .inner .left .icon {
-    color: red;
+  color: red;
 }
 
 .header .top .inner .left span {
-    font-size: 14px;
-    color: #a3a2b9
+  font-size: 14px;
+  color: #a3a2b9;
 }
 
 .header .top .inner .right {
-    width: 612px;
-    height: 34px;
-    float: right;
+  width: 612px;
+  height: 34px;
+  float: right;
 }
 
 .header .top .inner .right ul li {
-    float: left;
-    margin-right: 11px;
-    font-size: 13px;
+  float: left;
+  margin-right: 11px;
+  font-size: 13px;
 }
 
 .header .top .inner .right ul li a {
-    color: #a3a2b9
+  color: #a3a2b9;
 }
 
 .header .top .inner .right ul li .red {
-    color: red
+  color: red;
 }
 
 .header .top .inner .right ul li:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .header .top .inner .right ul li a:hover {
-    color: red;
+  color: red;
 }
 
 .header .top .inner .right ul .text {
-    height: 34px;
-    line-height: 34px;
-    padding-left: 5px;
-    padding-right: 5px;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .header .top .inner .right ul .wrap {
-    padding-right: 12px;
-    background-image: url(../images/sj_03.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    position: relative;
-    z-index: 21;
+  padding-right: 12px;
+  background-image: url(../images/sj_03.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+  z-index: 21;
 }
 
 .header .top .inner .right ul .border {
-    width: 1px;
-    height: 11px;
-    background-color: #cccccc;
-    margin-top: 12px;
+  width: 1px;
+  height: 11px;
+  background-color: #cccccc;
+  margin-top: 12px;
 }
 
 .top .dropdown-layer {
-    top: 30px;
+  top: 30px;
 }
 
 .top .dd {
-    line-height: 24px;
+  line-height: 24px;
 }
 
 .top .dropdown-layer {
-    left: 0;
-    width: 140px;
-    padding: 10px 0 10px 15px;
+  left: 0;
+  width: 140px;
+  padding: 10px 0 10px 15px;
 }
 
 .dropdown-layer {
-    position: absolute;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    -webkit-box-shadow: 1px 2px 1px rgb(0 0 0 / 10%);
-    box-shadow: 1px 2px 1px rgb(0 0 0 / 10%);
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 1px rgb(0 0 0 / 10%);
+  box-shadow: 1px 2px 1px rgb(0 0 0 / 10%);
 }
 
 .dd-inner .item {
-    display: inline-block;
-    width: 56px;
-    white-space: nowrap;
+  display: inline-block;
+  width: 56px;
+  white-space: nowrap;
 }
 
 .logo {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    width: 175px;
-    height: 56px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 175px;
+  height: 56px;
 }
 
 .logo a {
-    display: block;
-    /*overflow: hidden;*/
-    width: 175px;
-    height: 56px;
-    /* background: url(../img/logo.png) no-repeat; */
-    /*text-indent: -999px;*/
-    font-size: 0;
+  display: block;
+  /*overflow: hidden;*/
+  width: 175px;
+  height: 56px;
+  /* background: url(../img/logo.png) no-repeat; */
+  /*text-indent: -999px;*/
+  font-size: 0;
 }
 
 .search {
-    position: absolute;
-    top: 25px;
-    left: 348px;
+  position: absolute;
+  top: 25px;
+  left: 348px;
 }
-
 
 /* .text {
     float: left;
@@ -204,473 +203,469 @@ a:hover {
 } */
 
 .btn {
-    float: left;
-    width: 82px;
-    height: 36px;
-    background-color: #b1191a;
-    border: 0;
-    font-size: 16px;
-    color: #fff;
+  float: left;
+  width: 82px;
+  height: 36px;
+  background-color: #b1191a;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
 }
 
 .hotwrods {
-    position: absolute;
-    top: 65px;
-    left: 348px;
+  position: absolute;
+  top: 65px;
+  left: 348px;
 }
 
 .hotwrods a {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .shopcar {
-    position: absolute;
-    top: 25px;
-    right: 64px;
-    width: 138px;
-    height: 34px;
-    border: 1px solid #dfdfdf;
-    background-color: #f7f7f7;
-    line-height: 34px;
-    text-align: center;
+  position: absolute;
+  top: 25px;
+  right: 64px;
+  width: 138px;
+  height: 34px;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  line-height: 34px;
+  text-align: center;
 }
 
 .car {
-    font-family: 'icomoon';
-    color: #da5555;
+  font-family: "icomoon";
+  color: #da5555;
 }
 
 .arrow {
-    font-family: 'icomoon';
-    margin-left: 5px;
+  font-family: "icomoon";
+  margin-left: 5px;
 }
 
 .count {
-    position: absolute;
-    top: -5px;
-    /*应该是左侧对齐 文字才能往右走显示*/
-    left: 100px;
-    background-color: #e60012;
-    height: 14px;
-    padding: 0 3px;
-    line-height: 14px;
-    color: #fff;
-    /*border-radius: 左上角 右上角  右下角  左下角;*/
-    border-radius: 7px 7px 7px 0;
+  position: absolute;
+  top: -5px;
+  /*应该是左侧对齐 文字才能往右走显示*/
+  left: 100px;
+  background-color: #e60012;
+  height: 14px;
+  padding: 0 3px;
+  line-height: 14px;
+  color: #fff;
+  /*border-radius: 左上角 右上角  右下角  左下角;*/
+  border-radius: 7px 7px 7px 0;
 }
-
 
 /*nav start*/
 
 .nav {
-    height: 45px;
-    border-bottom: 2px solid #b1191a;
+  height: 45px;
+  border-bottom: 2px solid #b1191a;
 }
 
 .dropdown {
-    width: 209px;
-    height: 45px;
+  width: 209px;
+  height: 45px;
 }
 
 .dropdown .dt {
-    height: 100%;
-    background-color: #b1191a;
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-    line-height: 45px;
+  height: 100%;
+  background-color: #b1191a;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
 }
 
 .dropdown .dd {
-    height: 465px;
-    background-color: #c81623;
-    margin-top: 2px;
+  height: 465px;
+  background-color: #c81623;
+  margin-top: 2px;
 }
 
 .menu_item:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
-
 
 /*鼠标经过li 里面的 a变颜色*/
 
 .menu_item:hover a {
-    color: #c81623;
+  color: #c81623;
 }
 
 .menu_item {
-    height: 31px;
-    line-height: 31px;
-    margin-left: 1px;
-    padding: 0 10px;
-    transition: all .5s;
+  height: 31px;
+  line-height: 31px;
+  margin-left: 1px;
+  padding: 0 10px;
+  transition: all 0.5s;
 }
 
 .menu_item:hover {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .menu_item a {
-    font-size: 14px;
-    color: #fff;
+  font-size: 14px;
+  color: #fff;
 }
 
 .menu_item i {
-    float: right;
-    font-family: 'icomoon';
-    font-size: 18px;
-    color: #fff;
+  float: right;
+  font-family: "icomoon";
+  font-size: 18px;
+  color: #fff;
 }
 
 .navitems {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .navitems li {
-    float: left;
+  float: left;
 }
 
 .navitems li a {
-    display: block;
-    height: 45px;
-    padding: 0 25px;
-    line-height: 45px;
-    font-size: 16px;
+  display: block;
+  height: 45px;
+  padding: 0 25px;
+  line-height: 45px;
+  font-size: 16px;
 }
-
 
 /*footer 部分*/
 
 .footer {
-    height: 386px;
-    background-color: #f5f5f5;
-    padding-top: 30px;
+  height: 386px;
+  background-color: #f5f5f5;
+  padding-top: 30px;
 }
 
 .mod_service {
-    height: 79px;
-    border-bottom: 1px solid #ccc;
+  height: 79px;
+  border-bottom: 1px solid #ccc;
 }
 
 .mod_service li {
-    float: left;
-    width: 240px;
-    height: 79px;
+  float: left;
+  width: 240px;
+  height: 79px;
 }
 
 .mod-service-icon {
-    /*浮动的盒子 可以直接给大小的 不需要转换*/
-    float: left;
-    width: 50px;
-    height: 50px;
-    margin-left: 35px;
-    background: url(../img/icons.png) no-repeat;
+  /*浮动的盒子 可以直接给大小的 不需要转换*/
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-left: 35px;
+  background: url(../img/icons.png) no-repeat;
 }
 
 .mod_service_zheng {
-    background-position: -253px -3px;
+  background-position: -253px -3px;
 }
 
 .mod_service_tit {
-    float: left;
-    margin-left: 5px;
+  float: left;
+  margin-left: 5px;
 }
 
 .mod_service_tit h5 {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .mod_service_kuai {
-    background-position: -255px -54px;
+  background-position: -255px -54px;
 }
 
 .mod_service_bao {
-    background-position: -257px -105px;
+  background-position: -257px -105px;
 }
 
 .mod_help {
-    height: 187px;
-    border-bottom: 1px solid #ccc;
+  height: 187px;
+  border-bottom: 1px solid #ccc;
 }
 
 .mod_help_item {
-    float: left;
-    width: 150px;
-    padding: 20px 0 0 50px;
+  float: left;
+  width: 150px;
+  padding: 20px 0 0 50px;
 }
 
 .mod_help_item dt {
-    height: 25px;
-    font-size: 16px;
+  height: 25px;
+  font-size: 16px;
 }
 
 .mod_help_item dd {
-    height: 22px;
+  height: 22px;
 }
 
 .mod_help_app dt,
 .mod_help_app p {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .mod_help_app img {
-    margin: 7px 0;
+  margin: 7px 0;
 }
 
 .mod_copyright {
-    text-align: center;
+  text-align: center;
 }
 
 .mod_copyright_links {
-    margin: 20px 0 15px 0;
+  margin: 20px 0 15px 0;
 }
 
 .mod_copyright_info {
-    line-height: 18px;
+  line-height: 18px;
 }
 
 .car-header {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .car-logo img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .car-logo b {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .cart-filter-bar {
-    font-size: 16px;
-    color: #E2231A;
-    font-weight: 700;
-    margin-top: 20px;
+  font-size: 16px;
+  color: #e2231a;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .cart-thead {
-    height: 32px;
-    line-height: 32px;
-    margin: 15px 0 10px;
-    padding: 5px 0;
-    background: #f3f3f3;
-    border: 1px solid #e9e9e9;
-    border-top: 0;
-    position: relative;
+  height: 32px;
+  line-height: 32px;
+  margin: 15px 0 10px;
+  padding: 5px 0;
+  background: #f3f3f3;
+  border: 1px solid #e9e9e9;
+  border-top: 0;
+  position: relative;
 }
 
-.cart-thead>div,
-.cart-item>div {
-    float: left;
+.cart-thead > div,
+.cart-item > div {
+  float: left;
 }
 
 .t-checkbox,
 .p-checkbox {
-    height: 18px;
-    line-height: 18px;
-    padding-top: 7px;
-    width: 122px;
-    padding-left: 11px;
+  height: 18px;
+  line-height: 18px;
+  padding-top: 7px;
+  width: 122px;
+  padding-left: 11px;
 }
 
 .t-goods {
-    width: 445px;
+  width: 445px;
 }
 
 .t-price {
-    width: 120px;
-    padding-right: 40px;
-    text-align: right;
+  width: 120px;
+  padding-right: 40px;
+  text-align: right;
 }
 
 .t-num {
-    width: 150px;
-    text-align: center;
+  width: 150px;
+  text-align: center;
 }
 
 .t-sum {
-    width: 100px;
-    text-align: right;
+  width: 100px;
+  text-align: right;
 }
 
 .t-action {
-    width: 130px;
-    text-align: right;
+  width: 130px;
+  text-align: right;
 }
 
 .cart-item {
-    height: 160px;
-    border-style: solid;
-    border-width: 2px 1px 1px;
-    border-color: #aaa #f1f1f1 #f1f1f1;
-    background: #fff;
-    padding-top: 14px;
-    margin: 15px 0;
+  height: 160px;
+  border-style: solid;
+  border-width: 2px 1px 1px;
+  border-color: #aaa #f1f1f1 #f1f1f1;
+  background: #fff;
+  padding-top: 14px;
+  margin: 15px 0;
 }
 
 .check-cart-item {
-    background: #fff4e8;
+  background: #fff4e8;
 }
 
 .p-checkbox {
-    width: 50px;
+  width: 50px;
 }
 
 .p-goods {
-    margin-top: 8px;
-    width: 606px;
+  margin-top: 8px;
+  width: 606px;
 }
 
 .p-img {
-    float: left;
-    border: 1px solid #ccc;
-    padding: 5px;
-    cursor: pointer;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .p-msg {
-    float: left;
-    width: 220px;
-    margin: 0 10px;
-    line-height: 18px;
-    cursor: pointer;
+  float: left;
+  width: 220px;
+  margin: 0 10px;
+  line-height: 18px;
+  cursor: pointer;
 }
 
 .p-price {
-    width: 110px;
-    font-size: 13px;
-    margin-top: 5px;
+  width: 110px;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .quantity-form {
-    width: 80px;
-    height: 22px;
+  width: 80px;
+  height: 22px;
 }
 
 .p-num {
-    width: 170px;
+  width: 170px;
 }
 
 .decrement,
 .increment {
-    float: left;
-    border: 1px solid #cacbcb;
-    height: 18px;
-    line-height: 18px;
-    padding: 1px 0;
-    width: 16px;
-    text-align: center;
-    color: #666;
-    margin: 0;
-    background: #fff;
-    margin-left: -1px;
+  float: left;
+  border: 1px solid #cacbcb;
+  height: 18px;
+  line-height: 18px;
+  padding: 1px 0;
+  width: 16px;
+  text-align: center;
+  color: #666;
+  margin: 0;
+  background: #fff;
+  margin-left: -1px;
 }
 
 .itxt {
-    float: left;
-    border: 1px solid #cacbcb;
-    width: 42px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    padding: 1px;
-    margin: 0;
-    margin-left: -1px;
-    font-size: 12px;
-    font-family: verdana;
-    color: #333;
-    -webkit-appearance: none;
+  float: left;
+  border: 1px solid #cacbcb;
+  width: 42px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  padding: 1px;
+  margin: 0;
+  margin-left: -1px;
+  font-size: 12px;
+  font-family: verdana;
+  color: #333;
+  -webkit-appearance: none;
 }
 
 .p-sum {
-    font-weight: 700;
-    width: 145px;
-    font-size: 13px;
-    margin-top: 5px;
+  font-weight: 700;
+  width: 145px;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .p-action {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-
 
 /* 结算模块 */
 
 .cart-floatbar {
-    height: 50px;
-    border: 1px solid #f0f0f0;
-    background: #fff;
-    position: relative;
-    margin-bottom: 50px;
-    line-height: 50px;
+  height: 50px;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+  position: relative;
+  margin-bottom: 50px;
+  line-height: 50px;
 }
 
 .select-all {
-    float: left;
-    height: 18px;
-    line-height: 18px;
-    padding: 16px 0 16px 9px;
-    white-space: nowrap;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 16px 0 16px 9px;
+  white-space: nowrap;
 }
 
 .select-all input {
-    vertical-align: middle;
-    display: inline-block;
-    margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .operation {
-    float: left;
-    width: 200px;
-    margin-left: 26px;
+  float: left;
+  width: 200px;
+  margin-left: 26px;
 }
 
 .clear-all {
-    font-weight: 700;
-    margin: 0 20px;
+  font-weight: 700;
+  margin: 0 20px;
 }
 
 .toolbar-right {
-    float: right;
+  float: right;
 }
 
 .amount-sum {
-    float: left;
+  float: left;
 }
 
 .amount-sum em {
-    font-weight: 700;
-    color: #E2231A;
-    padding: 0 3px;
+  font-weight: 700;
+  color: #e2231a;
+  padding: 0 3px;
 }
 
 .price-sum {
-    float: left;
-    margin: 0 15px;
+  float: left;
+  margin: 0 15px;
 }
 
 .price-sum em {
-    font-size: 16px;
-    color: #E2231A;
-    font-weight: 700;
+  font-size: 16px;
+  color: #e2231a;
+  font-weight: 700;
 }
 
 .btn-area {
-    cursor: pointer;
-    font-weight: 700;
-    width: 94px;
-    height: 52px;
-    line-height: 52px;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    font-family: "Microsoft YaHei";
-    background: #e54346;
-    overflow: hidden;
+  cursor: pointer;
+  font-weight: 700;
+  width: 94px;
+  height: 52px;
+  line-height: 52px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  background: #e54346;
+  overflow: hidden;
 }
 
 .bg {
-    background: #fff4e8;
+  background: #fff4e8;
 }
