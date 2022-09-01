@@ -26,6 +26,7 @@ body {
   padding: 1.5em;
   z-index: 1;
 }
+
 .calendar_left .header {
   display: flex;
   justify-content: space-around;
