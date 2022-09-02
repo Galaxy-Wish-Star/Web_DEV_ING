@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login_page.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/login_page.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img class="bg1" src="../images/icon1.svg" alt="背景图片" />
+
+      <form action="#" method="post" class="login-form">
+        <h2 id="text1">郑经在线考试系统</h2>
+
+        <input
+          class="login-input"
+          type="text"
+          name=""
+          id="username"
+          placeholder="请输入账号"
+        />
+        <input
+          class="login-input"
+          type="password"
+          name=""
+          id="password"
+          placeholder="请输入密码"
+        />
+
+        <div class="option-radio">
+          <div class="option-radio-item">
+            <input
+              class="role-radio"
+              id="student"
+              name="radio"
+              type="radio"
+              value="student"
+              checked="checked"
+            />
+            <label class="radio-text" for="student">学生</label>
+          </div>
+
+          <div class="option-radio-item" id="option-radio-teacher">
+            <input
+              class="role-radio"
+              id="teacher"
+              name="radio"
+              type="radio"
+              value="teacher"
+            />
+            <label class="radio-text" for="teacher">教师</label>
+          </div>
+
+          <div class="option-radio-item" id="option-radio-admin">
+            <input
+              class="role-radio"
+              id="admin"
+              name="radio"
+              type="radio"
+              value="admin"
+            />
+            <label class="radio-text" for="admin">管理员</label>
+          </div>
+        </div>
+
+        <div class="option">
+          <input
+            class="remember-checkbox"
+            id="remember-checkbox"
+            type="checkbox"
+            value="remember"
+          />
+          <label class="remember-text option-item" for="remember-checkbox"
+            >记住我</label
+          >
+          <a class="forget option-item" href="#">忘记密码?</a>
+          <a class="register option-item" href="#">立即注册</a>
+        </div>
+
+        <div>
+          <input class="login-button" type="submit" value="登录" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.bg1 {
+  width: 450px;
+  height: 450px;
+}
+.login-form {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.login-input{
+    width: 280px;
+    height: 32px;
+    font-size: 14px;
+    margin: 0 0 0 20px ;
+    padding: 0 0 0 20px;
+    border:1px solid #2f54eb;
+    background-color: #f1f3f8;
+}
+
+.option-radio {
+    position: relative;
+    display: flex;
+    width: 300px;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    /* 用户无法选中文本 */
+    user-select: none;
+}
+
+.option-radio-item {
+    width: 100px;
+    height: 15px;
+    /* background-color: red; */
+    margin: 0 0 0 0;
+}
+
+#option-radio-teacher {
+    position: absolute;
+    left: 120px;
+}
+
+#option-radio-admin {
+    position: absolute;
+    right: -40px;
+}
+
+.role-radio {
+    width: 15px;
+    height: 15px;
+}
+
+.radio-text {
+    position: absolute;
+    line-height: 15px;
+    margin: 0 0 0 3px;
+
+}
+
+.radio-text:hover {
+    font-weight: 700;
+    color: #2f54eb;
+}
+
+.option {
+    position: relative;
+    display: flex;
+    width: 300px;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    /* 用户无法选中文本 */
+    user-select: none;
+    /* background-color: red; */
+}
+
+.remember-checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.option-item {
+    line-height: 15px;
+}
+
+.option-item:hover {
+    font-weight: 700;
+    color: #2f54eb;
+}
+
+.remember-text {
+    margin: 0 0 0 3px;
+}
+
+.forget {
+    position: absolute;
+    right: 0px;
+}
+
+.register {
+    position: absolute;
+    left: 120px;
+}
+
+.login-button {
+    width: 300px;
+    height: 38px;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    background-color: #2f54eb;
+    /* border: 1px solid #2f54eb; */
+    color: #fff;
+    border-radius: 3px;
+}
