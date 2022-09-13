@@ -4,3 +4,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    /* 满屏居中 */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top,#dfe9f3,#fff);
+}
+.container{
+    width: 1220px;
+    border: 1px solid red;
+}
+li{
+    list-style: none;
+    position: relative;
+    width: 400px;
+    height: 260px;
+    float: left;
+    margin: 5px 10px 5px 0;
+    overflow: hidden;
+/* 溢出隐藏 */
+
+
+}
+li img{
+
+}
