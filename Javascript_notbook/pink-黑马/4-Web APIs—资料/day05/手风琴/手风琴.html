@@ -67,33 +67,28 @@
   </div>
 </body>
 <script>
-  // 获取元素
-  let box = document.querySelectorAll('li');// lis = [li, li, li, li, li]
-  // 分析：
-  // 1、鼠标进入显示图片，
-  // 鼠标进入li，让当前li变成800，其他的li变成100
-  for (let i = 0; i < box.length; i++) {
-
-    box[i].addEventListener('mouseenter', function () {
-      for (let j = 0; j < box.length; j++) {// 事件触发执行，为了让所有li变成240宽的
-        box[j].style.width = '100px';
+  // 1. li 默认有个宽度是 240像素  
+  // 2. 当我们鼠标经过， 当前的小li 宽度变大 800px 其余的小li 变为 100px 
+  // 3. 鼠标离开事件， 所有的小li 都要复原 宽度为 240px
+  // (1) 获取元素
+  let lis = document.querySelectorAll('li')
+  // (2) 绑定鼠标经过和离开事件
+  for (let i = 0; i < lis.length; i++) {
+    // (3) 鼠标经过
+    lis[i].addEventListener('mouseenter', function () {
+      // 排他思想  干掉所有人 100px，复活我自己 800px
+      for (let j = 0; j < lis.length; j++) {
+        lis[j].style.width = '100px'
       }
       this.style.width = '800px'
     })
-
-    box[i].addEventListener('mouseleave', function () {
-      // 让所有的li变成240
-      for (let j = 0; j < box.length; j++) {// 事件触发执行，为了让所有li变成240宽的
-        box[j].style.width = '240px';
+    // (4) 鼠标离开
+    lis[i].addEventListener('mouseleave', function () {
+      for (let j = 0; j < lis.length; j++) {
+        lis[j].style.width = '240px'
       }
     })
-
   }
-
-
-
-
-
 </script>
 
 </html>
