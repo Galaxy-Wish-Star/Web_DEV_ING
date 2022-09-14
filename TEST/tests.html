@@ -1,55 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .b1 {
-            width: 200px;
-            height: 200px;
-            background: aqua;
-            /* float: right; */
-        }
-        
-        .b2 {
-            width: 200px;
-            height: 200px;
-            background: blue;
-            /* float: left; */
-        }
-        
-        .b3 {
-            width: 200px;
-            height: 200px;
-            background: chartreuse;
-            /* float: left; */
-        }
-        
-        .b4 {
-            width: 200px;
-            height: 200px;
-            background: darkgreen;
-            /* float: left; */
-        }
-        
-        .b5 {
-            width: 200px;
-            height: 200px;
-            background: red;
-            /* float: left; */
-        }
-    </style>
+	<style>
+		body {
+			--flex-bg: #bebebe;
+			--flex-item-bg: #FDC616;
+			--flex-item-border: #F8644A;
+			--theme-bg: #007fff;
+			background: #f9f9f9;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		#table_flex_1 {
+			width: 98%;
+		}
+
+		.no-select {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.flex {
+			display: flex;
+			background: var(--flex-bg) !important;
+			border-radius: 8px;
+			padding: 8px;
+		}
+		#table_flex_1 th {
+			min-width: 200px;
+		}
+
+		.not-tall {
+			height: 50px;
+			line-height: 50px;
+		}
+		.super-wide {
+			width: 100%;
+		}
+		.item {
+			font-size: 28px;
+			font-weight: bold;
+			border-radius: 8px;
+			min-width: 100px;
+			text-align: center;
+			background: var(--flex-item-bg);
+			box-shadow: inset 8px 8px 10px #ffffff, inset -3px -3px 10px #ff8e19;
+			color: var(--flex-item-color);
+			margin: 8px;
+		}
+
+		.write-for-us {
+			padding: 14px;
+			margin: 14px;
+			background: var(--theme-bg);
+			border: 2px solid transparent;
+			font-weight: bold;
+			color: #ffffff;
+		}
+
+		.write-for-us:hover {
+			color: var(--theme-bg) !important;
+			background-color: transparent !important;
+			border-color: var(--theme-bg) !important;
+		}
+
+		.pointer {
+			cursor: pointer;
+		}
+	</style>
 </head>
+<table id="table_flex_1">
+	<tbody>
+		<tr>
+			<th style="width: 150px;">
+				<h3>stretch</h3>
+			</th>
+			<td style="width: 100%;">
+				<div
+					class="flex no-select"
+					style="justify-content: stretch; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall super-wide">A</div>
+					<div class="item not-tall super-wide">B</div>
+					<div class="item not-tall super-wide">C</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<h3>space-between</h3>
+			</th>
+			<td>
+				<div
+					class="flex no-select"
+					style="justify-content: space-between; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
 
-<body>
-    <div class="b1"></div>
-    <div class="b2"></div>
-    <div class="b3"></div>
-    <div class="b4"></div>
-    <div class="b5"></div>
-</body>
+		<tr>
+			<th>
+				<h3>space-around</h3>
+			</th>
+			<td>
+				<div
+					class="flex no-select"
+					style="justify-content: space-around; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
 
-</html>
+		<tr>
+			<th>
+				<h3>space-evenly</h3>
+			</th>
+			<td>
+				<div
+					class="flex not-tall no-select"
+					style="justify-content: space-evenly; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<h3>center</h3>
+			</th>
+			<td>
+				<div
+					class="flex not-tall no-select"
+					style="justify-content: center; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<h3>flex-end</h3>
+			</th>
+			<td>
+				<div
+					class="flex not-tall no-select"
+					style="justify-content: flex-end; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<h3>flex-start</h3>
+			</th>
+			<td>
+				<div
+					class="flex not-tall no-select"
+					style="justify-content: flex-start; height: 82px; width: 100%;"
+				>
+					<div class="item not-tall">A</div>
+					<div class="item not-tall">B</div>
+					<div class="item not-tall">C</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div
+	id="play_flex_animation_1"
+	class="write-for-us pointer noselect"
+	onclick="window.playFlexAnimation1()"
+	style="width: 400px; font-size: 24px; text-align: center; margin: auto;"
+>
+	演示flex动画
+</div>
+<script>
+	window.playFlexAnimation1 = function () {
+		console.log("start animate");
+		window.flex_anim_1_playing = false;
+		window.flex_anim_1 = null;
+		if (window.flex_anim_1 == null && window.flex_anim_1_playing == false) {
+			window.flex_anim_1_playing = true;
+			$("#play_flex_animation_1").innerHTML = "动画演示中..";
+
+			window.flex_anim_1 = setTimeout((e) => {
+				$("#table_flex_1")
+					.animate({ width: "550px" }, 2000, "easeOutBounce")
+					.animate({ width: "90%" }, 2000, "easeOutBounce");
+			}, 0);
+
+			setTimeout((e) => {
+				window.flex_anim_1_playing = false;
+				$("#play_flex_animation_1").innerHTML = "再次演示flex动画";
+				clearTimeout(window.flex_anim_1);
+				window.flex_anim_1 = null;
+			}, 4100);
+		}
+	};
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
