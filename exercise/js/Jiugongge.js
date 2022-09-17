@@ -22,4 +22,4 @@ function direct(e, o) {
 		directName = ["上", "右", "下", "左"];
     return directName[angle];
 }
- 
+ eee
