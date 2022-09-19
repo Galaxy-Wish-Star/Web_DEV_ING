@@ -74,5 +74,10 @@ function mouseEvent(angle, o, d) {
 				}, 50);
 				break;
 		}
+	}else if (d=='out'){//鼠标离开
+			//判断方向
+			switch (angle) {
+				
+			}
 	}
 }
