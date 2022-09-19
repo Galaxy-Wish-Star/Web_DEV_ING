@@ -77,7 +77,14 @@ function mouseEvent(angle, o, d) {
 	}else if (d=='out'){//鼠标离开
 			//判断方向
 			switch (angle) {
-				
+				case'上':
+				setTimeout(() => {
+					p.style.left=0
+					p.style.top=h+'px';
+					p.style.transition ='.2s'
+					p.style.transitionsDelay = '0.1s';
+				}, 50);
+				break;
 			}
 	}
 }
