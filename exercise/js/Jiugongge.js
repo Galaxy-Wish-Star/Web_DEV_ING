@@ -22,4 +22,24 @@ function direct(e, o) {
 		directName = ["上", "右", "下", "左"];
     return directName[angle];
 }
- eee
+
+// 鼠标事件 (方向，元素，鼠标进入或离开)
+function mouseEvent(angle, o, d){
+	var w=o.offsetWidth,
+		h=o.offsetHeight;
+	var p= o.querySelector('p'); //元素下的p元素
+	p.style.transition='0s';
+	if(d=='in'){//鼠标进入
+	//判断方向
+	switch(angle){
+		case '上':
+			if(p.offsetTop==0&&p.offsetTop==0)break;
+			p.style.left=0
+			p.style.top=-h+'px';
+			setTimeout(() => {
+				
+			}, 50);
+			
+	}
+	}
+}
