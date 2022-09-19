@@ -115,5 +115,12 @@ function mouseEvent(angle, o, d) {
 lis.forEach((li) => {
 	li.addEventListener("mouseenter", function (e) {
 		var e = e || window.event;
+		var angle = direct(e, this);
+		mouseEvent(angle, this, "in");
+	});
+	li.addEventListener("mouseleave", function (e) {
+		var e = e || window.event;
+		var angle = direct(e, this);
+		mouseEvent(angle, this, "out");
 	});
 });
