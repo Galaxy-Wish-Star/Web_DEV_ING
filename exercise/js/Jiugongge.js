@@ -86,6 +86,26 @@ function mouseEvent(angle, o, d) {
 					p.style.transitionsDelay = "0.1s";
 				}, 50);
 				break;
+			case "右":
+				setTimeout(() => {
+					p.style.left = w+'px';
+					p.style.top=0
+					p.style.transition = ".1s";
+					p.style.transitionsDelay='.1s'
+				}, 50);
+				break
+				case'下':
+				setTimeout(() => {
+					p.style.left=0
+					p.style.top=h+'px'
+					p.style.transition = "0.2s";
+					p.style.transitionsDelay='.1s'
+				}, 50);
+				case'左':
+				setTimeout(() => {
+					p.style.left=w+ "px";
+					p.style
+				}, 50);
 		}
 	}
 }
