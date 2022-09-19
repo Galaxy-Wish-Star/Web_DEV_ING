@@ -72,6 +72,7 @@ function mouseEvent(angle, o, d) {
 					p.style.top = 0;
 					p.style.transition = ".2s";
 				}, 50);
+				break;
 		}
 	}
 }
