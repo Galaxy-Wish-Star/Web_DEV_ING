@@ -37,9 +37,11 @@ function mouseEvent(angle, o, d){
 			p.style.left=0
 			p.style.top=-h+'px';
 			setTimeout(() => {
-				
+				p.style.left=0;
+				p.style.top=0
+				p.style.transition='0.2s'
 			}, 50);
-			
+			break;
 	}
 	}
 }
