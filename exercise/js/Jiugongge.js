@@ -20,28 +20,58 @@ function direct(e, o) {
 		y = (ey - offTop - h / 2) * (h > w ? w / h : 1),
 		angle = (Math.round((y, x) * (180 / Math.PI) + 180) / 90 + 3) % 4,
 		directName = ["上", "右", "下", "左"];
-    return directName[angle];
+	return directName[angle];
 }
 
 // 鼠标事件 (方向，元素，鼠标进入或离开)
-function mouseEvent(angle, o, d){
-	var w=o.offsetWidth,
-		h=o.offsetHeight;
-	var p= o.querySelector('p'); //元素下的p元素
-	p.style.transition='0s';
-	if(d=='in'){//鼠标进入
-	//判断方向
-	switch(angle){
-		case '上':
-			if(p.offsetTop==0&&p.offsetTop==0)break;
-			p.style.left=0
-			p.style.top=-h+'px';
-			setTimeout(() => {
-				p.style.left=0;
-				p.style.top=0
-				p.style.transition='0.2s'
-			}, 50);
-			break;
-	}
+function mouseEvent(angle, o, d) {
+	var w = o.offsetWidth,
+		h = o.offsetHeight;
+	var p = o.querySelector("p"); //元素下的p元素
+	p.style.transition = "0s";
+	if (d == "in") {
+		//鼠标进入
+		//判断方向
+		switch (angle) {
+			case "上":
+				if (p.offsetTop == 0 && p.offsetTop == 0) break;
+				p.style.left = 0;
+				p.style.top = -h + "px";
+				setTimeout(() => {
+					p.style.left = 0;
+					p.style.top = 0;
+					p.style.transition = "0.2s";
+				}, 50);
+				break;
+			case "右":
+				if (p.offleft == 0 && p.offTop == 0) break;
+				p.style.left = w + "px";
+				p.style.top = 0;
+				setTimeout(() => {
+					p.style.left = 0;
+					p.style.top = 0;
+					p.style.transition = "0.2s";
+				}, 50);
+				break;
+			case "下":
+				if (p.offleft == 0 && p.offTop == 0) break;
+				p.style.left = 0;
+				p.style.top = h + "px";
+				setTimeout(() => {
+					p.style.left = 0;
+					p.style.top = 0;
+					p.style.transition = "0.2s";
+				}, 50);
+				break;
+			case "左":
+				if (p.offleft == 0 && p.offTop == 0) break;
+				p.style.left = w + "px";
+				p.style.top = 0;
+				setTimeout(() => {
+					p.style.left = 0;
+					p.style.top = 0;
+					p.style.transition = ".2s";
+				}, 50);
+		}
 	}
 }
