@@ -50,8 +50,8 @@ body {
 				animation: animateLine 4s ease-in-out infinite;
 			}
 		}
-        .border {
-            position: relative;
+        .broder {
+            position: absolute;
             inset: 0;
             background: url(../images/Qrcode/border.png);
             background-size: 400px;
@@ -78,7 +78,7 @@ body {
 		top: calc(100% - 20px);
 	}
 }
-@keyframes anmateText {
+@keyframes animateText {
 	0%,
 	100% {
 		opacity: 0;
