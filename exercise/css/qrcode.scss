@@ -50,16 +50,15 @@ body {
 				animation: animateLine 4s ease-in-out infinite;
 			}
 		}
-        .broder {
-            position: absolute;
-            inset: 0;
-            background: url(../images/Qrcode/border.png);
-            background-size: 400px;
-            background-repeat: no-repeat;
-            animation: animateText 0.5s linear infinite;
-        }
+		.broder {
+			position: absolute;
+			inset: 0;
+			background: url(../images/Qrcode/border.png);
+			background-size: 400px;
+			background-repeat: no-repeat;
+			animation: animateText 0.5s linear infinite;
+		}
 	}
-	
 }
 @keyframes animate {
 	0%,
