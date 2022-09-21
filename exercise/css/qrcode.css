@@ -53,8 +53,8 @@ body .scan .qrcode::after {
   filter: drop-shadow(0 0 20px #35fd5c) drop-shadow(0 0 60px #35fd5c);
   animation: animateLine 4s ease-in-out infinite;
 }
-body .scan .border {
-  position: relative;
+body .scan .broder {
+  position: absolute;
   inset: 0;
   background: url(../images/Qrcode/border.png);
   background-size: 400px;
@@ -78,7 +78,7 @@ body .scan .border {
     top: calc(100% - 20px);
   }
 }
-@keyframes anmateText {
+@keyframes animateText {
   0%, 100% {
     opacity: 0;
   }
