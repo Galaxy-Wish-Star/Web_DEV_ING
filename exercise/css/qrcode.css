@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+body .scan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .scan .qrcode {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: url(../images/Qrcode/QR_Code01.png);
+  background-size: 400px;
+}
+body .scan .qrcode::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(../images/Qrcode/QR_Code02.png);
+  background-size: 400px;
+  overflow: hidden;
+  animation: animate 4s ease-in-out infinite;
+}
+body .scan .qrcode::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background: #35fd5c;
+  filter: drop-shadow(0 0 20px #35fd5c) drop-shadow(0 0 60px #35fd5c);
+  animation: animateLine 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    height: 20px;
+  }
+  50% {
+    height: calc(100% - 20px);
+  }
+}
+@keyframes animateLine {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 20px);
+  }
+}/*# sourceMappingURL=qrcode.css.map */
