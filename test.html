@@ -8,7 +8,22 @@
 	</head>
 	<body></body>
 	<script>
-		var userNumber = window.prompt("请输入一个值");
-		
+		var userNumber = window.prompt("请输入三个数").split("");
+		numArray = userNumber.map((value) => {
+			return parseInt(value);
+		});
+
+		if (numArray.length > 3 || !isNaN(userNumber)) {
+			alert("请输正确的数");
+		} else {
+			sum = () => {
+				var user = 0;
+				for (var i = numArray.length - 1; i >= 0; i--) {
+					user += numArray[i];
+				}
+				return user;
+			};
+		}
+		alert("和为:" + sum());
 	</script>
 </html>
