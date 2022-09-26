@@ -10,16 +10,17 @@
 	<script>
 		var userNumber = window.prompt("请输入一个值");
 		var randomNumber = getRandomIntInclusive(0, 99);
-		function getRandomIntInclusive(min, max) {
+
+		function getRandomIntInclusive(min, max) {	//随机数生成
 			min = Math.ceil(min);
 			max = Math.floor(max);
 			return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
 		}
 
-		if (userNumber > randomNumber) {
-			alert(userNumber+'>' +randomNumber+"你输入的数大于随机数，你赢了");
+		if (userNumber > randomNumber) {	//判断用户输入与随机数
+			alert(userNumber + ">" + randomNumber + ",你输入的数大于随机数，你赢了");
 		} else {
-			alert(userNumber+'<' +randomNumber+"你输入的数小于随机数，你输了");
+			alert(userNumber + "<" + randomNumber + ",你输入的数小于随机数，你输了");
 		}
 	</script>
 </html>
