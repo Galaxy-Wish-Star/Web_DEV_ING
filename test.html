@@ -8,7 +8,7 @@
 	</head>
 	<body></body>
 	<script>
-		var userNumber = window.prompt("请输入");
+		var userNumber = window.prompt("请输入一个值");
 		var randomNumber = getRandomIntInclusive(0, 99);
 		function getRandomIntInclusive(min, max) {
 			min = Math.ceil(min);
@@ -17,9 +17,9 @@
 		}
 
 		if (userNumber > randomNumber) {
-			alert("你赢了");
+			alert(userNumber+'>' +randomNumber+"你输入的数大于随机数，你赢了");
 		} else {
-			alert("你输了");
+			alert(userNumber+'<' +randomNumber+"你输入的数小于随机数，你输了");
 		}
 	</script>
 </html>
