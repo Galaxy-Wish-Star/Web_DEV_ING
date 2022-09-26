@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+	<script>
+		var userNumber = window.prompt("请输入");
+		var randomNumber = getRandomIntInclusive(0, 99);
+		function getRandomIntInclusive(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+		}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        console.log("我在睡觉")
-        prompt("输入名字")
-    </script>
-</head>
-
-<body>
-    <input type="button" value="点击我呀" onclick="alert('头头爱蒲玖蓉')">
-</body>
-
+		if (userNumber > randomNumber) {
+			alert("你赢了");
+		} else {
+			alert("你输了");
+		}
+	</script>
 </html>
