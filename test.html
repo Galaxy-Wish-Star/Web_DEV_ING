@@ -28,7 +28,7 @@
 		var userNumber = window.prompt("请输入一个值");
 		var randomNumber = getRandomIntInclusive(0, 99);
 
-		function getRandomIntInclusive(min, max) {
+		getRandomIntInclusive=(min, max)=> {
 			//随机数生成
 			min = Math.ceil(min);
 			max = Math.floor(max);
