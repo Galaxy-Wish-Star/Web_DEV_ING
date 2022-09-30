@@ -93,8 +93,15 @@
 
 		for (var i of arr) {
 			for (var k in i) {
-				console.log(i[k]);
+				console.log("name:" + i[k]);
+				break;
+			}
+			for (var k in i) {
+				
+				console.log("id:" + i[k]);
+				break;
 			}
 		}
+
 	</script>
 </html>
