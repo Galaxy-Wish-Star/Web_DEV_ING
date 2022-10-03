@@ -1,0 +1,98 @@
+*{
+    margin: 0;  /*外边距 */
+    padding: 0; /*内边距 */
+    }
+
+img{
+    width: 100%;
+    }   /* 选中img，设置图片 */
+
+.bodyy{
+    height: 100vh;  /* 100%窗口高度 */
+    display: flex;  /* 弹性布局 居中 */
+    align-items: center;    /* 垂直居中 */
+    justify-content: center;    /* 水平居中 */
+    background: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
+    margin-top: -4px;
+}
+
+.regster{
+    position: relative;     /* 相对定位 */
+    z-index: 1;
+    background-color: #fff;     /* 设置背景为白色 */
+    border-radius: 15px;    /* 设置边框为圆角 */
+    display: flex;    /* 弹性布局 */
+    flex-direction: column;     /* 垂直排列 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    width: 620px;
+    height: 750px;  
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);/* 阴影 */
+}
+
+li{
+    list-style: none;
+}
+.tex{
+    width: 300px;
+    height: 30px;
+    text-indent: 8px;   
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;  /*下划线：大小、实线、颜色*/
+    outline: none;  /* 在一条声明中设置多个轮廓属性的简写属性  */
+    margin: 12px auto;
+}
+
+a{
+    color: rgb(0, 56, 211);
+    text-decoration: none;
+}
+
+.formm h1{
+    font-size: 30px;
+    margin: 32px auto 40px auto;
+}
+
+button{
+    width: 280px;
+    height: 40px;
+    margin: 10px auto 40px auto;
+    border: none;
+    background:linear-gradient(200deg, #1d99e3, rgb(134, 191, 50));
+    color: #fff;
+    font-weight: bold;  /* 字体粗细 */
+    letter-spacing: 8px;/* 设置字间距 */
+    border-radius: 10px;
+    cursor: pointer;/* 设定网页浏览时用户鼠标指针的样式 */
+    transition: 0.5s;   /* 动画过渡 */
+    display: flex;    /* 弹性布局 */
+    flex-direction: column;     /* 垂直排列 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+}
+
+button:hover{
+    background: linear-gradient(200deg, #1d99e3, rgb(134, 191, 50));
+    background-position-x: -280px;/*  设置水平方向的位置 */
+}
+
+.sm{
+    font-size: 13px;
+    color: rgb(110, 110, 110);
+}
+
+.yy{
+    line-height: 150%;
+    text-align: center;
+}
+.regster .formm h1{
+    color:rgb(134, 191, 50);
+
+
+}
+
+
+
+
+
