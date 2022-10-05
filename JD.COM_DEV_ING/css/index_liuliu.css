@@ -510,7 +510,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    /* 透明度 */
     opacity: 0;
     transition: all 1.5s;
 }
@@ -708,7 +707,7 @@
     font-size: 36px;
     color: white;
     text-align: center;
-    font-family: "黑体";
+    font-family: "榛戜綋";
     margin-bottom: 74px;
 }
 
@@ -1580,7 +1579,7 @@
     width: 80px;
     height: 520px;
     position: absolute;
-    top: 32px;
+    top: 748px;
     margin-left: 1320px;
 }
 
@@ -1598,6 +1597,7 @@
     background-image: url(images/v_03.jpg);
     background-repeat: no-repeat;
     background-position: 0 bottom;
+    
 }
 
 .elevator li:hover {
@@ -1607,5 +1607,27 @@
 }
 
 .elevator .active {
-    color: red
+    color: red;
+    font-weight: bold;
+}
+
+.elevator_fix {
+    position: fixed;
+    top: 45px;
+    animation: e_show 2s;
+}
+
+@Keyframes e_show {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 45px
+    }
+    50% {
+        top: 45px
+    }
+    100% {
+        top: 45px;
+    }
 }

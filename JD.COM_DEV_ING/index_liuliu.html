@@ -19,7 +19,7 @@
 <body>
     <div class="advert">
         <img src="../JD.COM_DEV_ING/images/618.01.jpg" alt="">
-    <span></span>
+    <span  style="cursor:pointer ;">关闭</span>
     </div>
 
     <div class="header">
@@ -1626,10 +1626,18 @@
                     <img src="images/banner2.jpg">
                     <img src="images/banner3.jpg">
                     <img src="images/banner4.jpg">
+                    <img src="images/banner5.jpg">
+                    <img src="images/banner6.jpg">
+                    <img src="images/banner7.jpg">
+                    <img src="images/banner0.webp">
                     <span id="bannerLeft" class="bannerButton bannerLeft">&lt;</span>
                     <span id="bannerRight" class="bannerButton bannerRight">&gt;</span>
                     <ul class="bannerNav">
                         <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -1643,37 +1651,37 @@
                 var index=0;
                 //  (1.鼠标不在轮播图区域的时候 轮播图正常播放)
                 var t=setInterval(function(){
-                    if(index==3){
+                    if(index==7){
                         index=0;
                     }else{
                         index++;
                     }
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerImg[n].className='';
                     }
                     bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerlist[n].className='';
                     }
                     bannerlist[index].className='active';
                 }, 2000)
                 //  (2.鼠标移入轮播图区域 轮播图播放暂停)
                 banner.addEventListener('mouseenter',function(){
-                    clearInterval(t);
+                    clearInterval();
                 })
                 //  (3.鼠标移出轮播图区域 轮播图恢复播放)
                 banner.addEventListener('mouseleave',function(){
                     t=setInterval(function(){
-                        if(index==3){
+                        if(index==7){
                         index=0;
                     }else{
                         index++;
                     }
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerImg[n].className='';
                     }
                     bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerlist[n].className='';
                     }
                     bannerlist[index].className='active';
@@ -1684,43 +1692,43 @@
                 var bannerRight=document.querySelector('#bannerRight');
                 bannerLeft.addEventListener('click',function(){
                     if(index==0){
-                        index=3;
+                        index=7;
                     }else{
                         index--;
                     }
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerImg[n].className='';
                     }
                     bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerlist[n].className='';
                     }
                     bannerlist[index].className='active';
                 })
                 bannerRight.addEventListener('click',function(){
-                    if(index==3){
+                    if(index==7){
                         index=0;
                     }else{
                         index++;
                     }
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerImg[n].className='';
                     }
                     bannerImg[index].className='show';
-                    for(var n=0;n<=3;n++){
+                    for(var n=0;n<=7;n++){
                         bannerlist[n].className='';
                     }
                     bannerlist[index].className='active';
                 })
                 // 鼠标移入左下方导航（小圆点）切换到对应的图片
-                for(var n=0;n<=3;n++){
+                for(var n=0;n<=7;n++){
                     bannerlist[n].index=n;
                     bannerlist[n].addEventListener('mouseenter',function(){
-                        for(var n=0;n<=3;n++){
+                        for(var n=0;n<=7;n++){
                             bannerImg[n].className='';
                         }
                         index=this.index;
-                        for(var n=0;n<=3;n++){
+                        for(var n=0;n<=7;n++){
                             bannerlist[n].className='';
                         }
                         bannerImg[index].className='show';
@@ -1845,7 +1853,7 @@
                     countDown();   // 先调用函数，防止刷新页面空白
                     function countDown(){
                         // 获取当前时间
-                        var inputTime = + new Date('2022/6/20 22:00:00');
+                        var inputTime = + new Date('2022/9/20 22:00:00');
                         var nowTime = + new Date().getTime(); //返回的是当前时间总的毫秒数
                         var times = (inputTime-nowTime)/1000; //times是剩余时间的总的毫秒数
                         // 定义变量，用于存放倒计时中的 时 分 秒
