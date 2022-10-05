@@ -10,3 +10,108 @@
     
 </body>
 </html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+	<script>
+		// 	var userName = window.prompt("请输入用户名");
+		// 	var adminPassword = 888888;
+		// 	if (userName == "admin") {
+		// 		var userPassword = window.prompt("请输入密码");
+		// 		if (userPassword == adminPassword) {
+		// 			alert("登录成功");
+		// 		} else {
+		// 			alert("登录失败");
+		// 		}
+		// 	} else {
+		// 		alert("用户名错误！登录失败");
+		// 		setTimeout(() => {
+		// 			window.close();
+		// 		}, 2000);
+		// 	}
+		//
+	</script>
+	<script>
+		// 	var userNumber = window.prompt("请输入一个值");
+		// 	var randomNumber = getRandomIntInclusive(0, 99);
+
+		// 	getRandomIntInclusive=(min, max)=> {
+		// 		//随机数生成
+		// 		min = Math.ceil(min);
+		// 		max = Math.floor(max);
+		// 		return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+		// 	}
+
+		// 	if (userNumber > randomNumber) {
+		// 		//判断用户输入与随机数
+		// 		alert(userNumber + ">" + randomNumber + ",你输入的数大于随机数，你赢了");
+		// 	} else {
+		// 		alert(userNumber + "<" + randomNumber + ",你输入的数小于随机数，你输了");
+		// 	}
+		//
+	</script>
+	<script>
+		// 	var userNumber = window.prompt("请输入三个数").split("");
+		// 	isNumber = (val) => {
+		// 		var regPos = /^[0-9]+.?[0-9]*/; //判断是否是数字。
+		// 		if (regPos.test(val)) {
+		// 			return false;
+		// 		} else {
+		// 			return true;
+		// 		}
+		// 	};
+		// 	numArray = userNumber.map((value) => {
+		// 		//字符串转换为数字
+		// 		return parseInt(value);
+		// 	});
+
+		// 	if (numArray.length > 3 || isNumber(numArray)) {
+		// 		//判断是否为三位数
+		// 		alert("请输正确的数");
+		// 	} else {
+		// 		sum = () => {
+		// 			//相加
+		// 			var user = 0;
+		// 			for (var i = numArray.length - 1; i >= 0; i--) {
+		// 				user += numArray[i];
+		// 			}
+		// 			return user;
+		// 		};
+		// 	}
+		// 	alert("和为:" + sum());
+		//
+	</script>
+	<script>
+		arr = [
+			{
+				name: "zhangsan",
+				id: "123",
+			},
+			{
+				name: "lisi",
+				id: "456",
+			},
+			{
+				name: "wangwu",
+				id: "789",
+			},
+		];
+
+		for (var i of arr) {
+			for (var k in i) {
+				console.log("name:" + i[k]);
+				break;
+			}
+			for (var k in i) {
+				
+				console.log("id:" + i[k]);
+				break;
+			}
+		}
+
+	</script>
+</html>
