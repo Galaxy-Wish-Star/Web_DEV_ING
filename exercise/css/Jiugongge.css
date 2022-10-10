@@ -4,17 +4,20 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	/* 方便演示 满屏居中 */
+	/* 满屏居中 */
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(to top, #dfe9f3, #fff);
 }
+
 .container {
 	width: 1220px;
 }
+
 li {
 	list-style: none;
 	position: relative;
@@ -22,9 +25,10 @@ li {
 	height: 260px;
 	float: left;
 	margin: 5px 10px 5px 0;
-	/* 溢出隐藏 */
 	overflow: hidden;
+	/* 溢出隐藏 */
 }
+
 li img {
 	width: 100%;
 	height: 100%;
@@ -33,38 +37,40 @@ li img {
 	/* 过渡效果 */
 	transition: 0.25s ease-in;
 }
+
 li p {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
 	left: 0;
-	/* 默认移出可视范围 */
-	top: -100%;
-	font-size: 15px;
-	color: #aaa;
+	top: -100;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
 	line-height: 24px;
 }
-li:hover img {
-	/* 悬停图片变大 */
+
+li:hover {
 	transform: scale(1.1);
 }
+
 li:nth-child(3) {
 	margin-right: 0;
 	width: 400px;
 	height: 530px;
 }
+
 li:nth-child(4),
 li:nth-child(5) {
-	margin-top: -265px;
+	margin-top: -256px;
 }
+
 li:nth-child(5) {
 	margin-left: 410px;
 }
+
 li:nth-child(8) {
 	margin-right: 0;
 }
