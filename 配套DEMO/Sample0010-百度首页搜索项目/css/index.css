@@ -1,0 +1,76 @@
+body {
+	height: 100%;
+	min-width: 1000px;
+	background-color: rgb(64, 64, 64);
+}
+
+
+/*核心代码*/
+
+div.search-container {
+	width: 641px;
+	margin: 0px auto;
+	border: 1px solid transparent;
+	position: relative;
+}
+
+div.logo {
+	width: 540px;
+	height: 258px;
+	margin: 50px auto;
+	background: url(../img/logo.png) no-repeat center center;
+	zoom: 0.5;
+}
+
+div.search {
+	width: 641px;
+	height: 40px;
+	margin: 0px auto;
+	background: url(../img/search.png) no-repeat center center;
+}
+
+div.search>[type='text'] {
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	border: none;
+	width: 485px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #212121;
+	padding-left: 10px;
+}
+
+div.search-result {
+	width: 535px;
+	background: #F9F9F9;
+	border: 1px solid #E0E0E0;
+	overflow: hidden;
+	position: relative;
+	z-index: 1000;
+}
+
+div.search-result>p {
+	margin: 0px;
+	padding: 0px 10px;
+	height: 35px;
+	line-height: 35px;
+	display: block;
+}
+
+div.search-result>p:hover {
+	color: #000;
+	background: #E9E9E9;
+	cursor: pointer;
+}
+
+div.search-container button {
+	outline: none;
+	border: none;
+	width: 104px;
+	height: 40px;
+	background: #E6E6E6;
+	cursor: pointer;
+	float: right;
+}

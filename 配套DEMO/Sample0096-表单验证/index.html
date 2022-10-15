@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<!-- 简单的样式开始 -->
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		label {
+			margin-left: 25px;
+		}
+		
+		input {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		span {
+			font-weight: lighter;
+			padding-left: 20px;
+		}
+	</style>
+	<!-- 简单的样式结束 -->
+
+	<body>
+		<!-- 表单开始 -->
+		<form action="#" method="post" name="myform">
+			<!-- 账号 -->
+			<label>账号：</label><input type="text" name="username" placeholder="" /><span id="username_info"></span><br />
+			<!-- 密码 -->
+			<label>密码：</label><input type="text" name="password" placeholder="" /><span id="password_info"></span><br />
+			<!-- 邮箱 -->
+			<label>邮箱：</label><input type="text" name="email" placeholder="" /><span id="email_info"></span><br />
+			<!-- 手机 -->
+			<label>手机：</label><input type="text" name="mobile" placeholder="" /><span id="mobile_info"></span><br />
+			<!-- 生日 -->
+			<label>生日：</label><input type="text" name="birthday" placeholder="" /><span id="birthday_info"></span><br />
+		</form>
+		<!-- 表单结束 -->
+	</body>
+
+	<!-- JavaScript 代码开始 -->
+	<script>
+		var username = document.myform.username; 	// 获取账号框
+		var password = document.myform.password; 	// 获取密码框
+		var email    = document.myform.email; 		// 获取邮箱框
+		var mobile   = document.myform.mobile; 		// 获取手机框
+		var birthday = document.myform.birthday; 	// 获取生日框
+
+		var username_info = document.getElementById("username_info"); 		// 获取账号信息提示框
+		var password_info = document.getElementById("password_info"); 		// 获取密码信息提示框
+		var email_info    = document.getElementById("email_info"); 			// 获取邮箱信息提示框
+		var mobile_info   = document.getElementById("mobile_info"); 		// 获取手机信息提示框
+		var birthday_info = document.getElementById("birthday_info"); 		// 获取生日信息提示框
+
+		// 当账号框失去焦点的时候，判断账号框里边的内容是否符合规范（.onblur：代表失去输入框焦点事件）
+		username.onblur = function() {
+			// 老师的题目要求：用户名只能由英文字母和数字组成，长度4—16个字符，并且以英文字母开头。
+
+			// 获取账号框的内容
+			var username_value = username.value;
+
+			// 创建符合老师要求的正则表达式，开始进行判断
+			if(/^[a-zA-Z]([a-zA-Z0-9]){3,15}$/.test(username_value)) {
+				username_info.innerHTML = "正确";
+				username_info.style.color = "green";
+			} else {
+				username_info.innerHTML = "错误";
+				username_info.style.color = "red";
+			}
+		};
+
+		// 当密码框失去焦点的时候，判断账号框里边的内容是否符合规范（.onblur：代表失去输入框焦点事件）
+		password.onblur = function() {
+			// 老师的题目要求：密码由英文字母和数字组成，长度为4—10个字符。
+
+			// 获取密码框的内容
+			var password_value = password.value;
+
+			// 创建符合老师要求的正则表达式，开始进行判断
+			if(/^([a-zA-Z0-9]){4,10}$/.test(password_value)) {
+				password_info.innerHTML = "正确";
+				password_info.style.color = "green";
+			} else {
+				password_info.innerHTML = "错误";
+				password_info.style.color = "red";
+			}
+		};
+
+		// 当邮箱框失去焦点的时候，判断账号框里边的内容是否符合规范（.onblur：代表失去输入框焦点事件）
+		email.onblur = function() {
+			// 老师的题目要求：邮箱地址要包含@符号和“.”符号，且“.”在“@”符号后面，两个符号之间至少有一个字符，邮箱地址以.com 或.cn 结束。
+
+			// 获取邮箱框的内容
+			var email_value = email.value;
+
+			// 创建符合老师要求的正则表达式，开始进行判断
+			if(/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(email_value)) {
+				email_info.innerHTML = "正确";
+				email_info.style.color = "green";
+			} else {
+				email_info.innerHTML = "错误";
+				email_info.style.color = "red";
+			}
+		};
+
+		// 当手机框失去焦点的时候，判断账号框里边的内容是否符合规范（.onblur：代表失去输入框焦点事件）
+		mobile.onblur = function() {
+			// 老师的题目要求：手机号为11位数字，以1开头。
+
+			// 获取手机框的内容
+			var mobile_value = mobile.value;
+
+			// 创建符合老师要求的正则表达式，开始进行判断
+			if(/^1\d{10}$/.test(mobile_value)) {
+				mobile_info.innerHTML = "正确";
+				mobile_info.style.color = "green";
+			} else {
+				mobile_info.innerHTML = "错误";
+				mobile_info.style.color = "red";
+			}
+		};
+
+		// 当生日框失去焦点的时候，判断账号框里边的内容是否符合规范（.onblur：代表失去输入框焦点事件）
+		birthday.onblur = function() {
+			// 老师的题目要求：生日的年份在1900—2014之间，生日按1980-05-12或1988-05-04格式填写。
+
+			// 获取生日框的内容
+			var birthday_value = birthday.value;
+
+			// 创建符合老师要求的正则表达式，开始进行判断
+			if(/^((19[0-9]\d{1})|(20((0[0-9])|(1[0-4]))))\-((0?[1-9])|(1[0-2]))\-((0?[1-9])|([1-2][0-9])|30|31)$/.test(birthday_value)) {
+				birthday_info.innerHTML = "正确";
+				birthday_info.style.color = "green";
+			} else {
+				birthday_info.innerHTML = "错误";
+				birthday_info.style.color = "red";
+			}
+		};
+	</script>
+	<!-- JavaScript 代码结束 -->
+
+</html>

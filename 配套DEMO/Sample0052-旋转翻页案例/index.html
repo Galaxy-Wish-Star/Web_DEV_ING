@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample052 - 旋转翻页案例</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: url(img/bg.jpg);
+			}
+			
+			#wrap {
+				width: 570px;
+				height: 420px;
+				margin: 50px auto;
+				padding: 50px 70px;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #000;
+				position: relative;
+			}
+			
+			#wrap .pic {
+				width: 570px;
+				height: 420px;
+				perspective: 800px;
+			}
+			
+			#wrap .pic ul {
+				width: 570px;
+				height: 420px;
+				box-shadow: 0 0 2px #f6f;
+				position: absolute;
+				transform-style: preserve-3d;
+				z-index: -1;
+			}
+			
+			#wrap .pic ul.now {
+				z-index: 2;
+			}
+			
+			#wrap .pic ul.next {
+				z-index: 1;
+			}
+			
+			#wrap .pic ul li {
+				list-style: none;
+				position: absolute;
+				transform: translate(0px, 0px) rotateX(0deg);
+				border: 1px solid transparent;
+				background-origin: border-box;
+				opacity: 1;
+			}
+			/*
+			#wrap .pic ul.next li{
+				transform:translate(0px,0px) rotateX(0deg);
+				opacity:1;
+			}
+			*/
+			
+			#wrap .pic ul li.on {
+				transform: translate(-50px, -50px) rotateX(720deg);
+				border: 1px solid #000;
+				opacity: 0;
+			}
+			
+			#wrap .pic ul li.move {
+				transition: 1.5s transform, 1.5s opacity;
+			}
+			
+			#wrap .pic ul li.last {
+				transform: translate(0px, 0px) rotateX(0deg);
+				border: 1px solid transparent;
+				opacity: 1;
+			}
+			
+			#wrap .pic .ul1 li {
+				background-image: url(img/1.jpg);
+			}
+			
+			#wrap .pic .ul2 li {
+				background-image: url(img/2.jpg);
+			}
+			
+			#wrap .pic .ul3 li {
+				background-image: url(img/3.jpg);
+			}
+			
+			#wrap .pic .ul4 li {
+				background-image: url(img/4.jpg);
+			}
+			
+			#wrap .pic .ul5 li {
+				background-image: url(img/5.jpg);
+			}
+			
+			#wrap .btn div {
+				width: 40px;
+				height: 69px;
+				position: absolute;
+				top: 50%;
+				margin-top: -35px;
+				background-image: url(img/btn.png);
+				cursor: pointer;
+			}
+			
+			#wrap .btn div#left {
+				left: 15px;
+				background-position: 0px 0px;
+			}
+			
+			#wrap .btn div#right {
+				right: 15px;
+				background-position: -42px 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<div class="pic">
+				<ul class="ul5"></ul>
+				<ul class="ul1 next"></ul>
+				<ul class="ul2"></ul>
+				<ul class="ul3"></ul>
+				<ul class="ul4"></ul>
+				<ul class="ul5"></ul>
+				<ul class="ul1"></ul>
+			</div>
+			<div class="btn">
+				<div id="left"></div>
+				<div id="right"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				fn(10, 7);
+
+				function fn(numX, numY) {
+					var $ul = $('.pic ul');
+					var $btn = $('.btn div');
+					var ulW = $ul.width(),
+						ulH = $ul.height();
+					var $li;
+					var liW = ulW / numX,
+						liH = ulH / numY;
+
+					var ulIndex = 1;
+					var onOff = true;
+
+					$ul.each(function() {
+						var s = '';
+						for(var i = 0; i < numX * numY; i++) {
+							s += '<li></li>'
+						}
+						$(this).append(s);
+					});
+
+					$li = $('.pic ul li');
+					$li.each(function(i) {
+						i %= numX * numY;
+						var iX = i % numX;
+						var iY = parseInt(i / numX);
+						this.x = iX;
+						this.y = iY;
+						$(this).css({
+							width: liW - 2 + 'px',
+							height: liH - 2 + 'px',
+							backgroundPosition: (-liW * iX) + 'px ' + (-liH * iY) + 'px',
+							left: liW * iX + 'px',
+							top: liH * iY + 'px'
+						});
+					});
+
+					$btn.click(function() {
+						if(onOff) {
+							onOff = !onOff;
+							var index = $(this).index();
+							var $ulLi;
+							if(index) {
+								zIndexNext();
+								var sum = numX + numY - 2;
+								$ulLi = $ul.eq(ulIndex).find('li');
+								ulIndex++;
+								var timer = setInterval(function() {
+									$ulLi.each(function() {
+										if(this.x + this.y == sum) {
+											$(this).removeClass('last move').addClass('on move');
+										}
+									});
+									sum--;
+									if(sum < 0) {
+										clearInterval(timer);
+										setTimeout(function() {
+											onOff = !onOff;
+											if(ulIndex == $ul.length - 1) {
+												$li.removeClass('on last move');
+												$ul.removeClass('next now');
+												$ul.eq(1).addClass('next');
+												ulIndex = 1;
+											}
+										}, 1500);
+									}
+								}, 50);
+							} else {
+								zIndexLast();
+								ulIndex--;
+								$ulLi = $ul.eq(ulIndex).find('li');
+								$ulLi.removeClass('move').addClass('on');
+								var sum = 0;
+								var timer = setInterval(function() {
+									$ulLi.each(function() {
+										if(this.x + this.y == sum) {
+											$(this).addClass('last move');
+										}
+									});
+									sum++;
+									if(sum > numX + numY - 2) {
+										clearInterval(timer);
+										setTimeout(function() {
+											onOff = !onOff;
+											if(ulIndex == 0) {
+												$li.removeClass('on last');
+												$ul.removeClass('next now');
+												$ul.eq($ul.length - 2).addClass('next');
+												ulIndex = $ul.length - 2;
+											}
+										}, 1500);
+									}
+								}, 50);
+							}
+						}
+					});
+
+					function zIndexNext() {
+						var i = ulIndex + 1;
+						$ul.eq(ulIndex).addClass('now').siblings().removeClass('now');
+						$ul.eq(i).addClass('next').siblings().removeClass('next');
+					}
+
+					function zIndexLast() {
+						var i = ulIndex - 1;
+						$ul.eq(ulIndex).addClass('next').siblings().removeClass('next');
+						$ul.eq(i).addClass('now').siblings().removeClass('now');
+					}
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

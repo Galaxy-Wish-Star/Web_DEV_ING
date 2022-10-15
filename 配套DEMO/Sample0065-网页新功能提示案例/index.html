@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Sample065 - 网页新功能提示案例</title>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#box {
+				width: 80%;
+				margin: 0 auto;
+				padding-top: 40px;
+				overflow: hidden;
+			}
+			
+			#box1 {
+				float: left;
+				height: 80px;
+				width: 120px;
+				background: #1089D4;
+			}
+			
+			#box2 {
+				float: right;
+				height: 80px;
+				width: 160px;
+				background: #C71585;
+			}
+			
+			#box3 {
+				position: absolute;
+				top: 500px;
+				left: 700px;
+				width: 150px;
+				height: 150px;
+				background: greenyellow;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/paopao.css" />
+
+		<script src="script/jquery-1.8.3.min.js"></script>
+		<script src="script/paopao.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var arrObj = [$('#box1'), $('#box2'), $('#box3')];
+				var arrTitle = ['提示信息可以修改哦^^', '背景萌图可以添加或者修改哦', '箭头指向也是可以修改的哈'];
+				$.guidance({
+					obj: arrObj,
+					title: arrTitle
+				});
+			});
+		</script>
+
+	</head>
+
+	<body style="height:2000px;">
+
+		<div id="box">
+			<div id="box1"></div>
+			<div id="box2"></div>
+		</div>
+		<div id="box3"></div>
+
+		<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+			<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,42 @@
+/*创建表格控制器样式*/
+
+.demo-title>input {
+	margin: 0px;
+	padding: 10px;
+	outline: none;
+	border: none;
+	border: 1px solid #E0E0E0;
+}
+
+.demo-result {
+	margin-top: 5px;
+}
+
+
+/*美化表格*/
+
+table>tr>th,
+table>tr>td {
+	margin: 0px;
+	padding: 0px;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	display: block;
+	border: 1px solid #E0E0E0;
+	float: left;
+}
+
+table>tr>th,
+table>tr:hover {
+	background-color: #E9E9E9;
+}
+
+table>tr {
+	cursor: pointer;
+}
+
+table>tr:nth-child(1) {
+	cursor: pointer;
+}

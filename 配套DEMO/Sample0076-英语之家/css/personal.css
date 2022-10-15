@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	line-height: 40px;
+}
+.per-body {
+	width: 1000px;
+	background: #FFF;
+	margin: 0 auto;
+}
+.pClass {
+	text-indent: 2em;
+	text-align: justify;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.label {
+	width: 200px;
+	margin: 0 auto;
+}
+.hrClass {
+	margin: 0 auto;
+}

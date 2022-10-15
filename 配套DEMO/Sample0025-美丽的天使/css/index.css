@@ -1,0 +1,10 @@
+body {
+	width: 2000px;
+	height: 2000px;
+}
+
+img {
+	position: absolute;
+	outline: none;
+	border: none;
+}

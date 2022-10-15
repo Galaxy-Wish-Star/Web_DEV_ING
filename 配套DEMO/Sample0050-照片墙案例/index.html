@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample050 - 照片墙案例</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				height: 80%;
+			}
+			
+			body {
+				overflow: hidden;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#wrap {
+				width: 90%;
+				height: 90%;
+				position: absolute;
+				top: 5%;
+				left: 5%;
+			}
+			
+			#wrap ul li {
+				width: 125px;
+				height: 125px;
+				box-shadow: 0 0 1px #000;
+				position: absolute;
+				transition: 1s left, 1s top;
+				transform: rotate(-30deg);
+			}
+			
+			#wrap ul li img {
+				transform: scale(0.92);
+				transition: 1s transform;
+			}
+			
+			#btn {
+				display: none;
+			}
+			
+			#btn input {
+				position: fixed;
+				top: 50%;
+			}
+			
+			#left {
+				left: 0;
+			}
+			
+			#right {
+				right: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<ul>
+			</ul>
+			<div id="btn">
+				<input id='left' type="button" value='左按钮' />
+				<input id="right" type="button" value='右按钮'>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var $ul = $('#wrap ul');
+				var $wrap = $('#wrap');
+				var $btn = $('#btn input');
+				var $li, $img;
+				var onOff = true;
+				var index = 0;
+				var liTime = 0;
+				var btnTime = 0;
+
+				init();
+				$li = $('#wrap ul li');
+				$img = $('#wrap ul li img');
+				liPosition();
+				liRot();
+				$(window).resize(liPosition);
+				$li.click(function() {
+					if(new Date() - liTime > 2000) {
+						liTime = new Date();
+						if(onOff) {
+							index = $(this).index();
+							$img.css('transform', 'scale(1)');
+							setTimeout(function() {
+								liClickP();
+								$img.fadeOut(1000);
+								$li.css('backgroundImage', 'url(img/big/' + (index + 1) + '.jpg)');
+							}, 1000);
+							$(window).off('resize').resize(liClickP);
+							$('#btn').show();
+							onOff = !onOff;
+						} else {
+							$img.fadeIn(1000, function() {
+								$li.css('backgroundImage', '');
+								$(this).css('transform', 'scale(0.9)');
+							});
+							liPosition();
+							liRot();
+							$(window).off('resize').resize(liPosition);
+							$('#btn').hide();
+							onOff = !onOff;
+						}
+					}
+				});
+
+				$btn.click(function() {
+					if(new Date() - btnTime > 800) {
+						btnTime = new Date();
+						var i = $(this).index();
+						if(i) {
+							index++;
+							index %= $li.length;
+						} else {
+							index--;
+							if(index == 0) index = $li.length - 1;
+						}
+						liBackground();
+					}
+				});
+
+				function init() {
+					for(var i = 0; i < 24; i++) {
+						var $li = $('<li><img src="img/' + (i + 1) + '.jpg" /></li>');
+						$ul.append($li);
+					}
+				}
+
+				function liPosition() {
+					var wrapW = $wrap.width();
+					var wrapH = $wrap.height();
+					var m = (wrapW - 6 * 125) / 5;
+					var n = (wrapH - 4 * 125) / 3;
+					$li.each(function(i) {
+						var iX = i % 6;
+						var iY = parseInt(i / 6);
+						$(this).css({
+							left: m * iX + iX * 125 + 'px',
+							top: n * iY + iY * 125 + 'px',
+							backgroundPosition: -iX * 125 + 'px ' + (-iY * 125) + 'px'
+						});
+					});
+				}
+
+				function liClickP() {
+					var wrapW = $wrap.width();
+					var wrapH = $wrap.height();
+					var l = (wrapW - 750) / 2;
+					var t = (wrapH - 500) / 2;
+					$li.each(function(i) {
+						var iX = i % 6;
+						var iY = parseInt(i / 6);
+						$(this).css({
+							left: l + iX * 125 + 'px',
+							top: t + iY * 125 + 'px',
+							transition: '1s transform , 1s left , 1s top',
+							transform: 'rotate(0deg)'
+						});
+					});
+				}
+
+				function liRot() {
+					$li.each(function() {
+						var r = (Math.random() - 0.5) * 60;
+						$(this).css('transform', 'rotate(' + r + 'deg)');
+					});
+				}
+
+				function liBackground() {
+					var arr = [];
+					for(var i = 0; i < 24; i++) {
+						arr[i] = i;
+					}
+					var timer = setInterval(function() {
+						var r = Math.floor(Math.random() * arr.length);
+						$li.eq(arr[r]).css('backgroundImage', 'url(img/big/' + (index + 1) + '.jpg)');
+						arr.splice(r, 1);
+						console.log(arr);
+						if(!arr.length) {
+							clearInterval(timer);
+						}
+					}, 30);
+
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample0099 - 吃热狗小游戏</title>
+	</head>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+		
+		body {
+			background: #F4F4F4;
+		}
+		
+		#game_box {
+			width: 450px;
+			height: 600px;
+			border: 1px solid #999999;
+			background: white;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		#game_box #wsc {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			z-index: 100;
+		}
+	</style>
+
+	<body>
+		<div id="game_box">
+			<img src="img/wsc.jpg" width="50" height="50" id="wsc" />
+		</div>
+
+		<h2>当前分数：<span id="my_score">0</span></h2>
+	</body>
+
+	<script type="text/javascript">
+		var wsc = document.getElementById("wsc");
+		var game_box = document.getElementById("game_box");
+		var my_score = document.getElementById("my_score");
+		var hotDogId;
+		var score = 0;
+
+		function makeHotDog() {
+			var hotDog = document.createElement("img");
+			hotDog.width = '25';
+			hotDog.height = '50';
+			hotDog.src = "img/small.jpg";
+			hotDog.id = "hotDog";
+			hotDog.style.position = "absolute";
+			hotDog.style.left = Math.floor(Math.random() * 425 + 0) + "px";
+			hotDog.style.top = 0 + "px";
+			hotDog.style.zIndex = "10";
+			game_box.appendChild(hotDog);
+		}
+
+		// 创建食物
+		makeHotDog();
+
+		function moveHotDog() {
+			var hotDog = document.getElementById("hotDog");
+			hotDog.style.top = hotDog.offsetTop + 50 + 'px';
+			console.log("热狗位置：" + hotDog.offsetTop);
+			// 判断是否吃热狗
+			if(hotDog.offsetTop == 500) {
+				// 获取王思聪坐标，判断是否吃到了食物
+				var wsc_left = wsc.offsetLeft;
+				// 获取热狗坐标，进行模糊匹配结果
+				var hd_left = hotDog.offsetLeft;
+
+				if(hd_left > (wsc_left) && wsc_left < (wsc_left + 50)) {
+					score += 10;
+					console.log("当前分数" + score);
+					my_score.innerHTML = score;
+					// 清掉食物
+					clearInterval(hotDogId);
+					hotDog.remove();
+					// 重新创建食物
+					makeHotDog();
+					// 重新移动食物
+					hotDogId = setInterval(moveHotDog, 500);
+				}
+
+			}
+			// 销毁食物
+			if(hotDog.offsetTop > 600) {
+				clearInterval(hotDogId);
+				hotDog.remove();
+				// 重新创建食物
+				makeHotDog();
+				// 重新移动食物
+				hotDogId = setInterval(moveHotDog, 500);
+				//alert("销毁了");
+			}
+		}
+		// 食物运行
+		hotDogId = setInterval(moveHotDog, 500);
+
+		// 判断键盘按键
+		document.onkeydown = function(event) {
+			var e = event || window.event || arguments.callee.caller.arguments[0];
+			// 左边按键
+			if(e && e.keyCode == 37) {
+				var nowLeft = wsc.offsetLeft;
+				if(nowLeft == 0) {
+					nowLeft = 25;
+				}
+				wsc.style.left = nowLeft - 25 + "px";
+				console.log(wsc.offsetLeft);
+			}
+			// 右边按键
+			if(e && e.keyCode == 39) {
+				var nowLeft = wsc.offsetLeft;
+				if(nowLeft == 400) {
+					nowLeft = 375;
+				}
+				wsc.style.left = nowLeft + 25 + "px";
+				console.log(wsc.offsetLeft);
+			}
+		};
+	</script>
+
+</html>

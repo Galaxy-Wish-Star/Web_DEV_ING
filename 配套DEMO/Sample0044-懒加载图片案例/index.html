@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>Sample044 - 懒加载图片案例</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<style type="text/css">
+			.lazy-box {
+				margin: 0px auto;
+				padding: 0px;
+				width: 960px;
+				height: auto;
+			}
+			
+			.lazy-box>img {
+				outline: none;
+				margin: 25px auto;
+				padding: 0px;
+				border: 1px solid #E0E0E0;
+				background-color: #F0F0F0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="lazy-box">
+			<img class="lazy" data-original="img/1.jpg" alt="1.jpg" width="960" height="540">
+			<img class="lazy" data-original="img/2.jpg" alt="2.jpg" width="960" height="540">
+			<img class="lazy" data-original="img/3.jpg" alt="3.jpg" width="960" height="540">
+			<img class="lazy" data-original="img/4.jpg" alt="4.jpg" width="960" height="540">
+			<img class="lazy" data-original="img/5.jpg" alt="5.jpg" width="960" height="540">
+		</div>
+
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$("div.lazy-box>img.lazy").lazyload({
+					effect: 'fadeIn',
+					placeholder: 'img/loading.jpg'
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

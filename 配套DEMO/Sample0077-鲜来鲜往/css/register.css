@@ -1,0 +1,144 @@
+/**
+ * 
+ * <鲜来鲜往 - 注册样式>
+ * 
+ * version:1.0
+ * 
+ * */
+
+
+/*头部logo样式*/
+
+.xlxw-register-container-title-fluid {
+	width: 100% !important;
+	height: 80px !important;
+	border-bottom: 1px solid #EEE;
+	box-shadow: 0px 0px 10px #999;
+}
+.xlxw-register-container-title {
+	width: 75% !important;
+	height: 80px !important;
+	margin: 0px auto;
+	position: relative;
+}
+.xlxw-register-container-title i {
+	width: 200px !important;
+	height: 80px !important;
+	display: block;
+	background: url(../images/login/login-logo.png) no-repeat center center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.xlxw-register-container-title p {
+	width: 150px !important;
+	height: 30px !important;
+	line-height: 30px;
+	color: #999;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+	text-align: right;
+}
+.xlxw-register-container-title p a {
+	color: #4CAF50 !important;
+	text-decoration: none;
+}
+.xlxw-register-container-title p a:hover {
+	color: #2E7D32 !important;
+	text-decoration: none;
+}
+.register-input {
+	width: 400px;
+	height: 50px;
+	display: block;
+	border: 1px solid #CCC;
+	position: relative;
+	margin: 0px auto;
+	margin-top: 45px !important;
+}
+.register-input:hover {
+	border: 1px solid #4CAF50;
+}
+.register-input input {
+	width: 380px;
+	height: 48px;
+	line-height: 48px;
+	display: block;
+	outline: none;
+	border: none;
+	padding: 0px 10px !important;
+	font-size: 18px;
+}
+.xlxw-register-container-body button {
+	width: 400px;
+	height: 50px;
+	display: block;
+	margin: 0px auto;
+	background: #ECECEC;
+	border: 1px solid #CCC;
+	outline: none;
+	color: #999;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 45px !important;
+}
+.xlxw-register-container-body button:hover {
+	background: #4CAF50;
+	color: #FEFEFE;
+}
+/*中间注册样式*/
+
+.xlxw-register-container-body-fluid {
+	width: 100% !important;
+	/*background: #4caf50;*/
+	opacity: 0.90;
+	overflow: hidden;
+}
+.xlxw-register-container-body {
+	width: 75% !important;
+	height: 500px !important;
+	margin: 0px auto;
+	border-top: 1px solid transparent;
+	position: relative;
+	padding-top: 100px;
+	overflow: hidden;
+}
+.msg-title {
+	width: 400px !important;
+	height: 60px !important;
+	margin: 0px auto;
+	background: url(../images/register/reg-icons.png) no-repeat center center;
+}
+/*链接导航样式*/
+
+.xlxw-register-container-link {
+	margin: 0px auto !important;
+	padding: 0px !important;
+	width: 75% !important;
+	height: 30px !important;
+	display: block;
+}
+.xlxw-register-container-link li {
+	width: 87px !important;
+	height: 30px !important;
+	display: block;
+	list-style: none;
+	float: left;
+	text-align: right;
+	line-height: 30px;
+}
+.xlxw-register-container-link li a {
+	text-decoration: none;
+	color: #333;
+}
+.xlxw-register-container-link li a:hover {
+	color: #4caf50;
+}
+/*底部版权样式*/
+
+.xlxw-register-container-copyright {
+	text-align: center;
+	color: #333;
+}

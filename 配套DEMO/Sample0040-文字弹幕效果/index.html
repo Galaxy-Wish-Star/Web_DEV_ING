@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Sample040 - 文字弹幕效果</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css" />
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style type="text/css">
+		html,
+		body {
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			height: 100%;
+			font-family: "微软雅黑";
+			font-size: 62.5%;
+		}
+		
+		.box {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.bot-nav {
+			width: 100%;
+			height: 100px;
+			background: #666;
+			position: fixed;
+			bottom: 0px;
+		}
+		
+		.content {
+			display: inline-block;
+			width: 450px;
+			height: 40px;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
+		}
+		
+		.title {
+			display: inline;
+			font-size: 4em;
+			vertical-align: bottom;
+			color: #fff;
+		}
+		
+		.text {
+			outline: none;
+			border: none;
+			width: 300px;
+			height: 30px;
+			border-radius: 5px;
+			font-size: 2.4em;
+			padding: 0px 10px;
+		}
+		
+		.btn {
+			outline: none;
+			width: 60px;
+			height: 30px;
+			background: #f90000;
+			border: none;
+			color: #fff;
+			font-size: 2.4em;
+			cursor: pointer;
+		}
+		
+		span {
+			width: 300px;
+			height: 40px;
+			position: absolute;
+			overflow: hidden;
+			color: #000;
+			font-size: 4em;
+			line-height: 1.5em;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+	</style>
+
+	<body>
+		<div class="box" id="box">
+			<div class="bot-nav" id="bot-nav">
+				<div class="content">
+					<p class="title">吐槽：</p>
+					<input type="text" class="text" id="text" />
+					<button type="button" class="btn" id="btn">发射</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// 随机颜色
+			var colors = ["red", "green", "hotpink", "pink", "cyan", "yellowgreen", "purple", "deepskyblue"];
+
+			// 注册按钮点击事件
+			$("#btn").click(function() {
+				// 获取随机颜色
+				var randomColor = parseInt(Math.random() * colors.length);
+				// 获取随机坐标
+				var randomY = parseInt(Math.random() * 700);
+
+				$("<span></span>") 						// 创建span
+					.text($("#text").val()) 			// 设置内容
+					.css("color", colors[randomColor])  // 设置字体颜色
+					.css("left", "1920px") 				// 设置left值
+					.css("top", randomY) 				// 设置top值
+					.animate({
+						left: -500
+					}, 10000, "linear", function() {
+						$(this).remove(); 				// 到达终点，删除span元素
+					})
+					.appendTo("#box"); 					// 添加动画效果
+				$("#text").val(""); 					// 输入完成，清空文本框内容
+			});
+
+			$("#text").keyup(function(e) { 				// 注册键盘抬起事件，检测回车键
+				if(e.keyCode == 13) {
+					$("#btn").click();
+				}
+			});
+		});
+	</script>
+
+</html>

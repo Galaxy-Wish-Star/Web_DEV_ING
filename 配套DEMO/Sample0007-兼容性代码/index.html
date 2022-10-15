@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample007 - 兼容性代码</title>
+		<link rel="stylesheet" type="text/css" href="css/cute.css" />
+	</head>
+
+	<body>
+
+		<div id="container">
+			<p>前面的P标签</p>
+			<b>加粗文本</b>
+			<a href="https://www.baidu.com" id="a">百度一下</a>
+			<i>斜体文本</i>
+			<p>最后的P标签</p>
+		</div>
+
+	</body>
+
+	<!-- 当页面加载完成，载入JavaScript文件，为Html元素添加动作 -->
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	<script>
+		/*第一个子元素*/
+		var firstNode = getfirstElementChild(document.getElementById("container"));
+		console.log(firstNode.innerHTML);
+		/*最后一个子元素*/
+		var lastNode = getLastElementChild(document.getElementById("container"));
+		console.log(lastNode.innerHTML);
+		/*指定元素的前一个子元素*/
+		var node1 = getPreviousElementSibling(document.getElementById("a"));
+		console.log(node1.innerHTML);
+		/*指定元素的后一个子元素*/
+		var node2 = getNextElementSibling(document.getElementById("a"));
+		console.log(node2.innerHTML);
+	</script>
+
+</html>

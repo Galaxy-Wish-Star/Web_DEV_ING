@@ -1,0 +1,1716 @@
+/**
+ * 
+ * <鲜来鲜往 - 首页样式>
+ * 
+ * version:1.0
+ * 
+ * */
+
+
+/**
+ * 
+ * 
+ * ##网页搜索栏样式##
+ * 
+ * */
+
+.xlxw-searching {
+	clear: both;
+	height: 120px !important;
+	margin-top: 30px !important;
+	margin-bottom: 10px !important;
+}
+.xlxw-searching-left {
+	height: 120px !important;
+}
+.xlxw-searching-left h1 {
+	width: 192px;
+	height: 64px;
+	display: block;
+	background: url(../images/logo/green.png) no-repeat center center;
+}
+.xlxw-searching-left h1 a {
+	width: 192px;
+	height: 64px;
+	display: block;
+	text-indent: -9999px;
+}
+.xlxw-searching-center {
+	height: 120px !important;
+	padding-top: 35px !important;
+}
+.xlxw-searching-group {
+	width: 450px;
+	height: 36px;
+	border: 2px solid #4CAF50;
+}
+.xlxw-searching-group input {
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	width: 390px;
+	height: 36px;
+	float: left;
+	padding-left: 10px;
+}
+.xlxw-searching-group button {
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	width: 50px;
+	height: 36px;
+	float: right;
+	background: #4CAF50;
+	color: #FFF;
+	font-size: 16px;
+	cursor: pointer;
+}
+.xlxw-searching-right {
+	height: 120px !important;
+	padding-top: 35px !important;
+}
+.xlxw-shopping-cart {
+	width: 150px;
+	height: 36px;
+	display: block;
+	background: #F9F9F9;
+	float: right;
+	text-align: center;
+	border: 1px solid #CCC;
+	line-height: 36px;
+}
+.xlxw-shopping-cart a {
+	height: 24px;
+	color: #333;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+.xlxw-shopping-cart:hover {
+	color: #4CAF50;
+	cursor: pointer;
+}
+/**
+ * 
+ * ##全部商品分类样式##
+ * 
+ * */
+
+.xlxw-menu-left {
+	padding-right: 0px !important;
+}
+.xlxw-menu-all-active {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background: #4CAF50;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF;
+	font-weight: 700;
+}
+.xlxw-menu-all-group {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	margin: 0px;
+}
+.xlxw-menu-all-group>li {
+	width: 16%;
+	height: 45px;
+	list-style: none;
+	float: left;
+	text-align: center;
+}
+.xlxw-menu-all-group>li>a {
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+.xlxw-menu-all-group>li>a.xlxw-menu-all-group-active {
+	background: #FEFEFE;
+	color: #4CAF50;
+}
+.xlxw-menu-all-group>li>a:hover {
+	background: #FEFEFE;
+	color: #4CAF50;
+}
+/**
+ * 
+ * 
+ * ##轮播导航区域样式##
+ * 
+ * */
+
+.xlxw-carousel {
+	height: 825px !important;
+	background: #F0F0F8 url(../images/banner/banner.jpg) no-repeat center center;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.xlxw-carousel-left, .xlxw-carousel-center, .xlxw-carousel-right {
+	height: 476px !important;
+}
+.xlxw-carousel-left {
+	padding-right: 0px !important;
+}
+.xlxw-carousel-center {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.xlxw-carousel-right {
+	padding-left: 0px !important;
+}
+/*左边菜单导航*/
+
+.xlxw-menu-item {
+	height: 94px !important;
+	background: #FEFEFE;
+	position: relative;
+	border: 1px solid #D9D9D9;
+}
+.xlxw-menu-item:hover {
+	cursor: pointer;
+}
+ .xlxw-menu-item>i:nth-child(1) {
+ background: url(../images/sprite_fresh.png) no-repeat 0 0;
+ -moz-background-size: 82px 54px;
+ background-size: 82px 54px;
+ width: 26px;
+ height: 26px;
+ position: absolute;
+ left: 15px;
+ top: 25px;
+}
+.xlxw-menu-item>i.xlxw-menu-item-more {
+	position: absolute;
+	left: 170px;
+	top: 25px;
+}
+.xlxw-menu-item>a {
+	font-size: 16px;
+	font-weight: 700;
+	color: #111;
+	text-decoration: none;
+	position: absolute;
+	left: 50px;
+	top: 25px;
+}
+.xlxw-menu-item>a:hover {
+	color: #4CAF50;
+}
+.xlxw-menu-small-item>ul {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 50px;
+	top: 55px;
+}
+.xlxw-menu-small-item>ul>li {
+	margin: 0px;
+	padding: 0px;
+	width: 30px;
+	height: 17px;
+	line-height: 17px;
+	list-style: none;
+	float: left;
+}
+.xlxw-menu-small-item>ul>li>a {
+	margin: 0px;
+	padding: 0px;
+	width: 30px;
+	height: 17px;
+	display: block;
+	line-height: 17px;
+	color: #333;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+}
+.xlxw-menu-small-item>ul>li>a:hover {
+	color: #4CAF50;
+}
+.xlxw-menu-small-item>ul>li.xlxw-menu-small-item-spacer {
+	width: 1px !important;
+	height: 14px !important;
+	padding: 0px;
+	background: #DDD;
+	overflow: hidden;
+}
+.xlxw-menu-item>i.xlxw-menu-item-fruits {
+	background-position: 0px 0px !important;
+}
+.xlxw-menu-item>i.xlxw-menu-item-vegetables {
+	background-position: -56px 0px !important;
+}
+.xlxw-menu-item>i.xlxw-menu-item-seafood {
+	background-position: -28px 0px !important;
+}
+.xlxw-menu-item>i.xlxw-menu-item-meat {
+	background-position: 0px -28px !important;
+}
+.xlxw-menu-item>i.xlxw-menu-item-oil {
+	background-position: -28px -28px!important;
+}
+/*中间轮播插件*/
+
+.xlxw-carousel-center ul {
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-carousel-center li {
+	list-style: none !important;
+}
+#banner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#banner .pic {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#banner .pic ul {
+	width: 100% !important;
+	height: 100% !important;
+}
+#banner .pic ul li {
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+#banner .pic ul li a img {
+	width: 100% !important;
+	height: 100% !important;
+	outline: none;
+}
+#banner .tab {
+	width: 148px;
+	height: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -70px;
+}
+#banner .tab ul li {
+	width: 18px;
+	height: 18px;
+	display: block;
+	background: #F0F0F0;
+	border-radius: 100%;
+	float: left;
+	margin: 1px 3px;
+	cursor: pointer;
+}
+#banner .tab ul li.on {
+	background: #4CAF50;
+}
+#banner .btn {
+	display: none;
+}
+#banner .btn div {
+	width: 30px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-size: 24px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	cursor: pointer;
+}
+#leftBtn {
+	left: 0;
+}
+#rightBtn {
+	right: 0;
+}
+/*右边鲜来资讯*/
+
+.xlxw-carousel-right-new {
+	width: 100% !important;
+	height: 100% !important;
+	border: 1px solid #DADADA;
+	background: #FEFEFE;
+	border-top: 2px solid #4CAF50;
+}
+.xlxw-carousel-right-new-header {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	position: relative;
+}
+ .xlxw-carousel-right-new-header>i:nth-child(1) {
+ width: 25px;
+ height: 30px;
+ line-height: 30px;
+ display: block;
+ color: #4CAF50;
+ position: absolute;
+ top: 0px;
+ left: 10%;
+}
+ .xlxw-carousel-right-new-header>i:nth-child(3) {
+ width: 25px;
+ height: 30px;
+ line-height: 30px;
+ display: block;
+ color: #4CAF50;
+ position: absolute;
+ top: 0px;
+ right: 10%;
+}
+.xlxw-carousel-right-new-header>h3 {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #4CAF50;
+}
+.xlxw-carousel-right-new-list {
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-carousel-right-new-list>li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.xlxw-carousel-right-new-list>li>a {
+	width: 90%;
+	height: 26px;
+	margin: 5px auto;
+	line-height: 30px;
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.xlxw-carousel-right-new-list>li>a:hover {
+	color: #4CAF50;
+	text-decoration: underline;
+}
+/**
+ * 
+ * ##图片展示导航样式##
+ * 
+ * */
+
+.xlxw-showImage {
+	clear: both;
+	margin-top: 25px;
+	padding: 0px 8px;
+}
+.xlxw-showImage-item {
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-right: 16px;
+	position: relative;
+}
+.xlxw-showImage-last-item {
+	margin-right: 0px !important;
+}
+.xlxw-showImage-item>a {
+	text-decoration: none;
+	color: #333;
+}
+.xlxw-showImage-item>a:hover {
+	text-decoration: none;
+	color: #4CAF50;
+}
+.xlxw-showImage-item>a>img {
+	width: 100%;
+	height: 100%;
+	outline: none;
+}
+.xlxw-showImage-item-text {
+	width: 270px;
+	height: 60px;
+	background-color: rgba(242, 242, 242, 0.65);
+	margin: 0px auto;
+	position: absolute;
+	left: 15px;
+	bottom: 20px;
+	border-top: transparent;
+	padding-top: 5px;
+}
+.xlxw-showImage-item-text h2 {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.xlxw-showImage-item-text p {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.xlxw-showImage-item:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 4px #999;
+}
+/*通用标题颜色*/
+
+.xlxw-fruits-green {
+	color: #30B969 !important;
+}
+.xlxw-vegetables-light-green {
+	color: #A7BF37 !important;
+}
+.xlxw-meat-orange {
+	color: #FF9F6F !important;
+}
+.xlxw-seafood-blue {
+	color: #56B1E8 !important;
+}
+.xlxw-oil-yellow {
+	color: #f8db62 !important;
+}
+.xlxw-red {
+	color: #FE602F !important;
+}
+/*时令鲜果样式开始*/
+
+.xlxw-fruits-container {
+	height: 700px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-top: 30px;
+	overflow: hidden;
+}
+/*时令鲜果标题栏*/
+
+.xlxw-fruits-container-title {
+	width: 99.8% !important;
+	height: 50px !important;
+	position: relative;
+	border: 1px solid #E0E0E0;
+}
+.xlxw-fruits-container-title>i {
+	background: url(../images/sprite_fresh.png) no-repeat 0 0;
+	-moz-background-size: 90px 60px;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-position: 0px 0px;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.xlxw-fruits-container-title>h2 {
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	width: 200px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.xlxw-fruits-container-title>a {
+	margin: 0px;
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	width: 100px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	text-decoration: none;
+	text-align: right;
+	color: #333333;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.xlxw-fruits-container-title>a:hover {
+	color: #4CAF50;
+}
+/*时令鲜果内容栏*/
+
+.xlxw-fruits-content {
+	height: 500px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+/*左边样式开始*/
+
+.xlxw-fruits-content-left {
+	width: 210px;
+	height: 500px;
+	background: url(../images/column/Fruits.jpg) no-repeat center center;
+	position: relative;
+	float: left;
+}
+/*第一个项目组*/
+
+.xlxw-fruits-content-left>ul.item1 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+/*第二个项目组*/
+
+.xlxw-fruits-content-left>ul.item2 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+}
+/*项目组通用样式*/
+
+.xlxw-fruits-content-left>ul.item1>li, .xlxw-fruits-content-left>ul.item2>li {
+	list-style: none;
+	float: left;
+}
+.xlxw-fruits-content-left>ul.item1>li>a, .xlxw-fruits-content-left>ul.item2>li>a {
+	float: left;
+	margin: 0 6px 6px 0;
+	padding: 0 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: rgba(247, 247, 251, .2);
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.xlxw-fruits-content-left>ul.item1>li>a:hover, .xlxw-fruits-content-left>ul.item2>li>a:hover {
+	background: #4CAF50;
+}
+/*左边样式结束*/
+
+
+/*右边样式开始*/
+
+.xlxw-fruits-content-right {
+	width: 1038px !important;
+	height: 500px !important;
+	display: block;
+	float: left;
+}
+.xlxw-fruits-content-right-list {
+	width: 100% !important;
+	height: 250px !important;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-fruits-content-right-list-item {
+	width: 200px !important;
+	height: 245px !important;
+	display: block;
+	list-style: none;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 9px;
+}
+.xlxw-fruits-content-right-list-item:hover {
+	border-bottom: 2px solid #4CAF50;
+}
+.xlxw-fruits-content-right-list-item>a {
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid transparent;
+}
+.xlxw-fruits-content-right-list-item>a>img {
+	width: 160px !important;
+	height: 160px !important;
+	display: block;
+	outline: none;
+	margin: 5px auto;
+	transition: all 0.25s;
+}
+.xlxw-fruits-content-right-list-item>a>p {
+	width: 160px;
+	height: 36px;
+	font-size: 14px;
+	color: #111;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	font-weight: lighter;
+	margin: 7.5px auto 0px auto;
+	line-height: 18px;
+}
+.xlxw-fruits-content-right-list-item-price {
+	font-size: 16px !important;
+	height: 20px !important;
+	font-weight: 900 !important;
+	margin: 3px auto !important;
+}
+.xlxw-fruits-content-right-list-item:hover .xlxw-fruits-content-right-list-item-active {
+	color: #4CAF50 !important;
+}
+.xlxw-fruits-content-right-list-item:hover .xlxw-fruits-content-right-list-item-img {
+	margin: 2.5px auto !important;
+	margin-bottom: 2.5px !important;
+}
+.xlxw-fruits-content-right-list-last-item {
+	margin-right: 0px !important;
+}
+/*右边样式结束*/
+
+
+/*时令鲜果热门品牌*/
+
+.xlxw-fruits-container-bottom {
+	width: 100%;
+	height: 80px;
+	margin-top: 5px !important;
+}
+.xlxw-fruits-container-bottom>ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100% !important;
+	height: 80px;
+	display: block;
+}
+.xlxw-fruits-container-bottom>ul>li {
+	width: 9.05% !important;
+	height: 80px;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ .xlxw-fruits-container-bottom>ul>li:nth-child(1) {
+ width: 210px !important;
+}
+.xlxw-fruits-container-bottom img {
+	outline: none;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	height: 50px;
+	margin: 15px auto;
+	display: block;
+}
+.xlxw-fruits-container-bottom>ul .hot-title {
+	width: 80px !important;
+	height: 80px;
+	display: block;
+	background: url(../images/hot/Fruits.jpg) no-repeat center center;
+}
+/*时令鲜果样式结束*/
+
+
+/*新鲜蔬菜样式开始*/
+
+.xlxw-vegetables-container {
+	height: 700px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-top: 30px;
+	overflow: hidden;
+}
+/*新鲜蔬菜标题栏*/
+
+.xlxw-vegetables-container-title {
+	width: 99.8% !important;
+	height: 50px !important;
+	position: relative;
+	border: 1px solid #E0E0E0;
+}
+.xlxw-vegetables-container-title>i {
+	background: url(../images/sprite_fresh.png) no-repeat 0 0;
+	-moz-background-size: 90px 60px;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-position: -56px 0px;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.xlxw-vegetables-container-title>h2 {
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	width: 200px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.xlxw-vegetables-container-title>a {
+	margin: 0px;
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	width: 100px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	text-decoration: none;
+	text-align: right;
+	color: #333333;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.xlxw-vegetables-container-title>a:hover {
+	color: #A7BF37;
+}
+/*新鲜蔬菜内容栏*/
+
+.xlxw-vegetables-content {
+	height: 500px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+/*左边样式开始*/
+
+.xlxw-vegetables-content-left {
+	width: 210px;
+	height: 500px;
+	background: url(../images/column/Vegetables.jpg) no-repeat center center;
+	position: relative;
+	float: left;
+}
+/*第一个项目组*/
+
+.xlxw-vegetables-content-left>ul.item1 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+/*第二个项目组*/
+
+.xlxw-vegetables-content-left>ul.item2 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+}
+/*项目组通用样式*/
+
+.xlxw-vegetables-content-left>ul.item1>li, .xlxw-vegetables-content-left>ul.item2>li {
+	list-style: none;
+	float: left;
+}
+.xlxw-vegetables-content-left>ul.item1>li>a, .xlxw-vegetables-content-left>ul.item2>li>a {
+	float: left;
+	margin: 0 6px 6px 0;
+	padding: 0 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: rgba(247, 247, 251, .2);
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.xlxw-vegetables-content-left>ul.item1>li>a:hover, .xlxw-vegetables-content-left>ul.item2>li>a:hover {
+	background: #A7BF37;
+}
+/*左边样式结束*/
+
+
+/*右边样式开始*/
+
+.xlxw-vegetables-content-right {
+	width: 1038px !important;
+	height: 500px !important;
+	display: block;
+	float: left;
+}
+.xlxw-vegetables-content-right-list {
+	width: 100% !important;
+	height: 250px !important;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-vegetables-content-right-list-item {
+	width: 200px !important;
+	height: 245px !important;
+	display: block;
+	list-style: none;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 9px;
+}
+.xlxw-vegetables-content-right-list-item:hover {
+	border-bottom: 2px solid #A7BF37;
+}
+.xlxw-vegetables-content-right-list-item>a {
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid transparent;
+}
+.xlxw-vegetables-content-right-list-item>a>img {
+	width: 160px !important;
+	height: 160px !important;
+	display: block;
+	outline: none;
+	margin: 5px auto;
+	transition: all 0.25s;
+}
+.xlxw-vegetables-content-right-list-item>a>p {
+	width: 160px;
+	height: 36px;
+	font-size: 14px;
+	color: #111;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	font-weight: lighter;
+	margin: 7.5px auto 0px auto;
+	line-height: 18px;
+}
+.xlxw-vegetables-content-right-list-item-price {
+	font-size: 16px !important;
+	height: 20px !important;
+	font-weight: 900 !important;
+	margin: 3px auto !important;
+}
+.xlxw-vegetables-content-right-list-item:hover .xlxw-vegetables-content-right-list-item-active {
+	color: #A7BF37 !important;
+}
+.xlxw-vegetables-content-right-list-item:hover .xlxw-vegetables-content-right-list-item-img {
+	margin: 2.5px auto !important;
+	margin-bottom: 2.5px !important;
+}
+.xlxw-vegetables-content-right-list-last-item {
+	margin-right: 0px !important;
+}
+/*右边样式结束*/
+
+
+/*新鲜蔬菜热门品牌*/
+
+.xlxw-vegetables-container-bottom {
+	width: 100%;
+	height: 80px;
+	margin-top: 5px !important;
+}
+.xlxw-vegetables-container-bottom>ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100% !important;
+	height: 80px;
+	display: block;
+}
+.xlxw-vegetables-container-bottom>ul>li {
+	width: 9.05% !important;
+	height: 80px;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ .xlxw-vegetables-container-bottom>ul>li:nth-child(1) {
+ width: 210px !important;
+}
+.xlxw-vegetables-container-bottom img {
+	outline: none;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	height: 50px;
+	margin: 15px auto;
+	display: block;
+}
+.xlxw-vegetables-container-bottom>ul .hot-title {
+	width: 80px !important;
+	height: 80px;
+	display: block;
+	background: url(../images/hot/Vegetables.jpg) no-repeat center center;
+}
+/*新鲜蔬菜样式结束*/
+
+
+/*肉禽蛋品样式开始*/
+
+.xlxw-meat-container {
+	height: 700px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-top: 30px;
+	overflow: hidden;
+}
+/*肉禽蛋品标题栏*/
+
+.xlxw-meat-container-title {
+	width: 99.8% !important;
+	height: 50px !important;
+	position: relative;
+	border: 1px solid #E0E0E0;
+}
+.xlxw-meat-container-title>i {
+	background: url(../images/sprite_fresh.png) no-repeat 0 0;
+	-moz-background-size: 90px 60px;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-position: 0px -28px;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.xlxw-meat-container-title>h2 {
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	width: 200px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.xlxw-meat-container-title>a {
+	margin: 0px;
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	width: 100px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	text-decoration: none;
+	text-align: right;
+	color: #333333;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.xlxw-meat-container-title>a:hover {
+	color: #FF9F6F;
+}
+/*肉禽蛋品内容栏*/
+
+.xlxw-meat-content {
+	height: 500px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+/*左边样式开始*/
+
+.xlxw-meat-content-left {
+	width: 210px;
+	height: 500px;
+	background: url(../images/column/Meat.jpg) no-repeat center center;
+	position: relative;
+	float: left;
+}
+/*第一个项目组*/
+
+.xlxw-meat-content-left>ul.item1 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+/*第二个项目组*/
+
+.xlxw-meat-content-left>ul.item2 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+}
+/*项目组通用样式*/
+
+.xlxw-meat-content-left>ul.item1>li, .xlxw-meat-content-left>ul.item2>li {
+	list-style: none;
+	float: left;
+}
+.xlxw-meat-content-left>ul.item1>li>a, .xlxw-meat-content-left>ul.item2>li>a {
+	float: left;
+	margin: 0 6px 6px 0;
+	padding: 0 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: rgba(247, 247, 251, .2);
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.xlxw-meat-content-left>ul.item1>li>a:hover, .xlxw-meat-content-left>ul.item2>li>a:hover {
+	background: #FF9F6F;
+}
+/*左边样式结束*/
+
+
+/*右边样式开始*/
+
+.xlxw-meat-content-right {
+	width: 1038px !important;
+	height: 500px !important;
+	display: block;
+	float: left;
+}
+.xlxw-meat-content-right-list {
+	width: 100% !important;
+	height: 250px !important;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-meat-content-right-list-item {
+	width: 200px !important;
+	height: 245px !important;
+	display: block;
+	list-style: none;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 9px;
+}
+.xlxw-meat-content-right-list-item:hover {
+	border-bottom: 2px solid #FF9F6F;
+}
+.xlxw-meat-content-right-list-item>a {
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid transparent;
+}
+.xlxw-meat-content-right-list-item>a>img {
+	width: 160px !important;
+	height: 160px !important;
+	display: block;
+	outline: none;
+	margin: 5px auto;
+	transition: all 0.25s;
+}
+.xlxw-meat-content-right-list-item>a>p {
+	width: 160px;
+	height: 36px;
+	font-size: 14px;
+	color: #111;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	font-weight: lighter;
+	margin: 7.5px auto 0px auto;
+	line-height: 18px;
+}
+.xlxw-meat-content-right-list-item-price {
+	font-size: 16px !important;
+	height: 20px !important;
+	font-weight: 900 !important;
+	margin: 3px auto !important;
+}
+.xlxw-meat-content-right-list-item:hover .xlxw-meat-content-right-list-item-active {
+	color: #FF9F6F !important;
+}
+.xlxw-meat-content-right-list-item:hover .xlxw-meat-content-right-list-item-img {
+	margin: 2.5px auto !important;
+	margin-bottom: 2.5px !important;
+}
+.xlxw-meat-content-right-list-last-item {
+	margin-right: 0px !important;
+}
+/*右边样式结束*/
+
+
+/*肉禽蛋品热门品牌*/
+
+.xlxw-meat-container-bottom {
+	width: 100%;
+	height: 80px;
+	margin-top: 5px !important;
+}
+.xlxw-meat-container-bottom>ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100% !important;
+	height: 80px;
+	display: block;
+}
+.xlxw-meat-container-bottom>ul>li {
+	width: 9.05% !important;
+	height: 80px;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ .xlxw-meat-container-bottom>ul>li:nth-child(1) {
+ width: 210px !important;
+}
+.xlxw-meat-container-bottom img {
+	outline: none;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	height: 50px;
+	margin: 15px auto;
+	display: block;
+}
+.xlxw-meat-container-bottom>ul .hot-title {
+	width: 80px !important;
+	height: 80px;
+	display: block;
+	background: url(../images/hot/Meat.jpg) no-repeat center center;
+}
+/*肉禽蛋品样式结束*/
+
+
+/*海鲜水产样式开始*/
+
+.xlxw-seafood-container {
+	height: 700px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-top: 30px;
+	overflow: hidden;
+}
+/*海鲜水产标题栏*/
+
+.xlxw-seafood-container-title {
+	width: 99.8% !important;
+	height: 50px !important;
+	position: relative;
+	border: 1px solid #E0E0E0;
+}
+.xlxw-seafood-container-title>i {
+	background: url(../images/sprite_fresh.png) no-repeat 0 0;
+	-moz-background-size: 90px 60px;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-position: -28px 0px;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.xlxw-seafood-container-title>h2 {
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	width: 200px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.xlxw-seafood-container-title>a {
+	margin: 0px;
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	width: 100px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	text-decoration: none;
+	text-align: right;
+	color: #333333;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.xlxw-seafood-container-title>a:hover {
+	color: #56B1E8;
+}
+/*海鲜水产内容栏*/
+
+.xlxw-seafood-content {
+	height: 500px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+/*左边样式开始*/
+
+.xlxw-seafood-content-left {
+	width: 210px;
+	height: 500px;
+	background: url(../images/column/Seafood.jpg) no-repeat center center;
+	position: relative;
+	float: left;
+}
+/*第一个项目组*/
+
+.xlxw-seafood-content-left>ul.item1 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+/*第二个项目组*/
+
+.xlxw-seafood-content-left>ul.item2 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+}
+/*项目组通用样式*/
+
+.xlxw-seafood-content-left>ul.item1>li, .xlxw-seafood-content-left>ul.item2>li {
+	list-style: none;
+	float: left;
+}
+.xlxw-seafood-content-left>ul.item1>li>a, .xlxw-seafood-content-left>ul.item2>li>a {
+	float: left;
+	margin: 0 6px 6px 0;
+	padding: 0 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: rgba(247, 247, 251, .2);
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.xlxw-seafood-content-left>ul.item1>li>a:hover, .xlxw-seafood-content-left>ul.item2>li>a:hover {
+	background: #56B1E8;
+}
+/*左边样式结束*/
+
+
+/*右边样式开始*/
+
+.xlxw-seafood-content-right {
+	width: 1038px !important;
+	height: 500px !important;
+	display: block;
+	float: left;
+}
+.xlxw-seafood-content-right-list {
+	width: 100% !important;
+	height: 250px !important;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-seafood-content-right-list-item {
+	width: 200px !important;
+	height: 245px !important;
+	display: block;
+	list-style: none;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 9px;
+}
+.xlxw-seafood-content-right-list-item:hover {
+	border-bottom: 2px solid #56B1E8;
+}
+.xlxw-seafood-content-right-list-item>a {
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid transparent;
+}
+.xlxw-seafood-content-right-list-item>a>img {
+	width: 160px !important;
+	height: 160px !important;
+	display: block;
+	outline: none;
+	margin: 5px auto;
+	transition: all 0.25s;
+}
+.xlxw-seafood-content-right-list-item>a>p {
+	width: 160px;
+	height: 36px;
+	font-size: 14px;
+	color: #111;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	font-weight: lighter;
+	margin: 7.5px auto 0px auto;
+	line-height: 18px;
+}
+.xlxw-seafood-content-right-list-item-price {
+	font-size: 16px !important;
+	height: 20px !important;
+	font-weight: 900 !important;
+	margin: 3px auto !important;
+}
+.xlxw-seafood-content-right-list-item:hover .xlxw-seafood-content-right-list-item-active {
+	color: #56B1E8 !important;
+}
+.xlxw-seafood-content-right-list-item:hover .xlxw-seafood-content-right-list-item-img {
+	margin: 2.5px auto !important;
+	margin-bottom: 2.5px !important;
+}
+.xlxw-seafood-content-right-list-last-item {
+	margin-right: 0px !important;
+}
+/*右边样式结束*/
+
+
+/*海鲜水产热门品牌*/
+
+.xlxw-seafood-container-bottom {
+	width: 100%;
+	height: 80px;
+	margin-top: 5px !important;
+}
+.xlxw-seafood-container-bottom>ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100% !important;
+	height: 80px;
+	display: block;
+}
+.xlxw-seafood-container-bottom>ul>li {
+	width: 9.05% !important;
+	height: 80px;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ .xlxw-seafood-container-bottom>ul>li:nth-child(1) {
+ width: 210px !important;
+}
+.xlxw-seafood-container-bottom img {
+	outline: none;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	height: 50px;
+	margin: 15px auto;
+	display: block;
+}
+.xlxw-seafood-container-bottom>ul .hot-title {
+	width: 80px !important;
+	height: 80px;
+	display: block;
+	background: url(../images/hot/Seafood.jpg) no-repeat center center;
+}
+/*海鲜水产样式结束*/
+
+
+/*柴米油盐样式开始*/
+
+.xlxw-oil-container {
+	height: 700px !important;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-top: 30px;
+	overflow: hidden;
+}
+/*柴米油盐标题栏*/
+
+.xlxw-oil-container-title {
+	width: 99.8% !important;
+	height: 50px !important;
+	position: relative;
+	border: 1px solid #E0E0E0;
+}
+.xlxw-oil-container-title>i {
+	background: url(../images/sprite_fresh.png) no-repeat 0 0;
+	-moz-background-size: 90px 60px;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-position: -28px -28px;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.xlxw-oil-container-title>h2 {
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	width: 200px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.xlxw-oil-container-title>a {
+	margin: 0px;
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	width: 100px !important;
+	height: 50px !important;
+	line-height: 50px !important;
+	text-decoration: none;
+	text-align: right;
+	color: #333333;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+}
+.xlxw-oil-container-title>a:hover {
+	color: #f8db62;
+}
+/*柴米油盐内容栏*/
+
+.xlxw-oil-content {
+	height: 500px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+/*左边样式开始*/
+
+.xlxw-oil-content-left {
+	width: 210px;
+	height: 500px;
+	background: url(../images/column/Oil.jpg) no-repeat center center;
+	position: relative;
+	float: left;
+}
+/*第一个项目组*/
+
+.xlxw-oil-content-left>ul.item1 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 50px;
+}
+/*第二个项目组*/
+
+.xlxw-oil-content-left>ul.item2 {
+	width: 200px;
+	height: 30px;
+	margin: 0px auto;
+	padding: 0px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+}
+/*项目组通用样式*/
+
+.xlxw-oil-content-left>ul.item1>li, .xlxw-oil-content-left>ul.item2>li {
+	list-style: none;
+	float: left;
+}
+.xlxw-oil-content-left>ul.item1>li>a, .xlxw-oil-content-left>ul.item2>li>a {
+	float: left;
+	margin: 0 6px 6px 0;
+	padding: 0 13px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: rgba(247, 247, 251, .2);
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	text-decoration: none;
+}
+.xlxw-oil-content-left>ul.item1>li>a:hover, .xlxw-oil-content-left>ul.item2>li>a:hover {
+	background: #f8db62;
+}
+/*左边样式结束*/
+
+
+/*右边样式开始*/
+
+.xlxw-oil-content-right {
+	width: 1038px !important;
+	height: 500px !important;
+	display: block;
+	float: left;
+}
+.xlxw-oil-content-right-list {
+	width: 100% !important;
+	height: 250px !important;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+.xlxw-oil-content-right-list-item {
+	width: 200px !important;
+	height: 245px !important;
+	display: block;
+	list-style: none;
+	background: #FFFFFF;
+	float: left;
+	margin-right: 9px;
+}
+.xlxw-oil-content-right-list-item:hover {
+	border-bottom: 2px solid #f8db62;
+}
+.xlxw-oil-content-right-list-item>a {
+	text-decoration: none;
+	display: block;
+	border-top: 1px solid transparent;
+}
+.xlxw-oil-content-right-list-item>a>img {
+	width: 160px !important;
+	height: 160px !important;
+	display: block;
+	outline: none;
+	margin: 5px auto;
+	transition: all 0.25s;
+}
+.xlxw-oil-content-right-list-item>a>p {
+	width: 160px;
+	height: 36px;
+	font-size: 14px;
+	color: #111;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	font-weight: lighter;
+	margin: 7.5px auto 0px auto;
+	line-height: 18px;
+}
+.xlxw-oil-content-right-list-item-price {
+	font-size: 16px !important;
+	height: 20px !important;
+	font-weight: 900 !important;
+	margin: 3px auto !important;
+}
+.xlxw-oil-content-right-list-item:hover .xlxw-oil-content-right-list-item-active {
+	color: #f8db62 !important;
+}
+.xlxw-oil-content-right-list-item:hover .xlxw-oil-content-right-list-item-img {
+	margin: 2.5px auto !important;
+	margin-bottom: 2.5px !important;
+}
+.xlxw-oil-content-right-list-last-item {
+	margin-right: 0px !important;
+}
+/*右边样式结束*/
+
+
+/*柴米油盐热门品牌*/
+
+.xlxw-oil-container-bottom {
+	width: 100%;
+	height: 80px;
+	margin-top: 5px !important;
+}
+.xlxw-oil-container-bottom>ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100% !important;
+	height: 80px;
+	display: block;
+}
+.xlxw-oil-container-bottom>ul>li {
+	width: 9.05% !important;
+	height: 80px;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ .xlxw-oil-container-bottom>ul>li:nth-child(1) {
+ width: 210px !important;
+}
+.xlxw-oil-container-bottom img {
+	outline: none;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	height: 50px;
+	margin: 15px auto;
+	display: block;
+}
+.xlxw-oil-container-bottom>ul .hot-title {
+	width: 80px !important;
+	height: 80px;
+	display: block;
+	background: url(../images/hot/Oil.jpg) no-repeat center center;
+}
+
+
+/*柴米油盐样式结束*/

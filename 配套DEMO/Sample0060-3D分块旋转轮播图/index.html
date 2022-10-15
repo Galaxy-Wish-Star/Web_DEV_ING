@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Sample060 - 3D分块旋转轮播图</title>
+		<meta charset="utf-8">
+		<style type='text/css' id='css'>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#wrap {
+				width: 800px;
+				height: 360px;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			#pic {
+				width: 800px;
+				height: 360px;
+				perspective: 800px;
+			}
+			
+			#pic ul li {
+				width: 200px;
+				height: 360px;
+				float: left;
+				position: relative;
+				transform-style: preserve-3d;
+				transform: translateZ(-180px);
+			}
+			
+			#pic ul li div {
+				width: 200px;
+				height: 360px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#pic ul li div:nth-child(1) {
+				top: -360px;
+				transform-origin: bottom;
+				transform: translateZ(180px) rotateX(90deg);
+				background-image: url(img/1.png);
+			}
+			
+			#pic ul li div:nth-child(2) {
+				top: 360px;
+				transform-origin: top;
+				transform: translateZ(180px) rotateX(-90deg);
+				background-image: url(img/2.png);
+			}
+			
+			#pic ul li div:nth-child(3) {
+				transform: translateZ(180px);
+				background-image: url(img/3.png);
+			}
+			
+			#pic ul li div:nth-child(4) {
+				transform: translateZ(-180px) rotateX(180deg);
+				background-image: url(img/4.png);
+			}
+			
+			#pic ul li:nth-child(1) div {
+				background-position: 0 0;
+			}
+			
+			#pic ul li:nth-child(2) div {
+				background-position: -200px 0;
+			}
+			
+			#pic ul li:nth-child(3) div {
+				background-position: -400px 0;
+			}
+			
+			#pic ul li:nth-child(4) div {
+				background-position: -600px 0;
+			}
+			
+			#pic ul li:nth-child(1) {
+				transition: 1s 0s;
+			}
+			
+			#pic ul li:nth-child(2) {
+				transition: 1s .1s;
+			}
+			
+			#pic ul li:nth-child(3) {
+				transition: 1s .2s;
+			}
+			
+			#pic ul li:nth-child(4) {
+				transition: 1s .3s;
+			}
+			
+			#tab {
+				position: absolute;
+				width: 100px;
+				height: 20px;
+				right: 10px;
+				bottom: 10px;
+			}
+			
+			#tab ul li {
+				width: 20px;
+				height: 20px;
+				background: #999;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				line-height: 20px;
+				font-family: 'Microsoft yahei';
+				float: left;
+				cursor: pointer;
+				margin: 0 2px;
+				border-radius: 100%;
+			}
+			
+			#tab ul li.on {
+				background: #f60;
+			}
+			/*
+			#pic:hover ul li{
+				transform:translateZ(-180px) rotateX(180deg);
+			}
+			*/
+		</style>
+	</head>
+
+	<body>
+
+		<div id="wrap">
+
+			<div id="pic">
+				<ul>
+					<li>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+					<li style='z-index:-1;'>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="tab">
+				<ul>
+					<li class='on'>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var tabLi = document.getElementById('tab').getElementsByTagName('li');
+			var oCss = document.getElementById('css');
+
+			for(var i = 0; i < tabLi.length; i++) {
+				tabLi[i].i = i;
+				tabLi[i].onclick = function() {
+					for(var j = 0; j < tabLi.length; j++) {
+						tabLi[j].className = '';
+					}
+					this.className = 'on';
+					oCss.innerHTML += '#pic ul li{transform:translateZ(-180px) rotateX(' + -90 * this.i + 'deg);}';
+				};
+			}
+		</script>
+	</body>
+
+</html>

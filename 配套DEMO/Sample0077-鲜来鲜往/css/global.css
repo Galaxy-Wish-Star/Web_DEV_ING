@@ -1,0 +1,397 @@
+/**
+ * 
+ * <鲜来鲜往 - 全局通用样式>
+ * 
+ * version:1.0
+ * 
+ * */
+
+body {
+	background: #F0F0F0 !important;
+	color: #333 !important;
+	list-style: none !important;
+	min-width: 1280px !important;
+}
+/**
+ * 
+ * ##网页头部导航条样式##
+ * 
+ * */
+
+.xlxw-header {
+	height: 30px !important;
+	background: #E6E6E6;
+}
+.xlxw-header-left {
+	height: 30px !important;
+	line-height: 30px !important;
+	color: #666 !important;
+}
+.xlxw-header-right {
+	height: 30px !important;
+	line-height: 30px !important;
+}
+.xlxw-header-nav {
+	margin: 0px !important;
+	height: 30px !important;
+	line-height: 30px !important;
+}
+.xlxw-header-nav>li {
+	width: 85px !important;
+	height: 30px !important;
+	line-height: 30px !important;
+	float: left;
+	text-align: center;
+	list-style: none;
+}
+.xlxw-header-nav>li.xlxw-header-nav-business {
+	width: 100px !important;
+	position: relative;
+}
+.xlxw-header-nav>li.xlxw-header-nav-service {
+	width: 100px !important;
+	position: relative;
+}
+.xlxw-header-nav>li.xlxw-header-nav-spacer {
+	width: 1px !important;
+	height: 12px !important;
+	margin-top: 9px !important;
+	padding: 0;
+	background: #ccc;
+	overflow: hidden;
+}
+.xlxw-header-nav>li>a {
+	text-decoration: none;
+	font-size: 14px !important;
+	color: #666 !important;
+}
+.xlxw-header-nav>li>a.xlxw-header-nav-active {
+	color: #4CAF50 !important;
+}
+.xlxw-header-nav>li>a:hover {
+	text-decoration: none;
+	font-size: 14px !important;
+	color: #4CAF50 !important;
+}
+/*商家二级导航样式*/
+
+.xlxw-header-t-nav-business {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100px !important;
+	background: #FFFFFF;
+	position: relative;
+	z-index: 1000;
+}
+.xlxw-header-t-nav-business>li {
+	width: 100px !important;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	list-style: none;
+}
+.xlxw-header-t-nav-business>li>a {
+	color: #999;
+	font-size: 14px;
+	text-decoration: none;
+}
+.xlxw-header-t-nav-business>li>a:hover {
+	color: #4CAF50;
+	font-size: 14px;
+	text-decoration: none;
+}
+.xlxw-header-nav-business:hover {
+	background: #FFF;
+}
+.xlxw-header-nav-business:hover .xlxw-header-t-nav-business {
+	background: #FFF;
+	display: block;
+}
+/*服务二级导航样式*/
+
+.xlxw-header-t-nav-service {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100px !important;
+	background: #FFFFFF;
+	position: relative;
+	z-index: 1000;
+}
+.xlxw-header-t-nav-service>li {
+	width: 100px !important;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	list-style: none;
+}
+.xlxw-header-t-nav-service>li>a {
+	color: #999;
+	font-size: 14px;
+	text-decoration: none;
+}
+.xlxw-header-t-nav-service>li>a:hover {
+	color: #4CAF50;
+	font-size: 14px;
+	text-decoration: none;
+}
+.xlxw-header-nav-service:hover {
+	background: #FFF;
+}
+.xlxw-header-nav-service:hover .xlxw-header-t-nav-service {
+	background: #FFF;
+	display: block;
+}
+/*分隔符*/
+
+.xlxw-divider-dark {
+	width: 100%;
+	height: 1px !important;
+	background-color: rgba(0, 0, 0, 0.25) !important;
+}
+.xlxw-divider-light {
+	width: 100%;
+	height: 1px !important;
+	background-color: rgba(0, 0, 0, 0.10) !important;
+}
+.xlxw-divider-light-white {
+	width: 100%;
+	height: 1px !important;
+	background-color: rgba(255, 255, 255, 0.50) !important;
+}
+/**
+ * 
+ * ##底部信息样式##
+ * 
+ * */
+
+
+/*底部图标导航栏*/
+
+.xlxw-footer {
+	height: 505px;
+	background: #4CAF50;
+	overflow: hidden;
+}
+.xlxw-footer-icons {
+	margin: 0px 8px;
+	padding: 0px;
+	height: 144px;
+	list-style: none;
+	overflow: hidden;
+}
+.xlxw-footer-icons>li {
+	width: 20%;
+	height: 144px;
+	float: left;
+	padding-top: 48px;
+}
+.xlxw-footer-icons-item {
+	width: 60%;
+	height: 48px;
+	margin: 0px auto;
+	position: relative;
+	color: #FEFEFE;
+}
+.xlxw-footer-icons-item h3 {
+	margin: 0px;
+	width: 96px;
+	height: 24px;
+	display: block;
+	line-height: 24px;
+	font-weight: 300;
+	font-size: 20px;
+	position: absolute;
+	left: 60px;
+	top: 0px;
+}
+.xlxw-footer-icons-item p {
+	margin: 0px;
+	width: 108px;
+	height: 24px;
+	display: block;
+	line-height: 32px;
+	font-weight: 300;
+	font-size: 13px;
+	position: absolute;
+	left: 60px;
+	top: 24px;
+}
+.xlxw-footer-icons-item i {
+	width: 48px;
+	height: 48px;
+	display: block;
+	background: url(../images/footer-icons/1.png);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.xlxw-footer-icons-item i.item1 {
+	background: url(../images/footer-icons/1.png);
+}
+.xlxw-footer-icons-item i.item2 {
+	background: url(../images/footer-icons/2.png);
+}
+.xlxw-footer-icons-item i.item3 {
+	background: url(../images/footer-icons/3.png);
+}
+.xlxw-footer-icons-item i.item4 {
+	background: url(../images/footer-icons/4.png);
+}
+.xlxw-footer-icons-item i.item5 {
+	background: url(../images/footer-icons/5.png);
+}
+/*底部链接导航栏*/
+
+.xlxw-footer-link {
+	width: 100%;
+	height: 225px;
+	/*background: orange;*/
+	padding-top: 48px;
+}
+.xlxw-footer-link-left {
+	width: 40%;
+	height: 200px;
+	/*background: red;*/
+	float: left;
+}
+.xlxw-footer-link-right {
+	width: 60%;
+	height: 200px;
+	/*background: white;*/
+	float: left;
+}
+.xlxw-footer-link-left-item {
+	width: 50%;
+	height: 200px;
+	float: left;
+	text-align: center;
+}
+.xlxw-footer-link-left-item p {
+	font-size: 16px;
+	color: #333;
+}
+.xlxw-footer-link-left-item div {
+	width: 160px;
+	height: 160px;
+	display: block;
+	margin: 0px auto;
+	position: relative;
+}
+.xlxw-footer-link-left-item>div>img {
+	width: 100%;
+	height: 100%;
+	outline: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.xlxw-footer-link-left-item>div>span {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #4CAF50;
+	outline: none;
+	top: 0px;
+	left: 0px;
+	opacity: 0.25;
+}
+.xlxw-footer-link-right-item {
+	width: 33.3%;
+	height: 200px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: left;
+}
+.xlxw-footer-link-right-item li {
+	width: 100%;
+	height: 30px;
+	display: block;
+	text-align: center;
+}
+ .xlxw-footer-link-right-item li:nth-child(1) {
+ width: 100%;
+ height: 48px;
+ display: block;
+ font-size: 18px;
+ color: #FCFCFC;
+ text-align: center;
+}
+.xlxw-footer-link-right-item li a {
+	color: #EAEAEA;
+	text-decoration: none;
+}
+.xlxw-footer-link-right-item li a:hover {
+	color: green;
+}
+/*底部版权注释*/
+
+.xlxw-footer-copyright {
+	width: 100%;
+	height: 48px;
+	display: block;
+	/*background: yellow;*/
+	line-height: 48px;
+}
+.xlxw-footer-copyright>p {
+	font-size: 16px;
+	font-weight: 300;
+	color: #F9F9F9;
+	text-align: center;
+}
+/**
+ * 
+ * ##右侧返回顶部样式##
+ * 
+ * */
+
+.xlxw-toolbar {
+	position: fixed;
+	top: 31%;
+	right: 90px;
+	opacity: 0.75;
+	display: none;
+}
+.xlxw-toolbar-item {
+	background: rgba(0, 0, 0, 0.25);
+}
+.xlxw-toolbar-item {
+	width: 48px;
+	height: 48px;
+	display: block;
+	margin-top: 1px;
+	position: relative;
+	font-size: 12px;
+	line-height: 24px;
+	text-decoration: none;
+	color: #FEFEFE;
+	text-align: center;
+	-moz-transition: background-position 1.5s;
+	-ms-transition: background-position 1.5s;
+	-o-moz-transition: background-position 1.5s;
+	-webkit-moz-transition: background-position 1.5s;
+	transition: background-position 1.5s;
+	cursor: pointer;
+}
+.xlxw-toolbar-item-fruits:hover {
+	background: #4FBB6E;
+}
+.xlxw-toolbar-item-vegetables:hover {
+	background: #A7BF36;
+}
+.xlxw-toolbar-item-meat:hover {
+	background: #FF9F6E;
+}
+.xlxw-toolbar-item-seafood:hover {
+	background: #55B1E8;
+}
+.xlxw-toolbar-item-oil:hover {
+	background: #FBE58F;
+}
+.xlxw-toolbar-item-feedback:hover {
+}
+.xlxw-toolbar-item-top:hover {
+	background: #4CAF50;
+}

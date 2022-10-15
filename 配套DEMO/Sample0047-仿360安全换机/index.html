@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample047 - 仿360安全换机</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			a img {
+				border: none;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			body {
+				overflow: hidden;
+			}
+			
+			#bg {
+				height: 100%;
+			}
+			
+			#bg div {
+				height: 100%;
+				background-position: center;
+				background-attachment: fixed;
+			}
+			
+			#header {
+				width: 100%;
+				height: 47px;
+				position: fixed;
+				top: 27px;
+			}
+			
+			#header .logo {
+				width: 226px;
+				height: 47px;
+				margin-left: 50px;
+				float: left;
+			}
+			
+			#header .nav {
+				width: 400px;
+				height: 47px;
+				float: right;
+				margin-right: 50px;
+				position: relative;
+			}
+			
+			#header .nav ul {
+				height: 47px;
+				position: relative;
+				z-index: 1;
+			}
+			
+			#header .nav ul li {
+				float: left;
+				font-size: 14px;
+				line-height: 47px;
+				margin-left: 53px;
+			}
+			
+			#header .nav ul li a {
+				color: #fff;
+				color: rgba(255, 255, 255, 0.8);
+				text-shadow: 4px 3px 10px #000;
+				text-decoration: none;
+				font-family: 'aaaaa', 'Microsoft yahei', '楷体';
+			}
+			
+			#header .nav ul li.on a {
+				color: #fff;
+			}
+			
+			#border {
+				width: 56px;
+				height: 30px;
+				border: 1px solid #fff;
+				border: 1px solid rgba(255, 255, 255, 0.7);
+				border-radius: 16px;
+				position: absolute;
+				top: 8px;
+				left: 38px;
+			}
+			
+			#slide {
+				width: 100px;
+				height: 330px;
+				position: fixed;
+				top: 35%;
+				left: 50px;
+				background: url(img/nav.png) no-repeat;
+			}
+			
+			#slide ul li {
+				font-size: 12px;
+				color: #fff;
+				color: rgba(255, 255, 255, 0.8);
+				font-family: 'Microsoft yahei', '楷体';
+				padding-left: 50px;
+				line-height: 21px;
+				margin-top: 6px;
+				margin-bottom: 56px;
+				cursor: pointer;
+			}
+			
+			#slide ul li.on {
+				background: url(img/nav_cho.png) no-repeat;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	</head>
+
+	<body>
+
+		<div id="header">
+			<div class="logo">
+				<a href=""><img src="img/logo.png" /></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="on">
+						<a href="">首页</a>
+					</li>
+					<li>
+						<a href="">常见问题</a>
+					</li>
+					<li>
+						<a href="">论坛</a>
+					</li>
+					<li>
+						<a href="">360首页>></a>
+					</li>
+				</ul>
+				<div id="border"></div>
+			</div>
+		</div>
+
+		<div id="bg">
+			<div class='bg1' style="background-image:url(img/1.jpg);"></div>
+			<div class='bg2' style="background-image:url(img/2.jpg);"></div>
+			<div class='bg3' style="background-image:url(img/3.jpg);"></div>
+			<div class='bg4' style="background-image:url(img/4.jpg);"></div>
+		</div>
+
+		<div id="slide">
+			<ul>
+				<li class="on">安全换机</li>
+				<li>无网对传</li>
+				<li>隐私粉碎</li>
+				<li>一键转移</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				$(document).scrollTop(0);
+			}
+
+			var $navLi = $('.nav ul li');
+			var $border = $('#border');
+			var $nav = $('.nav');
+			var $slideLi = $('#slide ul li');
+			var index = 0;
+
+			$navLi.mouseenter(function() {
+				var thisWidth = $(this).width();
+				var thisLeft = $(this).position().left;
+				$(this).addClass('on').siblings().removeClass('on');
+				$border.stop(true).animate({
+					left: thisLeft + 38 + 'px',
+					width: thisWidth + 28 + 'px'
+				}, 300);
+			});
+
+			$nav.mouseleave(function() {
+				$navLi.eq(0).addClass('on').siblings().removeClass('on');
+				$border.stop(true).animate({
+					left: '38px',
+					width: '56px'
+				}, 300);
+			});
+
+			$slideLi.click(function() {
+				index = $(this).index();
+				wheel();
+			});
+
+			$(document).mousewheel(function(e, d) {
+				if(d < 0) {
+					index++;
+					index %= $slideLi.length
+				} else {
+					index--;
+					if(index < 0) index = $slideLi.length - 1;
+				}
+				wheel();
+			});
+
+			$(window).resize(function() {
+				var windowH = $(window).height();
+				$(document).scrollTop(index * windowH);
+			});
+
+			function wheel() {
+				$slideLi.eq(index).addClass('on').siblings().removeClass('on');
+				var windowH = $(window).height();
+				$('body,html').stop(true).animate({
+					scrollTop: index * windowH
+				}, 500);
+			};
+		</script>
+	</body>
+
+</html>

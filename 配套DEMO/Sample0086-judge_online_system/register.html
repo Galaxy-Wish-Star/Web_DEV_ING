@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+	<script>
+		window.AESKey = '';
+		// 判断浏览器是否支持placeholder属性                                                                                                                                                                                        
+		function isSupportPlaceholder() {
+			var input = document.createElement('input');
+			return 'placeholder' in input;
+		};
+		(function() {
+			//判断是否是IE浏览器，包括Edge浏览器                                                                                                                                                                                       
+			function IEVersion() {
+				//取得浏览器的userAgent字符串                                                                                                                                                                                     
+				var userAgent = navigator.userAgent;
+				//判断是否IE浏览器                                                                                                                                                                                              
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+				if(isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					if(fIEVersion < 10 || !isSupportPlaceholder()) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+			}
+
+			var tpl = ['<img style="border:none;outline:0;display:block;width:450px;height:140px;position:absolute;top:50%;left:50%;margin-left:-225px;margin-top:-70px" src="Custom/img/error.png">'].join('');
+
+			window.onload = function() {
+				if(IEVersion()) {
+					document.write(tpl);
+				}
+			};
+			window.siteName = "温馨提示";
+		})();
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>极客社区 - 注册</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<!-- AmazeUI Basic Style -->
+		<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+
+		<!-- Geek Community Style -->
+		<link rel="stylesheet" href="Custom/css/common.css" />
+		<link rel="stylesheet" href="Custom/css/register.css" />
+	</head>
+
+	<body sroll="no">
+		<!-- body -->
+		<div class="register-box">
+			<!-- title -->
+			<h2>极客社区</h2>
+			<!-- title -->
+			<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+			<!-- form -->
+			<form action="" class="am-form" data-am-validator>
+				<fieldset>
+					<div class="am-form-group">
+						<label>极客昵称：</label>
+						<input type="text" minlength="3" placeholder="建议为3 ~ 9个英文字符" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>极客账号：</label>
+						<input type="text" minlength="3" placeholder="建议为手机号码" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>极客密码：</label>
+						<input type="password" id="reg-vld-pwd-1" placeholder="密码为6 ~ 16位数字、字母" pattern="^[a-zA-Z\d_@]{6,}$" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>确认密码：</label>
+						<input type="password" id="reg-vld-pwd-2" placeholder="请与上面输入的值一致" data-equal-to="#reg-vld-pwd-1" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>选择性别：</label>
+						<br />
+						<select data-am-selected>
+							<option value="男" name="gender">男</option>
+							<option value="女" name="gender">女</option>
+						</select>
+					</div>
+
+					<div class="am-form-group">
+						<label>手机号码：</label>
+						<input type="tel" class="js-pattern-mobile" placeholder="常用手机号" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>常用邮箱：</label>
+						<input type="email" placeholder="常用邮箱" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>出生日期：</label>
+						<input type="text" class="am-form-field" placeholder="出生日期" data-am-datepicker="{theme: 'success'}" required/>
+					</div>
+
+					<div class="am-form-group">
+						<label>验证码：</label>
+						<div style="width: 100%;height: 37.2px;vertical-align: middle;">
+							<div style="width: 48%;height: 37.2px;vertical-align: middle;float: left;">
+								<input type="text" class="am-form-field" placeholder="验证码" required/>
+							</div>
+							<div style="width: 48%;height: 37.2px;vertical-align: middle;float: right;cursor: pointer;">
+								<img src="Custom/img/vcode.jpg" alt="验证码" width="100%" height="100%" />
+							</div>
+						</div>
+					</div>
+
+					<!-- register -->
+					<button type="submit" class="am-btn am-btn-primary am-btn-block" style="margin-top: 20px;">立即注册</button>
+					<!-- register -->
+
+					<hr data-am-widget="divider" style="width: 55%;margin-top: 20px;" class="am-divider am-divider-default" />
+
+					<!-- nowLogin -->
+					<div style="width: 100%;height: 30px;line-height: 30px;text-align: right;">
+						<span>已有账号？<a href="login.html">立即登录</a></span>
+					</div>
+					<!-- nowLogin -->
+				</fieldset>
+			</form>
+			<!-- form -->
+		</div>
+		<!-- body -->
+
+		<!-- footer -->
+		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+			<div class="am-footer-switch">
+				<span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">移动版</span>
+				<span class="am-footer-divider"> | </span>
+				<a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">电脑版 </a>
+			</div>
+			<div class="am-footer-miscs ">
+				<p>Copyright © 2018-2019 Geek-Community-Inc.All Rights Reserved.</p>
+				<p>冀ICP备18007717号</p>
+			</div>
+		</footer>
+
+		<div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd am-modal-footer-hd">
+					<a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd">
+					<span class="am-switch-mode-slogan">移动端正在开发中...</span>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+
+		<script src="AmazeUI/js/jquery.min.js"></script>
+		<script src="AmazeUI/js/amazeui.min.js"></script>
+
+		<script>
+			if($.AMUI && $.AMUI.validator) {
+				$.AMUI.validator.patterns.mobile = /^\s*1\d{10}\s*$/;
+			}
+		</script>
+
+		<script>
+			$("#username").click(function() {
+				$("#username").val("Dolly Duck");
+			});
+		</script>
+	</body>
+
+</html>

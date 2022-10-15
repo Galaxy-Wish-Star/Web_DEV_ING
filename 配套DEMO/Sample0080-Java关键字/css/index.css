@@ -1,0 +1,18 @@
+th {
+	width: 400px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #F6F6F6;
+	font-size: 16px;
+}
+
+td {
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #E0E0E0;
+	text-align: center;
+	font-size: 16px;
+}

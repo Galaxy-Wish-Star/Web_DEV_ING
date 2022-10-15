@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Sample036 - 呼吸灯轮播图</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css" />
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style type="text/css">
+		.carousel {
+			margin: 50px auto;
+			padding: 0px;
+			width: 790px;
+			height: 340px;
+			position: relative;
+			border: 1px solid #E9E9E9;
+		}
+		
+		.carousel-img {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		
+		.carousel-img>li {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: none;
+		}
+		
+		.carousel-img>a>img {
+			border: none;
+			outline: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		
+		.carousel-control {
+			display: none;
+		}
+		
+		.carousel-control-left,
+		.carousel-control-right {
+			width: 40px;
+			height: 90px;
+			display: block;
+			background-color: #000;
+			background-color: rgba(0, 0, 0, .4);
+			filter: alpha(opacity=40);
+			position: absolute;
+			top: 50%;
+			margin-top: -45px;
+			color: #FFF;
+			font-size: 32px;
+			line-height: 90px;
+			text-align: center;
+			cursor: pointer;
+		}
+		
+		.carousel-control-left {
+			left: 0px;
+		}
+		
+		.carousel-control-right {
+			right: 0px;
+		}
+		
+		.carousel-control-left:hover,
+		.carousel-control-right:hover {
+			background-color: #000;
+			background-color: rgba(0, 0, 0, .75);
+			filter: alpha(opacity=75);
+		}
+		
+		.carousel-nav {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			width: 240px;
+			height: 25px;
+			display: block;
+			border-radius: 10px;
+			background-color: #FFF;
+			background-color: rgba(255, 255, 255, .25);
+			filter: alpha(opacity=25);
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -120px;
+		}
+		
+		.carousel-nav>li {
+			width: 20px;
+			height: 20px;
+			display: block;
+			border-radius: 10px;
+			background-color: #FFF;
+			background-color: rgba(255, 255, 255, .5);
+			filter: alpha(opacity=50);
+			margin: 2.5px 5px;
+			float: left;
+			cursor: pointer;
+			transition: all .25s;
+		}
+		
+		.carousel-nav>li.active {
+			width: 20px;
+			height: 20px;
+			display: block;
+			border-radius: 10px;
+			background-color: orangered;
+			margin: 2.5px 5px;
+			float: left;
+		}
+		
+		.carousel:hover .carousel-control {
+			display: block;
+		}
+	</style>
+
+	<body>
+
+		<div class="carousel">
+			<ul class="carousel-img">
+				<li>
+					<a href="#"><img src="img/1.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/2.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/3.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/4.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/5.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/6.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/7.jpg" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/8.jpg" /></a>
+				</li>
+			</ul>
+			<div class="carousel-control">
+				<div class="carousel-control-left">&lt;</div>
+				<div class="carousel-control-right">&gt;</div>
+			</div>
+			<ul class="carousel-nav">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// 初始化插件
+			for(var i = 0; i < $(".carousel-img li").length; i++) {
+				$(".carousel-nav li").eq(i).attr("index", i);
+			}
+
+			$(".carousel-img li").eq(0).fadeIn(10).siblings("li").fadeOut(10);
+			$(".carousel-nav li").eq(0).addClass("active").siblings().removeClass("active");
+
+			// 图片索引
+			var index = 0;
+
+			// 右边按钮点击事件
+			$(".carousel-control-right").click(function() {
+				index++;
+				if(index == $(".carousel-img li").length) {
+					index = 0;
+				}
+				$(".carousel-img li").eq(index).fadeIn(500).siblings("li").fadeOut(500);
+				$(".carousel-nav li").eq(index).addClass("active").siblings().removeClass("active");
+			});
+
+			// 左边按钮点击事件
+			$(".carousel-control-left").click(function() {
+				index--;
+				if(index == -1) {
+					index = $(".carousel-img li").length - 1;
+				}
+				$(".carousel-img li").eq(index).fadeIn(500).siblings("li").fadeOut(500);
+				$(".carousel-nav li").eq(index).addClass("active").siblings().removeClass("active");
+			});
+
+			// 导航栏li
+			$(".carousel-nav li").mouseover(function() {
+				index = $(this).attr("index");
+				$(".carousel-img li").eq(index).fadeIn(500).siblings("li").fadeOut(500);
+				$(".carousel-nav li").eq(index).addClass("active").siblings().removeClass("active");
+			});
+
+		});
+	</script>
+
+</html>

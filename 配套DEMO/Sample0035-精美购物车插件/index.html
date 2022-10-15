@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Sample035 - 精美购物车插件</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css" />
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style type="text/css">
+		.shopping-cart {
+			margin: 50px auto;
+			padding: 0px;
+			outline: none;
+			width: 1000px;
+			height: auto;
+			display: block;
+		}
+		
+		.shopping-cart-title {
+			margin: 0px;
+			padding: 0px;
+			outline: none;
+			width: 100%;
+			height: 45px;
+			display: block;
+			background-color: #F3F3F3;
+		}
+		
+		.shopping-cart-item {
+			margin: 10px 0px;
+			padding: 0px;
+			outline: none;
+			width: 100%;
+			height: 100px;
+			display: block;
+			background-color: #F6F6F6;
+		}
+		
+		.shopping-cart-title1,
+		.shopping-cart-title2,
+		.shopping-cart-title3,
+		.shopping-cart-title4,
+		.shopping-cart-title5,
+		.shopping-cart-title6,
+		.shopping-cart-title7,
+		.shopping-cart-title8 {
+			height: 45px;
+			line-height: 45px;
+			float: left;
+			overflow: hidden;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+		.shopping-cart-item1,
+		.shopping-cart-item2,
+		.shopping-cart-item3,
+		.shopping-cart-item4,
+		.shopping-cart-item5,
+		.shopping-cart-item6,
+		.shopping-cart-item7,
+		.shopping-cart-item8 {
+			height: 100px;
+			line-height: 100px;
+			float: left;
+			overflow: hidden;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+		.shopping-cart-title1,
+		.shopping-cart-item1 {
+			width: 25px;
+		}
+		
+		.shopping-cart-title2,
+		.shopping-cart-item2 {
+			width: 100px;
+		}
+		
+		.shopping-cart-title3,
+		.shopping-cart-item3 {
+			width: 175px;
+		}
+		
+		.shopping-cart-title4,
+		.shopping-cart-item4 {
+			width: 140px;
+		}
+		
+		.shopping-cart-title5,
+		.shopping-cart-item5 {
+			width: 140px;
+		}
+		
+		.shopping-cart-title6,
+		.shopping-cart-item6 {
+			width: 140px;
+		}
+		
+		.shopping-cart-title7,
+		.shopping-cart-item7 {
+			width: 140px;
+		}
+		
+		.shopping-cart-title8,
+		.shopping-cart-item8 {
+			width: 140px;
+		}
+		/*购物车单项设置*/
+		
+		.shopping-cart-item2 {
+			padding: 10px 0px;
+		}
+		
+		.shopping-cart-item2>img {
+			outline: none;
+			border: none;
+		}
+		
+		.shopping-cart-item3>a {
+			width: 100%;
+			height: 36px;
+			font-size: 14px;
+			color: #333;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			font-weight: lighter;
+			line-height: 18px;
+			text-align: left;
+			text-decoration: none;
+			margin-top: 32px;
+		}
+		
+		.shopping-cart-item8>span:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		/*数量控制条*/
+		
+		.count-control {
+			width: 112px;
+			height: 25px;
+			border: 1px solid #BBB;
+			background: #F9F9F9;
+			margin-top: 37.5px;
+			margin-left: 14px;
+		}
+		
+		.count-control-left,
+		.count-control-center,
+		.count-control-right {
+			width: 30px;
+			height: 25px;
+			float: left;
+			text-align: center;
+			vertical-align: middle;
+			line-height: 25px;
+			overflow: hidden;
+			font-size: 18px;
+			display: block;
+		}
+		
+		.count-control-left,
+		.count-control-right {
+			cursor: pointer;
+		}
+		
+		.count-control-left {
+			border-right: 1px solid #BBB;
+		}
+		
+		.count-control-right {
+			border-left: 1px solid #BBB;
+		}
+		
+		.count-control-left:hover,
+		.count-control-right:hover {
+			background-color: #CCC;
+		}
+		
+		.count-control-center {
+			width: 50px;
+		}
+		/*结算栏目*/
+		
+		.shopping-cart-bottom {
+			margin: 0px;
+			padding: 0px;
+			outline: none;
+			width: 100%;
+			height: 40px;
+			display: block;
+			background-color: #F6F6F6;
+			line-height: 40px;
+		}
+		
+		.shopping-cart-bottom1,
+		.shopping-cart-bottom2,
+		.shopping-cart-bottom3,
+		.shopping-cart-bottom4,
+		.shopping-cart-bottom5,
+		.shopping-cart-bottom6,
+		.shopping-cart-bottom7,
+		.shopping-cart-bottom8 {
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			float: left;
+		}
+		
+		.shopping-cart-bottom1 {
+			width: 100px;
+		}
+		
+		.shopping-cart-bottom2 {
+			width: 100px;
+		}
+		
+		.shopping-cart-bottom3 {
+			width: 25px;
+		}
+		
+		.shopping-cart-bottom4 {
+			width: 191.666666px;
+		}
+		
+		.shopping-cart-bottom5 {
+			width: 191.666666px;
+		}
+		
+		.shopping-cart-bottom6 {
+			width: 191.666666px;
+		}
+		
+		.shopping-cart-bottom7 {
+			width: 100px;
+		}
+		
+		.shopping-cart-bottom8 {
+			width: 100px;
+		}
+		
+		.shopping-cart-bottom1:hover,
+		.shopping-cart-bottom2:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		
+		.shopping-cart-bottom7>span {
+			color: darkred;
+		}
+		
+		.shopping-cart-bottom8>a {
+			width: 90px;
+			height: 40px;
+			margin: 0px 5px;
+			background-color: brown;
+			color: #FFF;
+			font-size: 16px;
+			text-decoration: none;
+			display: block;
+			line-break: 30px;
+		}
+	</style>
+
+	<body>
+
+		<div class="shopping-cart">
+			<div class="shopping-cart-title">
+				<div class="shopping-cart-title1"><input type="checkbox" name="shopping_cart_item" /></div>
+				<div class="shopping-cart-title2">商品图片</div>
+				<div class="shopping-cart-title3">商品描述</div>
+				<div class="shopping-cart-title4">商品单价</div>
+				<div class="shopping-cart-title5">商品数量</div>
+				<div class="shopping-cart-title6">商品小计</div>
+				<div class="shopping-cart-title7">商品规格</div>
+				<div class="shopping-cart-title8">删除商品</div>
+			</div>
+			<div class="shopping-cart-item">
+				<div class="shopping-cart-item1"><input type="checkbox" name="shopping_cart_item" /></div>
+				<div class="shopping-cart-item2"><img src="img/1.png" alt="暂无图片" /></div>
+				<div class="shopping-cart-item3">
+					<a href="">维艾痞 休闲鞋男鞋春夏季透气韩版潮鞋网面男士内增高运动小白鞋男网红学生ins鞋子男老爹鞋旅游鞋板鞋男 8853男款灰色 41标准运动鞋码数 </a>
+				</div>
+				<div class="shopping-cart-item4">¥<span>138.00</span></div>
+				<div class="shopping-cart-item5">
+					<div class="count-control">
+						<div class="count-control-left">-</div>
+						<div class="count-control-center">1</div>
+						<div class="count-control-right">+</div>
+					</div>
+				</div>
+				<div class="shopping-cart-item6">¥<span>138.00</span></div>
+				<div class="shopping-cart-item7">件</div>
+				<div class="shopping-cart-item8"><span>删除商品</span></div>
+			</div>
+			<div class="shopping-cart-item">
+				<div class="shopping-cart-item1"><input type="checkbox" name="shopping_cart_item" /></div>
+				<div class="shopping-cart-item2"><img src="img/2.png" alt="暂无图片" /></div>
+				<div class="shopping-cart-item3">
+					<a href="">短袖衬衫男2018夏季新品男士休闲修身格子免烫韩版男装衬衣 红色+灰色 L</a>
+				</div>
+				<div class="shopping-cart-item4">¥<span>128.00</span></div>
+				<div class="shopping-cart-item5">
+					<div class="count-control">
+						<div class="count-control-left">-</div>
+						<div class="count-control-center">1</div>
+						<div class="count-control-right">+</div>
+					</div>
+				</div>
+				<div class="shopping-cart-item6">¥<span>128.00</span></div>
+				<div class="shopping-cart-item7">件</div>
+				<div class="shopping-cart-item8"><span>删除商品</span></div>
+			</div>
+			<div class="shopping-cart-item">
+				<div class="shopping-cart-item1"><input type="checkbox" name="shopping_cart_item" /></div>
+				<div class="shopping-cart-item2"><img src="img/3.png" alt="暂无图片" /></div>
+				<div class="shopping-cart-item3">
+					<a href="">梵太短裤男2018夏季新品休闲五分裤运动大裤衩潮迷彩梵太短裤男2018夏季新品休闲五分裤运动大裤衩潮迷彩 </a>
+				</div>
+				<div class="shopping-cart-item4">¥<span>69.00</span></div>
+				<div class="shopping-cart-item5">
+					<div class="count-control">
+						<div class="count-control-left">-</div>
+						<div class="count-control-center">1</div>
+						<div class="count-control-right">+</div>
+					</div>
+				</div>
+				<div class="shopping-cart-item6">¥<span>69.00</span></div>
+				<div class="shopping-cart-item7">件</div>
+				<div class="shopping-cart-item8"><span>删除商品</span></div>
+			</div>
+			<div class="shopping-cart-item">
+				<div class="shopping-cart-item1"><input type="checkbox" name="shopping_cart_item" /></div>
+				<div class="shopping-cart-item2"><img src="img/4.png" alt="暂无图片" /></div>
+				<div class="shopping-cart-item3">
+					<a href="">卡爵伦牛仔裤男九分裤夏季薄款弹力修身男士学生黑色休闲裤韩版春秋破洞乞丐裤哈伦裤乞丐裤 HP-1830灰色薄款长裤 29码 </a>
+				</div>
+				<div class="shopping-cart-item4">¥<span>99.00</span></div>
+				<div class="shopping-cart-item5">
+					<div class="count-control">
+						<div class="count-control-left">-</div>
+						<div class="count-control-center">1</div>
+						<div class="count-control-right">+</div>
+					</div>
+				</div>
+				<div class="shopping-cart-item6">¥<span>99.00</span></div>
+				<div class="shopping-cart-item7">件</div>
+				<div class="shopping-cart-item8"><span>删除商品</span></div>
+			</div>
+			<div class="shopping-cart-bottom">
+				<div class="shopping-cart-bottom1"><span>删除选中商品</span></div>
+				<div class="shopping-cart-bottom2"><span>清空购物清单</span></div>
+				<div class="shopping-cart-bottom3"></div>
+				<div class="shopping-cart-bottom4"></div>
+				<div class="shopping-cart-bottom5"></div>
+				<div class="shopping-cart-bottom6"></div>
+				<div class="shopping-cart-bottom7">总计：<span>00.00</span></div>
+				<div class="shopping-cart-bottom8">
+					<a href="">去结算</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// 全部选中功能
+			$(".shopping-cart-title input").click(function() {
+				$(".shopping-cart-item input").prop("checked", $(this).prop("checked"));
+				if($(this).prop("checked")) {
+					$(".shopping-cart-item").css("backgroundColor", "#FFF4E8");
+					// 更新价格
+					var sumPrice = 0;
+					$(".shopping-cart-item").each(function() {
+						var singlePrice = $(this).children(".shopping-cart-item6").children("span").text();
+						singlePrice = parseInt(singlePrice);
+						sumPrice += singlePrice * 1;
+					});
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				} else {
+					$(".shopping-cart-item").css("backgroundColor", "#F6F6F6");
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text("00.00");
+				}
+			});
+
+			// 单个选中功能
+			$(".shopping-cart-item input").click(function() {
+				// 当前项目选中变色
+				if($(this).prop("checked")) {
+					$(this).parent().parent().css("backgroundColor", "#FFF4E8");
+					// 增加价格
+					// 获取总的价格
+					var sumPrice = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+					sumPrice = parseInt(sumPrice);
+					// 获取当前价格
+					var nowPrice = $(this).parent().siblings(".shopping-cart-item6").children("span").text();
+					nowPrice = parseInt(nowPrice);
+					// 计算后的价格
+					sumPrice += nowPrice;
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				} else {
+					$(this).parent().parent().css("backgroundColor", "#F6F6F6");
+					// 减少价格
+					// 获取总的价格
+					var sumPrice = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+					sumPrice = parseInt(sumPrice);
+					// 获取当前价格
+					var nowPrice = $(this).parent().siblings(".shopping-cart-item6").children("span").text();
+					nowPrice = parseInt(nowPrice);
+					// 计算后的价格
+					sumPrice -= nowPrice;
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				}
+				// 判断是否全部选上，如果是则将全部选上的复选框选上
+				if($(".shopping-cart-item input:checked").length == $(".shopping-cart-item input").length) {
+					$(".shopping-cart-title input").prop("checked", true)
+				} else {
+					$(".shopping-cart-title input").prop("checked", false)
+				}
+			});
+
+			// 删除当前商品
+			$(".shopping-cart-item8>span").click(function() {
+				// 删除当前商品
+				$(this).parent().parent().slideUp(1000, function() {
+					$(this).remove();
+				});
+				// 判断当前商品是否选中
+				if($(this).parent().siblings(".shopping-cart-item1").children("input").prop("checked")) {
+					// 更新购物车价格
+					var sum = $(this).parents().siblings(".shopping-cart-item6").children("span").text();
+					var sumPrice = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+					sum = parseInt(sum);
+					sumPrice = parseInt(sumPrice);
+					sumPrice -= sum;
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				}
+			});
+
+			// 删除当前选中商品
+			$(".shopping-cart-bottom1>span").click(function() {
+				$(".shopping-cart-item input:checked").parent().parent().slideUp(750, function() {
+					$(this).remove();
+				});
+				$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text("00.00");
+				if($(this).prop("checked")) {
+					$(".shopping-cart-item").css("backgroundColor", "#FFF4E8");
+					// 更新价格
+					var sumPrice = 0;
+					$(".shopping-cart-item").each(function() {
+						var singlePrice = $(this).children(".shopping-cart-item6").children("span").text();
+						singlePrice = parseInt(singlePrice);
+						sumPrice -= singlePrice * 1;
+					});
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				} else {
+					$(".shopping-cart-item").css("backgroundColor", "#F6F6F6");
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text("00.00");
+				}
+			});
+
+			// 删除全部商品
+			$(".shopping-cart-bottom2>span").click(function() {
+				$(".shopping-cart-item").slideUp(500, function() {
+					$(this).remove();
+				});
+				$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text("00.00");
+			});
+
+			// 减少单个商品数量
+			$(".count-control-left").click(function() {
+				// 数量
+				var count = $(this).next().text();
+				if(count != 0) {
+					// 单价
+					var price = $(this).parent().parent().siblings(".shopping-cart-item4").children("span").text();
+					price = parseInt(price);
+					// 数量改变
+					count = parseInt(count) - 1;
+					if(count <= 0) {
+						count = 0;
+					}
+					// 计算总价
+					var sum = parseInt(count * price);
+					// 设置总价
+					$(this).parent().parent().siblings(".shopping-cart-item6").children("span").text(sum);
+					$(this).next().text(count);
+					// 判断当前商品是否选中
+					if($(this).parent().parent().siblings(".shopping-cart-item1").children("input").prop("checked")) {
+						// 更新购物车价格
+						var sumPrice = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+						sumPrice = parseInt(sumPrice);
+						sumPrice -= price;
+						if(sumPrice <= 0) {
+							sumPrice = 0;
+						}
+						// 设置新的价格
+						$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+					}
+				}
+			});
+
+			// 增加单个商品数量
+			$(".count-control-right").click(function() {
+				// 数量
+				var count = $(this).prev().text();
+				// 单价
+				var price = $(this).parent().parent().siblings(".shopping-cart-item4").children("span").text();
+				price = parseInt(price);
+				// 数量改变
+				count = parseInt(count) + 1;
+				// 计算总价
+				var sum = parseInt(count * price);
+				// 设置总价
+				$(this).parent().parent().siblings(".shopping-cart-item6").children("span").text(sum);
+				$(this).prev().text(count);
+				// 判断当前商品是否选中
+				if($(this).parent().parent().siblings(".shopping-cart-item1").children("input").prop("checked")) {
+					// 更新购物车价格
+					var sumPrice = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+					sumPrice = parseInt(sumPrice);
+					sumPrice += price;
+					// 设置新的价格
+					$(".shopping-cart-bottom>.shopping-cart-bottom7>span").text(sumPrice);
+				}
+			});
+
+			// 去结算
+			$(".shopping-cart-bottom>.shopping-cart-bottom8>a").click(function() {
+				var price = $(".shopping-cart-bottom>.shopping-cart-bottom7>span").text();
+				if(price == "0" || price == "0.00" || price == "00.00") {
+					alert("请选择商品");
+				} else {
+					alert("商品总价格：" + price);
+				}
+			});
+
+		});
+	</script>
+
+</html>

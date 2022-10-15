@@ -1,0 +1,32 @@
+.box {
+	width: 1024px;
+	height: auto;
+	margin: 0px auto;
+}
+
+.box ul,
+.box ul li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.box ul li {
+	width: 20%;
+	float: left;
+	overflow: hidden;
+}
+
+.box h2 {
+	border-bottom: 2px solid #111;
+	margin: 5px 0px;
+}
+
+.box ul li a {
+	color: #333;
+	text-decoration: none;
+}
+
+.box ul li p {
+	margin: 2.5px 0px;
+}

@@ -1,0 +1,28 @@
+div#box {
+	width: 1226px;
+	height: 400px;
+	margin: 50px auto;
+	border: 1px solid #E0E0E0;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div#box ul {
+	width: 1300px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+div#box li {
+	width: 245.2px;
+	height: 400px;
+	float: left;
+}
+
+div#box li a img {
+	outline: none;
+	border: none;
+}

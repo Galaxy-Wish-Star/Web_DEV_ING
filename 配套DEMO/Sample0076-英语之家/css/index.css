@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+/*基本模板样式表--开始部分*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	line-height: 40px;
+	background-color: #eceff1;
+}
+#header-banner {
+	background: #FCF9F9;
+}
+.hb {
+	width: 100%;
+	height: 40px;
+	background: #FCF9F9;
+}
+.hb-center {
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;
+}
+.hb-container {
+	width: 120px;
+	height: 40px;
+	margin-left: 880px;
+}
+.hb-container-left, .hb-container-right {
+	width: 40px;
+	height: 40px;
+	float: left;
+	padding-left: 10px;
+}
+.hb-container-center {
+	width: 10px;
+	height: 40px;
+	float: left;
+	padding-left: 10px;
+}
+#header-footer {
+	font-size: 14px;
+	line-height: 20px;
+	color: #ccc;
+	background: #333333;
+}
+#header-color {
+	width: 100%;
+	height: 40px;
+	background: #333333;
+}
+#header-nav {
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;
+}
+#header-nav span ul li {
+	float: left;
+	list-style: none;
+}
+#header-nav span ul li a {
+	display: inline-block;
+	padding: 0px 25px;
+	font-size: 16px;
+	color: #ccc;
+	text-decoration: none;
+	cursor: pointer;
+}
+#header-nav span ul li a:hover {
+	color: #fff;
+	background: #2196f3;
+}
+/*基本模板样式表--结束部分*/
+#main-body {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+.main-body-header-left {
+	float: left;
+	width: 320px;
+	height: 320px;
+	background: #FFF;
+}
+.main-body-header-right {
+	float: right;
+	width: 640px;
+	height: 320px;
+	background: #FFF;
+}
+/*列表样式开始*/
+.list-of-articles-container {
+	width: 600px;
+	height: 40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.list-of-articles-left {
+	width: 480px;
+	height: auto;
+	float: left;
+}
+.list-of-articles-right {
+	width: 60px;
+	height: auto;
+	float: right;
+}
+.list-of-articles-left-left {
+	width: 120px;
+	height: auto;
+	float: left;
+}
+.list-of-articles-left-right {
+}
+.list-of-articles-container a {
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+}
+.list-of-articles-left a:hover {
+	color: #F66;
+}
+.list-of-articles-left-right a {
+	color: #666;
+}
+/*列表样式结束*/
+
+/*项目样式表开始*/
+.item-list-all {
+	width: 1000px;
+	height: 500px;
+	background: #FFF;/*	box-shadow: 1px 1px 5px 5px #888888;*/
+}
+.item-list-of-articles-title {
+	width: 1000px;
+	height: auto;
+}
+.item-list-of-articles-title-left {
+	width: 800px;
+	float: left;
+}
+.item-list-of-articles-title-right {
+	width: 80px;
+	float: right;
+}
+.item-list-of-articles-container {
+	width: 960;
+	height: 40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.item-list-of-articles-left {
+	width: 800px;
+	height: auto;
+	float: left;
+}
+.item-list-of-articles-right {
+	width: 60px;
+	height: auto;
+	float: right;
+}
+.item-list-of-articles-container a {
+	font-size: 18px;
+	text-decoration: none;
+	color: #243238;
+}
+.item-list-of-articles-left-left {
+	width: 140px;
+	height: auto;
+	float: left;
+}
+.item-list-of-articles-left-right a {
+	color: #2196f3;
+}
+.item-list-of-articles-left a:hover {
+	color: #F66;
+}
+
+/*项目样式表结束*/

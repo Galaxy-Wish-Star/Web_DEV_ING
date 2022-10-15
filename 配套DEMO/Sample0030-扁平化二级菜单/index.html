@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample030 - 扁平化二级菜单</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css" />
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style type="text/css">
+		ul,
+		li {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		.nav {
+			width: 450px;
+			height: 40px;
+			list-style: none;
+			margin: 50px auto;
+			line-height: 40px;
+			background-color: #333;
+			color: #fff;
+		}
+		
+		.nav>li {
+			width: 82px;
+			margin: 0px 5px;
+			float: left;
+			text-align: center;
+		}
+		
+		.nav>li>a {
+			width: 82px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			display: block;
+			color: #FFFFFF;
+			transition: all .5s;
+		}
+		
+		.nav>li>a:hover {
+			background-color: #0c8ed9;
+		}
+		
+		.nav>li:first-child {
+			margin-left: 0px;
+		}
+		
+		.nav>li:last-child {
+			margin-right: 0px;
+		}
+		
+		.nav>li>ul {
+			line-height: 30px;
+			display: none;
+		}
+		
+		.nav>li>ul>li {
+			background: #333;
+			color: #EEE;
+		}
+		
+		.nav>li>ul>li:hover {
+			background: #666;
+			color: #FFF;
+			cursor: pointer;
+		}
+	</style>
+
+	<body>
+		<ul class="nav">
+			<li>
+				<a href="javascript:void(0);">菜单项目一</a>
+				<ul>
+					<li>子菜单项01</li>
+					<li>子菜单项02</li>
+					<li>子菜单项03</li>
+					<li>子菜单项04</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">菜单项目二</a>
+				<ul>
+					<li>子菜单项01</li>
+					<li>子菜单项02</li>
+					<li>子菜单项03</li>
+					<li>子菜单项04</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">菜单项目三</a>
+				<ul>
+					<li>子菜单项01</li>
+					<li>子菜单项02</li>
+					<li>子菜单项03</li>
+					<li>子菜单项04</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">菜单项目四</a>
+				<ul>
+					<li>子菜单项01</li>
+					<li>子菜单项02</li>
+					<li>子菜单项03</li>
+					<li>子菜单项04</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">菜单项目五</a>
+				<ul>
+					<li>子菜单项01</li>
+					<li>子菜单项02</li>
+					<li>子菜单项03</li>
+					<li>子菜单项04</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $nav = $(".nav>li");
+
+			$nav.mouseover(function() {
+				$(this).children("ul").show();
+			});
+
+			$nav.mouseout(function() {
+				$(this).children("ul").hide();
+			});
+		});
+	</script>
+
+</html>

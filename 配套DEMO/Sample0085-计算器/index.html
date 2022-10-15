@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/robust.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<input type="text" placeholder="第一个计算数" id="num01" />
+		<select id="option_value">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" placeholder="第二个计算数" id="num02" />
+		<input type="button" value="=" id="btn" />
+		<input type="text" placeholder="结果" id="result" />
+	</body>
+
+	<script type="text/javascript">
+		var num01 = document.getElementById("num01");
+		var num02 = document.getElementById("num02");
+		var btn = document.getElementById("btn");
+		var result = document.getElementById("result");
+		var option_value = document.getElementById("option_value");
+
+		btn.onclick = function() {
+			num01 = parseFloat(num01.value);
+			num02 = parseFloat(num02.value);
+
+			result.value = eval(num01 + option_value.value + num02);
+		};
+	</script>
+
+</html>

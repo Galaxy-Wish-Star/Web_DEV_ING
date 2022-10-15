@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Sample068 - 仿职位发布案例 </title>
+
+		<link href="css/base.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/help.css">
+
+		<!--js区域-->
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".fwmc_xxk li").click(function() {
+					//var fw_price = $(this).children("i").text();
+					//var fw_numb = $(".srkk").val();
+					//var fw_tal = fw_price*fw_numb;
+					//$(".zwfb_zje span").text(fw_tal);
+					$(this).addClass("on").siblings().removeClass("on");
+					tola();
+				});
+				//加
+				$(".jia").click(function() {
+					var fw_numb = $(".srkk").val();
+					fw_numb++;
+					$(".srkk").val(fw_numb);
+					/*$(".fwmc_xxk li").each(function() {
+            if($(this).hasClass("on")){
+				var dqzt_price = $(this).children("i").text();
+				//alert(dqzt_price);
+				var zgsj_jia = dqzt_price*fw_numb;
+				$(".zwfb_zje span").text(zgsj_jia);
+				}
+        }); */
+					tola();
+				})
+
+				//减
+				$(".jian").click(function() {
+					var fw_numb = $(".srkk").val();
+					if(fw_numb <= 1) {
+						alert("数量不足了，请住手！")
+					} else {
+						fw_numb--;
+						$(".srkk").val(fw_numb);
+					}
+					/*$(".fwmc_xxk li").each(function() {
+            if($(this).hasClass("on")){
+				var dqzt_price = $(this).children("i").text();
+				//alert(dqzt_price);
+				var zgsj_jia = dqzt_price*fw_numb;
+				$(".zwfb_zje span").text(zgsj_jia);
+				}
+        }); */
+					tola();
+				})
+
+			});
+
+			function tola() {
+				var $li = $(".fwmc_xxk").children("li.on");
+				var money = $li.children("i").text();
+				var count = $(".srkk").val();
+				$(".zwfb_zje span").text(money * count);
+			}
+		</script>
+
+		<!--兼容提示-->
+		<!--[if lt IE 8]>
+<script type="text/javascript">
+jQuery(function($){ 
+	$(".wzjzgbann_but").click(function(){ 
+		$(".browser-upgrade").remove();
+ 	}); 	
+}); 
+</script> 
+<div class="browser-upgrade">
+  <div class="wrapper">
+    <div class="fl">您的浏览器版本过低，为了保证更好的安全性和浏览体验，建议更换高级浏览器，如：<a href="http://www.baidu.com/s?wd=谷歌浏览器"  target="_blank">谷歌浏览器</a><a href="http://www.baidu.com/s?wd=火狐浏览器"  target="_blank">火狐浏览器</a><a href="http://www.baidu.com/s?wd=360极速浏览器"  target="_blank">360 极速浏览器</a>  <a href="http://t.cn/RPrfSNj"  target="_blank">IE8浏览器</a>  </div>
+    <a href="javascript:void(0);" class="wzjzgbann_but fr">x</a> </div>
+</div>
+<style> 
+.browser-upgrade {background-color: #DA7575;border-bottom: 1px solid #D65F39;color: #F0F0F0;padding: 10px 0; width: 100%; }
+.browser-upgrade .wrapper {width: 1000px;margin: 0 auto; overflow:hidden;} 
+.browser-upgrade a {color: yellow;margin-right: 10px;text-decoration: underline;}
+.browser-upgrade a.wzjzgbann_but{ display:block; height:15px; width:15px; background:#000; color:#fff; font-size:14px; text-align: center; line-height:15px; text-decoration:none; margin-top: 2px; }
+</style>
+<![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="w_1200 fw_box ">
+			<div class="left_nav">
+				<ul class="bzzx_nav_list">
+					<li>
+						<a href="#" class="icon_1">会员服务</a>
+					</li>
+					<li class="on">
+						<a href="#" class="icon_2"> 职位发布</a>
+					</li>
+					<li>
+						<a href="#" class="icon_3"> 职位刷新</a>
+					</li>
+					<li>
+						<a href="#" class="icon_4"> 职位置顶</a>
+					</li>
+					<li>
+						<a href="#" class="icon_5"> 简历下载</a>
+					</li>
+					<li>
+						<a href="#" class="icon_6"> 广告服务</a>
+					</li>
+					<li>
+						<a href="#" class="icon_7"> 展位预定</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fw_conent">
+				<!--内容开始------------------------------>
+				<div class="bzzx_bt"> <strong>职位发布</strong>企业购买职位发布服务后可以发布招聘职位，并对已发布的职位进行<span>编辑、刷新、置顶</span>等管理</div>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="zwfb_shop_table">
+					<tr valign="top">
+						<td align="right" width="70">服务名称：</td>
+						<td>
+							<ul class="fwmc_xxk">
+								<li class="on">
+									<p>职位发布服务服务</p>
+									<i>600</i>元</li>
+								<li>
+									<p>职位发布服务服务</p>
+									<i>500</i>元</li>
+								<li>
+									<p>职位发布服务服务</p>
+									<i>400</i>元</li>
+								<li>
+									<p>职位发布服务服务</p>
+									<i>300</i>元</li>
+								<li>
+									<p>职位发布服务服务</p>
+									<i>200</i>元</li>
+								<li>
+									<p>职位发布服务服务</p>
+									<i>100</i>元</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td align="right">职位数量：</td>
+						<td>
+							<div class=" zwsl_num">50个<span>职位数量职位书名</span></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="20"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="right">购买数量：</td>
+						<td>
+							<ul class="nmb_jj">
+								<li class="jian">-</li>
+								<li>
+									<input name="" type="text" value="1" class="srkk" />
+								</li>
+								<li class="jia">+</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td height="20"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="right">价格：</td>
+						<td>
+							<div class="zwfb_zje"><span>600</span> <i>元</i></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="20"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<a class="ty_but ml20" href="#">购 买</a>
+						</td>
+					</tr>
+				</table>
+				<div class="gmxz_tip"> 购买须知：
+					<p>1.职位发布服务购买后有效期为自购买之日起24个月，过期将会自动作废。</p>
+					<p> 2.本次服务购买后即生效，不支持退费服务。</p>
+				</div>
+
+				<!--内容结束------------------------------>
+			</div>
+		</div>
+
+		<div style="text-align:center;margin:1px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+			<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+		</div>
+	</body>
+
+</html>

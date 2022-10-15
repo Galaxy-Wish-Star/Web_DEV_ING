@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample063 - 仿w3school首页</title>
+		<link rel="stylesheet" type="text/css" href="css/w3cschool.css">
+	</head>
+
+	<body>
+		<!--头部导航开始-->
+		<div class="w3c-header-item container">
+			<div class="w3c-header-left leftFloat">
+				<h1><a href="">w3cschool - 学编程，从w3cschool开始</a></h1>
+				<div class="search-content rightFloat">
+					<input type="text" placeholder="在1000+高质量的免费教程&amp;开发文档中搜索你需要的...">
+					<button></button>
+				</div>
+			</div>
+			<div class="w3c-header-right leftFloat">
+				<div class="login rightFloat">
+					<a href="">注册</a>
+					|
+					<a href="">登录</a>
+				</div>
+				<div class="app rightFloat">
+					<span class="leftFloat"></span>移动端
+					<div class="appCoder">
+						<span></span>
+						<span class="bu"></span>
+						<div class="leftapp">
+							<img src="images/app-qrcode2.png">
+							<p>扫码下载App</p>
+						</div>
+						<div class="rightapp">
+							<img src="images/w3cschool.png">
+							<p>w3cchool公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--头部导航结束-->
+
+		<!--第二导航栏开始-->
+		<ul class="menu-nav container">
+			<li class="menu-nav-active">
+				<a href=""><span></span>免费教程分类</a>
+			</li>
+			<li>
+				<a href="">编程入门教程</a><span class="greenhot"></span></li>
+			<li class="wk">
+				<a href="">编程微课</a><span class="redhot"></span></li>
+			<li class="docwd">
+				<a href="">极客文档</a>
+			</li>
+			<li class="xy">
+				<a href="">学院</a><span class="down1"></span>
+				<div class="down1content">
+					<span></span>
+					<span class="bu1"></span>
+					<a href="">编程实战训练</a>
+					<a href="">编程实例</a>
+					<a href="">编程题库</a>
+					<a href="">编程问答</a>
+					<a href="">代码实例</a>
+				</div>
+			</li>
+			<li class="bbx">
+				<a href="">百宝箱</a><span class="down2"></span>
+				<div class="down2content">
+					<span></span>
+					<span class="bu2"></span>
+					<a href="">专题</a>
+					<a href="">极客导航</a>
+					<a href="">速查词典</a>
+					<a href="">群组</a>
+					<a href="">职位进阶</a>
+					<a href="">排行榜</a>
+					<a href="">活动</a>
+				</div>
+			</li>
+			<li>
+				<a href="">在线工具</a>
+			</li>
+			<li class="vip">
+				<a href="">会员</a><span class="yellohot"></span></li>
+		</ul>
+		<!--第二导航栏结束-->
+
+		<!--清除浮动开始-->
+		<div class="clearFloat"></div>
+		<!--清除浮动结束-->
+
+		<!--轮播图容器-->
+		<div class="boxContainer">
+			<!--轮播图开始-->
+			<div class="silderBox container">
+				<!--左边导航开始-->
+				<div class="leftNav">
+					<div class="ln-item">
+						<div class="ln-top">
+							前端开发 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>Web前端开发</span>
+							<span>HTML5</span>
+						</div>
+					</div>
+					<div class="ln-item">
+						<div class="ln-top">
+							后端开发 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>PHP开发</span>
+							<span>Java开发</span>
+						</div>
+					</div>
+					<div class="ln-item">
+						<div class="ln-top">
+							移动开发 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>Android开发</span>
+							<span>IOS开发</span>
+						</div>
+					</div>
+					<div class="ln-item">
+						<div class="ln-top">
+							数据库 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>关系型数据库</span>
+							<span>NoSQL</span>
+						</div>
+					</div>
+					<div class="ln-item">
+						<div class="ln-top">
+							云计算&amp;大数据 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>大数据</span>
+							<!--<span>HTML5</span>-->
+						</div>
+					</div>
+					<div class="ln-item">
+						<div class="ln-top">
+							服务器运维&amp;办公软件 <span class="next"></span>
+						</div>
+						<div class="ln-bot">
+							<span>自动化测试</span>
+							<span>服务器运维</span>
+						</div>
+					</div>
+				</div>
+				<!--左边导航结束-->
+				<!--右边快速登陆开始-->
+				<div class="rightQuick">
+					<li><span>快速登录</span></li>
+					<form>
+						<input name="refer" value="" type="hidden">
+						<div class="input-wrap">
+							<label class="pass-label pass-user"></label>
+							<input placeholder="学号/手机/邮箱" class="input-box input-user" type="text">
+						</div>
+						<div class="input-wrap">
+							<label class="pass-label pass-pwd"></label>
+							<input placeholder="登录密码" class="input-box input-pwd" type="password">
+						</div>
+						<div class="check-wrap">
+							<div class="form-checkbox">
+								<input checked="checked" type="checkbox"><span class="check-text">保持登录状态</span>
+							</div>
+							<a href="" rel="nofollow" class="find-pwd">忘记密码？</a>
+						</div>
+						<div class="btn-wrap">
+							<button type="button" class="form-button">立即登录</button>
+						</div>
+					</form>
+					<!--第三方登陆-->
+					<div class="pop-login-sns">
+						<a><i class="quic-ico icons-qq"></i>QQ登录</a>
+						<a><i class="quic-ico icons-weixin"></i>微信登录</a>
+						<a><i class="quic-ico icons-weibo"></i>微博登录</a>
+						<a><i class="quic-ico icons-right"></i>注册账号</a>
+					</div>
+				</div>
+				<!--右边快速登陆结束-->
+				<!--聚焦开始-->
+				<div class="foucus">
+					<a href=""><img src="images/1519977423362615.png"></a>
+					<a href=""><img src="images/1519977428899297.png"></a>
+					<a href=""><img src="images/1528339220278480.jpg"></a>
+					<a href=""><img src="images/1527909554863067.png"></a>
+				</div>
+				<!--聚焦结束-->
+			</div>
+			<!--轮播图结束-->
+		</div>
+
+		<!--清除浮动开始-->
+		<div class="clearFloat"></div>
+		<!--清除浮动结束-->
+
+		<!--三大列表样式-->
+		<div class="AllList container">
+			<div class="oneList">
+				<div class="list-title">
+					<h2>官方推荐</h2>
+					<a href="" class="more-btn">更多 »</a>
+				</div>
+				<ul>
+					<!--第一个-->
+					<li class="list-item ">
+						<a href="">
+							<img src="images/vip.png">
+						</a>
+
+						<div class="list-intro">
+							<h4><a href="">VIP推新特权，web端微课上线...</a></h4>
+							<p>w3cschool的发展需要热爱学习的您的支持，我们正在不断添加更多的内容，更多服务方式：Web、APP、PC客户端等全方位为你的学习和开发服务......</p>
+							<div class="list-meta">
+								<a class="redtext">路飞</a>&nbsp;|
+								<span class="v-line">05-18 15:16</span>
+							</div>
+						</div>
+					</li>
+					<!--第二个-->
+					<li class="list-item ">
+						<a href="">
+							<img src="images/2.png">
+						</a>
+
+						<div class="list-intro">
+							<h4><a href="">HTML微课，编程入门必备</a></h4>
+							<p>HTML是现在世界通用的超文本标记语言，HTML已经是程序员必须掌握的一项基本功。...</p>
+							<div class="list-meta">
+								<a class="redtext">陈</a>&nbsp;|
+								<span class="v-line">05-22 09:18</span>
+							</div>
+						</div>
+					</li>
+					<!--第三个-->
+					<li class="list-item ">
+						<a href="">
+							<img src="images/3.png">
+						</a>
+
+						<div class="list-intro">
+							<h4><a href="">微信小程序微课上线，小程序开发必学</a></h4>
+							<p>微信小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用......</p>
+							<div class="list-meta">
+								<a class="redtext">陈</a>&nbsp;|
+								<span class="v-line">05-22 09:18</span>
+							</div>
+						</div>
+					</li>
+					<!--第四个-->
+					<li class="list-item ">
+						<a href="">
+							<img src="images/4.png">
+						</a>
+
+						<div class="list-intro">
+							<h4><a href="">Python微课，当下最热门后端语言</a></h4>
+							<p>数据采集，大数据分析，AI技术智能化等等必学python...</p>
+							<div class="list-meta">
+								<a class="redtext">陈</a>&nbsp;|
+								<span class="v-line">05-22 09:18</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="twoList">
+				<div class="list-title">
+					<h2>w3school头条</h2>
+					<a href="" class="more-btn">更多 »</a>
+				</div>
+				<!--新闻列表-->
+				<ul class="news-item">
+					<li class="istop">
+						<a>高级VIP特权重磅升级 官方微课全部免费</a><span class="news-postdate">04-23</span></li>
+					<li>
+						<a>Ruby微课VIP免费开放！W3Cschool会员福利重磅升级</a><span class="news-postdate">04-11</span></li>
+					<li>
+						<a>W3Cschool常见问题汇总</a><span class="news-postdate">02-02</span></li>
+					<li>
+						<a>W3Cschool早报，广电叫停互联网电视直播世界杯</a><span class="news-postdate">06-11</span></li>
+					<li>
+						<a>W3Cschool开发者日报，2018 开发者生态报告</a><span class="news-postdate">06-11</span></li>
+					<li>
+						<a>W3Cschool早报，第一批CDR名单确定</a><span class="news-postdate">06-08</span></li>
+					<li>
+						<a>W3Cschool开发者日报，微信有望取代港澳通行证</a><span class="news-postdate">06-08</span></li>
+					<li>
+						<a>W3Cschool早报，抖音侮辱英烈广告现身搜狗</a><span class="news-postdate">06-07</span></li>
+					<li>
+						<a>W3Cschool开发者日报，阿里程序员放弃高薪入山禅修</a><span class="news-postdate">06-07</span></li>
+					<li>
+						<a>W3Cschool早报，携程旅游广告被点名</a><span class="news-postdate">06-06</span></li>
+					<li>
+						<a>W3Cschool开发者日报，苹果弃用 OpenCL 和 OpenGL</a><span class="news-postdate">06-06</span></li>
+					<li>
+						<a>W3Cschool开发者日报，6月全球数据库排名</a><span class="news-postdate">06-05</span></li>
+				</ul>
+			</div>
+			<div class="thrList">
+				<div class="list-title">
+					<h2>今日经验值榜</h2>
+					<a href="" class="more-btn">更多 »</a>
+				</div>
+				<ul>
+					<!--第一个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第二个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第三个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第四个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第五个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第六个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第七个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+					<!--第八个-->
+					<li>
+						<a>
+							<img src="images/user.jpg">
+							<span class="top-uname">未来无限可能</span>
+						</a>
+						<span class="top-numbers">+2535</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--清除浮动开始-->
+		<div class="clearFloat"></div>
+		<!--清除浮动结束-->
+
+		<!--三大列表下边的编程进阶实践开始-->
+		<div class="bcsz">
+			<div class="title container">
+				<h2>编程实战进阶</h2>
+				<span><a href="">更多免费教程 &gt;&gt;</a></span>
+			</div>
+			<div class="mainImage container">
+				<div class="leftImage">
+					<div class="course-sidebar">
+						<a>
+							<h2 class="course-top">编程微课</h2>
+							<div class="course-bot">即学即练轻松实践</div>
+						</a>
+
+					</div>
+
+				</div>
+				<div class="rightImage">
+					<div class="course-main">
+						<ul>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/htmlico.png">
+											<span>VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/11.png">
+											<span class="highText">高级VIP免费</span>
+											<span class="new">NEW</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/22.png">
+											<span class="highText">高级VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/33.png">
+											<span>VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="course-main">
+						<ul class="two">
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/44.png">
+											<span class="highText">高级VIP免费</span>
+											<span class="new">NEW</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/55.png">
+											<span class="highText">高级VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img">
+											<img src="images/66.png">
+											<span class="highText">高级VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="course-box">
+									<a>
+										<div class="course-img ">
+											<img src="images/77.png">
+											<span class="highText">高级VIP免费</span>
+										</div>
+										<div class="course-desc">
+											<h3>HTML微课</h3>
+										</div>
+										<div class="course-meta">
+											<span class="cur-price">¥19.9</span>
+											<del class="pre-price">¥39.80</del>
+											<span class="pull-right">19068人参与</span>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--三大列表下边的编程进阶实践结束-->
+
+		<!--清除浮动开始-->
+		<div class="clearFloat"></div>
+		<!--清除浮动结束-->
+
+		<!--网站底部导航样式部分开始-->
+		<div class="footer_item">
+			<div class="footer container">
+				<div class="footer-box">
+					<div class="footer-title">网站相关</div>
+					<div class="footer-items">
+						<a>关于我们</a>
+						<a>加入我们</a>
+						<a>免责声明</a>
+						<a>网站地图</a>
+					</div>
+				</div>
+				<div class="footer-box">
+					<div class="footer-title">内容专区</div>
+					<div class="footer-items">
+						<a>编程入门教程</a>
+						<a>极客文档</a>
+						<a>在线工具</a>
+						<a>文章存档</a>
+					</div>
+				</div>
+				<div class="footer-box">
+					<div class="footer-title">常用链接</div>
+					<div class="footer-items">
+						<a>极客导航</a>
+						<a>编程实战</a>
+						<a>w3cschool离线下载</a>
+						<a>w3cschool手机版</a>
+					</div>
+				</div>
+				<div class="footer-box ">
+					<div class="footer-title ">联系我们</div>
+					<div class="footer-items ">
+						<a>常见问题QA</a>
+						<a>友情链接</a>
+						<a>官方QQ群：236419487</a>
+						<a>商务合作QQ：3532917531</a>
+					</div>
+				</div>
+				<div class="footer-box fb ">
+					<div class="tcode "><img src="images/w3cschoolCoder.png " alt="微信订阅号 " width="100 " height="100 "></div>
+					<p class="tcode-txt ">微信号：w3cschoolcn</p>
+				</div>
+			</div>
+		</div>
+		<div class="bot ">
+			<p>Copyright©2018 亿动科技
+				<a>w3cschool.cn </a> All Rights Reserved. 闽ICP备15016281号-3</p>
+		</div>
+		<!--网站底部导航样式部分结束-->
+
+	</body>
+
+</html>

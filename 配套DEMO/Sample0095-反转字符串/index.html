@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			// 提示用户输入一行字符串
+			var string = prompt("请输入一行字符串");
+
+			// 定义一个变量用来拼接需保留的数字
+			var result = "";
+
+			// 通过FOR循环从后边逐一取每一个字符然后拼接起来
+			// (string.length - 1)代表最后一个字符，缩因最小为0，所以判断条件要大于-1。
+			// .charAt(i) 方法代表获取当前索引的字符
+			for(var i = string.length - 1; i > -1; i--) {
+				result += string.charAt(i);
+			}
+
+			// 将获取到的结果输出到页面
+			document.write(result);
+		</script>
+
+	</body>
+
+</html>

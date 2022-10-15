@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>Sample042 - 小火箭返航案例</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<style type="text/css">
+			.rocket {
+				margin: 0px;
+				padding: 0px;
+				width: 150px;
+				height: 195px;
+				display: block;
+				background: url(img/rocket.png) no-repeat center center;
+				position: fixed;
+				right: 50px;
+				bottom: 50px;
+				display: none;
+				z-index: 1000;
+			}
+		</style>
+	</head>
+
+	<body style="height: 4000px;">
+
+		<a href="javascript:void(0)" class="rocket"></a>
+
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// 当页面卷曲超过1000px的时候，显示小火箭
+				$(window).scroll(function() {
+					if($(this).scrollTop() > 1000) {
+						$(".rocket").stop().fadeIn();
+					} else {
+						$(".rocket").stop().fadeOut();
+					}
+				});
+
+				// 当小火箭被点击的时候，要返航
+				$(".rocket").on("click", function() {
+					$("html,body").stop().animate({
+						scrollTop: '0'
+					}, 2000);
+				});
+			});
+		</script>
+	</body>
+
+</html>

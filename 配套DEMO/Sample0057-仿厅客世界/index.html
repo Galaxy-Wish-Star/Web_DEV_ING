@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample057 - 仿厅客世界</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				height: 100%;
+			}
+			
+			body {
+				overflow: hidden;
+			}
+			
+			#wrap {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#wrap .part {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			#wrap .part .logo {
+				width: 215px;
+				height: 60px;
+				background: url(img/logo.png) top left/100% 100%;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+			
+			#wrap .img1 {
+				position: absolute;
+				transition: 1.2s;
+			}
+			
+			#wrap .part1 .img1 {
+				top: 50%;
+				margin-top: -300px;
+				left: 50%;
+				margin-left: -315px;
+				opacity: 0;
+			}
+			
+			#wrap .part2 .img1 {
+				top: 50%;
+				margin-top: 0px;
+				left: 50%;
+				margin-left: -315px;
+				opacity: 0;
+			}
+			
+			#wrap .part3 .img1 {
+				top: 50%;
+				margin-top: -110px;
+				left: -30px;
+				opacity: 0;
+			}
+			
+			#wrap .part1 .img1.on {
+				top: 50%;
+				margin-top: -120px;
+				left: 50%;
+				margin-left: -315px;
+				opacity: 1;
+			}
+			
+			#wrap .part2 .img1.on {
+				top: 50%;
+				margin-top: -225px;
+				left: 50%;
+				margin-left: -315px;
+				opacity: 1;
+			}
+			
+			#wrap .part3 .img1.on {
+				top: 50%;
+				margin-top: -110px;
+				left: 100px;
+				opacity: 1;
+			}
+			
+			#wrap .part img {
+				display: block;
+			}
+			
+			#slide {
+				width: 20px;
+				height: 160px;
+				position: fixed;
+				top: 50%;
+				margin-top: -80px;
+				left: 30px;
+			}
+			
+			#slide ul li {
+				width: 16px;
+				height: 16px;
+				border: 2px solid #fff;
+				margin: 3px 0;
+				border-radius: 100%;
+				list-style: none;
+				cursor: pointer;
+			}
+			
+			#slide ul li.on {
+				background: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id='wrap'>
+			<div class="part part1">
+				<div class='img1'><img src='img/1-2.png' width='630' height='250'></div>
+			</div>
+			<div class="part part2">
+				<div class='img1'><img src='img/2-2.png' width='630' height='450'></div>
+			</div>
+			<div class="part part3">
+				<div class='img1'><img src='img/3-2.png' width='570' height='220'></div>
+			</div>
+			<div class="part part4"></div>
+			<div class="part part5"></div>
+			<div class="part part6"></div>
+			<div class="part part7"></div>
+		</div>
+		<div id="slide">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript">
+			setTimeout(function() {
+				$(document).scrollTop(0);
+			}, 50);
+
+			var $part = $('.part');
+			var $li = $('#slide ul li');
+			var $img = $('.part img');
+
+			//初始化
+			(function() {
+				$li.eq(0).addClass('on');
+				$part.append('<div class="logo"></div>');
+				$part.each(function(i) {
+					var str = i != 1 ? 'url(img/' + (i + 1) + '.jpg) no-repeat center / cover' : '#D97F5C';
+					$(this).css('background', str);
+				});
+			})();
+
+			//页面滚动
+			(function() {
+				var index = 0;
+				var wH = $(window).height();
+				var nowTime = new Date();
+
+				$(window).resize(function() {
+					wH = $(window).height();
+				});
+				$li.click(function() {
+					index = $(this).index();
+					move();
+				});
+				$(document).mousewheel(function() {
+					if(new Date() - nowTime > 500) {
+						nowTime = new Date();
+						var d = arguments[1];
+						index = d < 0 ? (index >= $li.length - 1 ? 0 : index + 1) : (index <= 0 ? $li.length - 1 : index - 1);
+						move();
+					};
+				});
+
+				function move() {
+					$li.eq(index).addClass('on').siblings().removeClass('on');
+					$('body,html').animate({
+						scrollTop: index * wH
+					}, 500, function() {
+						$part.eq(index).find('.img1').addClass('on');
+						$part.eq(index).siblings().find('.img1').removeClass('on');
+					});
+
+				}
+			})();
+
+			//图片加载完后盒子居中
+		</script>
+	</body>
+
+</html>

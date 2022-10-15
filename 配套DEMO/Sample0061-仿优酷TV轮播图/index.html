@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample061 - 仿优酷TV轮播图</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#wrap {
+				width: 970px;
+				height: 300px;
+				margin: 50px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#pic {
+				width: 970px;
+				height: 270px;
+				position: relative;
+			}
+			
+			#pic li {
+				list-style: none;
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 135px;
+				left: 485px;
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+			#pic li span {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				filter: alpha(opacity=50);
+				background: rgba(0, 0, 0, .5);
+				display: block;
+			}
+			
+			#pic li img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#pic li.l1 {
+				width: 640px;
+				height: 270px;
+				left: 165px;
+				top: 0px;
+				z-index: 10;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			
+			#pic li.l2 {
+				width: 530px;
+				height: 220px;
+				left: 440px;
+				top: 25px;
+				z-index: 9;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			
+			#pic li.l0 {
+				width: 530px;
+				height: 220px;
+				left: 0px;
+				top: 25px;
+				z-index: 9;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			
+			#pic li.l3 {
+				width: 300px;
+				height: 150px;
+				left: 970px;
+				top: 60px;
+				z-index: 8;
+			}
+			
+			#pic li.l9 {
+				width: 300px;
+				height: 150px;
+				left: -300px;
+				top: 60px;
+				z-index: 8;
+			}
+			
+			#btn div {
+				width: 45px;
+				height: 45px;
+				position: absolute;
+				top: 50%;
+				margin-top: -22px;
+				z-index: 999;
+				cursor: pointer;
+			}
+			
+			#left {
+				background: url(img/left.png);
+				left: 0;
+			}
+			
+			#right {
+				background: url(img/right.png);
+				right: 0;
+			}
+			
+			#tab {
+				width: 200px;
+				height: 10px;
+				padding: 10px 0;
+				position: absolute;
+				left: 50%;
+				margin-left: -100px;
+				bottom: 0;
+			}
+			
+			#tab li {
+				list-style: none;
+				float: left;
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
+				border-radius: 100%;
+				background: #bbb;
+				cursor: pointer;
+			}
+			
+			#tab li.on {
+				background: #0cf;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<div id='pic'>
+				<li class='l1'><img src="img/1.jpg" alt="" /></li>
+				<li class='l2'><img src="img/2.jpg" alt="" /></li>
+				<li class='l3'><img src="img/3.jpg" alt="" /></li>
+				<li><img src="img/4.jpg" alt="" /></li>
+				<li><img src="img/5.jpg" alt="" /></li>
+				<li><img src="img/6.jpg" alt="" /></li>
+				<li><img src="img/7.jpg" alt="" /></li>
+				<li><img src="img/8.jpg" alt="" /></li>
+				<li class='l9'><img src="img/9.jpg" alt="" /></li>
+				<li class='l0'><img src="img/10.jpg" alt="" /></li>
+			</div>
+			<div id="btn">
+				<div id="left"></div>
+				<div id="right"></div>
+			</div>
+			<div id="tab">
+				<li class='on'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</div>
+		</div>
+
+		<script type="text/javascript" src='js/jquery-1.12.1.min.js'></script>
+		<script type="text/javascript">
+			(function() {
+				var $left = $('#left');
+				var $right = $('#right');
+				var $li = $('#pic li');
+				var $tabLi = $('#tab li');
+				var index = 0;
+
+				$li.append('<span></span>');
+				$('#pic li span').eq(0).css('display', 'none');
+
+				var arrW = [],
+					arrH = [],
+					arrL = [],
+					arrT = [],
+					arrZ = [],
+					arrS = [],
+					arrO = [];
+				var nowTime = 0;
+				$right.click(function() {
+					if(new Date() - nowTime > 500) {
+						nowTime = new Date();
+						index++;
+						index %= $li.length;
+						$tabLi.eq(index).addClass('on').siblings().removeClass('on');
+						fn($(this).index());
+					}
+
+				});
+
+				$left.click(function() {
+					if(new Date() - nowTime > 500) {
+						nowTime = new Date();
+						index--;
+						if(index < 0) index = $li.length - 1;
+						$tabLi.eq(index).addClass('on').siblings().removeClass('on');
+						fn($(this).index());
+					}
+				});
+
+				$tabLi.click(function() {
+					$(this).addClass('on').siblings().removeClass('on');
+					var nowIndex = $(this).index();
+					var x = nowIndex - index;
+					if(x == 1 || x == -($li.length - 1)) {
+						fn(true);
+						index = nowIndex;
+					} else if(x == -1 || x == $li.length - 1) {
+						fn(false);
+						index = nowIndex;
+					} else if(nowIndex != index) {
+						$li.each(function(i) {
+							arrW[i] = $(this).css('width');
+							arrH[i] = $(this).css('height');
+							arrL[i] = $(this).css('left');
+							arrT[i] = $(this).css('top');
+							arrZ[i] = $(this).css('zIndex');
+							arrS[i] = $(this).find('span').css('display');
+							arrO[i] = $(this).css('opacity');
+						});
+						$li.each(function(i) {
+							$(this).animate({
+								width: 0,
+								height: 0,
+								opacity: 0,
+								left: '485px',
+								top: '135px'
+							}, 300);
+						});
+						setTimeout(function() {
+							$li.each(function(i) {
+								var a = i - (nowIndex - index);
+								if(a < 0) a += $li.length;
+								if(a >= $li.length) a -= 10;
+								$(this).find('span').css('display', arrS[a]);
+								$(this).css('zIndex', arrZ[a]).animate({
+									width: arrW[a],
+									height: arrH[a],
+									left: arrL[a],
+									top: arrT[a],
+									opacity: arrO[a]
+								}, 500);
+							});
+							index = nowIndex;
+						}, 300);
+					}
+
+				});
+
+				function fn(x) {
+					$li.each(function(i) {
+						arrW[i] = $(this).css('width');
+						arrH[i] = $(this).css('height');
+						arrL[i] = $(this).css('left');
+						arrT[i] = $(this).css('top');
+						arrZ[i] = $(this).css('zIndex');
+						arrS[i] = $(this).find('span').css('display');
+						arrO[i] = $(this).css('opacity');
+					});
+					$li.each(function(i) {
+						if(x) {
+							var a = i - 1;
+							if(a < 0) a = $li.length - 1;
+						} else {
+							var a = i + 1;
+							if(a == $li.length) a = 0;
+						}
+
+						$(this).find('span').css('display', arrS[a]);
+						$(this).css('zIndex', arrZ[a]).animate({
+							width: arrW[a],
+							height: arrH[a],
+							left: arrL[a],
+							top: arrT[a],
+							opacity: arrO[a]
+						}, 500);
+					});
+				}
+
+			})();
+		</script>
+	</body>
+
+</html>

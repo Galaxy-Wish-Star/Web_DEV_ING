@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>Sample041 - 钢琴案例</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<style type="text/css">
+			.piano-box {
+				margin: 50px auto;
+				padding: 0px;
+				list-style: none;
+				width: 900px;
+				height: 90px;
+				background-color: #000000;
+				cursor: pointer;
+			}
+			
+			.piano-box>li {
+				width: 100px;
+				height: 90px;
+				float: left;
+				color: #FFF;
+				font-size: 20px;
+				line-height: 90px;
+				text-align: center;
+				letter-spacing: 2px;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.piano-box>li>span {
+				width: 100px;
+				height: 90px;
+				display: block;
+				background-color: #D98CB0;
+				position: absolute;
+				top: 90px;
+				z-index: 1000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="piano-box">
+			<li>按键1<span></span></li>
+			<li>按键2<span></span></li>
+			<li>按键3<span></span></li>
+			<li>按键4<span></span></li>
+			<li>按键5<span></span></li>
+			<li>按键6<span></span></li>
+			<li>按键7<span></span></li>
+			<li>按键8<span></span></li>
+			<li>按键9<span></span></li>
+		</ul>
+
+		<div class="piano-audio">
+			<audio src="audio/1.ogg"></audio>
+			<audio src="audio/2.ogg"></audio>
+			<audio src="audio/3.ogg"></audio>
+			<audio src="audio/4.ogg"></audio>
+			<audio src="audio/5.ogg"></audio>
+			<audio src="audio/6.ogg"></audio>
+			<audio src="audio/7.ogg"></audio>
+			<audio src="audio/8.ogg"></audio>
+			<audio src="audio/9.ogg"></audio>
+		</div>
+
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// 设置标记位
+				var flag = true;
+
+				// 注册键盘按下事件
+				$(document).on("keydown", function(e) {
+					if(e.keyCode >= 49 && e.keyCode <= 57) {
+						$(".piano-box>li").eq(e.keyCode - 49).mouseenter();
+					}
+				});
+
+				// 注册键盘抬起事件
+				$(document).on("keyup", function(e) {
+					if(e.keyCode >= 49 && e.keyCode <= 57) {
+						$(".piano-box>li").eq(e.keyCode - 49).mouseleave();
+					}
+				});
+
+				// 注册鼠标移入事件
+				$(".piano-box>li").on("mouseenter", function() {
+					if(flag) {
+						// 更改标志
+						flag = false;
+						// 移动方块
+						$(this).children("span").stop().animate({
+							top: '0'
+						});
+						// 播放音乐
+						var index = $(this).index();
+						console.log(index);
+						$(".piano-audio>audio").get(index).load();
+						$(".piano-audio>audio").get(index).play();
+					}
+				});
+
+				// 注册鼠标移出事件
+				$(".piano-box>li").on("mouseleave", function() {
+					// 更改标志
+					flag = true;
+					// 移动方块
+					$(this).children("span").stop().animate({
+						top: '90'
+					});
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

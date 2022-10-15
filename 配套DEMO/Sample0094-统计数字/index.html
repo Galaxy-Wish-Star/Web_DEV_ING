@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			// 提示用户输入一行字符串
+			var string = prompt("请输入一行字符串");
+
+			// 定义一个变量用来拼接需保留的数字
+			var result = "";
+
+			// 通过FOR循环逐一判断每一个字符，如果是数字，就将他保留下来，如果是其他字符，则舍弃。
+			for(var i = 0; i < string.length; i++) {
+				// 如果是数字就将他保留下来
+				if(string.charAt(i) >= 0 && string.charAt(i) <= 9) {
+					result += string.charAt(i);
+				}
+			}
+
+			// 将获取到的结果输出到页面
+			document.write(result);
+		</script>
+
+	</body>
+
+</html>

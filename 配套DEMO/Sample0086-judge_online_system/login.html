@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+	<script>
+		window.AESKey = '';
+		// 判断浏览器是否支持placeholder属性                                                                                                                                                                                        
+		function isSupportPlaceholder() {
+			var input = document.createElement('input');
+			return 'placeholder' in input;
+		};
+		(function() {
+			//判断是否是IE浏览器，包括Edge浏览器                                                                                                                                                                                       
+			function IEVersion() {
+				//取得浏览器的userAgent字符串                                                                                                                                                                                     
+				var userAgent = navigator.userAgent;
+				//判断是否IE浏览器                                                                                                                                                                                              
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+				if(isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					if(fIEVersion < 10 || !isSupportPlaceholder()) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+			}
+
+			var tpl = ['<img style="border:none;outline:0;display:block;width:450px;height:140px;position:absolute;top:50%;left:50%;margin-left:-225px;margin-top:-70px" src="Custom/img/error.png">'].join('');
+
+			window.onload = function() {
+				if(IEVersion()) {
+					document.write(tpl);
+				}
+			};
+			window.siteName = "温馨提示";
+		})();
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>极客社区 - 登录</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<!-- AmazeUI Basic Style -->
+		<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+
+		<!-- Geek Community Style -->
+		<link rel="stylesheet" href="Custom/css/common.css" />
+		<link rel="stylesheet" href="Custom/css/login.css" />
+	</head>
+
+	<body sroll="no">
+		<!-- body -->
+		<div class="login-box">
+			<!-- title -->
+			<h2>极客社区</h2>
+			<!-- title -->
+			<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+			<!-- form -->
+			<form action="" method="post" class="am-form" id="login-msg">
+				<fieldset>
+					<div class="am-form-group">
+						<input type="text" minlength="3" placeholder="极客账户" required data-validation-message="极客账户至少3位" />
+					</div>
+					<div class="am-form-group" style="margin-bottom: 0px;">
+						<input type="password" placeholder="极客密码" pattern="^\d{6,16}$" required data-validation-message="极客密码6~16位" />
+					</div>
+					<!-- autoLogin -->
+					<div class="am-g" style="margin-bottom: 0px;">
+						<div class="autoLogin">
+							<label class="am-checkbox">
+								<input type="checkbox" value="" data-am-ucheck> 自动登录
+							</label>
+						</div>
+						<div class="nowRegister">
+							<label class="am-checkbox" style="text-align: right;">
+								<a href="register.html">立即注册</a>
+							</label>
+						</div>
+					</div>
+					<!-- autoLogin -->
+					<!-- login -->
+					<button type="submit" class="am-btn am-btn-primary am-btn-block">登录</button>
+					<!-- login -->
+					<!-- quickLogin -->
+					<hr data-am-widget="divider" style="width: 55%;margin-top: 20px;" class="am-divider am-divider-default" />
+					<div style="width: 206px;margin: 0px auto;">
+						<a href="" class="am-icon-btn am-icon-qq"></a>
+						<a href="" class="am-icon-btn am-icon-wechat"></a>
+						<a href="" class="am-icon-btn am-icon-weibo"></a>
+						<a href="" class="am-icon-btn am-icon-github"></a>
+					</div>
+					<!-- quickLogin -->
+				</fieldset>
+			</form>
+			<!-- form -->
+		</div>
+		<!-- body -->
+
+		<!-- footer -->
+		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+			<div class="am-footer-switch">
+				<span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">移动版</span>
+				<span class="am-footer-divider"> | </span>
+				<a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">电脑版 </a>
+			</div>
+			<div class="am-footer-miscs ">
+				<p>Copyright © 2018-2019 Geek-Community-Inc.All Rights Reserved.</p>
+				<p>冀ICP备18007717号</p>
+			</div>
+		</footer>
+
+		<div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd am-modal-footer-hd">
+					<a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd">
+					<span class="am-switch-mode-slogan">移动端正在开发中...</span>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+
+		<script src="AmazeUI/js/jquery.min.js"></script>
+		<script src="AmazeUI/js/amazeui.min.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				$('#login-msg').validator({
+					onValid: function(validity) {
+						$(validity.field).closest('.am-form-group').find('.am-alert').hide();
+					},
+
+					onInValid: function(validity) {
+						var $field = $(validity.field);
+						var $group = $field.closest('.am-form-group');
+						var $alert = $group.find('.am-alert');
+
+						// 使用自定义的提示信息 或 插件内置的提示信息
+						var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+						if(!$alert.length) {
+							$alert = $('<div class="am-alert am-alert-danger"></div>').hide().
+							appendTo($group);
+						}
+
+						$alert.html(msg).show();
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

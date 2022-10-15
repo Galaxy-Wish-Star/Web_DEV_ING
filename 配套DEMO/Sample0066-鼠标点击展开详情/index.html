@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Sample066 - 鼠标点击展开详情</title>
+
+		<script type="text/javascript" src="js/jquery.11.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				//------------------------------------------鼠标点击图片	
+				$('#aaa').children('li').click(function() {
+
+					wz = $(this).css('left');
+					dq = $(this).index();
+
+					$(this).siblings(dq).fadeOut();
+					$(this).animate({
+						left: '0px'
+					}, 1000);
+
+					$(this).children('img').animate({
+						opacity: '1'
+					});
+					$(this).children('.aaays').css('display', 'none');
+					$('#dang').css('z-index', '999');
+
+					//------------------------------------------鼠标划出全部的时候	
+					$('#name').children('div').eq(dq).animate({
+						top: '0px'
+					}, 1000);
+				});
+
+				$('#nav').hover(function() {}, function() {
+					$('#nav').find('li').fadeIn();
+					$('#nav').find('li').eq(dq).animate({
+						left: wz
+					}, 1000);
+					$('#name').children('div').eq(dq).animate({
+						top: '-500px'
+					});
+					$('#dang').css('z-index', '0');
+				})
+
+				//------------------------------------------鼠标滑过透明
+
+				$('#aaa').children('li').hover(function() {
+					$(this).children('img').animate({
+						opacity: '0.5'
+					}, 500);
+					$(this).children('.aaays').css('display', 'block');
+				}, function() {
+					$(this).children('img').animate({
+						opacity: '1'
+					});
+					$(this).children('.aaays').css('display', 'none');
+				});
+
+			});
+		</script>
+
+		<style type="text/css">
+			body {
+				background: #CCC;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			ul li {
+				float: left;
+				height: 300px;
+				background: #000;
+			}
+			
+			img {
+				border: 5px solid #CCC;
+			}
+			
+			#nav {
+				background: url(img/bj.jpg);
+				width: 1200px;
+				height: 300px;
+				cursor: pointer;
+				margin: 0 auto;
+				position: relative;
+				border: #999 10px solid;
+				border-radius: 10px;
+			}
+			
+			.a1 {
+				position: absolute;
+				left: 0px;
+			}
+			
+			.a2 {
+				position: absolute;
+				left: 200px;
+			}
+			
+			.a3 {
+				position: absolute;
+				left: 400px;
+			}
+			
+			.a4 {
+				position: absolute;
+				left: 600px;
+			}
+			
+			.a5 {
+				position: absolute;
+				left: 800px;
+			}
+			
+			.a6 {
+				position: absolute;
+				left: 1000px;
+			}
+			
+			#name {
+				position: relative;
+			}
+			
+			.nr {
+				position: absolute;
+				left: 220px;
+				color: #FFF;
+				font-size: 30px;
+				padding-top: 50px;
+				top: -500px;
+			}
+			
+			.ys {
+				font-size: 18px;
+				padding-top: 10px;
+			}
+			
+			.aaays {
+				width: 200px;
+				height: 40px;
+				background: #000;
+				color: #FFF;
+				font-size: 25px;
+				text-align: center;
+				opacity: 0.7;
+				position: absolute;
+				top: 200px;
+				line-height: 40px;
+				display: none;
+			}
+			
+			#dang {
+				position: absolute;
+				left: 0px;
+				width: 200px;
+				height: 300px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<br>
+		<div id="nav">
+			<div id="dang"></div>
+			<ul id="aaa">
+				<li class="a1"><img src="img/U011.jpg" width="195" height="295">
+					<div class="aaays">NO1.黄忠</div>
+				</li>
+				<li class="a2"><img src="img/U022.jpg" width="195" height="295">
+					<div class="aaays">NO2.刘备</div>
+				</li>
+				<li class="a3"><img src="img/U033.jpg" width="195" height="295">
+					<div class="aaays">NO3.程普</div>
+				</li>
+				<li class="a4"><img src="img/U044.jpg" width="195" height="295">
+					<div class="aaays">NO4.吴凤熙</div>
+				</li>
+				<li class="a5"><img src="img/U055.jpg" width="195" height="295">
+					<div class="aaays">NO5.马云禄</div>
+				</li>
+				<li class="a6"><img src="img/U066.jpg" width="195" height="295">
+					<div class="aaays">NO6.姜维</div>
+				</li>
+			</ul>
+			<div id="name">
+				<div class="nr">
+					黄忠
+					<div class="ys"> （？－220年）
+						<p>字汉升 南阳（今河南南阳）人。东汉末年名将。本为刘表部下中郎将，后归刘备，并助刘备攻益州刘璋。公元219年，黄忠在定军山一战中阵斩曹操部下名将夏侯渊，升任征西将军，刘备称汉中王后改封后将军，赐关内侯。次年，黄忠病逝，谥曰刚侯。黄忠在后世多以勇猛的老将形象出现于各类文学艺术作品中，《三国演义》里，刘备称汉中王后将其封为五虎上将之一，而黄忠的名字在中国也逐渐成为了老当益壮的代名词。</p>
+					</div>
+				</div>
+				<div class="nr">
+					人皇*刘备
+					<div class="ys">（142年－208年）
+						<p>字景升，山阳郡高平（今山东微山[1] ）人。汉鲁恭王刘余之后[2] ，东汉末年名士，汉末群雄之一。他身长八尺余，姿貌温厚伟壮，少时知名于世，与七位贤士同号为“八俊”。为大将军何进辟为掾，出任北军中候。后代王睿为荆州刺史，用蒯氏兄弟、蔡瑁等人为辅。李傕等入长安，刘表遣使奉贡。李傕任命刘表为镇南将军、荆州牧，封成武侯，假节，以为己援。 在荆州期间，刘表恩威并著，招诱有方，使得万里肃清、群民悦服。又开经立学，爱民养士，从容自保。远交袁绍，近结张绣，内纳刘备，据地数千里，带甲十余万，称雄荆江，先杀孙坚，后又常抗曹操。然而刘表为人性多疑忌，好于坐谈，立意自守，而无四方之志，后更宠溺后妻蔡氏，使妻族蔡瑁等得权。刘表死后，蔡瑁等人废长立幼，奉表次子刘琮为主；曹操南征，刘琮举州投降，荆州遂没。
+						</p>
+					</div>
+				</div>
+				<div class="nr">
+					程普
+					<div class="ys">（？—210年）
+						<p>字德谋，右北平土垠（今河北丰润东）人。东汉末年东吴的名将，历仕孙坚、孙策、孙权三代。他曾跟随孙坚讨伐过黄巾、董卓，斩华雄、破吕布，又助孙策平定江东。孙策死后，他与张昭等人共同辅佐孙权，并讨伐江东境内的山贼，功勋卓著。赤壁之战与周瑜分任左右都督打败曹操，之后大破曹仁于南郡。程普在东吴诸将中年岁最长，被人们尊称为“程公”。</p>
+					</div>
+				</div>
+				<div class="nr">
+					吴凤熙
+					<div class="ys">虚拟人物
+						<p>东吴神皇孙权之母，凤骨龙姿，皓齿峨眉，她手握如意法杖，身披金凤衣，法力无边，可颠倒乾坤。她用意念创造的琉璃神光法球，能在敌军之中来去弹射，被击中者四肢无力，望尘奔北；当她周身环绕七彩光辉法球时，祥云笼罩大地，为友军治疗伤口，使战场彼竭我盈，旗开得胜；神奇的天山玉如意还可召唤万丈神光，灼热之光强烈炙烫敌军，更犹如万把利剑穿心而过，无人可挡。神后乃天山瑶林女神，她教子有方，落落大方，深受神族人民的爱戴，是万流景仰的一代国母。</p>
+					</div>
+				</div>
+				<div class="nr">
+					马云禄
+					<div class="ys">虚拟人物
+						<p>是周大荒的小说——《反三国演义》中的虚构人物。在小说里她是马腾之女，马超之妹，赵云之妻。该人物曾在游戏《真·三国无双3 帝国》里作为自创武将出现，但是4代开始在非帝国系列里都难觅其踪。日本光荣游戏《三国志》系列9代及之后的版本中都以女武将身份出场，最新的三国志12里将其删除，但在PSV版中再次作为附加武将登场。</p>
+					</div>
+				</div>
+				<div class="nr">
+					姜维
+					<div class="ys">（202年－264年）
+						<p>字伯约，天水冀县（今甘肃甘谷东南）人。三国时蜀汉名将，官至大将军。少年时和母亲住在一起，喜欢儒家大师郑玄的学说。因为父亲姜冏战死，姜维被郡里任命为中郎。诸葛亮北伐时，姜维被怀疑有异心，姜维不得已投降蜀汉，被诸葛亮重用。诸葛亮去世后姜维在蜀汉开始崭露头角，费祎死后姜维开始独掌军权，继续率领蜀汉军队北伐曹魏，与曹魏名将邓艾、陈泰、郭淮等多次交手，姜维北伐总计大胜两次；小胜三次；相距不克四次；大败一次，小败一次。后因蜀中大臣也多反对姜维北伐，而宦官黄皓弄权，姜维杀之不成，只得在沓中屯田避祸，后司马昭五道伐蜀，姜维据守剑阁，阻挡住钟会大军，却被邓艾从阴平偷袭成都，刘禅投降。后姜维希望凭自己的力量复兴蜀汉，假意投降魏将钟会，打算利用钟会反叛曹魏以实现恢复汉室的愿望，但最终钟会反叛失败，姜维与钟会一同被魏军所杀。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+			<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+		</div>
+	</body>
+
+</html>

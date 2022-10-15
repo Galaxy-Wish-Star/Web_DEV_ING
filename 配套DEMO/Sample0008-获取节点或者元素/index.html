@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample008 - 获取节点或者元素</title>
+	</head>
+
+	<body>
+		<ul id="ul">
+			<li>第1个</li>
+			<li>第2个</li>
+			<li>第3个</li>
+			<li id="four">第4个</li>
+			<li>第5个</li>
+			<li>第6个</li>
+			<li>第7个</li>
+		</ul>
+	</body>
+
+	<script>
+		//获取当前节点的父级节点
+		console.log(document.getElementById("ul").parentNode);
+		//获取当前节点的父级元素
+		console.log(document.getElementById("ul").parentElement);
+		//获取当前节点的子级节点
+		console.log(document.getElementById("ul").childNodes);
+		//获取当前节点的子级元素
+		console.log(document.getElementById("ul").children);
+
+		//获取当前节点的第一个子节点
+		console.log(document.getElementById("ul").firstChild); //IE8中是第一个子元素
+		//获取当前节点的第一个子元素
+		console.log(document.getElementById("ul").firstElementChild); //IE8中不支持
+		//获取当前节点的最后一个子节点
+		console.log(document.getElementById("ul").lastChild); //IE8中是第一个子元素
+		//获取当前节点的最后一个子元素
+		console.log(document.getElementById("ul").lastElementChild); //IE8中不支持
+		//获取当前节点的前一个兄弟节点
+		console.log(document.getElementById("four").previousSibling); //IE8中是前一个子元素
+		//获取当前节点的前一个兄弟元素
+		console.log(document.getElementById("four").previousElementSibling); //IE8中不支持
+		//获取当前节点的后一个兄弟节点
+		console.log(document.getElementById("four").nextSibling); //IE8中是后一个子元素
+		//获取当前节点的后一个兄弟元素
+		console.log(document.getElementById("four").nextElementSibling); //IE8中不支持
+	</script>
+
+</html>

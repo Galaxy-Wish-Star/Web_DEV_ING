@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+	<script>
+		window.AESKey = '';
+		// 判断浏览器是否支持placeholder属性                                                                                                                                                                                        
+		function isSupportPlaceholder() {
+			var input = document.createElement('input');
+			return 'placeholder' in input;
+		};
+		(function() {
+			//判断是否是IE浏览器，包括Edge浏览器                                                                                                                                                                                       
+			function IEVersion() {
+				//取得浏览器的userAgent字符串                                                                                                                                                                                     
+				var userAgent = navigator.userAgent;
+				//判断是否IE浏览器                                                                                                                                                                                              
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+				if(isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					if(fIEVersion < 10 || !isSupportPlaceholder()) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+			}
+
+			var tpl = ['<img style="border:none;outline:0;display:block;width:450px;height:140px;position:absolute;top:50%;left:50%;margin-left:-225px;margin-top:-70px" src="Custom/img/error.png">'].join('');
+
+			window.onload = function() {
+				if(IEVersion()) {
+					document.write(tpl);
+				}
+			};
+			window.siteName = "温馨提示";
+		})();
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>极客社区 - {question.title}</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<!-- AmazeUI Basic Style -->
+		<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+
+		<!-- Geek Community Style -->
+		<link rel="stylesheet" href="Custom/css/common.css" />
+		<link rel="stylesheet" href="Custom/css/details.css" />
+	</head>
+
+	<body sroll="no">
+		<!-- header -->
+		<div style="border-bottom: 1px solid #E0E0E0;background: #F8F8F8;">
+			<header class="am-topbar am-container" style="margin-bottom: 0px;border: none;">
+				<h1 class="am-topbar-brand">
+					<a href="exercise-library.html">极客社区</a>
+  				</h1>
+
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+				<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+					<ul class="am-nav am-nav-pills am-topbar-nav">
+						<li class="am-active">
+							<a href="exercise-library.html">练习题库</a>
+						</li>
+						<li>
+							<a href="development-tools.html">开发工具</a>
+						</li>
+						<li>
+							<a href="league-table.html">积分榜</a>
+						</li>
+					</ul>
+
+					<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
+						<div class="am-form-group">
+							<input type="text" class="am-form-field am-input-sm" placeholder="Searching...">
+						</div>
+					</form>
+
+					<!--<div class="am-topbar-right">
+						<button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href='login.html'">登录</button>
+					</div>
+
+					<div class="am-topbar-right">
+						<button class="am-btn am-btn-default am-topbar-btn am-btn-sm" onclick="window.location.href='register.html'">注册</button>
+					</div>-->
+
+					<div class="am-topbar-right">
+						<div class="am-dropdown" data-am-dropdown style="margin-top: 6.6px;">
+							<button class="am-btn am-btn-default am-round am-dropdown-toggle" data-am-dropdown-toggle style="padding: 1px;padding-right: 10px;background: none !important;outline: none;border: 1px solid #F0F0F0;"><img class="am-circle" src="Custom/img/header.jpg" width="37" height="37" style="margin: 0px;padding: 0px;outline: none;border: none;opacity: .9;"/> aimee <span class="am-icon-caret-down"></span></button>
+							<ul class="am-dropdown-content">
+								<li>
+									<a href="#">我的主页</a>
+								</li>
+								<li class="am-divider"></li>
+								<li>
+									<a href="#">学习中心</a>
+								</li>
+								<li>
+									<a href="#">充值管理</a>
+								</li>
+								<li>
+									<a href="#">账号设置</a>
+								</li>
+								<li class="am-divider"></li>
+								<li>
+									<a href="#">退出登录</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- header -->
+
+		<!-- body -->
+		<div class="am-container" style="margin: 25px auto;background-color: #FAFAFA;">
+			<!-- tips -->
+			<div class="gcojs-list-tips">
+				<div class="gcojs-list-tips-msg">
+					<p>
+						<a href="exercise-library.html">
+							<span class="am-icon-reply"></span> 返回题库
+						</a>
+					</p>
+				</div>
+			</div>
+			<!-- tips -->
+			<!-- title -->
+			<div class="que-title">猜网友年龄</div>
+			<!-- title -->
+			<!-- divider -->
+			<hr data-am-widget="divider" style="width: 50%;margin: 0px auto;" class="am-divider am-divider-default" />
+			<!-- divider -->
+			<!-- limit -->
+			<div class="que-limit-box">
+				<ul class="que-limit">
+					<li>时间限制:1000ms</li>
+					<li> | </li>
+					<li>内存限制:65536K</li>
+					<li> | </li>
+					<li>大小限制:65536K</li>
+				</ul>
+			</div>
+			<!-- limit -->
+			<!-- description -->
+			<div class="que-description">
+				<p class="title">问题描述</p>
+				<p class="content">写一个程序，找出给出素数范围内的所有孪生素数的组数。一般来说，孪生素数就是指两个素数距离为2，近的不能再近的相邻素数。有些童鞋一看到题就开始写程序，不仔细看题，咱们为了遏制一下读题不认真仔细的童鞋，规定，两个素数相邻为1的也成为孪生素数。</p>
+			</div>
+			<!-- description -->
+			<!-- image -->
+			<div class="que-image">
+				<img src="Custom/img/eclipse.png" alt="问题描述图片" />
+			</div>
+			<!-- image -->
+			<!-- input_format -->
+			<div class="que-if">
+				<p class="title">输入格式</p>
+				<p class="content">
+					<pre>第一行给出N(0&lt;N&lt;100)表示测试数据组数。<br />接下来组测试数据给出m，表示找出m之前的所有孪生素数。<br />S(0&lt;m&lt;1000000)</pre>
+				</p>
+			</div>
+			<!-- input_format -->
+			<!-- output_format -->
+			<div class="que-of">
+				<p class="title">输入格式</p>
+				<p class="content">
+					<pre>每组测试数据输出占一行，该行为m范围内所有孪生素数组数。</pre>
+				</p>
+			</div>
+			<!-- output_format -->
+			<!-- sample_input -->
+			<div class="que-si">
+				<p class="title">样例输入</p>
+				<p class="content">
+					<pre>0 5 6 9<br />2 3 3 4<br />0 5 6 8</pre>
+				</p>
+			</div>
+			<!-- sample_input -->
+			<!-- sample_output -->
+			<div class="que-so">
+				<p class="title">样例输出</p>
+				<p class="content">
+					<pre>5</pre>
+				</p>
+			</div>
+			<!-- sample_output -->
+			<!-- submit -->
+			<div style="width: 100%;margin: 25px 0px;text-align: center;">
+				<button type="button" class="am-btn am-btn-success" data-am-modal="{target: '#my-popup'}">提交代码</button>
+				<button type="button" class="am-btn am-btn-primary">查看代码</button>
+
+				<div class="am-popup" id="my-popup">
+					<div class="am-popup-inner">
+						<div class="am-popup-hd">
+							<h4 class="am-popup-title">...</h4>
+						</div>
+						<div class="am-popup-bd">
+							<div id="code-textarea" contenteditable="true" data-text="// 请将代码复制到这里..."></div>
+							<div style="text-align: center; margin-top: 15px;">
+								<button type="button" class="am-btn am-btn-primary">提交代码</button>
+								<button type="button" class="am-btn am-btn-default" data-am-modal-close>取消提交</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- submit -->
+		</div>
+		<!-- body -->
+
+		<!-- footer -->
+		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+			<div class="am-footer-switch">
+				<span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">移动版</span>
+				<span class="am-footer-divider"> | </span>
+				<a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">电脑版 </a>
+			</div>
+			<div class="am-footer-miscs ">
+				<p>Copyright © 2018-2019 Geek-Community-Inc.All Rights Reserved.</p>
+				<p>冀ICP备18007717号</p>
+			</div>
+		</footer>
+
+		<div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd am-modal-footer-hd">
+					<a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd">
+					<span class="am-switch-mode-slogan">移动端正在开发中...</span>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+
+		<script src="AmazeUI/js/jquery.min.js"></script>
+		<script src="AmazeUI/js/amazeui.min.js"></script>
+	</body>
+
+</html>

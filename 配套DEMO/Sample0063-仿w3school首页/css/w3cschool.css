@@ -1,0 +1,1798 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+
+/* Document
+   ========================================================================== */
+
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15;
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+
+
+/* Sections
+   ========================================================================== */
+
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+	margin: 0;
+}
+
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+
+/* Grouping content
+   ========================================================================== */
+
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+
+/* Text-level semantics
+   ========================================================================== */
+
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+	background-color: transparent;
+}
+
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none;
+	/* 1 */
+	text-decoration: underline;
+	/* 2 */
+	text-decoration: underline dotted;
+	/* 2 */
+}
+
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+
+/* Embedded content
+   ========================================================================== */
+
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+	border-style: none;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */
+}
+
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+	/* 1 */
+	overflow: visible;
+}
+
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+	/* 1 */
+	text-transform: none;
+}
+
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	white-space: normal;
+	/* 1 */
+}
+
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	vertical-align: baseline;
+}
+
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+}
+
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+}
+
+
+/* Interactive
+   ========================================================================== */
+
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+	display: block;
+}
+
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+
+/* Misc
+   ========================================================================== */
+
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+	display: none;
+}
+
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+	display: none;
+}
+
+
+/*
+ * w3cschool 样式
+ * @version 1.0
+ */
+
+
+/*
+ * 通用样式
+ */
+
+.container {
+	width: 1230px;
+	min-width: 1230px;
+	margin: 0px auto;
+}
+
+
+/*左浮动*/
+
+.leftFloat {
+	float: left;
+}
+
+
+/*右浮动*/
+
+.rightFloat {
+	float: right;
+}
+
+
+/*清除浮动*/
+
+.clearFloat {
+	clear: both;
+}
+
+body {
+	font-size: 13px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	min-width: 1230px;
+}
+
+
+/**
+ * 头部样式 开始
+ */
+
+.w3c-header-item {
+	height: 80px;
+}
+
+
+/*左侧样式*/
+
+.w3c-header-left {
+	width: 70%;
+	height: 80px;
+}
+
+
+/*右侧样式*/
+
+.w3c-header-right {
+	width: 30%;
+	height: 80px;
+}
+
+
+/*左侧logo样式*/
+
+.w3c-header-left h1 {
+	width: 228px;
+	height: 60px;
+	display: block;
+	background: url(../images/index-logo.png) no-repeat center center;
+	float: left;
+}
+
+.w3c-header-left h1 a {
+	width: 228px;
+	height: 60px;
+	display: block;
+	text-indent: -9999px;
+}
+
+
+/*左侧搜索框容器样式*/
+
+.w3c-header-left .search-content {
+	width: 534px;
+	height: 36px;
+	border: 2px solid #AE4141;
+	margin-top: 24px;
+	position: relative;
+}
+
+.w3c-header-left .search-content input {
+	width: 468px;
+	height: 32px;
+	border: none;
+	outline: none;
+	margin-left: 8px;
+	position: absolute;
+	top: 2px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #888;
+}
+
+.w3c-header-left .search-content button {
+	width: 60px;
+	height: 36px;
+	background: #AE4141 url(../images/search-icon.png) no-repeat center center;
+	outline: none;
+	border: 2px solid #AE4141;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+
+
+/*头部右边样式*/
+
+.w3c-header-right {
+	position: relative;
+}
+
+.w3c-header-right .app {
+	width: 70px;
+	height: 25px;
+	display: inline-block;
+	line-height: 25px;
+	font-size: 15px;
+	margin-top: 28px;
+	margin-right: 15px;
+	cursor: pointer;
+	position: relative;
+}
+
+.w3c-header-right>.app:hover {
+	color: #AE4141;
+}
+
+.w3c-header-right .app>span {
+	width: 25px;
+	height: 25px;
+	display: block;
+	background: url(../images/header-app.png) no-repeat center center;
+}
+
+
+/*头部右边登陆注册样式*/
+
+.w3c-header-right .login {
+	width: 80px;
+	height: 80px;
+	display: block;
+	line-height: 80px;
+}
+
+.w3c-header-right .login a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #333;
+}
+
+.w3c-header-right .login>a:hover {
+	color: #900b09;
+}
+
+
+/* 下载App隐藏样式*/
+
+.w3c-header-right .appCoder {
+	width: 350px;
+	height: 210px;
+	position: absolute;
+	background: #FFFFFF;
+	border: 1px solid #eee;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	display: none;
+	left: -98px;
+	top: 35px;
+	: 5px;
+	padding-right: 7px;
+	z-index: 200;
+	text-align: center;
+}
+
+.app:hover .appCoder {
+	display: block;
+}
+
+.appCoder:hover .appCoder {
+	display: block;
+}
+
+.appCoder>span:hover .appCoder {
+	display: block;
+}
+
+.appCoder .bu:hover .appCoder {
+	display: block;
+}
+
+
+/*设置下载图片样式*/
+
+.appCoder div {
+	width: 165px;
+	height: 181.5px;
+	float: left;
+	padding: 5px;
+	position: relative;
+	padding-top: 17px;
+}
+
+.appCoder div img {
+	width: 150px;
+	height: 150px;
+	outline: none;
+	position: relative;
+}
+
+.appCoder div p {
+	margin-top: 0px;
+	padding-top: 0px;
+	text-align: center;
+	color: #333333;
+}
+
+.w3c-header-right .app .appCoder span:nth-child(1) {
+	width: 20px;
+	height: 20px;
+	display: block;
+	border: 1px solid #FEFEFE;
+	background: white;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -9px;
+	left: 131px;
+	z-index: 100;
+}
+
+.w3c-header-right .app .appCoder .bu {
+	width: 40px;
+	height: 17px;
+	display: block;
+	background: white;
+	position: absolute;
+	top: 1px;
+	left: 123px;
+	z-index: 500;
+}
+
+
+/*头部样式至此完全结束*/
+
+
+/*第二导航栏样式开始*/
+
+.menu-nav {
+	height: 50px;
+	margin: 20px auto;
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.menu-nav li {
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	position: relative;
+}
+
+.menu-nav li a {
+	text-decoration: none;
+	color: #333333;
+	font-size: 16px;
+}
+
+.menu-nav li a:hover {
+	color: #900b09;
+}
+
+.menu-nav .menu-nav-active {
+	width: 216px;
+	height: 50px;
+	background-color: #AE4141;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin-right: 20px;
+	position: relative;
+}
+
+.menu-nav .menu-nav-active a {
+	font-size: 16px;
+	color: #FEFEFE;
+}
+
+.menu-nav .menu-nav-active a:hover {
+	color: #FFF;
+}
+
+
+/*被激活icons*/
+
+.menu-nav .menu-nav-active span {
+	width: 27px;
+	height: 27px;
+	display: block;
+	background: url(../images/three-line.JPG) no-repeat center center;
+	position: absolute;
+	top: 12px;
+	left: 13px;
+}
+
+.greenhot {
+	width: 35px;
+	height: 22px;
+	display: block;
+	background: url(../images/greenhot.JPG);
+	position: absolute;
+	top: -3px;
+	left: 86px;
+}
+
+.redhot {
+	width: 28px;
+	height: 15px;
+	display: block;
+	background: url(../images/redhot.JPG) no-repeat;
+	position: absolute;
+	left: 81px;
+	top: 2px;
+}
+
+.yellohot {
+	width: 37px;
+	height: 22px;
+	display: block;
+	background: url(../images/yellohot.JPG) no-repeat;
+	position: absolute;
+	left: 35px;
+	top: -5px;
+}
+
+.menu-nav .down1 {
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: url(../images/icon-angle-down1.png);
+	position: absolute;
+	top: 22px;
+	left: 64px;
+}
+
+.menu-nav .down2 {
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: url(../images/icon-angle-down1.png);
+	position: absolute;
+	top: 22px;
+	left: 80px;
+}
+
+
+/*第一个下拉样式*/
+
+.down1content {
+	width: 237px;
+	height: 140px;
+	display: none;
+	border: 1px solid #FEFEFE;
+	background: white;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: relative;
+}
+
+.down1content a {
+	width: 100px;
+	height: 40px;
+	padding-left: 10px;
+	display: block;
+	float: left;
+	font-size: 13px;
+}
+
+.down1content span:nth-child(1) {
+	width: 20px;
+	height: 20px;
+	display: block;
+	border: 1px solid #FEFEFE;
+	background: white;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: absolute;
+	top: -9px;
+	left: 41px;
+	z-index: 10;
+	transform: rotate(45deg);
+}
+
+.bu1 {
+	width: 66px;
+	height: 20px;
+	display: block;
+	background: white;
+	position: absolute;
+	top: -1px;
+	left: 29px;
+	z-index: 20;
+}
+
+.menu-nav .xy {
+	width: 75px;
+}
+
+.xy:hover .down1content {
+	display: block;
+}
+
+.menu-nav .docwd {
+	width: 80px;
+}
+
+.menu-nav .wk {
+	width: 110px;
+}
+
+
+/*第二个下拉菜单样式*/
+
+.down2content {
+	width: 237px;
+	height: 170px;
+	display: none;
+	border: 1px solid #FEFEFE;
+	background: white;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: relative;
+	z-index: 5;
+}
+
+.down2content a {
+	width: 100px;
+	height: 40px;
+	padding-left: 10px;
+	display: block;
+	float: left;
+	font-size: 13px;
+}
+
+.down2content span:nth-child(1) {
+	width: 20px;
+	height: 20px;
+	display: block;
+	border: 1px solid #FEFEFE;
+	background: white;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: absolute;
+	top: -9px;
+	left: 41px;
+	z-index: 10;
+	transform: rotate(45deg);
+}
+
+.bu2 {
+	width: 66px;
+	height: 20px;
+	display: block;
+	background: white;
+	position: absolute;
+	top: -1px;
+	left: 29px;
+	z-index: 20;
+}
+
+.bbx:hover .down2content {
+	display: block;
+}
+
+.menu-nav .vip {
+	width: 60px;
+}
+
+
+/*第二导航栏样式结束*/
+
+
+/*轮播图样式*/
+
+.boxContainer {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 300px;
+	display: block;
+	background: #ff525a url(../images/31740.png) no-repeat center center;
+}
+
+.silderBox {
+	margin-top: 0px;
+	padding: 0px;
+	display: block;
+	position: relative;
+	height: 427px;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+.silderBox .leftNav {
+	width: 216px;
+	height: 426px;
+	background: white;
+	border: 1px solid #CCC;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+}
+
+.silderBox .rightQuick {
+	width: 209px;
+	height: 280px;
+	background: white;
+	border: 1px solid #CCC;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px 15px;
+}
+
+.silderBox .rightQuick li {
+	width: 210px;
+	height: 24px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: #AE4141;
+	list-style-type: square;
+	margin-bottom: 10px;
+}
+
+.silderBox .rightQuick span {
+	color: #333;
+}
+
+.ln-item {
+	width: 202px;
+	height: 57.5px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 14px;
+	border-bottom: 1px solid #CCC;
+	padding-top: 13px;
+}
+
+.ln-item .ln-top {
+	width: 197;
+	height: 26px;
+	display: block;
+	color: #900b09;
+	font-size: 16px;
+	font-weight: 500;
+	padding-right: 15px;
+	position: relative;
+}
+
+.ln-item .ln-bot {
+	width: 100%;
+	height: 28px;
+	display: block;
+	color: #333333;
+	font-size: 14px;
+}
+
+.ln-item .ln-bot span {
+	width: 95px;
+	display: block;
+	float: left;
+}
+
+.ln-item .ln-top .next {
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url(../images/hd_arr.gif) no-repeat center center;
+	float: right;
+	position: absolute;
+	right: 15px;
+	top: 6px;
+}
+
+.foucus {
+	width: 1014px;
+	height: 116px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 220px;
+	position: absolute;
+	bottom: 0px;
+	padding-top: 10px;
+}
+
+.foucus img {
+	margin: 8px;
+	float: left;
+	border-radius: 4px;
+}
+
+
+/*右边登陆*/
+
+.quick-item {
+	padding: 10px 15px;
+}
+
+.quick-content .quick-title {
+	font-size: 18px;
+	color: #000;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.input-wrap {
+	margin-bottom: 12px;
+}
+
+.pass-label {
+	display: block;
+	position: absolute;
+	left: 20px;
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+	z-index: 20;
+	background-image: url(../images/pass.png);
+	background-repeat: no-repeat;
+}
+
+.pass-user {
+	background-position: 0px 5px;
+}
+
+.pass-pwd {
+	background-position: 0px -21px;
+}
+
+.input-box {
+	padding: 7px 8px 7px 10px;
+	width: 78px;
+	line-height: 18px;
+	border: 1px solid #DDD;
+	vertical-align: middle;
+	font-size: 13px;
+	color: #333;
+	border-radius: 3px;
+}
+
+.input-box:focus {
+	border-color: #aaa;
+	box-shadow: 2px 0 5px 0 #fff;
+}
+
+.input-user,
+.input-pwd {
+	padding: 7px 8px 7px 40px;
+	width: 160px;
+}
+
+.input-img {
+	padding-left: 10px;
+	width: 92px;
+	height: 35px;
+	vertical-align: middle;
+}
+
+.form-checkbox {
+	display: inline-block;
+	font-size: 13px;
+	color: #333;
+}
+
+.check-text {
+	padding-left: 2px;
+	vertical-align: 2px;
+}
+
+.find-pwd {
+	float: right;
+	font-size: 13px;
+}
+
+.btn-wrap {
+	padding: 10px 0;
+}
+
+.form-button {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
+	background-color: #AE4141;
+	border: 0px none;
+	font-size: 15px;
+	color: #FFF;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.form-button:hover {
+	background-color: #900b09;
+}
+
+.pop-login-sns {
+	height: 76px;
+}
+
+.pop-login-sns a {
+	float: left;
+	width: 95px;
+	padding: 0 0 10px 10px;
+	color: #900b09;
+}
+
+.find-pwd {
+	color: #900b09;
+	text-decoration: none;
+}
+
+
+/* 第三方登录样式   */
+
+.pop-login-sns a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+.quic-ico {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 2px;
+	vertical-align: middle;
+	background-image: url(../images/sns-sprite.png);
+	background-repeat: no-repeat;
+	color: #333;
+	cursor: pointer;
+}
+
+.quic-ico a i {
+	cursor: pointer;
+}
+
+.quicklogin a {
+	display: inline-block;
+	line-height: 30px;
+	font-size: 14px;
+	color: #666;
+	cursor: pointer;
+}
+
+.quicklogin a:hover,
+.pop-login-sns a:hover {
+	color: #333;
+}
+
+.icons-qq {
+	background-position: 0px 0px;
+}
+
+.icons-weixin {
+	background-position: -30px 0px;
+}
+
+.icons-weibo {
+	background-position: -60px 0px;
+}
+
+.icons-right {
+	background-position: -90px 0px;
+}
+
+.pop-login-sns a:hover .icons-qq {
+	background-position: 0px -30px;
+}
+
+.pop-login-sns a:hover .icons-weixin {
+	background-position: -30px -30px;
+}
+
+.pop-login-sns a:hover .icons-weibo {
+	background-position: -60px -30px;
+}
+
+.pop-login-sns a:hover .icons-right {
+	background-position: -90px -30px;
+}
+
+.pop-login-sns a {
+	float: left;
+	width: 90px;
+	padding: 0 0 10px 10px;
+}
+
+
+/*三大列表样式*/
+
+.oneList {
+	width: 45%;
+	height: 520px;
+	/*border: 1px solid #333;*/
+	float: left;
+}
+
+.twoList {
+	width: 29%;
+	height: 520px;
+	/*border: 1px solid #333;*/
+	float: left;
+}
+
+.thrList {
+	width: 22%;
+	height: 520px;
+	/*border: 1px solid #333;*/
+	float: right;
+}
+
+
+/*第一列表标题*/
+
+.AllList {
+	margin-top: 60px;
+}
+
+.list-title {
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #DDDDDD;
+	line-height: 30px;
+}
+
+.list-title h2,
+.list-title a {
+	height: 30px;
+	width: 30%;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.list-title h2 {
+	float: left;
+	font-size: 18px;
+}
+
+.list-title h2:before {
+	content: url(../images/redBlock.png);
+}
+
+.list-title a {
+	width: 60px;
+	float: right;
+	color: #444;
+	text-align: right;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.list-item {
+	width: 100%;
+	height: 95px;
+	display: block;
+	margin-top: 15px;
+}
+
+.list-item img {
+	width: 133px;
+	height: 89px;
+	display: block;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	float: left;
+}
+
+.AllList ul,
+.AllList ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.AllList img {
+	padding: 0px;
+	margin: 0px;
+	outline: none;
+	margin-right: 20px;
+}
+
+.AllList a {
+	text-decoration: none;
+	color: #333;
+}
+
+.AllList h4 {
+	font-size: 16px;
+	color: #222;
+	margin: 0px;
+	margin-top: 15px;
+}
+
+.AllList h4 a:hover {
+	color: #900b09;
+}
+
+.list-item {
+	margin-top: 20px;
+}
+
+.list-item p {
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 10px 0px;
+}
+
+.list-item .redtext {
+	color: #900b09;
+	margin-top: 8px;
+}
+
+.redtext .v-line {
+	color: #666;
+}
+
+.oneList {
+	margin-right: 20px;
+}
+
+
+/*第二列样式*/
+
+.twoList .list-title h2 {
+	height: 30px;
+	width: 170px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/*新闻列表*/
+
+.news-item {
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+}
+
+.news-item,
+.news-item li {
+	list-style: none;
+}
+
+.news-item a {
+	display: inline-block;
+	font-size: 14px;
+	color: #333;
+	width: 75%;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.news-item li span {
+	float: right;
+	font-size: 13px;
+	color: #666;
+	position: relative;
+	line-height: 26px;
+	padding-top: 4px;
+}
+
+.news-item a {
+	height: 26px;
+	line-height: 27px;
+	margin-bottom: 4px;
+	margin-top: 5px;
+	cursor: pointer;
+	position: relative;
+}
+
+.news-item a:hover {
+	color: #900b09
+}
+
+.news-item li:before {
+	content: url(../images/redcircle.png);
+}
+
+.news-item .istop {
+	font-size: 20px;
+	font-weight: 600;
+	color: #222;
+	list-style: none;
+}
+
+.istop a {
+	width: 80%;
+	font-size: 15px;
+}
+
+.news-item .istop:before {
+	content: "";
+}
+
+
+/*第三栏样式*/
+
+.thrList h2 {
+	width: 60%;
+}
+
+.thrList ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.thrList ul img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	margin-left: 10px;
+	float: left;
+	cursor: pointer;
+}
+
+.thrList ul li {
+	width: 100%;
+	height: 42px;
+	margin-top: 12px;
+	margin-bottom: 13px;
+	line-height: 42px;
+	list-style: none;
+	cur
+}
+
+.thrList li .top-numbers {
+	padding-right: 3px;
+	float: right;
+	color: #666;
+}
+
+.thrList li a {
+	cursor: pointer;
+}
+
+
+/*补充样式*/
+
+.ln-item span {
+	cursor: pointer;
+}
+
+.ln-item .ln-top {
+	cursor: pointer;
+}
+
+
+/*编程实战*/
+
+.bcsz {
+	width: 100%;
+	height: 630px;
+	display: block;
+	background: #F9F9F9;
+	/*position: relative;*/
+}
+
+.bcsz .title {
+	height: 60px;
+	padding-top: 30px;
+	margin-bottom: 5px;
+	/*padding-left: 50px ;*/
+	/*position: absolute;*/
+	/*left: 30px;*/
+}
+
+.bcsz .title h2 {
+	/*width: 500px;*/
+	float: left;
+	/*padding-top:50px ;*/
+}
+
+.bcsz .title span {
+	float: right;
+	margin-top: 15px;
+}
+
+.bcsz .title a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #666;
+}
+
+
+/*实战*/
+
+.leftImage {
+	width: 16.5%;
+	height: 520px;
+	float: left;
+	/*border: #888888 1px solid;*/
+	position: relative;
+}
+
+.rightImage {
+	width: 81.5%;
+	height: 520px;
+	float: right;
+	/*border: #888888 1px solid;*/
+}
+
+
+/*左边样式部分*/
+
+.leftImage .course-sidebar {
+	width: 200px;
+	height: 400px;
+	border-radius: 8px;
+	display: block;
+	background: url(../images/course-minicourse-bg.png) no-repeat center center;
+	position: relative;
+}
+
+.leftImage h2,
+.leftImage span {
+	font-size: 18px;
+	color: #FEFEFE;
+	position: absolute;
+}
+
+.leftImage h2 {
+	font-size: 30px;
+	font-weight: 400;
+	top: 15px;
+	left: 44px;
+}
+
+.leftImage .course-bot {
+	position: absolute;
+	font-size: 18px;
+	font-weight: 400;
+	bottom: 65px;
+	left: 31px;
+	color: white;
+}
+
+.course-sidebar:hover {
+	box-shadow: 0px 2px 2px #AAA;
+	cursor: pointer;
+}
+
+.icon-course-down {
+	width: 100px;
+	height: 75px;
+	background: url(../images/jcsz.png) no-repeat center center;
+	position: absolute;
+	left: 50px;
+	bottom: -91px;
+}
+
+
+/*右边样式*/
+
+.rightImage {
+	margin: 0px;
+	padding: 0px;
+	height: 500px;
+}
+
+.rightImage ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.rightImage li {
+	list-style: none;
+}
+
+.course-box {
+	width: 230px;
+	height: 183px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 10px;
+	background: #FEFEFE;
+	box-shadow: 0 0 5px #999;
+	margin-right: 10px;
+	margin-left: 10px;
+	/*margin-top: 5px;*/
+	float: left;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.course-box:hover {
+	box-shadow: 1px 1px 6px #666;
+}
+
+.course-box img {
+	width: 230px;
+	height: 120px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.course-img {
+	position: relative;
+}
+
+.course-box .course-img span {
+	width: 60px;
+	height: 20px;
+	border-radius: 3px;
+	background: orange;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #FEFEFE;
+	font-size: 14px;
+	text-align: center;
+}
+
+.course-box .course-img .highText {
+	width: 95px;
+	height: 20px;
+	border-radius: 3px;
+	background: #ff5900;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #FEFEFE;
+	font-size: 14px;
+	text-align: center;
+}
+
+.course-box .course-img .new {
+	width: 38px;
+	height: 20px;
+	border-radius: 12px;
+	border: 3px solid #FEFEFE;
+	background: #FF0000;
+	position: absolute;
+	top: -8px;
+	left: -12px;
+	color: #FEFEFE;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.course-box h3 {
+	margin: 0px;
+	padding: 8px;
+	text-align: center;
+	font-weight: 300;
+}
+
+
+/*下边文字*/
+
+.course-meta .cur-price {
+	color: #FF525A;
+	width: 50px;
+	float: left;
+	padding-left: 5px;
+}
+
+.course-meta .pre-price {
+	width: 60px;
+	float: left;
+	color: #666;
+}
+
+.course-meta .pull-right {
+	width: 85px;
+	float: right;
+	padding-right: 5px;
+}
+
+.course-main .two {
+	margin-top: 25px;
+}
+
+
+/*网站底部导航样式*/
+
+.footer_item {
+	width: 100%;
+	height: 175px;
+	background: #efefef;
+	display: block;
+	padding-top: 30px;
+}
+
+.footer-box {
+	width: 20%;
+	height: 160px;
+	float: left;
+}
+
+.footer-box .footer-items a {
+	width: 200px;
+	height: 26px;
+	display: block;
+	line-height: 26px;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+
+.footer-box .footer-items a:hover {
+	color: #FF525A;
+	text-decoration: underline;
+}
+
+.footer-title {
+	font-size: 15px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 5px;
+	line-height: 30px;
+}
+
+.bot {
+	background: #EFEFEF;
+	width: 100%;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.bot p {
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	font-size: 16px;
+}
+
+.bot p a {
+	color: #ff0000;
+}
+
+.fb {
+	text-align: center;
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+	<script>
+		window.AESKey = '';
+		// 判断浏览器是否支持placeholder属性                                                                                                                                                                                        
+		function isSupportPlaceholder() {
+			var input = document.createElement('input');
+			return 'placeholder' in input;
+		};
+		(function() {
+			//判断是否是IE浏览器，包括Edge浏览器                                                                                                                                                                                       
+			function IEVersion() {
+				//取得浏览器的userAgent字符串                                                                                                                                                                                     
+				var userAgent = navigator.userAgent;
+				//判断是否IE浏览器                                                                                                                                                                                              
+				var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+				if(isIE) {
+					var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+					reIE.test(userAgent);
+					var fIEVersion = parseFloat(RegExp["$1"]);
+					if(fIEVersion < 10 || !isSupportPlaceholder()) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+			}
+
+			var tpl = ['<img style="border:none;outline:0;display:block;width:450px;height:140px;position:absolute;top:50%;left:50%;margin-left:-225px;margin-top:-70px" src="Custom/img/error.png">'].join('');
+
+			window.onload = function() {
+				if(IEVersion()) {
+					document.write(tpl);
+				}
+			};
+			window.siteName = "温馨提示";
+		})();
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>极客社区 - 练习题库</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<!-- AmazeUI Basic Style -->
+		<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+
+		<!-- Geek Community Style -->
+		<link rel="stylesheet" href="Custom/css/common.css" />
+		<link rel="stylesheet" href="Custom/css/exercise-library.css" />
+	</head>
+
+	<body sroll="no">
+		<!-- header -->
+		<div style="border-bottom: 1px solid #E0E0E0;background: #F8F8F8;">
+			<header class="am-topbar am-container" style="margin-bottom: 0px;border: none;">
+				<h1 class="am-topbar-brand">
+					<a href="exercise-library.html">极客社区</a>
+  				</h1>
+
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+				<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+					<ul class="am-nav am-nav-pills am-topbar-nav">
+						<li class="am-active">
+							<a href="exercise-library.html">练习题库</a>
+						</li>
+						<li>
+							<a href="development-tools.html">开发工具</a>
+						</li>
+						<li>
+							<a href="league-table.html">积分榜</a>
+						</li>
+					</ul>
+
+					<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
+						<div class="am-form-group">
+							<input type="text" class="am-form-field am-input-sm" placeholder="Searching...">
+						</div>
+					</form>
+
+					<!--<div class="am-topbar-right">
+						<button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href='login.html'">登录</button>
+					</div>
+
+					<div class="am-topbar-right">
+						<button class="am-btn am-btn-default am-topbar-btn am-btn-sm" onclick="window.location.href='register.html'">注册</button>
+					</div>-->
+
+					<div class="am-topbar-right">
+						<div class="am-dropdown" data-am-dropdown style="margin-top: 6.6px;">
+							<button class="am-btn am-btn-default am-round am-dropdown-toggle" data-am-dropdown-toggle style="padding: 1px;padding-right: 10px;background: none !important;outline: none;border: 1px solid #F0F0F0;"><img class="am-circle" src="Custom/img/header.jpg" width="37" height="37" style="margin: 0px;padding: 0px;outline: none;border: none;opacity: .9;"/> aimee <span class="am-icon-caret-down"></span></button>
+							<ul class="am-dropdown-content">
+								<li>
+									<a href="#">我的主页</a>
+								</li>
+								<li class="am-divider"></li>
+								<li>
+									<a href="#">学习中心</a>
+								</li>
+								<li>
+									<a href="#">充值管理</a>
+								</li>
+								<li>
+									<a href="#">账号设置</a>
+								</li>
+								<li class="am-divider"></li>
+								<li>
+									<a href="#">退出登录</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- header -->
+
+		<!-- body -->
+		<div class="am-container" style="margin: 25px auto;background-color: #FAFAFA;">
+			<!-- tips -->
+			<div class="gcojs-list-tips">
+				<div class="gcojs-list-tips-msg">练习题库</div>
+			</div>
+			<!-- tips -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- question list -->
+			<div class="gcojs-list-item">
+				<div class="gcojs-list-item-top">
+					<!--<span class="am-icon-circle" style="color: #0E90D2;margin-right: 5px;"></span>-->
+					<span class="am-icon-circle-o" style="color: #0E90D2;margin-right: 5px;"></span>
+					<span class="am-text-default"><a href="" style="color: #333;font-weight: 600;">猜网友年龄</a></span>
+				</div>
+				<div class="gcojs-list-item-bot">
+					<div class="gcojs-list-item-bot-box01 am-u-sm-4">通过率:66.66%</div>
+					<div class="gcojs-list-item-bot-box02 am-u-sm-4">通过人次:4536</div>
+					<div class="gcojs-list-item-bot-box03 am-u-sm-4">
+						<ul>
+							<li class="rank-1"></li>
+							<li class="rank-2"></li>
+							<li class="rank-3"></li>
+							<li class="rank-4"></li>
+							<li class="rank-5"></li>
+						</ul>
+						<span style="float: right;">难度:</span>
+					</div>
+				</div>
+			</div>
+			<!-- question list -->
+			<!-- pagination -->
+			<ul class="am-pagination am-pagination-centered">
+				<li class="am-disabled">
+					<a href="#">&laquo;</a>
+				</li>
+				<li class="am-active">
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">&raquo;</a>
+				</li>
+			</ul>
+			<!-- pagination -->
+		</div>
+		<!-- body -->
+
+		<!-- footer -->
+		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+			<div class="am-footer-switch">
+				<span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">移动版</span>
+				<span class="am-footer-divider"> | </span>
+				<a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">电脑版 </a>
+			</div>
+			<div class="am-footer-miscs ">
+				<p>Copyright © 2018-2019 Geek-Community-Inc.All Rights Reserved.</p>
+				<p>冀ICP备18007717号</p>
+			</div>
+		</footer>
+
+		<div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd am-modal-footer-hd">
+					<a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd">
+					<span class="am-switch-mode-slogan">移动端正在开发中...</span>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+
+		<script src="AmazeUI/js/jquery.min.js"></script>
+		<script src="AmazeUI/js/amazeui.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+.zw-container {
+	width: 80%;
+	margin: 0 auto;
+	-webkit-column-width: 320px;
+	column-width: 320px;
+	-webkit-column-gap: 25px;
+	column-gap: 25px;
+	background-color: white;
+	padding-top: 25px;
+}
+.zw {
+	width: 320px;
+	margin: 0 auto;
+	box-shadow: 0.5px 0.5px 2.5px 2.5px #333;
+	margin-bottom: 25px;
+}
+.zw:hover {
+	box-shadow: 1px 1px 5px 5px #333;
+}
+.zw a {
+	color: #333;
+	font-size: 16px;
+	text-decoration: none;
+}
+.zw a:hover {
+	color: cornflowerblue;
+}
+.nav-now {
+	width: 80%;
+	margin: 0 auto;
+	background-color: white;
+}

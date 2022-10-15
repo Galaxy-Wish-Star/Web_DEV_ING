@@ -1,0 +1,44 @@
+.attendance-warp {
+	margin: 0px;
+	padding: 5px 10px;
+}
+
+.attendance-warp-head,
+.attendance-warp-item {
+	width: 100%;
+	clear: both;
+	height: 50px;
+	line-height: 50px;
+}
+
+.attendance-warp-head span,
+.attendance-warp-item span {
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+
+.attendance-warp-head {
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.attendance-warp-head span {
+	font-weight: 800;
+	color: #000;
+}
+
+.attendance-warp-item {
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.attendance-warp-item span a {
+	margin-top: 8.4px;
+}
+
+.attendance-warp-item span p {
+	margin-top: 8.4px;
+}
+
+.attendance-warp-item span button {
+	margin-top: 8.4px;
+}

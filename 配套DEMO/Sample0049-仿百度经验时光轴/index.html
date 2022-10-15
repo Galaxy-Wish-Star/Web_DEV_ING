@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample049 - 仿百度经验时光轴</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#header {
+				width: 1071px;
+				height: 654px;
+				margin: 0 auto;
+			}
+			
+			#content {
+				width: 1071px;
+				margin: 10px auto;
+			}
+			
+			#main {
+				width: 680px;
+				font-family: 'Microsoft yahei';
+			}
+			
+			#main h2 {
+				font-weight: normal;
+				font-size: 22px;
+				color: rgba(50, 50, 50);
+				line-height: 40px;
+				border-bottom: 1px solid #ddd;
+			}
+			
+			#main ol {
+				margin: 30px 0 0 18px;
+			}
+			
+			#main ol li {
+				width: 630px;
+				border-left: 2px dotted #ddd;
+				position: relative;
+				padding-left: 30px;
+			}
+			
+			#main ol li .main_step {
+				width: 32px;
+				height: 32px;
+				background-image: url(img/step.png);
+				background-position: 0px -34px;
+				color: #fff;
+				text-align: center;
+				line-height: 32px;
+				position: absolute;
+				left: -16px;
+			}
+			
+			#main ol li .main_step.on {
+				background-position: 0px 0px;
+			}
+			
+			#main ol li p {
+				line-height: 25px;
+				margin-bottom: 15px;
+			}
+			
+			#main ol li img {
+				padding-bottom: 35px;
+				display: block;
+			}
+			
+			#top {
+				width: 100%;
+				min-width: 1071px;
+				height: 40px;
+				background: url(img/top.png) center;
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9;
+				border-bottom: 1px solid #ddd;
+				box-shadow: 0 2px 5px #ddd;
+			}
+			
+			#slide {
+				width: 32px;
+				position: fixed;
+				top: 42px;
+				margin-left: 4px;
+				background: #fff;
+			}
+			
+			#slide ul li {
+				width: 32px;
+				height: 32px;
+				background-image: url(img/step.png);
+				background-position: 0px 32px;
+				color: #fff;
+				text-align: center;
+				line-height: 32px;
+				display: none;
+				cursor: pointer;
+			}
+			
+			#slide ul li.on,
+			#slide ul li.hover {
+				background-position: 0px 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="header">
+			<img src="img/header.png">
+		</div>
+
+		<div id="top"></div>
+
+		<div id="content">
+			<div id="main">
+				<h2>方法/步骤</h2>
+				<ol>
+					<li>
+						<div class="main_step on">1</div>
+						<p>试用后油法，将面团揉成团，面包机30分钟即可！牛奶要用凉的，因为面包机揉面温度较高！</p>
+						<img src="img/1.jpg" />
+					</li>
+					<li>
+						<div class="main_step">2</div>
+						<p>揉好的面团，用手抻开可以抻成薄一些的膜，有一定的扩展性！</p>
+						<img src="img/2.jpg" />
+					</li>
+					<li>
+						<div class="main_step">3</div>
+						<p>然后揉成团，放入面包机中就行第一次发酵，发酵约1小时，是原面团的2倍大！用手按下去无回缩就证明发酵好了！</p>
+						<img src="img/3.jpg" />
+					</li>
+					<li>
+						<div class="main_step">4</div>
+						<p>发酵好的面团排气揉光滑，称重</p>
+						<img src="img/4.jpg" />
+					</li>
+					<li>
+						<div class="main_step">5</div>
+						<p>将面团平均分成5份，揉成光滑的面团！盖上保鲜膜醒发15分钟</p>
+						<img src="img/5.jpg" />
+					</li>
+					<li>
+						<div class="main_step">6</div>
+						<p>然后揉成你想放的模具中，没有就用纸拖，或可以不用也行。</p>
+						<img src="img/6.jpg" />
+					</li>
+					<li>
+						<div class="main_step">7</div>
+						<p>将烤箱中放一碗热水保持湿度，把面包生坯放入烤箱就行二次发酵，烤箱温度不易超过30度，发酵40分钟！</p>
+						<img src="img/7.jpg" />
+					</li>
+					<li>
+						<div class="main_step">8</div>
+						<p>然后烤箱预热180度，上下火加热中下层烤20左右即可！</p>
+						<img src="img/8.jpg" />
+					</li>
+					<li>
+						<div class="main_step">9</div>
+						<p>软软的很好吃！</p>
+						<img src="img/9.jpg" />
+					</li>
+				</ol>
+				<div id="slide">
+					<ul>
+						<li class="on">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var $top = $('#top');
+				var $step = $('.main_step');
+				var stepLength = $step.length;
+				var $slideLi = $('#slide ul li');
+
+				$(window).scroll(function() {
+					var scrollTop = $(document).scrollTop();
+					scrollTop >= 150 ? $top.show() : $top.hide();
+					var index = 0;
+
+					$step.each(function(i) {
+						var a = $(this).offset().top - $(document).scrollTop();
+						if(a < (42 + 32 * i)) {
+							$slideLi.eq(i).show();
+							index = i + 1;
+						} else {
+							$slideLi.eq(i).hide();
+						}
+					});
+					$step.eq(index).addClass('on').parent().siblings().find('.main_step').removeClass('on');
+					index && $slideLi.eq(index - 1).addClass('on').siblings().removeClass('on');
+				});
+
+				$slideLi.click(function() {
+					var index = $(this).index();
+					$('body,html').animate({
+						scrollTop: $step.eq(index).offset().top
+					}, 500);
+				}).hover(function() {
+					$(this).addClass('hover');
+				}, function() {
+					$(this).removeClass('hover');
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

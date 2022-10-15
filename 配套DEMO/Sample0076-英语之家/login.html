@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link href="css/login.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="title">
+  <h1 align="center">ENGLISH HOUSE</h1>
+  <h3 align="center">留下美好&nbsp;&nbsp;分享感动</h3>
+</div>
+<div class="container">
+  <div class="container-center">
+    <form name="my-form" id="my-form" action="#MyServer.php" method="get">
+      <div class="input-container">
+        <input type="text" class="user" placeholder="手机/用户名/邮箱" size="45" />
+      </div>
+      <br />
+      <div class="input-container">
+        <input type="password" class="password" size="45" placeholder="请输入密码" />
+      </div>
+      <div class="checkbox-container">
+        <div class="checkbox-left">
+          <input type="checkbox" />
+          保存密码</div>
+        <div class="checkbox-right">
+          <p align="right"><a href="register.html">立即注册</a></p>
+        </div>
+      </div>
+    </form>
+    <div class="input-container-submit" onclick="document.getElementById('my-form').submit()">
+      <div align="center" class="login-button"><a href="index.html">登录</a></div>
+    </div>
+    <div class="quick-login">
+      <div class="ql-left"></div>
+      <div class="ql-center">
+        <p align="center">快速登陆</p>
+      </div>
+      <div class="ql-right"></div>
+    </div>
+    <div class="links"> <a href="#"><i class="passport-icon icon-tencent"></i></a> <a href="#"><i class="passport-icon icon-weibo"></i></a> <a href="#"><i class="passport-icon icon-weixin"></i></a> <a href="#"><i class="passport-icon icon-eoe"></i></a> </div>
+  </div>
+</div>
+</body>
+</html>

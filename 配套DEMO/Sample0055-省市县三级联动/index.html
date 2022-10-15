@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample055 - 省市县三级联动</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<select id="sheng" name='sheng'>
+			<option value="0">省</option>
+		</select>
+		<select id='shi'>
+			<option value="0">市</option>
+		</select>
+		<select id='xian'>
+			<option value="0">县</option>
+		</select>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="js/areaData.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var sheng = areaData.sheng;
+				var $sheng = $('#sheng');
+				var $shi = $('#shi');
+				var $xian = $('#xian');
+				var shiIndex = 0;
+				for(var i = 0; i < sheng.length; i++) {
+					var $option = $('<option value=' + (i + 1) + '>' + sheng[i] + '</option>');
+					$sheng.append($option);
+				}
+				$sheng.change(function() {
+					shiIndex = this.selectedIndex - 1;
+					if(shiIndex < 0) {
+
+					} else {
+						var shi = areaData.shi['a_' + shiIndex];
+						$shi.html('<option value="0">市</option>');
+						$xian.html('<option value="0">县</option>');
+						for(var i = 0; i < shi.length; i++) {
+							var $option = $('<option value=' + (i + 1) + '>' + shi[i] + '</option>');
+							$shi.append($option);
+						}
+					}
+				});
+				$shi.change(function() {
+					var index = this.selectedIndex - 1;
+					if(index < 0) {
+
+					} else {
+						var xian = areaData.xian['a_' + shiIndex + '_' + index];
+						$xian.html('<option value="0">县</option>');
+						for(var i = 0; i < xian.length; i++) {
+							var $option = $('<option value=' + (i + 1) + '>' + xian[i] + '</option>');
+							$xian.append($option);
+						}
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

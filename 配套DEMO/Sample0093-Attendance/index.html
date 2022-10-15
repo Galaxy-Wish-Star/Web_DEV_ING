@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<!-- MUI.Css -->
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+		<!-- App.Css -->
+		<link href="css/attendance.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable mui-scalable">
+			<!-- 菜单容器开始 -->
+			<aside class="mui-off-canvas-left mui-transitioning" id="offCanvasSide">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容开始 -->
+						<!-- 菜单具体展示内容结束-->
+					</div>
+				</div>
+			</aside>
+			<!-- 菜单容器结束 -->
+
+			<!-- 主页面容器开始-->
+			<div class="mui-inner-wrap mui-transitioning">
+				<!-- 主页面标题开始 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+					<h1 class="mui-title">兴趣小组</h1>
+				</header>
+				<!-- 主页面标题结束 -->
+
+				<!-- 底部导航条开始 -->
+				<nav class="mui-bar mui-bar-tab">
+					<a href="#page1" class="mui-tab-item mui-active">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a href="#page2" class="mui-tab-item">
+						<span class="mui-icon mui-icon-chatboxes"></span>
+						<span class="mui-tab-label">试题</span>
+					</a>
+					<a href="#page3" class="mui-tab-item">
+						<span class="mui-icon mui-icon-compose"></span>
+						<span class="mui-tab-label">签到</span>
+					</a>
+					<a href="#page4" class="mui-tab-item">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label">设置</span>
+					</a>
+				</nav>
+				<!-- 底部导航条结束 -->
+
+				<!-- 对应的容器开始 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div id="page1" class="mui-control-content mui-active">
+							正在开发中...
+						</div>
+						<div id="page2" class="mui-control-content">
+							正在开发中...
+						</div>
+						<div id="page3" class="mui-control-content">
+							<!-- 签到列表开始 -->
+							<div class="attendance-warp" id="attendance_warp">
+								<div class="attendance-warp-head">
+									<span>班级</span>
+									<span>姓名</span>
+									<span>操作</span>
+									<span>备注</span>
+								</div>
+								<!-- 单个项目开始 -->
+								<div class="attendance-warp-item">
+									<span>计算1701</span>
+									<span>曹晨磊</span>
+									<span><p      type="button" class="mui-btn mui-btn-primary mui-btn-outlined">未签到</p></span>
+									<span><button type="button" class="mui-btn mui-btn-danger  mui-btn-outlined" id='promptBtn'>填写备注</button></span>
+								</div>
+								<!-- 单个项目结束 -->
+								<!-- 单个项目开始 -->
+								<div class="attendance-warp-item">
+									<span>计算1701</span>
+									<span>曹晨磊</span>
+									<span><p      type="button" class="mui-btn mui-btn-primary mui-btn-outlined">未签到</p></span>
+									<span><button type="button" class="mui-btn mui-btn-danger  mui-btn-outlined" id='promptBtn'>填写备注</button></span>
+								</div>
+								<!-- 单个项目结束 -->
+							</div>
+							<!-- 签到列表结束 -->
+						</div>
+						<div id="page4" class="mui-control-content">
+							正在开发中...
+						</div>
+					</div>
+				</div>
+				<!-- 对应的容器结束 -->
+
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+			<!-- 主页面容器结束-->
+		</div>
+	</body>
+
+	<!-- MUI.JS -->
+	<script src="js/mui.min.js"></script>
+
+	<!-- Initialization -->
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+	</script>
+
+	<!-- JQuery.JS -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+	<!-- App.JS -->
+	<script type="text/javascript">
+		try {
+			/*获取任意一个子元素的前一个兄弟元素*/
+			function getPreviousElementSibling(element) {
+				if(element.previousElementSibling) {
+					return element.previousElementSibling;
+				} else {
+					var node = element.previousSibling;
+					while(node && node.nodeType != 1) {
+						node = node.previousSibling;
+					}
+					return node;
+				}
+			}
+
+			/*获取任意一个子元素的后一个兄弟元素*/
+			function getNextElementSibling(element) {
+				if(element.nextElementSibling) {
+					return element.nextElementSibling;
+				} else {
+					var node = element.nextSibling;
+					while(node && node.nodeType != 1) {
+						node = node.nextSibling;
+					}
+					return node;
+				}
+			}
+			// 获取按钮数组开始
+			var htmlBtns = document.getElementById("attendance_warp").getElementsByTagName("button");
+			// 获取按钮数组结束
+
+			// 按钮循环注册事件开始
+			for(var i = 0; i < htmlBtns.length; ++i) {
+				htmlBtns[i].addEventListener('tap', function(e) {
+					var that = this;
+					e.detail.gesture.preventDefault();
+					mui.prompt('', '默认：正常出操', '提交信息', ['取消', '确定'], function(e) {
+						var content = e.value.toString().substring(0, 4);
+						if(content == "") {
+							content = "正常出操";
+						}
+						if(e.index == 1) {
+							that.innerText = content;
+							getPreviousElementSibling(that.parentNode).getElementsByTagName("p")[0].innerHTML = "已签到";
+						} else {
+							that.innerText = content;
+						}
+					})
+				});
+			}
+			// 按钮循环注册事件结束
+		} catch(error) {}
+	</script>
+
+</html>

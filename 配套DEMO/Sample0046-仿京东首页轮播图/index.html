@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sample046 - 仿京东首页轮播图</title>
+		<style type='text/css'>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#banner {
+				width: 730px;
+				height: 454px;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			#banner .pic {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			#banner .pic ul li {
+				position: absolute;
+				display: none;
+			}
+			
+			#banner .tab {
+				width: 148px;
+				height: 20px;
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				margin-left: -70px;
+			}
+			
+			#banner .tab ul li {
+				width: 18px;
+				height: 18px;
+				background: #666;
+				border-radius: 100%;
+				float: left;
+				margin: 1px 3px;
+				color: #fff;
+				text-align: center;
+				line-height: 18px;
+				font-family: 'Microsoft yahei';
+				font-size: 12px;
+				cursor: pointer;
+			}
+			
+			#banner .tab ul li.on {
+				background: #f60;
+			}
+			
+			#banner .btn {
+				display: none;
+			}
+			
+			#banner .btn div {
+				width: 30px;
+				height: 60px;
+				background: rgba(0, 0, 0, 0.3);
+				text-align: center;
+				line-height: 60px;
+				color: #fff;
+				font-size: 24px;
+				position: absolute;
+				top: 50%;
+				margin-top: -30px;
+				cursor: pointer;
+			}
+			
+			#leftBtn {
+				left: 0;
+			}
+			
+			#rightBtn {
+				right: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="banner">
+			<div class="pic">
+				<ul>
+					<li style="display:block;">
+						<a href=""><img src="img/1.jpg" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/2.jpg" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/3.jpg" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/4.jpg" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/5.jpg" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/6.jpg" /></a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="tab">
+				<ul>
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+			</div>
+
+			<div class="btn">
+				<div id="leftBtn">&lt;</div>
+				<div id="rightBtn">&gt;</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var $tabLi = $('#banner .tab li');
+				var $picLi = $('#banner .pic li');
+				var $btn = $('#banner .btn');
+				var $btnDiv = $('#banner .btn div');
+				var $banner = $('#banner');
+				var index = 0;
+				var timer;
+
+				$tabLi.hover(function() {
+					index = $(this).index();
+					fn();
+				});
+
+				$banner.hover(function() {
+					$btn.show();
+					clearInterval(timer);
+				}, function() {
+					$btn.hide();
+					auto();
+				});
+
+				$btnDiv.click(function() {
+					var i = $(this).index();
+					if(i) {
+						index++;
+						index %= $tabLi.length;
+					} else {
+						index--;
+						if(index < 0) index = $tabLi.length - 1;
+					}
+					fn();
+				}).mousedown(function() {
+					return false;
+				});
+
+				auto();
+
+				function auto() {
+					timer = setInterval(function() {
+						index++;
+						index %= $tabLi.length;
+						fn();
+					}, 5000);
+				}
+
+				function fn() {
+					$tabLi.eq(index).addClass('on').siblings().removeClass('on');
+					$picLi.eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>register</title>
+<link href="css/register.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="header-banner"> </div>
+<div class="container">
+  <form name="my-form" id="my-form" action="#MyServer.php" method="get">
+    <br />
+    <br />
+    <div class="quick-login">
+      <div class="ql-left"></div>
+      <div class="ql-center">
+        <p align="center">快速注册</p>
+      </div>
+      <div class="ql-right"></div>
+    </div>
+    <br />
+    <div class="input-container">
+      <input type="text" class="user" placeholder="手机号" size="75" />
+    </div>
+    <br />
+    <div class="input-container">
+      <input type="password" class="password" size="75" placeholder="请输入密码" />
+    </div>
+    <br />
+    <div class="input-container">
+      <input type="password" class="again-password" size="75" placeholder="再次输入密码" />
+    </div>
+    <br />
+    <div class="input-container-verification-code">
+      <div class="input-container-left">
+        <input type="text" class="verification-code-left" placeholder="验证码" size="75" />
+      </div>
+      <div class="input-container-right">
+        <p align="center">发送验证码</p>
+      </div>
+    </div>
+    <div class="checkbox-container">
+      <div class="checkbox-left">
+        <input type="checkbox" />
+        同意</div>
+      <div class="checkbox-right">
+        <p align="right"><a href="register.html">隐私声明</a></p>
+      </div>
+    </div>
+    <div class="input-container-submit" onclick="document.getElementById('my-form').submit()">
+      <div align="center" class="register-button"><a href="login.html">立即注册</a></div>
+    </div>
+  </form>
+  <div class="input-container-other icpa">
+    <p align="right">已有账号？<a href="login.html" class="now-login">立即登录</a></p>
+  </div>
+</div>
+</body>
+</html>

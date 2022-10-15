@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample032 - 手风琴选项卡</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css" />
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style type="text/css">
+		body {
+			background: #CCC;
+		}
+		
+		.tab-warp {
+			margin: 50px auto;
+			padding: 0px;
+			list-style: none;
+			width: 300px;
+			background: #FFF;
+		}
+		
+		.tab-warp>li {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			border: 1px solid #C0C0C0;
+		}
+		
+		.tab-title {
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 600;
+			border-bottom: 1px solid #C0C0C0;
+			cursor: pointer;
+			display: block;
+		}
+		
+		.tab-content {
+			height: 500px;
+			line-height: 500px;
+			text-align: center;
+			display: none;
+		}
+	</style>
+
+	<body>
+		<ul class="tab-warp">
+			<li>
+				<div class="tab-title">选项卡一</div>
+				<div class="tab-content">选项卡一内容</div>
+			</li>
+			<li>
+				<div class="tab-title">选项卡二</div>
+				<div class="tab-content">选项卡二内容</div>
+			</li>
+			<li>
+				<div class="tab-title">选项卡三</div>
+				<div class="tab-content">选项卡三内容</div>
+			</li>
+			<li>
+				<div class="tab-title">选项卡四</div>
+				<div class="tab-content">选项卡四内容</div>
+			</li>
+			<li>
+				<div class="tab-title">选项卡五</div>
+				<div class="tab-content">选项卡五内容</div>
+			</li>
+		</ul>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".tab-title").click(function() {
+				$(this).next().slideDown(200).parent().siblings().children(".tab-content").slideUp(200);
+			});
+		});
+	</script>
+
+</html>

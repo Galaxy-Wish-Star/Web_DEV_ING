@@ -1,0 +1,49 @@
+/*控制器样式*/
+
+.controller {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.controller button {
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	width: 200px;
+	height: 50px;
+	font-size: 16px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #E9E9E9;
+	cursor: pointer;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 2px solid #F0F0F0;
+}
+
+.controller button:hover {
+	background-color: #F9F9F9;
+}
+
+
+/*小汽车样式*/
+
+div#car {
+	width: 135px;
+	height: 100px;
+	display: block;
+	background: dodgerblue url(../img/car.png) no-repeat center center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1500;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #F0F0F0;
+	margin-top: 150px;
+}

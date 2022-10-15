@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample006 - 兼容性代码</title>
+		<link rel="stylesheet" type="text/css" href="css/cute.css" />
+	</head>
+
+	<body>
+
+		<button id="btn1">点击添加事件</button>
+		<button id="btn2">点击添加事件</button>
+
+	</body>
+
+	<!-- 当页面加载完成，载入JavaScript文件，为Html元素添加动作 -->
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	<script>
+		function f1() {
+			console.log("output1...");
+		};
+
+		function f2() {
+			console.log("output2...");
+		};
+
+		// 点击添加事件
+		addEventListener(document.getElementById("btn1"), "click", f1);
+		addEventListener(document.getElementById("btn1"), "click", f2);
+
+		// 点击解绑事件
+		document.getElementById("btn2").onclick = function() {
+			removeEventListener(document.getElementById("btn1"), "click", f1);
+		};
+	</script>
+
+</html>

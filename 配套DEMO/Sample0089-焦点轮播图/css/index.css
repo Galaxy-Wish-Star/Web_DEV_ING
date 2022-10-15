@@ -1,0 +1,147 @@
+#carousel * {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+#carousel {
+	/*轮播图大小*/
+	width: 960px;
+	height: 540px;
+	/*轮播图边框*/
+	border: 1px solid #ABCABC;
+	/*轮播图居中*/
+	margin: 50px auto;
+	/*设置定位标准*/
+	position: relative;
+	/*设置小手*/
+	cursor: pointer;
+}
+
+#carousel #carousel-display {
+	/*设置图片容器大小*/
+	width: 100%;
+	height: 100%;
+}
+
+#carousel #carousel-display img {
+	/*初始化图片*/
+	border: none;
+	outline: none;
+	/*设置图片大小*/
+	width: 100%;
+	height: 100%;
+}
+
+#carousel #carousel-nav {
+	text-align: center;
+	/*设置导航条位置*/
+	margin-top: -50px;
+}
+
+#carousel #carousel-nav ul {
+	/*去掉默认小圆点*/
+	list-style: none;
+	/*去掉内外边距*/
+	margin: 0px;
+	padding: 0px;
+	/*设置为行内元素*/
+	display: inline-block;
+	/*设置颜色*/
+	/*background: rgba(255, 255, 255, .78);*/
+	/*设置容器圆角*/
+	border-radius: 20px;
+}
+
+#carousel #carousel-nav ul li {
+	/*所有li左浮动*/
+	float: left;
+	/*设置大小*/
+	width: 10px;
+	height: 10px;
+	/*设置圆形*/
+	border-radius: 50%;
+	/*设置外边距*/
+	margin: 5px;
+	/*设置颜色*/
+	background: hsla(0, 0%, 100%, .4);
+	/*设置圆圈大小*/
+	border: 4px solid #FFFFFF;
+	/*设置透明度*/
+	opacity: .78;
+	/*设置小手*/
+	cursor: pointer;
+}
+
+#carousel #carousel-nav ul li.active {
+	/*所有li左浮动*/
+	float: left;
+	/*设置大小*/
+	width: 14px;
+	height: 14px;
+	/*设置圆形*/
+	border-radius: 50%;
+	/*设置外边距*/
+	margin: 5px;
+	/*设置颜色*/
+	background: orange;
+	/*设置圆圈大小*/
+	border: 2px solid orange;
+	/*动画效果*/
+	transition: all .78s;
+}
+
+#carousel-controller {
+	margin-top: -300px;
+	/*默认不显示*/
+	display: none;
+}
+
+#carousel-controller #carousel-controller-left,
+#carousel-controller #carousel-controller-right {
+	/*设置左右两个按钮的大小*/
+	width: 50px;
+	height: 100px;
+	/*设置透明度*/
+	opacity: .99;
+	/*设置颜色*/
+	background: hsla(0, 0%, 100%, .4);
+	/*设置字体大小*/
+	font-size: 30px;
+	/*设置粗细*/
+	font-weight: 400;
+	/*设置字体颜色*/
+	color: white;
+	/*设置字体居中*/
+	text-align: center;
+	/*设置字体垂直居中*/
+	line-height: 100px;
+	/*设置小手*/
+	cursor: pointer;
+	/*禁止选择文字*/
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Chrome/Safari/Opera */
+	-khtml-user-select: none;
+	/* Konqueror */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently not supported by any browser */
+}
+
+#carousel-controller #carousel-controller-left {
+	float: left;
+}
+
+#carousel-controller #carousel-controller-right {
+	float: right;
+}
+
+#carousel-controller #carousel-controller-left:hover,
+#carousel-controller #carousel-controller-right:hover {
+	background: hsla(0, 0%, 100%, .2);
+}

@@ -1,0 +1,61 @@
+#carousel,
+#carousel>li {
+	#carousel>list-style: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#carousel {
+	width: 1080px;
+	max-width: 1080px;
+	height: 475px;
+	margin: 0px auto;
+	padding: 0px;
+	position: relative;
+	border: 1px so#carousel>lid #E0E0E0;
+}
+
+#carousel>li>a>img {
+	out#carousel>line: none;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#carousel>li {
+	position: absolute;
+	display: block;
+	width: 400px;
+	height: 250px;
+	left: 340px;
+	top: 0px;
+	opacity: 1;
+	z-index: 1;
+}
+
+#next {
+	width: 76px;
+	height: 112px;
+	position: absolute;
+	top: 181.5px;
+	right: 0px;
+	background-image: url(../img/next.png);
+	z-index: 2000;
+	cursor: pointer;
+}
+
+#prev {
+	width: 76px;
+	height: 112px;
+	position: absolute;
+	top: 181.5px;
+	left: 0px;
+	background-image: url(../img/prev.png);
+	z-index: 2000;
+	cursor: pointer;
+}
+
+#control {
+	display: none;
+}

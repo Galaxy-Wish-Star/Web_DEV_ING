@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<input type="button" id="btn" value="开灯" />
+		<br>
+		<img src="img/eg_bulboff.gif" id="img" />
+
+	</body>
+
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var img = document.getElementById("img");
+
+		btn.onclick = function() {
+			if(btn.value == "开灯") {
+				img.src = "img/eg_bulbon.gif";
+				btn.value = "关灯";
+			} else {
+				img.src = "img/eg_bulboff.gif";
+				btn.value = "开灯";
+			}
+		};
+	</script>
+
+</html>

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>鲜来鲜往 - 美味品质，领鲜享受！</title>
+<link rel="stylesheet" type="text/css" href="css/mdui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="shortcut icon" href="images/favicon/green.png" />
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mdui.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body class="mdui-theme-primary-green">
+<!--网页头部导航条开始-->
+<div class="mdui-container-fluid xlxw-header">
+  <div class="mdui-container">
+    <div class="mdui-col-md-3 mdui-float-left xlxw-header-left ">欢迎来到鲜来鲜往！</div>
+    <div class="mdui-col-md-9 mdui-float-right xlxw-header-right ">
+      <ul class="mdui-float-right xlxw-header-nav">
+        <li> <a href="login.html" class="xlxw-header-nav-active">您好，请登录</a> </li>
+        <li> <a href="register.html">免费注册</a> </li>
+        <li class="xlxw-header-nav-spacer"></li>
+        <li> <a href="">我的订单</a> </li>
+        <li class="xlxw-header-nav-spacer"></li>
+        <li> <a href="">我的收藏</a> </li>
+        <li class="xlxw-header-nav-spacer"></li>
+        <li> <a href="">我的足迹</a> </li>
+        <li class="xlxw-header-nav-spacer"></li>
+        <li class="xlxw-header-nav-business"> <a href="">卖家中心<i class="mdui-icon material-icons">&#xe5cf;</i></a> 
+          <!--商家二级导航-->
+          <ul class="xlxw-header-t-nav-business">
+            <li> <a href="">免费开店</a> </li>
+            <li> <a href="">已卖出的产品</a> </li>
+            <li> <a href="">出售中的产品</a> </li>
+          </ul>
+        </li>
+        <li class="xlxw-header-nav-spacer"></li>
+        <li class="xlxw-header-nav-service"> <a href="">服务中心<i class="mdui-icon material-icons">&#xe5cf;</i></a> 
+          <!--服务二级导航-->
+          <ul class="xlxw-header-t-nav-service">
+            <li> <a href="">买家服务</a> </li>
+            <li> <a href="">卖家服务</a> </li>
+            <li> <a href="">侵权投诉</a> </li>
+            <li> <a href="">帮助中心</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--网页头部导航条结束--> 
+
+<!--网页头部搜索栏开始-->
+<div class="mdui-container-fluid xlxw-searching">
+  <div class="mdui-container">
+    <div class="mdui-col-md-4 mdui-float-left xlxw-searching-left">
+      <h1> <a href="">Fresh To Fresh!</a> </h1>
+    </div>
+    <div class="mdui-col-md-6 mdui-float-left xlxw-searching-center">
+      <div class="xlxw-searching-group">
+        <input type="text" name="searching" id="searching" placeholder="搜索鲜来鲜往..." />
+        <button>搜索</button>
+      </div>
+    </div>
+    <div class="mdui-col-md-2 mdui-float-left xlxw-searching-right">
+      <div class="xlxw-shopping-cart"> <i class="mdui-icon material-icons">&#xe8cc;</i> <a href="">我的购物车</a> </div>
+    </div>
+  </div>
+</div>
+<!--网页头部搜索栏结束--> 
+
+<!--菜单总览开始-->
+<div class="mdui-container-fluid">
+  <div class="mdui-container">
+    <div class="mdui-col-md-2 mdui-float-left xlxw-menu-left">
+      <div class="xlxw-menu-all-active"> 全部商品分类 </div>
+    </div>
+    <div class="mdui-col-md-5 mdui-float-left xlxw-menu-right">
+      <ul class="xlxw-menu-all-group">
+        <li> <a href="#xlxw-fruits" class="xlxw-menu-all-group-active">时令鲜果</a> </li>
+        <li> <a href="#xlxw-vegetables">新鲜蔬菜</a> </li>
+        <li> <a href="#xlxw-meat">肉禽蛋品</a> </li>
+        <li> <a href="#xlxw-seafood">海鲜水产</a> </li>
+        <li> <a href="#xlxw-oil">柴米油盐</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--菜单总览结束--> 
+
+<!--轮播导航栏开始-->
+<div class="mdui-container-fluid xlxw-carousel">
+  <div class="mdui-container"> 
+    <!--左边菜单导航-->
+    <div class="mdui-col-md-2  xlxw-carousel-left"> 
+      <!--时令鲜果-->
+      <div class="xlxw-menu-item"> <i class="xlxw-menu-item-fruits"></i> <a href="">时令鲜果</a> <i class="mdui-icon material-icons xlxw-menu-item-more">&#xe5cc;</i>
+        <div class="xlxw-menu-small-item">
+          <ul>
+            <li> <a href="">苹果</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">香蕉</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">草莓</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">西瓜</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--新鲜蔬菜-->
+      <div class="xlxw-menu-item"> <i class="xlxw-menu-item-vegetables"></i> <a href="">新鲜蔬菜</a> <i class="mdui-icon material-icons xlxw-menu-item-more">&#xe5cc;</i>
+        <div class="xlxw-menu-small-item">
+          <ul>
+            <li> <a href="">白菜</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">土豆</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">芹菜</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">萝卜</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--肉禽蛋品-->
+      <div class="xlxw-menu-item"> <i class="xlxw-menu-item-meat"></i> <a href="">肉禽蛋品</a> <i class="mdui-icon material-icons xlxw-menu-item-more">&#xe5cc;</i>
+        <div class="xlxw-menu-small-item">
+          <ul>
+            <li> <a href="">猪肉</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">牛肉</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">羊肉</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">鸡蛋</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--海鲜水产-->
+      <div class="xlxw-menu-item"> <i class="xlxw-menu-item-seafood"></i> <a href="">海鲜水产</a> <i class="mdui-icon material-icons xlxw-menu-item-more">&#xe5cc;</i>
+        <div class="xlxw-menu-small-item">
+          <ul>
+            <li> <a href="">鱼类</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">贝类</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">龙虾</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">螃蟹</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--柴米油盐-->
+      <div class="xlxw-menu-item"> <i class="xlxw-menu-item-oil"></i> <a href="">柴米油盐</a> <i class="mdui-icon material-icons xlxw-menu-item-more">&#xe5cc;</i>
+        <div class="xlxw-menu-small-item">
+          <ul>
+            <li> <a href="">大米</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">小米</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">油</a> </li>
+            <li class="xlxw-menu-small-item-spacer"></li>
+            <li> <a href="">食盐</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--中间图片轮播-->
+    <div class="mdui-col-md-8  xlxw-carousel-center"> 
+      
+      <!--外部插件开始-->
+      <div id="banner" style="display:block;">
+        <div class="pic">
+          <ul>
+            <li style="display:block;"> <a href=""><img src="images/carousel/1.jpg" /></a> </li>
+            <li> <a href=""><img src="images/carousel/2.jpg" /></a> </li>
+            <li> <a href=""><img src="images/carousel/3.jpg" /></a> </li>
+            <li> <a href=""><img src="images/carousel/4.jpg" /></a> </li>
+            <li> <a href=""><img src="images/carousel/5.jpg" /></a> </li>
+          </ul>
+        </div>
+        <div class="tab">
+          <ul>
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="btn">
+          <div id="leftBtn">&lt;</div>
+          <div id="rightBtn">&gt;</div>
+        </div>
+      </div>
+      <!--外部插件结束--> 
+      
+    </div>
+    <!--右边资讯展示-->
+    <div class="mdui-col-md-2  xlxw-carousel-right"> 
+      <!--资讯标题-->
+      <div class="xlxw-carousel-right-new">
+        <div class="xlxw-carousel-right-new-header"> <i>—</i>
+          <h3>鲜来资讯</h3>
+          <i>—</i> </div>
+        <!--资讯分割-->
+        <div class="xlxw-divider-dark"></div>
+        <!--资讯列表-->
+        <ul class="xlxw-carousel-right-new-list">
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+          <li> <a href="">龙州乌龙茶：广西龙州县特色农产品龙州乌龙茶图文百科</a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--图片展示开始-->
+    <div class="mdui-col-md-12 xlxw-showImage">
+      <div class="xlxw-showImage-item"> <a href=""> <img src=" images/showImage/1.jpg" />
+        <div class="xlxw-showImage-item-text">
+          <h2>新品专区</h2>
+          <p>探访源头产地 臻选当令时鲜</p>
+        </div>
+        </a> </div>
+      <div class="xlxw-showImage-item"> <a href=""> <img src="images/showImage/2.jpg" />
+        <div class="xlxw-showImage-item-text">
+          <h2>爆款专区</h2>
+          <p>美食有态度 生活更有味</p>
+        </div>
+        </a> </div>
+      <div class="xlxw-showImage-item"> <a href=""> <img src="images/showImage/3.jpg" />
+        <div class="xlxw-showImage-item-text">
+          <h2>水果专区</h2>
+          <p>全球水果 新鲜速递</p>
+        </div>
+        </a> </div>
+      <div class="xlxw-showImage-item  xlxw-showImage-last-item "> <a href=""> <img src="images/showImage/4.jpg" />
+        <div class="xlxw-showImage-item-text">
+          <h2>菜谱专栏</h2>
+          <p>大厨私房菜 餐桌新食尚</p>
+        </div>
+        </a> </div>
+    </div>
+    <!--图片展示结束--> 
+  </div>
+</div>
+<!--轮播导航栏结束--> 
+
+<!--时令鲜果开始-->
+<div class="mdui-container-fluid xlxw-fruits" id="xlxw-fruits">
+  <div class="mdui-container xlxw-fruits-container"> 
+    <!--标题区域开始-->
+    <div class="xlxw-fruits-container-title"> <i></i>
+      <h2>时令<span class="xlxw-fruits-green">鲜</span>果</h2>
+      <a href="">浏览更多</a> </div>
+    <!--标题区域结束--> 
+    
+    <!--中间主体内容开始-->
+    <div class="xlxw-fruits-content">
+      <div class="xlxw-fruits-content-left">
+        <ul class="item1">
+          <li> <a href="">猕猴桃</a> </li>
+          <li> <a href="">蓝莓</a> </li>
+          <li> <a href="">西瓜</a> </li>
+        </ul>
+        <ul class="item2">
+          <li> <a href="">蓝莓</a> </li>
+          <li> <a href="">车厘子</a> </li>
+          <li> <a href="">芒果</a> </li>
+        </ul>
+      </div>
+      <div class="xlxw-fruits-content-right">
+        <ul class="xlxw-fruits-content-right-list">
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/1.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">四川安岳黄柠檬 8颗 一级大果 单果约100-120g 新鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥17.80</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/2.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">京觅 新疆库尔勒香梨 精选特级大果 总重约2.5kg 新鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥29.70</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/3.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">小台农芒果 1kg装 单果50g以上 新鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥19.9</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/4.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">果然鲜 山东大樱桃1.5斤 车厘子水果</p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥59.90</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item xlxw-fruits-content-right-list-last-item"> <a href=""> <img src="images/fruits/5.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">百香果 精品大果12个装 单果70-100g 新鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥41.90</span></p>
+            </a> </li>
+        </ul>
+        <ul class="xlxw-fruits-content-right-list" style="margin-top: 5px !important;">
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/6.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">夏黑无籽葡萄 1kg装 新鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥29.80</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/7.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">进口 牛油果 4个装 单果重约130-150g 新鲜水果</p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥36.00</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/8.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">优仙果 广西小贵妃芒果 热带新鲜芒果 4斤装 单果80-150g </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥23.90</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item"> <a href=""> <img src="images/fruits/9.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">九家原 广西百香果12个 单果约65-90g生鲜水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥17.90</span></p>
+            </a> </li>
+          <li class="xlxw-fruits-content-right-list-item xlxw-fruits-content-right-list-last-item"> <a href=""> <img src="images/fruits/10.jpg" alt="" class="xlxw-fruits-content-right-list-item-img" />
+            <p class="xlxw-fruits-content-right-list-item-active">果园汇 山东大樱桃 1斤 车厘子水果 </p>
+            <p class="xlxw-fruits-content-right-list-item-price"><span class="xlxw-red">￥46.90</span></p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--中间主体内容结束--> 
+    
+    <!--热门品牌开始-->
+    <div class="xlxw-fruits-container-bottom">
+      <ul>
+        <li class="hot-title"></li>
+        <li> <a href=""><img src="images/fruits-hot/1.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/2.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/3.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/4.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/5.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/6.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/7.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/8.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/fruits-hot/9.jpg" alt="" /></a> </li>
+      </ul>
+    </div>
+    <!--热门品牌结束--> 
+  </div>
+</div>
+<!--时令鲜果结束--> 
+
+<!--新鲜蔬菜开始-->
+<div class="mdui-container-fluid xlxw-vegetables" id="xlxw-vegetables">
+  <div class="mdui-container xlxw-vegetables-container"> 
+    <!--标题区域开始-->
+    <div class="xlxw-vegetables-container-title"> <i></i>
+      <h2>新<span class="xlxw-vegetables-light-green">鲜</span>蔬菜</h2>
+      <a href="">浏览更多</a> </div>
+    <!--标题区域结束--> 
+    
+    <!--中间主体内容开始-->
+    <div class="xlxw-vegetables-content">
+      <div class="xlxw-vegetables-content-left">
+        <ul class="item1">
+          <li> <a href="">绿叶菜</a> </li>
+          <li> <a href="">土豆</a> </li>
+          <li> <a href="">豆角</a> </li>
+        </ul>
+        <ul class="item2">
+          <li> <a href="">芹菜</a> </li>
+          <li> <a href="">长茄子</a> </li>
+          <li> <a href="">蒜苔</a> </li>
+        </ul>
+      </div>
+      <div class="xlxw-vegetables-content-right">
+        <ul class="xlxw-vegetables-content-right-list">
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/1.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 圣女果 小番茄 樱桃番茄约500g 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥9.90</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/2.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 西兰花 花椰菜 西蓝花 约300g 火锅涮菜 新鲜蔬菜 </p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥8.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/3.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 上海青 小油菜 小青菜 约400g 火锅涮菜 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥7.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/4.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 西红柿 番茄 粉茄 约1.1kg 新鲜蔬菜 </p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥19.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item xlxw-vegetables-content-right-list-last-item"> <a href=""> <img src="images/vegetables/5.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">浦之灵 冷冻 野荠菜碎 田园荠菜馅 350g 袋装</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥10.80</span></p>
+            </a> </li>
+        </ul>
+        <ul class="xlxw-vegetables-content-right-list" style="margin-top: 5px !important;">
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/6.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 胡萝卜 红萝卜 甘荀 约700g 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥9.90</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/7.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">东源兴 秀珍菇 蘑菇 约200g 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥6.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/8.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">东源兴 金针菇 蘑菇 约300g 新鲜蔬菜 </p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥5.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item"> <a href=""> <img src="images/vegetables/9.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 红洋葱 约500g 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥7.80</span></p>
+            </a> </li>
+          <li class="xlxw-vegetables-content-right-list-item xlxw-vegetables-content-right-list-last-item"> <a href=""> <img src="images/vegetables/10.jpg" alt="" class="xlxw-vegetables-content-right-list-item-img" />
+            <p class="xlxw-vegetables-content-right-list-item-active">绿鲜知 菠菜 约400g 火锅涮菜 新鲜蔬菜</p>
+            <p class="xlxw-vegetables-content-right-list-item-price"><span class="xlxw-red">￥6.80</span></p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--中间主体内容结束--> 
+    
+    <!--热门品牌开始-->
+    <div class="xlxw-vegetables-container-bottom">
+      <ul>
+        <li class="hot-title"></li>
+        <li> <a href=""><img src="images/vegetables-hot/1.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/2.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/3.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/4.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/5.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/6.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/7.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/8.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/vegetables-hot/9.jpg" alt="" /></a> </li>
+      </ul>
+    </div>
+    <!--热门品牌结束--> 
+  </div>
+</div>
+<!--新鲜蔬菜结束--> 
+
+<!--肉禽蛋品开始-->
+<div class="mdui-container-fluid xlxw-meat" id="xlxw-meat">
+  <div class="mdui-container xlxw-meat-container"> 
+    <!--标题区域开始-->
+    <div class="xlxw-meat-container-title"> <i></i>
+      <h2><span class="xlxw-meat-orange">肉</span>禽蛋品</h2>
+      <a href="">浏览更多</a> </div>
+    <!--标题区域结束--> 
+    
+    <!--中间主体内容开始-->
+    <div class="xlxw-meat-content">
+      <div class="xlxw-meat-content-left">
+        <ul class="item1">
+          <li> <a href="">牛腱肉</a> </li>
+          <li> <a href="">猪肉</a> </li>
+          <li> <a href="">羊肉</a> </li>
+        </ul>
+        <ul class="item2">
+          <li> <a href="">排骨</a> </li>
+          <li> <a href="">小肥牛</a> </li>
+          <li> <a href="">鸡蛋</a> </li>
+        </ul>
+      </div>
+      <div class="xlxw-meat-content-right">
+        <ul class="xlxw-meat-content-right-list">
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/1.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 精制 肥牛片 380g/袋 谷饲牛肉 （适用做菜、涮火锅）</p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥39.90</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/2.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 澳洲进口 牛肉片 500g/袋 草饲 （适用做菜、涮火锅）</p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥39.00</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/3.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 筋头巴脑 1kg/袋 谷饲牛肉 </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥41.80</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/4.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 澳洲牛腱子1kg/袋 草饲 整肉原切生鲜冷冻牛肉安格斯牛</p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥68.00</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item xlxw-meat-content-right-list-last-item"> <a href=""> <img src="images/meat/5.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 羊肉卷 350g/盒 火锅食材</p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥29.90</span></p>
+            </a> </li>
+        </ul>
+        <ul class="xlxw-meat-content-right-list" style="margin-top: 5px !important;">
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/6.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 有机眼肉牛排 500g/盒 2-3片 原切牛肉 谷饲300天 </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥58.00</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/7.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">双汇 猪汤骨块 1000g/袋 </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥23.00</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/8.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">双汇 猪肉馅(70%瘦肉) 300g/袋 (2件起售) </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥9.90</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item"> <a href=""> <img src="images/meat/9.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">恒都 羔羊蝎子段 1000g/袋 火锅食材 </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥46.00</span></p>
+            </a> </li>
+          <li class="xlxw-meat-content-right-list-item xlxw-meat-content-right-list-last-item"> <a href=""> <img src="images/meat/10.jpg" alt="" class="xlxw-meat-content-right-list-item-img" />
+            <p class="xlxw-meat-content-right-list-item-active">精气神 猪通脊猪扒 400g/袋 长白山山黑猪 林间散养 </p>
+            <p class="xlxw-meat-content-right-list-item-price"><span class="xlxw-red">￥49.00</span></p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--中间主体内容结束--> 
+    
+    <!--热门品牌开始-->
+    <div class="xlxw-meat-container-bottom">
+      <ul>
+        <li class="hot-title"></li>
+        <li> <a href=""><img src="images/meat-hot/1.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/2.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/3.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/4.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/5.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/6.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/7.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/8.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/meat-hot/9.jpg" alt="" /></a> </li>
+      </ul>
+    </div>
+    <!--热门品牌结束--> 
+  </div>
+</div>
+<!--肉禽蛋品结束--> 
+
+<!--海鲜水产开始-->
+<div class="mdui-container-fluid xlxw-seafood" id="xlxw-seafood">
+  <div class="mdui-container xlxw-seafood-container"> 
+    <!--标题区域开始-->
+    <div class="xlxw-seafood-container-title"> <i></i>
+      <h2>海<span class="xlxw-seafood-blue">鲜</span>水产</h2>
+      <a href="">浏览更多</a> </div>
+    <!--标题区域结束--> 
+    
+    <!--中间主体内容开始-->
+    <div class="xlxw-seafood-content">
+      <div class="xlxw-seafood-content-left">
+        <ul class="item1">
+          <li> <a href="">黄花鱼</a> </li>
+          <li> <a href="">草鱼</a> </li>
+          <li> <a href="">甲鱼</a> </li>
+        </ul>
+        <ul class="item2">
+          <li> <a href="">带鱼</a> </li>
+          <li> <a href="">小龙虾</a> </li>
+          <li> <a href="">海带</a> </li>
+        </ul>
+      </div>
+      <div class="xlxw-seafood-content-right">
+        <ul class="xlxw-seafood-content-right-list">
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/1.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">三都港 冷冻无公害黄花鱼 宁德大黄鱼 700g 2条 袋装 海鲜水产 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥39.00</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/2.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">獐子岛 冷冻南美虾仁 250g 25-40只 袋装 海鲜水产 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥32.00</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/3.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">极地湾 冷冻加拿大多春鱼 1kg 40-60条 袋装 海鲜水产</p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥38.90</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/4.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">大湖 冷冻有机鲫鱼 去鳃去鳞去内脏 300g 1-2条 袋装 海鲜水产 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥39.90</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item xlxw-seafood-content-right-list-last-item"> <a href=""> <img src="images/seafood/5.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">翔泰 冷冻无公害金鲳鱼 BAP认证 700g 2条 袋装 海鲜水产</p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥34.90</span></p>
+            </a> </li>
+        </ul>
+        <ul class="xlxw-seafood-content-right-list" style="margin-top: 5px !important;">
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/6.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">蓝雪 冷冻越南巴沙鱼柳 ASC认证 600g 3片 袋装 海鲜水产</p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥32.80</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/7.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">鲜元素 冷冻阿拉斯加真鳕鱼500g 4-6块 袋装 海鲜水产</p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥32.90</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/8.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">大洋世家 舟山带鱼段 800g/袋 海鲜 带鱼 鱼 鱼块 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥45.00</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item"> <a href=""> <img src="images/seafood/9.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">鲜动生活 冷冻乳山半壳生蚝 460g 6-8粒原汁 袋装 烧烤食材 海鲜水产 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥33.00</span></p>
+            </a> </li>
+          <li class="xlxw-seafood-content-right-list-item xlxw-seafood-content-right-list-last-item"> <a href=""> <img src="images/seafood/10.jpg" alt="" class="xlxw-seafood-content-right-list-item-img" />
+            <p class="xlxw-seafood-content-right-list-item-active">荷裕 冷冻三文鱼刺身 100g 袋装 海鲜水产 </p>
+            <p class="xlxw-seafood-content-right-list-item-price"><span class="xlxw-red">￥25.90</span></p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--中间主体内容结束--> 
+    
+    <!--热门品牌开始-->
+    <div class="xlxw-seafood-container-bottom">
+      <ul>
+        <li class="hot-title"></li>
+        <li> <a href=""><img src="images/seafood-hot/1.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/2.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/3.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/4.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/5.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/6.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/7.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/8.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/seafood-hot/9.jpg" alt="" /></a> </li>
+      </ul>
+    </div>
+    <!--热门品牌结束--> 
+  </div>
+</div>
+<!--海鲜水产结束--> 
+
+<!--柴米油盐开始-->
+<div class="mdui-container-fluid xlxw-oil" id="xlxw-oil">
+  <div class="mdui-container xlxw-oil-container"> 
+    <!--标题区域开始-->
+    <div class="xlxw-oil-container-title"> <i></i>
+      <h2>柴米<span class="xlxw-oil-yellow">油</span>盐</h2>
+      <a href="">浏览更多</a> </div>
+    <!--标题区域结束--> 
+    
+    <!--中间主体内容开始-->
+    <div class="xlxw-oil-content">
+      <div class="xlxw-oil-content-left">
+        <ul class="item1">
+          <li> <a href="">玉米面</a> </li>
+          <li> <a href="">大米</a> </li>
+          <li> <a href="">白面</a> </li>
+        </ul>
+        <ul class="item2">
+          <li> <a href="">小米</a> </li>
+          <li> <a href="">花生油</a> </li>
+          <li> <a href="">食盐</a> </li>
+        </ul>
+      </div>
+      <div class="xlxw-oil-content-right">
+        <ul class="xlxw-oil-content-right-list">
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/1.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">金龙鱼 东北大米 寿司香米 粳米 鲜稻小町大米 5KG 当季新米</p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥58.00</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/2.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">柴火大院 五常糯米 （粽子米 东北杂粮 大米伴侣 粥米搭档） 1kg </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥25.80</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/3.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">燕之坊 雪晶糯米 心意系列 糯米 五谷杂粮 435g（真空包装 大米伴侣）</p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥13.80</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/4.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">柴火大院 五常糯米 （无添加 江米 黏米 粽子米 东北 五谷 杂粮 真空装 大米 粥米伴侣）2kg </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥49.90</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item xlxw-oil-content-right-list-last-item"> <a href=""> <img src="images/oil/5.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">天地粮人 精品 糯米1kg </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥12.80</span></p>
+            </a> </li>
+        </ul>
+        <ul class="xlxw-oil-content-right-list" style="margin-top: 5px !important;">
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/6.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">金龙鱼 食用油 葵花籽食用调和油5L</p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥39.90</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/7.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">泥河湾（nihewan）十谷米450g 五谷杂粮养生粥 （糙米、燕麦米、莲子、白糯米、红花生、黑豆、黑米、大米） </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥29.90</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/8.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">鲁花 5S 压榨一级 花生油 4L（新老包装随机发放</p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥109.90</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item"> <a href=""> <img src="images/oil/9.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">金龙鱼 食用油 非转基因 压榨 玉米油5L(捆绑小油) </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥67.80</span></p>
+            </a> </li>
+          <li class="xlxw-oil-content-right-list-item xlxw-oil-content-right-list-last-item"> <a href=""> <img src="images/oil/10.jpg" alt="" class="xlxw-oil-content-right-list-item-img" />
+            <p class="xlxw-oil-content-right-list-item-active">福临门 食用油 家香味压榨一级花生油（京东定制）6.18L 中粮出品 </p>
+            <p class="xlxw-oil-content-right-list-item-price"><span class="xlxw-red">￥105.90</span></p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--中间主体内容结束--> 
+    
+    <!--热门品牌开始-->
+    <div class="xlxw-oil-container-bottom">
+      <ul>
+        <li class="hot-title"></li>
+        <li> <a href=""><img src="images/oil-hot/1.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/2.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/3.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/4.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/5.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/6.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/7.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/8.jpg" alt="" /></a> </li>
+        <li> <a href=""><img src="images/oil-hot/9.jpg" alt="" /></a> </li>
+      </ul>
+    </div>
+    <!--热门品牌结束--> 
+  </div>
+</div>
+<!--柴米油盐结束--> 
+
+<!--网页底部信息开始-->
+<div class="mdui-container-fluid xlxw-footer">
+  <div class="mdui-container"> 
+    
+    <!--底部图标导航栏开始-->
+    <ul class="xlxw-footer-icons">
+      <li>
+        <div class="xlxw-footer-icons-item"> <i class="item1"></i>
+          <h3>食品安全</h3>
+          <p>精选生鲜 严格质检</p>
+        </div>
+      </li>
+      <li>
+        <div class="xlxw-footer-icons-item"> <i class="item2"></i>
+          <h3>全程冷链</h3>
+          <p>自营物流 安全可控</p>
+        </div>
+      </li>
+      <li>
+        <div class="xlxw-footer-icons-item"> <i class="item3"></i>
+          <h3>源头直采</h3>
+          <p>绿色生态 鲜活天然</p>
+        </div>
+      </li>
+      <li>
+        <div class="xlxw-footer-icons-item"> <i class="item4"></i>
+          <h3>产地直销</h3>
+          <p>价格便宜 天天优惠</p>
+        </div>
+      </li>
+      <li>
+        <div class="xlxw-footer-icons-item"> <i class="item5"></i>
+          <h3>售后无忧</h3>
+          <p>在线客服 疑难解惑</p>
+        </div>
+      </li>
+    </ul>
+    <!--底部图标导航栏结束--> 
+    
+    <!--底部分割线开始-->
+    <div class="xlxw-divider-light"></div>
+    <!--底部分割线结束--> 
+    
+    <!--底部链接导航开始-->
+    <div class="xlxw-footer-link">
+      <div class="xlxw-footer-link-left">
+        <div class="xlxw-footer-link-left-item">
+          <div> <img src="images/wechat-png/微信服务号.png" alt="" /> <span></span> </div>
+          <p>鲜来鲜往微信服务号</p>
+        </div>
+        <div class="xlxw-footer-link-left-item">
+          <div> <img src="images/wechat-png/微信订阅号.png" alt="" /> <span></span> </div>
+          <p>鲜来鲜往微信订阅号</p>
+        </div>
+      </div>
+      <div class="xlxw-footer-link-right">
+        <ul class="xlxw-footer-link-right-item">
+          <li>新手指导</li>
+          <li> <a href="">账户注册</a> </li>
+          <li> <a href="">购物流程</a> </li>
+          <li> <a href="">支付方式</a> </li>
+          <li> <a href="">售后服务</a> </li>
+        </ul>
+        <ul class="xlxw-footer-link-right-item">
+          <li>商家服务</li>
+          <li> <a href="">平台规则</a> </li>
+          <li> <a href="">商家入驻</a> </li>
+          <li> <a href="">免费培训</a> </li>
+          <li> <a href="">鲜来资讯</a> </li>
+        </ul>
+        <ul class="xlxw-footer-link-right-item">
+          <li>鲜来配送</li>
+          <li> <a href="">配送方式</a> </li>
+          <li> <a href="">配送运费</a> </li>
+          <li> <a href="">配送范围</a> </li>
+          <li> <a href="">配送时间</a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--底部链接导航结束--> 
+    
+    <!--底部版权注释开始-->
+    <div class="xlxw-footer-copyright">
+      <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2017-2018 Fresh To Fresh-Inc.All Rights Reserved</p>
+    </div>
+    <!--底部版权注释结束--> 
+    
+    <!--右侧返回顶部导航栏开始-->
+    <div class="xlxw-toolbar" id="xlxw-toolbar"> <a href="#xlxw-fruits" class="xlxw-toolbar-item xlxw-toolbar-item-fruits" id="xlxw-toolbar-item-fruits">时令<br />
+      水果 </a> <a href="#xlxw-vegetables" class="xlxw-toolbar-item xlxw-toolbar-item-vegetables" id="xlxw-toolbar-item-vegetables">新鲜<br />
+      蔬菜 </a> <a href="#xlxw-meat" class="xlxw-toolbar-item xlxw-toolbar-item-meat" id="xlxw-toolbar-item-meat">肉禽<br />
+      蛋品 </a> <a href="#xlxw-seafood" class="xlxw-toolbar-item xlxw-toolbar-item-seafood" id="xlxw-toolbar-item-seafood">海鲜<br />
+      水产 </a> <a href="#xlxw-oil" class="xlxw-toolbar-item xlxw-toolbar-item-oil" id="xlxw-toolbar-item-oil">柴米<br />
+      油盐 </a> <a href="feedback.html" class="xlxw-toolbar-item xlxw-toolbar-item-feedback">意见<br />
+      反馈 </a> <a href="javascript:scroll(0,0)" class="xlxw-toolbar-item xlxw-toolbar-item-top" id="xlxw-toolbar-item-top">返回<br />
+      顶部 </a> </div>
+    <!--右侧返回顶部导航栏结束--> 
+    
+  </div>
+</div>
+<!--网页底部信息结束-->
+
+</body>
+
+<!--外部轮播插件-->
+<script type="text/javascript">
+		$(function() {
+
+			var $tabLi = $('#banner .tab li');
+			var $picLi = $('#banner .pic li');
+			var $btn = $('#banner .btn');
+			var $btnDiv = $('#banner .btn div');
+			var $banner = $('#banner');
+			var index = 0;
+			var timer;
+
+			$tabLi.hover(function() {
+				index = $(this).index();
+				fn();
+			});
+
+			$banner.hover(function() {
+				$btn.show();
+				clearInterval(timer);
+			}, function() {
+				$btn.hide();
+				auto();
+			});
+
+			$btnDiv.click(function() {
+				var i = $(this).index();
+				if(i) {
+					index++;
+					index %= $tabLi.length;
+				} else {
+					index--;
+					if(index < 0) index = $tabLi.length - 1;
+				}
+				fn();
+			}).mousedown(function() {
+				return false;
+			});
+
+			auto();
+
+			function auto() {
+				timer = setInterval(function() {
+					index++;
+					index %= $tabLi.length;
+					fn();
+				}, 4000);
+			}
+
+			function fn() {
+				$tabLi.eq(index).addClass('on').siblings().removeClass('on');
+				$picLi.eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+			}
+		});
+	</script>
+<script type="text/javascript">
+		window.onscroll = function() {
+			//获取滚动条滚动时距离顶部的距离
+			var t = document.documentElement.scrollTop || document.body.scrollTop;
+			//获取子元素id
+			var xlxw_toolbar = document.getElementById('xlxw-toolbar');
+			var xlxw_toolbar_item_fruits = document.getElementById('xlxw-toolbar-item-fruits');
+			var xlxw_toolbar_item_vegetables = document.getElementById('xlxw-toolbar-item-vegetables');
+			var xlxw_toolbar_item_meat = document.getElementById('xlxw-toolbar-item-meat');
+			var xlxw_toolbar_item_seafood = document.getElementById('xlxw-toolbar-item-seafood');
+			var xlxw_toolbar_item_oil = document.getElementById('xlxw-toolbar-item-oil');
+			var xlxw_toolbar_item_top = document.getElementById('xlxw-toolbar-item-top');
+			//显示侧栏
+			if(t >= 900) {
+				xlxw_toolbar.style.display = "block";
+			} else {
+				xlxw_toolbar.style.display = "none";
+			}
+			//时令水果
+			if(t >= 1080) {
+				xlxw_toolbar_item_fruits.style.background = "#4FBB6E";
+				xlxw_toolbar_item_vegetables.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_meat.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_seafood.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_oil.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_top.style.background = "rgba(0, 0, 0, 0.25)";
+			}
+			//新鲜蔬菜
+			if(t >= 1600) {
+				xlxw_toolbar_item_fruits.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_vegetables.style.background = "#A7BF36";
+				xlxw_toolbar_item_meat.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_seafood.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_oil.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_top.style.background = "rgba(0, 0, 0, 0.25)";
+			}
+			//肉禽蛋品
+			if(t >= 2200) {
+				xlxw_toolbar_item_fruits.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_vegetables.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_meat.style.background = "#FF9F6E";
+				xlxw_toolbar_item_seafood.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_oil.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_top.style.background = "rgba(0, 0, 0, 0.25)";
+			}
+			//水产海鲜
+			if(t >= 2800) {
+				xlxw_toolbar_item_fruits.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_vegetables.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_meat.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_seafood.style.background = "#55B1E8";
+				xlxw_toolbar_item_oil.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_top.style.background = "rgba(0, 0, 0, 0.25)";
+			}
+			//柴米油盐
+			if(t >= 3400) {
+				xlxw_toolbar_item_fruits.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_vegetables.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_meat.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_seafood.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_oil.style.background = "#f8db62";
+				xlxw_toolbar_item_top.style.background = "rgba(0, 0, 0, 0.25)";
+			}
+			//返回顶部
+			if(t >= 4200) {
+				xlxw_toolbar_item_fruits.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_vegetables.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_meat.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_seafood.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_oil.style.background = "rgba(0, 0, 0, 0.25)";
+				xlxw_toolbar_item_top.style.background = "green";
+			}
+		}
+	</script>
+</html>

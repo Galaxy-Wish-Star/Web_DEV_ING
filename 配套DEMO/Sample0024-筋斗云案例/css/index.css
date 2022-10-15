@@ -1,0 +1,36 @@
+body {
+	background-color: #444;
+}
+
+.nav {
+	width: 800px;
+	height: 42px;
+	margin: 100px auto;
+	background: url(../img/rss.png) right center no-repeat;
+	background-color: #fff;
+	border-radius: 10px;
+	position: relative;
+}
+
+.nav li {
+	width: 83px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	float: left;
+	cursor: pointer;
+}
+
+.nav span {
+	position: absolute;
+	top: 0px;
+	left: 45px;
+	width: 83px;
+	height: 42px;
+	background: url(../img/cloud.gif) no-repeat center center;
+}
+
+#navBar {
+	list-style: none;
+	position: relative;
+}

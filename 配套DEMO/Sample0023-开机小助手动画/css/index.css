@@ -1,0 +1,8 @@
+#box {
+	width: 0px;
+	height: 154px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+}
