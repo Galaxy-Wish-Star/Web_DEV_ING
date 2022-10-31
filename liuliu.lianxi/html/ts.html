@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动切换搜索框</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .box-1{
+            height: 200px;
+            background-color: #09BB07;
+            position: relative;
+        }
+        .box-1 .search{
+            height: 40px;
+            width: 80%;
+            border-radius: 20px;
+            border: none;
+            background-color: #fff;
+            position: absolute;
+            left: 10%;
+            bottom: -20px;
+            box-shadow: 0 0 5px #999;
+            z-index: 5;
+            transition:all 0.5s ease-in-out0s;
+            top: auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+            outline:none;
+        }
+        .box-1 .search.fixed{
+            height: 30px;
+            width: 70%;
+            /* border-radius: 15px; */
+            /* border: none; */
+            /* background-color: #eee; */
+            position: fixed;
+            left: 20%;
+            top: 5px;
+            /* box-shadow: none; */
+            /* bottom: auto; */
+        }
+        .box-top{
+            height: 40px;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(255,255,255,0);
+            z-index: 1;
+            transition:all 0.5s ease-in-out0s;
+        }
+        .box-top.active{
+            background-color: rgba(255,255,255,1);
+        }
+        </style>
+</head>
+<body>
+    <div class="box-top" id="top"></div>
+    <div class="box-1">
+        <input type="text" class="search" id="search" placeholder="请输入搜索内容" autocomplete="off">
+    </div>
+    <div style="height: 1000px;background-color: #f3f3f3;">
+        <div style="text-align: center;color: #999;padding-top: 100px;">
+            <div>haha@qq.com</div>
+            <div>&copy; 2019</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // var el_top=document.querySelector("#top");
+        var el_search=document.querySelector("#search");
+        var height=el_search.offsetTop,
+        flag=true;
+        document.addEventListener("scroll",function () {
+            if(document.documentElement.scrollTop>=height){
+                if(flag){
+                    flag=false;
+                    // el_top.classList.add("active");
+                    el_search.classList.add("fixed");
+                }
+            }else {
+                if(!flag){
+                    flag=true;
+                    // el_top.classList.remove("active");
+                    el_search.classList.remove("fixed");
+                }
+            }
+        },false);
+    </script>
+</body>
+</html>
