@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- swiper使用第一步：引包，引入先关的js与css文件 -->
+    <script src="./js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- 第二步:需要的结构书写完整 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    //第三步:初始化swiper实例
+    //swiper.js:对外暴露的是一个Swiper构造函数
+    //jQuery.js:对外暴露$
+    //第一个参数:根节点的选择器（类选择器：字符串|真实DOM节点） 第二个参数:配置对象
+    var mySwiper = new Swiper(document.querySelector('.swiper-container'), {
+        //第一个参数：设置轮播图方向【属性这有两个：水平、垂直】
+        // direction: 'vertical', 
+        // 开启循环模式
+        loop: false,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+  //总结:初始化Swiper的时候，第一个参数，轮播图的根节点？
+  //因为可以通过根节点，获取相应的子节点，通过JS操作DOM，让轮播图动起来。
+  //*****如果说轮播图向动起来，页面结构中全部节点务必的有的。
+</script>
+

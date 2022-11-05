@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     //Object.assign:es6中新增的方法,可以把多个对象进行合并
+     let searchParams = {keyword:'',category1Id:"",categoryName:''};
+     let query = {category1Id:'61',categoryName:'手机'};
+     let params = {keyword:'小米',a:111}
+     Object.assign(searchParams,query,params);
+     console.log(searchParams);
+</script>
