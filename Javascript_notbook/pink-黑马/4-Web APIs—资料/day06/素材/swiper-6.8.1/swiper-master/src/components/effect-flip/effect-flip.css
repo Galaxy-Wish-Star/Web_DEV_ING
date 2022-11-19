@@ -3,7 +3,8 @@
 }
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   z-index: 1;
 }
 .swiper-container-flip .swiper-slide .swiper-slide {
@@ -17,5 +18,6 @@
 .swiper-container-flip .swiper-slide-shadow-left,
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }/*# sourceMappingURL=effect-flip.css.map */

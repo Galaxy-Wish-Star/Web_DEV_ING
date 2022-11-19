@@ -7,7 +7,13 @@
 .header {
     height: 717px;
 }
-
+/* 灰色背景 */
+/* .daida{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.2);
+} */
 .advert{
     z-index: 999;
     /* width: 100%;
@@ -38,6 +44,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .inner {
@@ -1579,7 +1586,11 @@
     width: 80px;
     height: 520px;
     position: absolute;
+<<<<<<< Updated upstream
     top: 748px;
+=======
+    top: 749px;
+>>>>>>> Stashed changes
     margin-left: 1320px;
 }
 
@@ -1607,13 +1618,18 @@
 }
 
 .elevator .active {
+<<<<<<< Updated upstream
     color: red;
     font-weight: bold;
+=======
+    color: red
+>>>>>>> Stashed changes
 }
 
 .elevator_fix {
     position: fixed;
     top: 45px;
+<<<<<<< Updated upstream
     animation: e_show 2s;
 }
 
@@ -1631,3 +1647,22 @@
         top: 45px;
     }
 }
+=======
+    animation: e_show 1.5s;
+}
+
+@keyframes e_show{
+    0%{
+        top:0;
+    }
+    25%{
+        top:45px;
+    }
+    50%{
+        top:45px;
+    }
+    100%{
+        top:45px;
+    }
+}
+>>>>>>> Stashed changes
