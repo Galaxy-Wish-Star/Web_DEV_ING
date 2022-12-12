@@ -1,6 +1,5 @@
 @import "./color";
 
-
 body {
 	.head-title {
 		height: 30px;
@@ -104,6 +103,40 @@ body {
 				top: 12px;
 				right: 58px;
 				color: #f5f5f5;
+			}
+		}
+	}
+	.home-nav-classifications {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: $white;
+			margin-top: 22px;
+			li {
+				width: 138px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				a {
+					width: 100%;
+					text-align: center;
+					font-size: 20px;
+					font-weight: bold;
+					color: $aw-color-gray-0;
+					line-height: 55px;
+					&:hover {
+						color: $white;
+						background-color: $meituan;
+					}
+				}
+				&:first-child {
+					width: 240px;
+					a {
+						color: $meituan;
+					}
+				}
 			}
 		}
 	}
