@@ -1,4 +1,4 @@
-@import "./_reset.scss";
+@import "./_reset";
 @import "./color";
 * {
 	-moz-osx-font-smoothing: grayscale;
@@ -22,7 +22,7 @@ body {
 	width: 100%;
 	min-width: $content-width;
 	height: 100%;
-	background-color: $aw-color-gray-8;
+	background-color: $aw-color-gray-7;
 	color: $black;
 	font-size: 14px;
 	line-height: 1.375;

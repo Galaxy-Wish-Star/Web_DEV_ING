@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*常用颜色*/
+/*Office 颜色*/
+/*灰阶*/
+/*Voclaoid 颜色*/
 /* reset */
 * {
   margin: 0;
@@ -32,7 +36,7 @@ body .head-title .head-title-left {
   align-items: center;
 }
 body .head-title .head-title-left .title-login {
-  color: #ffd103;
+  color: #ca5010;
 }
 body .head-title .head-title-right {
   width: 350px;
@@ -40,17 +44,22 @@ body .head-title .head-title-right {
   justify-content: space-between;
   align-items: center;
 }
+body .head-title .head-title-right .head-title-right-list {
+  width: 50px;
+  border: 1px solid red;
+  background-color: #ffffff;
+}
 body .head-title a:hover {
-  color: #ffd103;
+  color: #d06228;
 }
 body .background-all {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 body .head-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 100px;
 }
 body .head-logo .logo img {
@@ -74,18 +83,23 @@ body .head-logo .search input {
 body .head-logo .search button {
   width: 85px;
   height: 37px;
-  background-color: #ffd103;
+  background-color: #d06228;
   color: #fff;
   border: none;
   outline: none;
 }
 body .head-logo .search button:hover {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 body .head-logo .search .fa-magnifying-glass {
   position: absolute;
   top: 10px;
   right: 58px;
   color: #f5f5f5;
-}/*# sourceMappingURL=mixin.css.map */
+}
+
+/*常用颜色*/
+/*Office 颜色*/
+/*灰阶*/
+/*Voclaoid 颜色*//*# sourceMappingURL=mixin.css.map */
