@@ -21,7 +21,6 @@
   - [维护者](#维护者)
   - [如何贡献](#如何贡献)
   - [贡献者](#贡献者)
-  - [**感谢以上参与项目的人**](#感谢以上参与项目的人)
     - [特别感谢：](#特别感谢)
   - [使用许可](#使用许可)
 
@@ -91,7 +90,8 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 <!-- readme: collaborators,contributors -start -->
 <!-- readme: collaborators,contributors -end -->
 
-**感谢以上参与项目的人**
+**感谢以上参与学习的人**
+
 ---
 ### 特别感谢：
 
