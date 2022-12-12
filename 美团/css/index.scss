@@ -28,8 +28,8 @@ body {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			.title-login{
-				color: #FFD103;
+			.title-login {
+				color: #ffd103;
 			}
 		}
 		.head-title-right {
@@ -38,11 +38,11 @@ body {
 			justify-content: space-between;
 			align-items: center;
 		}
-		a:hover{
-			color: #FFD103;
+		a:hover {
+			color: #ffd103;
 		}
 	}
-	.background-all{
+	.background-all {
 		background-color: #fff;
 	}
 	.head-logo {
@@ -71,18 +71,18 @@ body {
 				outline: none;
 			}
 			button {
-				&:hover{
+				&:hover {
 					cursor: pointer;
 					color: rgb(255, 255, 255);
 				}
 				width: 85px;
 				height: 37px;
-				background-color: #FFD103;
+				background-color: #ffd103;
 				color: #fff;
 				border: none;
 				outline: none;
 			}
-			.fa-magnifying-glass{
+			.fa-magnifying-glass {
 				position: absolute;
 				top: 10px;
 				right: 58px;

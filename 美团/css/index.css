@@ -35,7 +35,7 @@ body .head-title .head-title-left {
   align-items: center;
 }
 body .head-title .head-title-left .title-login {
-  color: #FFD103;
+  color: #ffd103;
 }
 body .head-title .head-title-right {
   width: 350px;
@@ -44,7 +44,7 @@ body .head-title .head-title-right {
   align-items: center;
 }
 body .head-title a:hover {
-  color: #FFD103;
+  color: #ffd103;
 }
 body .background-all {
   background-color: #fff;
@@ -77,7 +77,7 @@ body .head-logo .search input {
 body .head-logo .search button {
   width: 85px;
   height: 37px;
-  background-color: #FFD103;
+  background-color: #ffd103;
   color: #fff;
   border: none;
   outline: none;
