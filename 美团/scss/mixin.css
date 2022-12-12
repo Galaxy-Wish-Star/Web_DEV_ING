@@ -145,8 +145,8 @@ body .home-nav .home-nav-box .home-nav-right ul {
   margin-left: 8px;
 }
 body .home-nav .home-nav-box .home-nav-right ul li {
-  width: 220px;
-  height: 26px;
+  width: 225px;
+  height: 30px;
   display: flex;
   color: #616161;
   justify-content: space-between;
@@ -162,49 +162,49 @@ body .home-nav .home-nav-box .home-nav-right ul li a:hover {
   color: #ffd103;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-pizza-slice {
-  color: #E8882D;
+  color: #e8882d;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-drumstick-bite {
-  color: #F6B325;
+  color: #f6b325;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-hospital {
-  color: #97675C;
+  color: #97675c;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-people-roof {
-  color: #FBB853;
+  color: #fbb853;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-message {
-  color: #F74136;
+  color: #f74136;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-music {
-  color: #4CAAE3;
+  color: #4caae3;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-headphones-simple {
-  color: #38B88D;
+  color: #38b88d;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-child-dress {
-  color: #ED4D84;
+  color: #ed4d84;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-mug-saucer {
-  color: #FB3D7E;
+  color: #fb3d7e;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-train-subway {
-  color: #EB6796;
+  color: #eb6796;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-tent-arrow-down-to-line {
-  color: #F6020B;
+  color: #f6020b;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-hand-spock {
-  color: #70CAAB;
+  color: #70caab;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-shopify {
-  color: #52C8AC;
+  color: #52c8ac;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-tag {
-  color: #48A6EC;
+  color: #48a6ec;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a .fa-reply-all {
-  color: #55CBA4;
+  color: #55cba4;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a i {
   margin-right: 12px;
@@ -217,13 +217,74 @@ body .home-nav .home-nav-box .home-nav-right ul li span {
   font-size: 16px;
 }
 body .home-nav .home-nav-box .home-nav-left {
-  height: 390px;
-  width: 700px;
-  border: 1px solid red;
+  height: 450px;
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body .home-nav .home-nav-box .home-nav-left .home-nav-left-img {
+  height: 270px;
+}
+body .home-nav .home-nav-box .home-nav-left .home-nav-left-img img {
+  height: 256px;
+}
+body .home-nav .home-nav-box .home-nav-left .home-nav-left-img-two {
+  height: 185px;
+}
+body .home-nav .home-nav-box .home-nav-left .home-nav-left-img-two img {
+  height: 177px;
 }
 body .home-nav .home-nav-box .user-info {
-  width: 170px;
-  border: 1px solid red;
+  width: 190px;
+  border: 1px solid #ccc;
+}
+body .home-nav .home-nav-box .user-info .user-info-user {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body .home-nav .home-nav-box .user-info .user-info-user img {
+  border-radius: 50%;
+}
+body .home-nav .home-nav-box .user-info .user-info-user h3 {
+  margin: 10px 0;
+}
+body .home-nav .home-nav-box .user-info .user-info-user button {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #616161;
+}
+body .home-nav .home-nav-box .user-info .user-info-user button:hover {
+  color: #ffd103;
+}
+body .home-nav .home-nav-box .user-info .user-info-user button:last-child {
+  margin-top: 10px;
+}
+body .home-nav .home-nav-box .user-info .user-info-qrcode {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body .home-nav .home-nav-box .user-info .user-info-qrcode img {
+  width: 100px;
+  height: 100px;
+}
+body .home-nav .home-nav-box .user-info .user-info-qrcode p {
+  margin: 10px 0;
+}
+body .home-nav .home-nav-box .user-info .user-info-qrcode span {
+  color: #f6020b;
+  font-weight: bold;
 }
 
 /*常用颜色*/
