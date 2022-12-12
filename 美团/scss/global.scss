@@ -5,6 +5,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
+// 盒模型标准
 *,
 *::before,
 *::after {
@@ -16,6 +17,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
+// body基准
 body {
 	margin: 0;
 	padding: 0;
@@ -24,6 +26,5 @@ body {
 	height: 100%;
 	background-color: $aw-color-gray-7;
 	color: $black;
-	font-size: 14px;
 	line-height: 1.375;
 }

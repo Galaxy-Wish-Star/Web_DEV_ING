@@ -36,21 +36,40 @@ body .head-title .head-title-left {
   align-items: center;
 }
 body .head-title .head-title-left .title-login {
-  color: #ca5010;
+  color: #ffd103;
 }
 body .head-title .head-title-right {
   width: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-body .head-title .head-title-right .head-title-right-list {
-  width: 50px;
-  border: 1px solid red;
+body .head-title .head-title-right li {
+  width: 70px;
+  line-height: 30px;
+  text-align: center;
+}
+body .head-title .head-title-right li:first-child:hover .head-title-right-list {
+  display: block;
+}
+body .head-title .head-title-right li:first-child:hover {
+  cursor: pointer;
   background-color: #ffffff;
 }
+body .head-title .head-title-right .head-title-right-list {
+  width: 68px;
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #ffffff;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 99;
+}
 body .head-title a:hover {
-  color: #d06228;
+  color: #ffd103;
 }
 body .background-all {
   background-color: #ffffff;
@@ -83,7 +102,7 @@ body .head-logo .search input {
 body .head-logo .search button {
   width: 85px;
   height: 37px;
-  background-color: #d06228;
+  background-color: #ffd103;
   color: #fff;
   border: none;
   outline: none;
@@ -94,7 +113,7 @@ body .head-logo .search button:hover {
 }
 body .head-logo .search .fa-magnifying-glass {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 58px;
   color: #f5f5f5;
 }
