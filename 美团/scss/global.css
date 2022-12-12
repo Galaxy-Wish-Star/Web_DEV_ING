@@ -170,9 +170,21 @@ a:hover {
 /*Office 颜色*/
 /*灰阶*/
 /*Voclaoid 颜色*/
+/* reset */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+  list-style: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+/* 容器 */
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 *,

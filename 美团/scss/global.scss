@@ -1,8 +1,24 @@
 @import "./_reset";
 @import "./color";
+
+$content-width: 1200px;
+$component-height: 32px;
+
+/* reset */
 * {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	text-decoration: none;
+	list-style: none;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+}
+
+/* 容器 */
+.container {
+	width: $content-width;
+	margin: 0 auto;
 }
 
 // 盒模型标准
