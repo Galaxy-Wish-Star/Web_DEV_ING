@@ -3,24 +3,6 @@
 /*Office 颜色*/
 /*灰阶*/
 /*Voclaoid 颜色*/
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-  text-decoration: none;
-  list-style: none;
-}
-* a {
-  color: #444444;
-}
-
-/* 容器 */
-.container {
-  width: 1210px;
-  margin: 0 auto;
-}
-
 body .head-title {
   height: 30px;
   font-size: 13px;
