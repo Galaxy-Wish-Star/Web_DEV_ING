@@ -1,14 +1,6 @@
-li {
-  list-style: none;
+ul {
+  font-size: 12px;
 }
-
-::placeholder {
-  color: red;
-}
-
-#box {
-  width: 580px;
-  height: 340px;
-  background-color: pink;
-  background: url('../images/1.jpg');
-}
+ul li {
+  line-height: 30px;
+}/*# sourceMappingURL=1.css.map */

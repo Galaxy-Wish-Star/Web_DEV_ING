@@ -3,8 +3,7 @@
 }
 .swiper-container-cube .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
   transform-origin: 0 0;
@@ -26,8 +25,7 @@
 }
 .swiper-container-cube .swiper-slide-shadow-top, .swiper-container-cube .swiper-slide-shadow-bottom, .swiper-container-cube .swiper-slide-shadow-left, .swiper-container-cube .swiper-slide-shadow-right {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .swiper-container-cube .swiper-cube-shadow {
   position: absolute;
@@ -37,6 +35,7 @@
   height: 100%;
   background: #000;
   opacity: 0.6;
+  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0;
 }/*# sourceMappingURL=effect-cube.css.map */
