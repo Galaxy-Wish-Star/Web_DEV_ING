@@ -44,15 +44,20 @@ body {
 				width: 70px;
 				line-height: 30px;
 				text-align: center;
-				&:first-child:hover .head-title-right-list {
+				&:first-child:hover .head-title-right-list,
+				&:nth-child(4):hover .head-title-right-list-ruls,
+				&:nth-child(5):hover .head-title-right-list-ruls {
 					display: block;
 				}
-				&:first-child:hover {
+				&:first-child:hover,
+				&:nth-child(4):hover,
+				&:nth-child(5):hover {
 					cursor: pointer;
 					background-color: $white;
 				}
 			}
-			.head-title-right-list {
+			.head-title-right-list,
+			.head-title-right-list-ruls {
 				width: 68px;
 				display: none;
 				border: 1px solid #ccc;
@@ -60,7 +65,6 @@ body {
 				background-color: $white;
 				position: absolute;
 				top: 28px;
-				left: 0;
 				z-index: 99;
 			}
 		}

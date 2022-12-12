@@ -50,14 +50,15 @@ body .head-title .head-title-right li {
   line-height: 30px;
   text-align: center;
 }
-body .head-title .head-title-right li:first-child:hover .head-title-right-list {
+body .head-title .head-title-right li:first-child:hover .head-title-right-list, body .head-title .head-title-right li:nth-child(4):hover .head-title-right-list-ruls, body .head-title .head-title-right li:nth-child(5):hover .head-title-right-list-ruls {
   display: block;
 }
-body .head-title .head-title-right li:first-child:hover {
+body .head-title .head-title-right li:first-child:hover, body .head-title .head-title-right li:nth-child(4):hover, body .head-title .head-title-right li:nth-child(5):hover {
   cursor: pointer;
   background-color: #ffffff;
 }
-body .head-title .head-title-right .head-title-right-list {
+body .head-title .head-title-right .head-title-right-list,
+body .head-title .head-title-right .head-title-right-list-ruls {
   width: 68px;
   display: none;
   border: 1px solid #ccc;
@@ -65,7 +66,6 @@ body .head-title .head-title-right .head-title-right-list {
   background-color: #ffffff;
   position: absolute;
   top: 28px;
-  left: 0;
   z-index: 99;
 }
 body .head-title a:hover {
