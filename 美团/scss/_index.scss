@@ -140,4 +140,103 @@ body {
 			}
 		}
 	}
+	.home-nav {
+		.home-nav-box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.home-nav-right {
+				width: 238px;
+				border: 1px solid #ccc;
+				background-color: $white;
+				ul {
+					width: 238px;
+					margin-left: 8px;
+					
+					li {
+						width: 220px;
+						height: 26px;
+						display: flex;
+						color: #616161;
+						justify-content: space-between;
+						align-items: center;
+						&:hover span {
+							color: $meituan;
+						}
+						a {
+							width: 100%;
+							&:hover {
+								color: $meituan;
+							}
+							.fa-pizza-slice{
+								color: #E8882D;
+							}
+							.fa-drumstick-bite {
+								color: #F6B325;
+							}
+							.fa-hospital {
+								color: #97675C;
+							}
+							.fa-people-roof {
+								color: #FBB853;
+							}
+							.fa-message {
+								color: #F74136;
+							}
+							.fa-music {
+								color: #4CAAE3;
+							}
+							.fa-headphones-simple{
+								color: #38B88D;
+							}
+							.fa-child-dress {
+								color: #ED4D84;
+							}
+							.fa-mug-saucer {
+								color: #FB3D7E;
+							}
+							.fa-train-subway {
+								color: #EB6796;
+							}
+							.fa-tent-arrow-down-to-line {
+								color: #F6020B;
+							}
+							.fa-hand-spock {
+								color: #70CAAB;
+							}
+							.fa-shopify {
+								color: #52C8AC;
+							}
+							.fa-tag {
+								color: #48A6EC;
+							}
+							.fa-reply-all {
+								color: #55CBA4;
+							}
+							i {
+								margin-right: 12px;
+								vertical-align: baseline;
+								line-height: 100%;
+								width: 18px;
+								text-align: center;
+								
+							}
+						}
+						span {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+			.home-nav-left {
+				height: 390px;
+				width: 700px;
+				border: 1px solid red;
+			}
+			.user-info {
+				width: 170px;
+				border: 1px solid red;
+			}
+		}
+	}
 }
