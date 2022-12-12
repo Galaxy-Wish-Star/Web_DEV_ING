@@ -15,7 +15,6 @@
 	margin: 0 auto;
 }
 body {
-	background-color: #f5f5f5;
 	.head-title {
 		height: 30px;
 		font-size: 13px;
@@ -29,7 +28,7 @@ body {
 			justify-content: space-between;
 			align-items: center;
 			.title-login {
-				color: #ffd103;
+				color: $aw-color-powerpoint;
 			}
 		}
 		.head-title-right {
@@ -39,17 +38,17 @@ body {
 			align-items: center;
 		}
 		a:hover {
-			color: #ffd103;
+			color: $aw-color-orange-light;
 		}
 	}
 	.background-all {
-		background-color: #fff;
+		background-color: $white;
 	}
 	.head-logo {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #fff;
+		background-color: $white;
 		height: 100px;
 		.logo {
 			img {
@@ -73,11 +72,11 @@ body {
 			button {
 				&:hover {
 					cursor: pointer;
-					color: rgb(255, 255, 255);
+					color: $white;
 				}
 				width: 85px;
 				height: 37px;
-				background-color: #ffd103;
+				background-color: $aw-color-orange-light;
 				color: #fff;
 				border: none;
 				outline: none;

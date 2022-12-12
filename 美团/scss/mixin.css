@@ -17,9 +17,6 @@
   margin: 0 auto;
 }
 
-body {
-  background-color: #f5f5f5;
-}
 body .head-title {
   height: 30px;
   font-size: 13px;
@@ -91,4 +88,4 @@ body .head-logo .search .fa-magnifying-glass {
   top: 10px;
   right: 58px;
   color: #f5f5f5;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=mixin.css.map */
