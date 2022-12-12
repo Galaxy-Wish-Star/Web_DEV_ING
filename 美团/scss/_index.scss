@@ -151,10 +151,9 @@ body {
 				background-color: $white;
 				ul {
 					width: 238px;
-					margin-left: 8px;
 
 					li {
-						width: 225px;
+						width: 238px;
 						height: 30px;
 						display: flex;
 						color: #616161;
@@ -162,6 +161,9 @@ body {
 						align-items: center;
 						&:hover span {
 							color: $meituan;
+						}
+						&:hover{
+							background-color: $aw-color-gray-7;
 						}
 						a {
 							width: 100%;
@@ -214,7 +216,8 @@ body {
 								color: #55cba4;
 							}
 							i {
-								margin-right: 12px;
+								padding-left: 8px;
+								padding-right: 12px;
 								vertical-align: baseline;
 								line-height: 100%;
 								width: 18px;
@@ -223,6 +226,7 @@ body {
 						}
 						span {
 							font-size: 16px;
+							margin-right: 22px;
 						}
 					}
 				}
@@ -247,7 +251,6 @@ body {
 				}
 			}
 			.user-info {
-				
 				width: 190px;
 				border: 1px solid #ccc;
 				.user-info-user {
@@ -257,23 +260,23 @@ body {
 					align-items: center;
 					flex-direction: column;
 					flex-wrap: wrap;
-					img{
+					img {
 						border-radius: 50%;
 					}
-					h3{
+					h3 {
 						margin: 10px 0;
 					}
-					button{
+					button {
 						width: 100px;
 						height: 30px;
 						border: 1px solid #ccc;
 						border-radius: 5px;
 						background-color: $white;
 						color: #616161;
-						&:hover{
+						&:hover {
 							color: $meituan;
 						}
-						&:last-child{
+						&:last-child {
 							margin-top: 10px;
 						}
 					}
@@ -285,14 +288,14 @@ body {
 					align-items: center;
 					flex-direction: column;
 					flex-wrap: wrap;
-					img{
+					img {
 						width: 100px;
 						height: 100px;
 					}
-					p{
+					p {
 						margin: 10px 0;
 					}
-					span{
+					span {
 						color: #f6020b;
 						font-weight: bold;
 					}
