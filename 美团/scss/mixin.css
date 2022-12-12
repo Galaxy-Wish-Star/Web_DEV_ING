@@ -130,6 +130,101 @@ body .home-nav-classifications ul li:first-child {
 body .home-nav-classifications ul li:first-child a {
   color: #ffd103;
 }
+body .home-nav .home-nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .home-nav .home-nav-box .home-nav-right {
+  width: 238px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+body .home-nav .home-nav-box .home-nav-right ul {
+  width: 238px;
+  margin-left: 8px;
+}
+body .home-nav .home-nav-box .home-nav-right ul li {
+  width: 220px;
+  height: 26px;
+  display: flex;
+  color: #616161;
+  justify-content: space-between;
+  align-items: center;
+}
+body .home-nav .home-nav-box .home-nav-right ul li:hover span {
+  color: #ffd103;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a {
+  width: 100%;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a:hover {
+  color: #ffd103;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-pizza-slice {
+  color: #E8882D;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-drumstick-bite {
+  color: #F6B325;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-hospital {
+  color: #97675C;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-people-roof {
+  color: #FBB853;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-message {
+  color: #F74136;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-music {
+  color: #4CAAE3;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-headphones-simple {
+  color: #38B88D;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-child-dress {
+  color: #ED4D84;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-mug-saucer {
+  color: #FB3D7E;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-train-subway {
+  color: #EB6796;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-tent-arrow-down-to-line {
+  color: #F6020B;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-hand-spock {
+  color: #70CAAB;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-shopify {
+  color: #52C8AC;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-tag {
+  color: #48A6EC;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a .fa-reply-all {
+  color: #55CBA4;
+}
+body .home-nav .home-nav-box .home-nav-right ul li a i {
+  margin-right: 12px;
+  vertical-align: baseline;
+  line-height: 100%;
+  width: 18px;
+  text-align: center;
+}
+body .home-nav .home-nav-box .home-nav-right ul li span {
+  font-size: 16px;
+}
+body .home-nav .home-nav-box .home-nav-left {
+  height: 390px;
+  width: 700px;
+  border: 1px solid red;
+}
+body .home-nav .home-nav-box .user-info {
+  width: 170px;
+  border: 1px solid red;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
