@@ -142,10 +142,9 @@ body .home-nav .home-nav-box .home-nav-right {
 }
 body .home-nav .home-nav-box .home-nav-right ul {
   width: 238px;
-  margin-left: 8px;
 }
 body .home-nav .home-nav-box .home-nav-right ul li {
-  width: 225px;
+  width: 238px;
   height: 30px;
   display: flex;
   color: #616161;
@@ -154,6 +153,9 @@ body .home-nav .home-nav-box .home-nav-right ul li {
 }
 body .home-nav .home-nav-box .home-nav-right ul li:hover span {
   color: #ffd103;
+}
+body .home-nav .home-nav-box .home-nav-right ul li:hover {
+  background-color: #f0f0f0;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a {
   width: 100%;
@@ -207,7 +209,8 @@ body .home-nav .home-nav-box .home-nav-right ul li a .fa-reply-all {
   color: #55cba4;
 }
 body .home-nav .home-nav-box .home-nav-right ul li a i {
-  margin-right: 12px;
+  padding-left: 8px;
+  padding-right: 12px;
   vertical-align: baseline;
   line-height: 100%;
   width: 18px;
@@ -215,6 +218,7 @@ body .home-nav .home-nav-box .home-nav-right ul li a i {
 }
 body .home-nav .home-nav-box .home-nav-right ul li span {
   font-size: 16px;
+  margin-right: 22px;
 }
 body .home-nav .home-nav-box .home-nav-left {
   height: 450px;
