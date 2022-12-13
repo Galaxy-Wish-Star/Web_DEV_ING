@@ -165,6 +165,9 @@ body {
 						&:hover {
 							background-color: $aw-color-gray-7;
 						}
+						&:hover .hidden-latent-perdue{
+							display:block
+						}
 						a {
 							width: 100%;
 							&:hover {
@@ -229,13 +232,13 @@ body {
 							margin-right: 22px;
 						}
 						.hidden-latent-perdue {
-							position: relative;
+							display: none;
 							ul {
 								position: absolute;
 								z-index: 999;
 								height: 448px;
 								width: 763px;
-								top: -15px;
+								top: 208px;
 								background-color: $white;
 								display: flex;
 								flex-wrap: wrap;
@@ -243,11 +246,18 @@ body {
 								box-shadow: 0 8px 16px rgb(0 0 0 / 18%);
 								li {
 									a {
+										display: flex;
+										align-items: center;
 										&:hover {
 											background-color: $aw-color-gray-7;
 										}
-										height: 62px;
+										line-height: 62px;
 										text-align: center;
+										img{
+											margin-left: 20px;
+											margin-right: 28px;
+											width: 75px;
+										}
 									}
 								}
 							}
