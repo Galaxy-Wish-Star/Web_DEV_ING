@@ -157,6 +157,9 @@ body .home-nav .home-nav-box .home-nav-right ul li:hover span {
 body .home-nav .home-nav-box .home-nav-right ul li:hover {
   background-color: #f0f0f0;
 }
+body .home-nav .home-nav-box .home-nav-right ul li:hover .hidden-latent-perdue {
+  display: block;
+}
 body .home-nav .home-nav-box .home-nav-right ul li a {
   width: 100%;
 }
@@ -221,14 +224,14 @@ body .home-nav .home-nav-box .home-nav-right ul li span {
   margin-right: 22px;
 }
 body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue {
-  position: relative;
+  display: none;
 }
 body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue ul {
   position: absolute;
   z-index: 999;
   height: 448px;
   width: 763px;
-  top: -15px;
+  top: 208px;
   background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
@@ -236,11 +239,18 @@ body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue ul {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
 }
 body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue ul li a {
-  height: 62px;
+  display: flex;
+  align-items: center;
+  line-height: 62px;
   text-align: center;
 }
 body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue ul li a:hover {
   background-color: #f0f0f0;
+}
+body .home-nav .home-nav-box .home-nav-right ul li .hidden-latent-perdue ul li a img {
+  margin-left: 20px;
+  margin-right: 28px;
+  width: 75px;
 }
 body .home-nav .home-nav-box .home-nav-left {
   height: 450px;
