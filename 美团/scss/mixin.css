@@ -228,6 +228,10 @@ body .home-nav .home-nav-box .home-nav-left {
   flex-wrap: wrap;
 }
 body .home-nav .home-nav-box .home-nav-left .home-nav-left-img {
+  width: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 270px;
 }
 body .home-nav .home-nav-box .home-nav-left .home-nav-left-img img {
@@ -290,8 +294,235 @@ body .home-nav .home-nav-box .user-info .user-info-qrcode span {
   color: #f6020b;
   font-weight: bold;
 }
+body .el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
+body .el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+body .el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
+body .el-carousel__container,
+body .el-carousel {
+  width: 584px;
+  height: 256px;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
 /*灰阶*/
-/*Voclaoid 颜色*//*# sourceMappingURL=mixin.css.map */
+/*Voclaoid 颜色*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+
+[hidefocus],
+summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+}
+
+sup,
+sub {
+  font-size: 83%;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: inherit;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label,
+summary {
+  cursor: default;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+  font: 14px/1.14 arial, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+  color: #666;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a,
+a:hover {
+  color: #666;
+}
+
+/*常用颜色*/
+/*Office 颜色*/
+/*灰阶*/
+/*Voclaoid 颜色*/
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+  list-style: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 容器 */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  background-color: #f0f0f0;
+  color: #000000;
+  line-height: 1.375;
+}/*# sourceMappingURL=mixin.css.map */

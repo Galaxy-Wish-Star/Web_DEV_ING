@@ -238,6 +238,10 @@ body {
 				justify-content: space-between;
 				flex-wrap: wrap;
 				.home-nav-left-img {
+					width: 750px;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
 					height: 270px;
 					img {
 						height: 256px;
@@ -302,5 +306,25 @@ body {
 				}
 			}
 		}
+	}
+	.el-carousel__item h3 {
+		color: #475669;
+		font-size: 14px;
+		opacity: 0.75;
+		line-height: 200px;
+		margin: 0;
+	}
+
+	.el-carousel__item:nth-child(2n) {
+		background-color: #99a9bf;
+	}
+
+	.el-carousel__item:nth-child(2n + 1) {
+		background-color: #d3dce6;
+	}
+	.el-carousel__container,
+	.el-carousel {
+		width: 584px;
+		height: 256px;
 	}
 }

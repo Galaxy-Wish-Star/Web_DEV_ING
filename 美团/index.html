@@ -6,10 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>美团</title>
 		<link rel="stylesheet" href="scss/mixin.css" />
-		<link rel="stylesheet" href="./scss/global.css" />
 		<link
 			rel="stylesheet"
 			href="assets/fontawesome-free-6.2.1-web/css/all.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
 		/>
 	</head>
 	<body>
@@ -196,7 +199,11 @@
 				</div>
 				<div class="home-nav-left">
 					<div class="home-nav-left-img">
-						<img src="assets/images/aa1.jpg" alt="" />
+						<el-carousel :interval="4000" arrow="always" id="app">
+							<el-carousel-item v-for="item in 6" :key="item">
+								<img :src=`assets/images/ad0${item}.jpg` alt="" />
+							</el-carousel-item>
+						</el-carousel>
 						<img src="assets/images/aa2.jpg" alt="" />
 					</div>
 					<div class="home-nav-left-img-two">
@@ -221,5 +228,8 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script src="./js/index.js"></script>
 	</body>
 </html>
