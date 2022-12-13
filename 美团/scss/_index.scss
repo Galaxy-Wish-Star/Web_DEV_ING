@@ -228,6 +228,30 @@ body {
 							font-size: 16px;
 							margin-right: 22px;
 						}
+						.hidden-latent-perdue {
+							position: relative;
+							ul {
+								position: absolute;
+								z-index: 999;
+								height: 448px;
+								width: 763px;
+								top: -15px;
+								background-color: $white;
+								display: flex;
+								flex-wrap: wrap;
+								align-items: center;
+								box-shadow: 0 8px 16px rgb(0 0 0 / 18%);
+								li {
+									a {
+										&:hover {
+											background-color: $aw-color-gray-7;
+										}
+										height: 62px;
+										text-align: center;
+									}
+								}
+							}
+						}
 					}
 				}
 			}
