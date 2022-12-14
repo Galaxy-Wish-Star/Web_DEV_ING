@@ -17,9 +17,9 @@
 	</head>
 	<body>
 		<!-- 头部 -->
-		<div class="head">
+		<header class="head">
 			<!-- 顶部标签 -->
-			<div class="head-title container">
+			<nav class="head-title container">
 				<ul class="head-title-left">
 					<li>欢迎来到美团网</li>
 					<li>|</li>
@@ -76,9 +76,9 @@
 						</ul>
 					</li>
 				</ul>
-			</div>
+			</nav>
 			<!-- logo$search -->
-			<div class="background-all">
+			<article class="background-all">
 				<div class="head-logo container">
 					<div class="logo">
 						<a href="./index.html"
@@ -91,10 +91,10 @@
 						<button>&nbsp 搜索</button>
 					</div>
 				</div>
-			</div>
-		</div>
+			</article>
+		</header>
 		<!-- 分类 -->
-		<div class="home-nav-classifications container">
+		<nav class="home-nav-classifications container">
 			<ul>
 				<li><a href="javascript:;">全部分类</a></li>
 				<li><a href="javascript:;">美团外卖</a></li>
@@ -105,11 +105,11 @@
 				<li><a href="javascript:;">美团公益</a></li>
 				<li><a href="javascript:;">周边游</a></li>
 			</ul>
-		</div>
+		</nav>
 		<!-- 轮播&nav -->
-		<div class="home-nav container">
-			<div class="home-nav-box">
-				<div class="home-nav-right">
+		<main class="home-nav container">
+			<nav class="home-nav-box">
+				<aside class="home-nav-right">
 					<ul>
 						<li>
 							<a href="javascript:;"
@@ -1879,8 +1879,8 @@
 							</div>
 						</li>
 					</ul>
-				</div>
-				<div class="home-nav-left">
+				</aside>
+				<nav class="home-nav-left">
 					<div class="home-nav-left-img">
 						<el-carousel :interval="4000" arrow="always" id="app">
 							<el-carousel-item v-for="item in 6" :key="item">
@@ -1894,8 +1894,8 @@
 						<img src="assets/images/aa4.png" alt="" />
 						<img src="assets/images/aa5.jpg" alt="" />
 					</div>
-				</div>
-				<div class="user-info">
+				</nav>
+				<aside class="user-info">
 					<div class="user-info-user">
 						<img src="./assets/images/avatar.jpg" alt="" />
 						<h3>Hi!你好!游客</h3>
@@ -1908,9 +1908,10 @@
 						<span>一元起</span>
 						<h3>吃喝玩乐</h3>
 					</div>
-				</div>
-			</div>
-		</div>
+				</aside>
+			</nav>
+		</main>
+
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		<script src="./js/index.js"></script>
