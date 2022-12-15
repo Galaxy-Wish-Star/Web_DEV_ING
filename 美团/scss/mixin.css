@@ -584,7 +584,7 @@ body .minsu-ls-view {
   padding: 20px;
   padding-right: 0;
   padding-bottom: 0;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   border-top: 0px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -610,7 +610,7 @@ body .minsu-ls-view .minsu-item .product-card-header .product-img {
   cursor: pointer;
 }
 body .minsu-ls-view .minsu-item .product-card-header .head-img {
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   height: 48px;
   width: 48px;
   position: absolute;
@@ -650,7 +650,7 @@ body .minsu-ls-view .minsu-item .product-info .sub-title {
 body .minsu-ls-view .minsu-item .product-info .price {
   font-weight: 500;
   font-size: 22px;
-  color: #FF6600;
+  color: #ff6600;
   letter-spacing: -0.8px;
   padding: 4px 0;
 }
@@ -660,7 +660,7 @@ body .minsu-ls-view .minsu-item .product-info .price .price-icon {
 body .minsu-ls-view .minsu-item .product-info .price {
   font-weight: 500;
   font-size: 22px;
-  color: #FF6600;
+  color: #ff6600;
   letter-spacing: -0.8px;
   padding: 4px 0;
 }
@@ -688,7 +688,7 @@ body .minsu-ls-view .minsu-item .product-card-header .product-img {
   cursor: pointer;
 }
 body .minsu-ls-view .minsu-item .product-card-header .head-img {
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   height: 48px;
   width: 48px;
   position: absolute;
@@ -738,12 +738,18 @@ body .minsu-ls-view .minsu-item .product-info .sub-title {
 body .minsu-ls-view .minsu-item .product-info .price {
   font-weight: 500;
   font-size: 22px;
-  color: #FF6600;
+  color: #ff6600;
   letter-spacing: -0.8px;
   padding: 4px 0;
 }
 body .minsu-ls-view .minsu-item .product-info .price .price-icon {
   font-size: 14px;
+}
+body .recommend-container {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /*常用颜色*/
