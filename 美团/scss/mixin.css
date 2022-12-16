@@ -1042,6 +1042,33 @@ body .com-footer {
 body .com-footer {
   margin-top: 40px;
 }
+body .com-footer .footer-content .footer-link {
+  padding: 40px 45px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+body .com-footer .footer-content .footer-link .footer-column {
+  width: 20%;
+  float: left;
+}
+body .com-footer .footer-content .footer-link dl {
+  padding-bottom: 20px;
+  color: #666;
+}
+body .com-footer .footer-content .footer-link dl dt {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+body .com-footer dd {
+  margin: 0;
+}
+body .com-footer .footer-content .footer-link dl a {
+  color: #666;
+}
+body .com-footer a {
+  text-decoration: none;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
@@ -1218,6 +1245,12 @@ a:hover {
 /*Office 颜色*/
 /*灰阶*/
 /*Voclaoid 颜色*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* reset */
 * {
   margin: 0;

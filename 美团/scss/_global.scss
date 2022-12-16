@@ -3,6 +3,12 @@
 
 $content-width: 1200px;
 $component-height: 32px;
+// 高度塌陷修复
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
 /* reset */
 * {
