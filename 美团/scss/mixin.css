@@ -1036,6 +1036,12 @@ body .botton-nav .b-n-content .b-n-classification .b-n-sublist .b-n-list-item .n
   position: relative;
   top: -1px;
 }
+body .com-footer {
+  background: #f8f8f8;
+}
+body .com-footer {
+  margin-top: 40px;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
