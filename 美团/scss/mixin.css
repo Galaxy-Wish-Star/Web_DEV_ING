@@ -951,6 +951,14 @@ body .recommend-card-wrapper .info-box .bottom-line .price-box .price-desc {
 body .comment-number {
   float: right;
 }
+body .botton-nav {
+  margin: 40px auto 0;
+  width: 1190px;
+  height: auto;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  background: #FFFFFF;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
