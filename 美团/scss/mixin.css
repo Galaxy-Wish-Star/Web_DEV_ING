@@ -951,6 +951,91 @@ body .recommend-card-wrapper .info-box .bottom-line .price-box .price-desc {
 body .comment-number {
   float: right;
 }
+body .botton-nav {
+  margin: 40px auto 0;
+  width: 1190px;
+  height: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background: #ffffff;
+}
+body .botton-nav .title {
+  width: auto;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 6px;
+  line-height: 44px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  /* margin-bottom: 6px; */
+}
+body .botton-nav .b-n-content {
+  width: 100%;
+  height: auto;
+}
+body dl {
+  margin: 0;
+}
+body .botton-nav .b-n-content .b-n-classification {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+body .botton-nav .b-n-content .b-n-classification .b-n-subtitle {
+  width: 100px;
+  height: 100%;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+  text-align: center;
+  padding: 10px 0;
+}
+body .botton-nav .b-n-content .b-n-classification .b-n-sublist {
+  width: 1090px;
+  height: auto;
+  padding-top: 12px;
+  float: left;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+body .botton-nav .b-n-content .b-n-classification .b-n-sublist .b-n-list-item {
+  width: 100px;
+  height: 17px;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 13px;
+  float: left;
+}
+body .botton-nav .b-n-content .b-n-classification .b-n-sublist .b-n-list-item a {
+  display: block;
+  width: 80px;
+  cursor: pointer;
+  color: #666666;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body .botton-nav .b-n-content .b-n-classification {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+body .botton-nav .b-n-content .b-n-classification .b-n-sublist .b-n-list-item .nav-promotion {
+  font-size: 12px;
+  color: #fff;
+  background: #ff4848;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 0 6px;
+  margin: 0 5px;
+  position: relative;
+  top: -1px;
+}
 
 /*常用颜色*/
 /*Office 颜色*/
