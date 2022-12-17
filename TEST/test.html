@@ -8,7 +8,7 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div id="app">
+		<!-- <div id="app">
 			<div>
 				<p>原数据输出:</p>
 				<ul>
@@ -30,7 +30,54 @@
 					Array: ["vue.js", "javascript", "java", "html"],
 				},
 				methods: {},
-			});
+			}); -->
+
+			<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="vue.js" type="text/javascript">
+
+  </script>
+ </head>
+ <body>
+  <div id="app">
+   <ul>
+    <li v-for="i in arry" v-if="i.n%2==0">{{i.n}}</li>
+   </ul>
+   <p>奇数和:{{add}}</p >
+   <!-- <div id="">
+    
+   </div> -->
+  </div>
+ </body>
+</html>
+<script type="text/javascript">
+ new Vue({
+  el: "#app",
+  data: {
+   arry:[{n:1},{n:2},{n:3},{n:4},{n:5},{n:6},{n:7},{n:8},{n:9},{n:10},{n:11},{n:12}],
+   num2: 0
+  },
+  computed: {
+   add() {
+    var num = 0
+    var date = this.arry
+    // console.log(this.arry)
+    for (var i = 0; i < date.length; i++) {
+     console.log(date[i].n)
+     if (date[i].n % 2 == 0) {
+      num += date[i].n
+      console.log(num)
+     }
+    }
+    return num
+
+   }
+  }
+ })
+</script>
 		</script>
 	</body>
 </html>
