@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>首页</h2>
+    <p>欢迎来到我的世界！</p>
+    <!-- <img src="/img/dog.jpg" alt=""> -->
+    <p>个人信息</p>
+    <ul>
+        <li>姓名：{{name}}</li>
+        <li>年龄：{{age}}</li>
+
+        {{if age > 18}}
+        <li>成年人</li>
+        {{/if}}
+
+        <li>家庭情况</li>
+
+        {{each childrens}}
+        <li>第{{$index+1}}个孩子是{{$value}}</li>
+        {{/each}}
+
+
+    </ul>
+</body>
+</html>

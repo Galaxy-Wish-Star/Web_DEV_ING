@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        用户名：<input type="text" name="username" id="username"/> <br><br>
+        密&emsp;码：<input type="password" name="password" id="password"/><br><br>
+
+        <!-- 点击submit按钮的时候，
+            浏览器会提交 form表单里面的这些数据到 action的值得地址上面去  
+            本质上就是一个请求， post请求
+
+             type="button" 不会有默认的提交行为
+        -->
+        <input type="button" value="提交" id="obtn">
+
+    </form>
+    <!-- 点击做  post  提交   登录要用ajax来提交， -->
+    <script>
+        let obtn=document.querySelector('#obtn');
+        obtn.addEventListener('click',()=>{
+            let username=document.querySelector('#username').value;
+            let password=document.querySelector('#password').value;
+            let params={username,password};
+            console.log(params);
+            let ajax=new XMLHttpRequest();
+            ajax.open('POST','/login_post');
+            ajax.onreadystatechange=()=>{
+
+            }
+            ajax.send(JSON.stringify(params));
+        })
+    </script>
+</body>
+</html>

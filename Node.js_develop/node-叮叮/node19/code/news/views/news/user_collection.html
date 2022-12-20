@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户中心</title>
+	<link rel="stylesheet" type="text/css" href="/news/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/news/css/jquery.pagination.css">
+    <link rel="stylesheet" type="text/css" href="/news/css/main.css">
+    <script type="text/javascript" src="/news/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/news/js/jquery.pagination.min.js"></script>
+</head>
+<body class="inframe_body">
+    <div class="my_collect">
+        <h3>我的收藏</h3>
+        <ul class="article_list">
+            {{each collectionNewsList}}
+            <li><a href="#">{{$value.title}}</a><span>{{$value.create_time | dateFormat}}</span></li>
+            {{/each}}
+            <!-- <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li>
+            <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li>
+            <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li>
+            <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li>
+            <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li>
+            <li><a href="#">智能音箱“不智能”：这次轮到三星语音助手Bixby被吐槽了</a><span>2018-1-17</span></li> -->
+        </ul>
+
+
+
+        <div id="pagination" class="page"></div>
+        <script>
+            $(function() {
+                $("#pagination").pagination({
+                    currentPage: Number({{currentPage}}),//当前第几页
+                    totalPage: Number({{totalPage}}),//总页数
+                    callback: function(current) {
+                        //点击切换的页码的时候就会执行这个里面的函数
+                        //current当前展示第几页->传给后端
+                        // alert('ok!'+current);
+                        // location:代表浏览器当前地址信息
+                        // location.href获取或者设置当前地址的信息
+                        location.href='http://localhost:3000/user/collection?page='+current
+                    }
+                });
+            });
+        </script>
+
+    </div>
+</body>
+</html>
