@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <h1>首页标题</h1>
+    <hr>
+    <p>欢迎来到我们网站！</p>
+    <a href="">跳转到详情页</a> <br><br>
+    <button id="obtn">点击按钮加载更多消息</button>
+    <!-- 需求：点击button按钮，做ajax请求，从服务器获取数据 -->
+    <script>
+        let btn=document.querySelector('#obtn');
+        btn.addEventListener('click',()=>{
+            //发送ajax请求
+            //1、创建ajax对象
+            let ajax=new XMLHttpRequest();
+            //2、设置请求路径和请求方式
+            ajax.open('GET','/get_data');
+            //3、绑定监听状态改变的处理函数
+            ajax.onreadystatechange=()=>{
+                //获取响应回来的数据
+                
+                if(ajax.readyState===4 && ajax.status===200){
+                    console.log(ajax.readyState);
+                    console.log(JSON.parse(ajax.responseText).user);
+                    console.log(JSON.parse(ajax.responseText).age);
+                    //进行渲染
+                }
+            }
+            //4、发送请求
+            ajax.send();
+        })
+    </script>
+</body>
+</html>
