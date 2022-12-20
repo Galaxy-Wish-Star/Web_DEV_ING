@@ -15,7 +15,7 @@ let filePath=path.join(__dirname,'hello.txt');
 
 //常用的方法
 //修改文件名
-// fs.renameSync(就文件名，新文件名);
+// fs.renameSync(旧文件名，新文件名);
 // fs.renameSync('hello.txt','hello01.txt');
 
 //fs.readdirSync获取当前路径下所有的文件名列表
