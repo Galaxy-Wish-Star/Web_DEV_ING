@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*灰阶*/
+/*常用颜色*/
 *,
 *::before,
 *::after {
@@ -58,6 +61,8 @@ a:hover {
   color: #666;
 }
 
+/*灰阶*/
+/*常用颜色*/
 /* v2.0 | 20110126
   http://meyerweb.com/eric/tools/css/reset/ 
   License: none (public domain)
@@ -110,4 +115,108 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+/*灰阶*/
+/*常用颜色*/
+.home .top-roof {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #FF0000;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .top-roof .logo {
+  text-align: center;
+  width: 4rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #B4A1FF;
+  font-size: 2.5rem;
+}
+.home .top-roof .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .top-roof .search-box .search {
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.home .top-roof .search-box .search .search-input {
+  border: 1px solid #ffffff;
+  width: 14rem;
+  height: 2.055rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  border: 1px solid #dddddd;
+  opacity: 0.9;
+}
+.home .top-roof .search-box .search .search-btn {
+  position: absolute;
+  right: 3rem;
+  border: 1px solid #909090;
+  width: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  border-left: none;
+  font-size: 0.7rem;
+  color: #ffffff;
+  background: #FFC300;
+}
+.home .top-roof .fa-house {
+  font-size: 1rem;
+  color: #ffffff;
+  width: 3rem;
+  opacity: 0.9;
+}
+.home .slideshow {
+  margin-top: 3.25rem;
+  height: 10rem;
+}
+.home .slideshow .swiper {
+  width: 100%;
+  height: 100%;
+}
+.home .slideshow .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.home .slideshow .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home .slideshow .swiper-button-next, .home .slideshow .swiper-button-prev {
+  scale: 0.5;
 }/*# sourceMappingURL=mixins.css.map */

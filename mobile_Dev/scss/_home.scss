@@ -1,0 +1,106 @@
+@import "./_color.scss";
+.home {
+	// 顶部
+	.top-roof {
+		//固定定位固定至顶部
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		background-color: $topColor;
+		height: rem(60);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo {
+			text-align: center;
+			width: rem(80);
+			height: rem(60);
+			line-height: rem(60);
+			color: $logoColor;
+			font-size: rem(50);
+		}
+		//搜索框
+		.search-box {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.search {
+				width: rem(320);
+				display: flex;
+				align-items: center;
+				justify-content:flex-start;
+				.search-input {
+					border: 1px solid $aw-color-gray-9;
+					width: rem(280);
+					height: rem(41.1);
+					line-height: rem(40);
+					padding: 0 rem(10);
+                    border-radius: 5px;
+					font-size: rem(14);
+					border: 1px solid $aw-color-gray-6;
+					opacity: 0.9;
+				}
+				.search-btn {
+                    position: absolute;
+                    right: rem(60);
+					border: 1px solid $aw-color-gray-3;
+					width: rem(60);
+					height: rem(40);
+					line-height: rem(40);
+					text-align: center;
+                    border-radius: 5px;
+                    border-left: none;
+					font-size: rem(14);
+					color: $aw-color-gray-9;
+					background: $searchBtnColor;
+				}
+			}
+		}
+		.fa-house {
+			font-size: rem(20);
+			color: $aw-color-gray-9;
+			width: rem(60);
+			opacity: 0.9;
+		}
+	}
+	//轮播图
+	.slideshow {
+        margin-top: rem(65);
+		height: rem(200);
+		.swiper {
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+        .swiper-button-next,.swiper-button-prev{
+            scale: 0.5;
+        }
+	}
+}

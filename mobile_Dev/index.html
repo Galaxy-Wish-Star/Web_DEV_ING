@@ -5,27 +5,60 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./mixins.css" />
-        <script src="https://kit.fontawesome.com/b807d5d8c5.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./scss/swiper-bul.css" />
+		<script
+			src="https://kit.fontawesome.com/b807d5d8c5.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Document</title>
 	</head>
 	<body>
 		<!-- 首页 -->
 		<div class="home">
 			<!-- 顶部 -->
-			<head class="top-roof">
+			<div class="top-roof">
+				<!-- logo(预留) -->
+				<div class="logo">
+					<i class="fa-brands fa-slack"></i>
+				</div>
 				<!-- 搜索框 -->
 				<div class="search-box">
 					<div class="search">
-						<input type="text" placeholder="搜索" />
-						<i class="fa-solid fa-magnifying-glass"></i>
-                        
+						<input
+							class="search-input"
+							type="text"
+							placeholder="搜索商品/店铺"
+						/>
+						<button class="search-btn">
+							搜索 <i class="fa-solid fa-magnifying-glass"></i>
+						</button>
 					</div>
 				</div>
-			</head>
+				<i class="fa-solid fa-house"></i>
+			</div>
 			<!-- 轮播图 -->
-			<nav class="slideshow"></nav>
+			<nav class="slideshow">
+				<!-- Swiper -->
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="./assets/img/banner1.jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/banner2.jpg" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/banner3.jpg" alt="" />
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</nav>
 		</div>
-
+		<script src="./js/public/swiper.min.js"></script>
+		<script src="./js/public/swiper-bundle.min.js"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>

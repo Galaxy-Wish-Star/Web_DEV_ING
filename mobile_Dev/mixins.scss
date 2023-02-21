@@ -1,12 +1,11 @@
-// 自动计算html字体大小，基准字体大小为20px
-//自动计算rem函数
-@function rem($px) {
-	@return ($px / 20) * 1rem;
-}
-
 @import "./scss/_color";
 @import "./scss/_global";
 @import "./scss/_reset";
 @import "./scss/_home.scss";
 @import "./scss/_shopCar";
 @import "./scss/_user";
+// 自动计算html字体大小，基准字体大小为20px
+//自动计算rem函数
+@function rem($px) {
+	@return ($px / 20) * 1rem;
+}
