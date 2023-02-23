@@ -225,10 +225,11 @@ body {
   scale: 0.5;
 }
 .home .hotproduct-recommendation .hotproduct-about {
+  width: 6rem;
   height: 3.25rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .home .hotproduct-recommendation .hotproduct-about img {
   width: 1.4rem;
@@ -241,14 +242,14 @@ body {
 }
 .home .hotproduct-recommendation .recommendation .hotproduct-item {
   width: 5.5rem;
-  height: 9rem;
+  height: 11rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 .home .hotproduct-recommendation .recommendation .hotproduct-item .hotproduct-item-img {
-  width: 4.75rem;
+  width: 5.5rem;
   height: 7.5rem;
   overflow: hidden;
 }
@@ -256,4 +257,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.home .hotproduct-recommendation .recommendation .hotproduct-item .hotproduct-item-title {
+  color: #001234;
+  font-size: 0.9rem;
+}
+.home .hotproduct-recommendation .recommendation .hotproduct-item .hotproduct-item-price {
+  color: #FF2400;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=mixins.css.map */

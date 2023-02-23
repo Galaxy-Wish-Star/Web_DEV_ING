@@ -107,13 +107,14 @@
 	}
 	.hotproduct-recommendation {
 		.hotproduct-about {
+			width: rem(120);
 			img {
 				width: rem(28);
 			}
 			height: rem(65);
 			display: flex;
 			align-items: center;
-			justify-content: flex-start;
+			justify-content: center;
 		}
 		.recommendation {
 			width: 100%;
@@ -122,13 +123,13 @@
 			justify-content: space-evenly;
 			.hotproduct-item {
 				width: rem(110);
-				height: rem(180);
+				height: rem(220);
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-around;
 				.hotproduct-item-img {
-					width: rem(95);
+					width: rem(110);
 					height: rem(150);
 					overflow: hidden;
 					img {
@@ -136,6 +137,14 @@
 						height: 100%;
 						object-fit: cover;
 					}
+				}
+				.hotproduct-item-title{
+					color: $recommendColor;
+					font-size: rem(18);
+				}
+				.hotproduct-item-price{
+					color: $recommendPriceColor;
+					font-size: rem(15);
 				}
 			}
 		}
