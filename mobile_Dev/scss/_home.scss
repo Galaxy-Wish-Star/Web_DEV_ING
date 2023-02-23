@@ -1,5 +1,6 @@
 @import "./_color.scss";
 .home {
+	width: 100%;
 	// 顶部
 	.top-roof {
 		//固定定位固定至顶部
@@ -102,5 +103,10 @@
         .swiper-button-next,.swiper-button-prev{
             scale: 0.5;
         }
+	}
+	.hotproduct-recommendation{
+		.hotproduct-about{
+			
+		}
 	}
 }

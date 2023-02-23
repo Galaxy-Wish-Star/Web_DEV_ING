@@ -123,6 +123,9 @@ body {
 
 /*灰阶*/
 /*常用颜色*/
+.home {
+  width: 100%;
+}
 .home .top-roof {
   position: fixed;
   top: 0;
