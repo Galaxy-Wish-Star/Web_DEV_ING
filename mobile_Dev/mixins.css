@@ -229,7 +229,7 @@ body {
   height: 3.25rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .home .hotproduct-recommendation .hotproduct-about img {
   width: 1.4rem;
