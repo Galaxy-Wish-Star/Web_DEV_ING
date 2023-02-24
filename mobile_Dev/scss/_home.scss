@@ -170,7 +170,6 @@
 		height: 100%;
 		display: flex;
 		flex-wrap: wrap;
-
 		.boutique-products-goods {
 			display: flex;
 			align-items: center;
@@ -202,5 +201,42 @@
 				}
 			}
 		}
+	}
+}
+
+//下拉加载更多
+.loadmore {
+	width: 100%;
+	height: rem(80);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: rem(70);
+}
+// 底部
+.footer {
+	// 固定定位
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: rem(80);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: $aw-color-gray-9;
+	.footer-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: rem(60);
+		height: rem(60);
+		.icon{
+			font-size: rem(30);
+		}
+	}
+	// 选中的footer-item的颜色为红色
+	.active {
+		color: $recommendPriceColor;
 	}
 }
