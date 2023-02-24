@@ -106,11 +106,12 @@
 		}
 	}
 	.hotproduct-recommendation {
+		background-color: $aw-color-gray-9;
 		.hotproduct-about {
-			width: rem(120);
 			img {
 				width: rem(28);
 			}
+			width: rem(120);
 			height: rem(65);
 			display: flex;
 			align-items: center;
@@ -138,14 +139,48 @@
 						object-fit: cover;
 					}
 				}
-				.hotproduct-item-title{
+				.hotproduct-item-title {
 					color: $recommendColor;
 					font-size: rem(18);
 				}
-				.hotproduct-item-price{
+				.hotproduct-item-price {
 					color: $recommendPriceColor;
 					font-size: rem(15);
 				}
+			}
+		}
+	}
+	.boutique-box {
+		width: 100%;
+		background-color: $aw-color-gray-9;
+		margin: 10px 0;
+		.boutique {
+			width: rem(80);
+			height: rem(65);
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			img {
+				width: rem(28);
+			}
+		}
+	}
+	.boutique-products-goods {
+		img {
+			width: rem(120);
+		}
+		span {
+			color: $recommendColor;
+			font-size: rem(18);
+		}
+		.goods-bottom {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			// 第一个span颜色为红色
+			& > span:first-child {
+				color: $recommendPriceColor;
 			}
 		}
 	}

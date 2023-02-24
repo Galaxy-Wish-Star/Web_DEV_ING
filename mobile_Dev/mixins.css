@@ -224,6 +224,9 @@ body {
 .home .slideshow .swiper-button-prev {
   scale: 0.5;
 }
+.home .hotproduct-recommendation {
+  background-color: #ffffff;
+}
 .home .hotproduct-recommendation .hotproduct-about {
   width: 6rem;
   height: 3.25rem;
@@ -265,4 +268,35 @@ body {
 .home .hotproduct-recommendation .recommendation .hotproduct-item .hotproduct-item-price {
   color: #FF2400;
   font-size: 0.75rem;
+}
+.home .boutique-box {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 10px 0;
+}
+.home .boutique-box .boutique {
+  width: 4rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .boutique-box .boutique img {
+  width: 1.4rem;
+}
+.home .boutique-products-goods img {
+  width: 6rem;
+}
+.home .boutique-products-goods span {
+  color: #001234;
+  font-size: 0.9rem;
+}
+.home .boutique-products-goods .goods-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home .boutique-products-goods .goods-bottom > span:first-child {
+  color: #FF2400;
 }/*# sourceMappingURL=mixins.css.map */
