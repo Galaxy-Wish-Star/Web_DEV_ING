@@ -33,25 +33,25 @@
 				align-items: center;
 				justify-content: flex-start;
 				.search-input {
-					border: 1px solid $aw-color-gray-9;
+					border: 0.05rem solid $aw-color-gray-9;
 					width: rem(280);
 					height: rem(41.1);
 					line-height: rem(40);
 					padding: 0 rem(10);
-					border-radius: 5px;
+					border-radius: 0.25rem;
 					font-size: rem(14);
-					border: 1px solid $aw-color-gray-6;
+					border: 0.05rem solid $aw-color-gray-6;
 					opacity: 0.9;
 				}
 				.search-btn {
 					position: absolute;
 					right: rem(60);
-					border: 1px solid $aw-color-gray-3;
+					border: 0.05rem solid $aw-color-gray-3;
 					width: rem(60);
 					height: rem(40);
 					line-height: rem(40);
 					text-align: center;
-					border-radius: 5px;
+					border-radius: 0.25rem;
 					border-left: none;
 					font-size: rem(14);
 					color: $aw-color-gray-9;
@@ -76,7 +76,7 @@
 		}
 		.swiper-slide {
 			text-align: center;
-			font-size: 18px;
+			font-size: 0.9rem;
 			background: #fff;
 
 			/* Center slide text vertically */
@@ -153,7 +153,7 @@
 	.boutique-box {
 		width: 100%;
 		background-color: $aw-color-gray-9;
-		margin: 10px 0;
+		margin: 0.5rem 0;
 		.boutique {
 			width: rem(80);
 			height: rem(65);
@@ -165,22 +165,41 @@
 			}
 		}
 	}
-	.boutique-products-goods {
-		img {
-			width: rem(120);
-		}
-		span {
-			color: $recommendColor;
-			font-size: rem(18);
-		}
-		.goods-bottom {
-			width: 100%;
+	.boutique-products-goods-box {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.boutique-products-goods {
 			display: flex;
 			align-items: center;
-			justify-content: space-evenly;
-			// 第一个span颜色为红色
-			& > span:first-child {
-				color: $recommendPriceColor;
+			flex-direction: column;
+			justify-content: space-between;
+			background-color: $aw-color-gray-9;
+			width: rem(220);
+			height: rem(230);
+			margin: rem(6);
+			padding: rem(10) 0;
+			img {
+				width: rem(170);
+			}
+			span {
+				color: $recommendColor;
+				font-size: rem(18);
+			}
+			.goods-bottom {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				// 第一个span颜色为红色
+				& > span:first-child {
+					color: $recommendPriceColor;
+				}
+				& > span:last-child {
+					color: $aw-color-gray-3;
+				}
 			}
 		}
 	}
