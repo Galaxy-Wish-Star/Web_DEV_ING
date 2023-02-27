@@ -67,7 +67,7 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: #FF0000;
+  background-color: #ff0000;
   height: 3rem;
   display: flex;
   justify-content: space-between;
@@ -78,7 +78,7 @@ a:hover {
   width: 4rem;
   height: 3rem;
   line-height: 3rem;
-  color: #B4A1FF;
+  color: #b4a1ff;
   font-size: 2.5rem;
 }
 .top-roof .search-box {
@@ -115,7 +115,7 @@ a:hover {
   border-left: none;
   font-size: 0.7rem;
   color: #ffffff;
-  background: #FFC300;
+  background: #ffc300;
 }
 .top-roof .fa-house {
   font-size: 1rem;
@@ -146,7 +146,7 @@ a:hover {
   font-size: 1.5rem;
 }
 .footer .active {
-  color: #FF2400;
+  color: #ff2400;
 }
 
 /*灰阶*/
@@ -206,5 +206,5 @@ table {
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }/*# sourceMappingURL=userMixin.css.map */
