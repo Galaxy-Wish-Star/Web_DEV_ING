@@ -207,4 +207,123 @@ table {
 
 body {
   background-color: #f2f2f2;
+}
+
+.header-box {
+  width: 100%;
+  background-color: #FEF0E2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header-box .header {
+  width: 100%;
+  height: 5rem;
+  background-color: #FEF0E2;
+  display: flex;
+  justify-content: space-between;
+}
+.header-box .header .user-img {
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem;
+  align-items: center;
+}
+.header-box .header .user-img img {
+  width: 4rem;
+}
+.header-box .header .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-box .header .user-info .user-info-box {
+  display: flex;
+  justify-content: space-between;
+  width: 18.5rem;
+  position: relative;
+}
+.header-box .header .user-info .user-info-box .user-name-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-box .header .user-info .user-info-box .user-name-box .user-nick-name {
+  font-weight: bold;
+}
+.header-box .header .user-info .user-info-box .user-name-box span {
+  font-size: 1.1rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .user-name-box .user-name {
+  font-size: 0.8rem;
+  color: #909090;
+  margin: 0.4rem;
+}
+.header-box .header .user-info .user-info-box .user-name-box .uer-info-data {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  font-size: 0.8rem;
+  color: #909090;
+}
+.header-box .header .user-info .user-info-box .user-name-box .uer-info-data span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .head-setting {
+  position: absolute;
+  top: -0.3rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 7rem;
+  height: 3rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .head-setting .head-setting-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 2.5rem;
+}
+.header-box .user-center {
+  height: 2.5rem;
+  display: flex;
+  align-items: f center;
+  justify-content: center;
+}
+.header-box .user-center .user-center-item {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 20rem;
+  height: 2.5rem;
+  background-color: #FF7815;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+.header-box .user-center .user-center-item > span:nth-child(2) {
+  width: 6.5rem;
+}
+.header-box .user-center .user-center-item > span:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 10rem;
+}
+.header-box .user-center .user-center-item .go-info {
+  width: 4rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FF7815;
+  font-weight: bold;
+  background-color: #ffffff;
 }/*# sourceMappingURL=userMixin.css.map */

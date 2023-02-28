@@ -6,3 +6,125 @@
 @function rem($px) {
 	@return ($px / 20) * 1rem;
 }
+
+// 顶部
+.header-box {
+	width: 100%;
+	background-color: $userCenterTopBgColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.header {
+		width: 100%;
+		height: rem(100);
+		background-color: $userCenterTopBgColor;
+		display: flex;
+		justify-content: space-between;
+		.user-img {
+			display: flex;
+			justify-content: center;
+			margin: rem(5);
+			align-items: center;
+			img {
+				width: rem(80);
+			}
+		}
+		.user-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.user-info-box {
+				display: flex;
+				justify-content: space-between;
+				width: rem(370);
+				.user-name-box {
+					flex: 1;
+					.user-nick-name {
+						font-weight: bold;
+					}
+					span {
+						font-size: rem(22);
+						color: $aw-color-gray-1;
+					}
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					.user-name {
+						font-size: rem(16);
+						color: $aw-color-gray-3;
+						margin: rem(8);
+					}
+					.uer-info-data {
+						display: flex;
+						justify-content: space-between;
+						width: rem(200);
+						font-size: rem(16);
+						color: $aw-color-gray-3;
+						span {
+							font-size: rem(16);
+							color: $aw-color-gray-1;
+						}
+					}
+				}
+				position: relative;
+				.head-setting {
+					position: absolute;
+					top: rem(-6);
+					right: rem(10);
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					width: rem(140);
+					height: rem(60);
+					color: $aw-color-gray-1;
+					.head-setting-item {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						height: rem(50);
+					}
+				}
+			}
+		}
+	}
+	.user-center {
+		height: rem(50);
+		display: flex;
+		align-items: f center;
+		justify-content: center;
+		.user-center-item {
+			& > span:nth-child(2) {
+				width: rem(130);
+			}
+			// 圆角，只有上左上右
+			border-top-left-radius: rem(20);
+			border-top-right-radius: rem(20);
+			width: rem(400);
+			height: rem(50);
+			background-color: $vipBgColor;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			color: $aw-color-gray-9;
+			font-size: rem(18);
+			& > span:nth-child(2) {
+				// 文本超出范围使用省略号
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: rem(200);
+			}
+			.go-info {
+				width: rem(80);
+				line-height: rem(30);
+				height: rem(30);
+				border-radius: rem(15);
+				text-align: center;
+				font-size: rem(16);
+				color: $vipBgColor;
+				font-weight: bold;
+				background-color: $aw-color-gray-9;
+			}
+		}
+	}
+}

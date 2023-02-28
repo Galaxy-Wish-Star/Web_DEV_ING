@@ -234,6 +234,11 @@ body {
   height: 100%;
   width: 3.3rem;
 }
+.header-box .header .header-left:nth-child(1),
+.header-box .header .header-right:nth-child(1),
+.header-box .header .header-center:nth-child(1) {
+  font-size: 0.8rem;
+}
 .header-box .header .header-left:nth-child(2),
 .header-box .header .header-right:nth-child(2),
 .header-box .header .header-center:nth-child(2) {
@@ -314,6 +319,7 @@ body {
   border-left: 1px solid #ccc;
 }
 .shopcar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-right {
+  font-size: 0.8rem;
   margin-right: 4rem;
 }
 .shopcar-box .shopcar-item .shopcar-item-left input[type=checkbox] {
@@ -340,5 +346,5 @@ body {
   transform: rotate(-45deg);
   position: absolute;
   margin-top: 0.25rem;
-  right: 0.95rem;
+  right: 0.65rem;
 }/*# sourceMappingURL=shopCarMixin.css.map */
