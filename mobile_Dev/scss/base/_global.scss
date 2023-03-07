@@ -141,6 +141,21 @@ a:hover {
 		justify-content: space-around;
 		width: rem(60);
 		height: rem(60);
+		position: relative;
+		// 购物车右上数量气泡
+		.shopCar-num{
+			position: absolute;
+			top: rem(-3);
+			right: rem(-10);
+			width: rem(20);
+			height: rem(20);
+			line-height: rem(20);
+			text-align: center;
+			border-radius: 50%;
+			background-color: $recommendPriceColor;
+			color: #fff;
+			font-size: rem(12);
+		}
 		.icon {
 			font-size: rem(30);
 		}

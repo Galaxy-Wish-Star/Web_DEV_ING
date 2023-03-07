@@ -20,7 +20,7 @@ body {
 	bottom: rem(80);
 	// 超出范围滚动条
 	overflow-x: auto;
-	
+
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -317,7 +317,7 @@ body {
 			}
 		}
 	}
-	.my-power-box2{
+	.my-power-box2 {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -326,18 +326,18 @@ body {
 		background-color: $ctrlBgColor2;
 		margin-bottom: rem(100);
 
-		.my-power-box2-item{
+		.my-power-box2-item {
 			height: rem(100);
 			width: rem(100);
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
 			align-items: center;
-			img{
+			img {
 				width: rem(40);
 				height: rem(40);
 			}
-			span{
+			span {
 				font-size: rem(14);
 				color: $aw-color-gray-2;
 			}
