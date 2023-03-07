@@ -1,0 +1,44 @@
+@import "./base/color";
+@import "./base/global";
+@import "./base/reset";
+// 自动计算html字体大小，基准字体大小为20px
+//自动计算rem函数
+@function rem($px) {
+	@return ($px / 20) * 1rem;
+}
+
+.header-box {
+	// 固定定位
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	.header {
+		width: 100%;
+		height: rem(44);
+		background-color: $topColor;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $aw-color-gray-7;
+		.header-left,
+		.header-right,
+		.header-center {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: rem(90);
+			&:nth-child(1) {
+				font-size: rem(16);
+			}
+			&:nth-child(2) {
+				font-size: rem(22);
+			}
+			&:nth-child(3) {
+				font-size: rem(25);
+			}
+		}
+	}
+}

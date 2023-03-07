@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./scss/homeMixns.css" />
+		<link rel="stylesheet" href="../scss/detailMixin.css" />
 		<script
 			src="https://kit.fontawesome.com/b807d5d8c5.js"
 			crossorigin="anonymous"
@@ -12,235 +12,23 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<!-- 首页 -->
-		<div class="home">
-			<!-- 顶部 -->
-			<div class="top-roof">
-				<!-- logo(预留) -->
-				<a href="./index.html" class="logo">
-					<i class="fa-brands fa-slack"></i>
-				</a>
-				<!-- 搜索框 -->
-				<div class="search-box">
-					<div class="search">
-						<input
-							class="search-input"
-							type="text"
-							placeholder="搜索商品/店铺"
-						/>
-						<button class="search-btn">
-							搜索 <i class="fa-solid fa-magnifying-glass"></i>
-						</button>
-					</div>
+		<!-- 顶部 -->
+		<div class="header-box">
+			<div class="header">
+				<div class="header-left">
+					<i class="icon fa-solid fa-chevron-left"></i>
+					<span>返回</span>
 				</div>
-				<a href="./index.html"><i class="fa-solid fa-house"></i></a>
-			</div>
-			<!-- 轮播图 -->
-			<nav class="slideshow">
-				<!-- Swiper -->
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="./assets/img/banner1.jpg" alt="" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./assets/img/banner2.jpg" alt="" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./assets/img/banner3.jpg" alt="" />
-						</div>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
+				<div class="header-center">
+					<span>确认订单</span>
 				</div>
-			</nav>
-			<!-- 爆品推荐 -->
-			<div class="hotproduct-recommendation">
-				<div class="hotproduct-about">
-					<img src="./assets/img/about.png" alt="" />
-					<span>精品推荐</span>
-				</div>
-				<div class="recommendation">
-					<div class="hotproduct-item">
-						<div class="hotproduct-item-img">
-							<img src="./assets/img/d_sp_04.png" alt="" />
-						</div>
-						<div class="hotproduct-item-title">
-							<span>爆款连衣裙</span>
-						</div>
-						<div class="hotproduct-item-price">
-							<span>￥200</span>
-						</div>
-					</div>
-					<div class="hotproduct-item">
-						<div class="hotproduct-item-img">
-							<img src="./assets/img/d_sp_04.png" alt="" />
-						</div>
-						<div class="hotproduct-item-title">
-							<span>爆款连衣裙</span>
-						</div>
-						<div class="hotproduct-item-price">
-							<span>￥200</span>
-						</div>
-					</div>
-					<div class="hotproduct-item">
-						<div class="hotproduct-item-img">
-							<img src="./assets/img/d_sp_04.png" alt="" />
-						</div>
-						<div class="hotproduct-item-title">
-							<span>爆款连衣裙</span>
-						</div>
-						<div class="hotproduct-item-price">
-							<span>￥200</span>
-						</div>
-					</div>
-					<div class="hotproduct-item">
-						<div class="hotproduct-item-img">
-							<img src="./assets/img/d_sp_04.png" alt="" />
-						</div>
-						<div class="hotproduct-item-title">
-							<span>爆款连衣裙</span>
-						</div>
-						<div class="hotproduct-item-price">
-							<span>￥200</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 精品 -->
-			<div class="boutique-box">
-				<div class="boutique">
-					<img src="./assets/img/collct.png" alt="" />
-					<span>精品</span>
-				</div>
-			</div>
-			<div class="boutique-products-goods-box">
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
-				</div>
-				<div class="boutique-products-goods">
-					<img src="./assets/img/d_sp_03.png" alt="" />
-					<span>iPhone6 4.7英寸64G </span>
-					<div class="goods-bottom">
-						<span>￥0.0</span>
-						<span>购买</span>
-					</div>
+				<div class="header-right">
+					<i class="fa-solid fa-house"></i>
 				</div>
 			</div>
 		</div>
-		<!-- 下拉加载更多 -->
-		<div class="loadmore">
-			<span>下拉加载更多</span>
-		</div>
-		<!-- 底部 -->
-		<div class="footer">
-			<a href="../index.html" class="footer-item active">
-				<i class="icon fa-solid fa-house-chimney"></i>
-				<span>首页</span>
-			</a>
-			<div class="footer-item">
-				<i class="icon fa-solid fa-bars"></i>
-				<span>分类</span>
-			</div>
-			<a href="../html/shopCar.html" class="footer-item">
-				<i class="icon fa-solid fa-cart-shopping"></i>
-				<span>购物车</span>
-				<!-- 购物车右上数量气泡 -->
-				<div class="shopCar-num">1</div>
-			</a>
-			<a href="../html/user.html" class="footer-item">
-				<i class="icon fa-solid fa-user"></i>
-				<span>我的</span>
-			</a>
-		</div>
-		<script src="./js/public/jquery-3.6.0.min.js"></script>
-		<script src="js/home.js"></script>
-		<script src="js/base.js"></script>
+
+		<script src="../js/public/jquery-3.6.0.min.js"></script>
+		<script src="../js/base.js"></script>
 	</body>
 </html>
