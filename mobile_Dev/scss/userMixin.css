@@ -206,12 +206,16 @@ table {
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
+}
+
+body {
+  width: 100%;
+  height: 100%;
 }
 
 .header-box {
   width: 100%;
-  background-color: #FEF0E2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -219,7 +223,7 @@ body {
 .header-box .header {
   width: 100%;
   height: 5rem;
-  background-color: #FEF0E2;
+  background: linear-gradient(65deg, #FEF1E7, #FDE1B2);
   display: flex;
   justify-content: space-between;
 }
@@ -290,40 +294,94 @@ body {
   height: 2.5rem;
 }
 .header-box .user-center {
-  height: 2.5rem;
+  height: 6rem;
   display: flex;
-  align-items: f center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-.header-box .user-center .user-center-item {
+.header-box .user-center .user-center-mask {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(45deg, #FEF1E7, #FDE1B2);
+}
+.header-box .user-center .user-center-mask .user-center-item {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   width: 20rem;
   height: 2.5rem;
-  background-color: #FF7815;
+  background: linear-gradient(45deg, #FE6114, #FE8115);
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: #ffffff;
   font-size: 0.9rem;
 }
-.header-box .user-center .user-center-item > span:nth-child(2) {
+.header-box .user-center .user-center-mask .user-center-item > span:nth-child(2) {
   width: 6.5rem;
 }
-.header-box .user-center .user-center-item > span:nth-child(2) {
+.header-box .user-center .user-center-mask .user-center-item > span:nth-child(2) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 10rem;
 }
-.header-box .user-center .user-center-item .go-info {
+.header-box .user-center .user-center-mask .user-center-item .go-info {
   width: 4rem;
   line-height: 1.5rem;
   height: 1.5rem;
   border-radius: 0.75rem;
   text-align: center;
   font-size: 0.8rem;
-  color: #FF7815;
+  color: #FE6114;
   font-weight: bold;
   background-color: #ffffff;
+}
+.header-box .user-center .user-center-item-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F9F8F6;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item .icon {
+  font-size: 1.5rem;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.header-box .my-order {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: #FEFEFE;
+}
+.header-box .my-order .my-order-box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+}
+.header-box .my-order .my-order-box1 h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3f3f3f;
+  margin-left: 0.5rem;
+}
+.header-box .my-order .my-order-box1 span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=userMixin.css.map */
