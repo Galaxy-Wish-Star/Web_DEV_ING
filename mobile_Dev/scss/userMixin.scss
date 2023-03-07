@@ -145,6 +145,7 @@ body {
 			}
 		}
 		.user-center-item-box {
+			padding: rem(10);
 			width: 100%;
 			height: 100%;
 			display: flex;
@@ -181,6 +182,7 @@ body {
 			justify-content: space-between;
 			align-items: center;
 			height: rem(50);
+			padding: 0 rem(10);
 			h3 {
 				font-size: rem(20);
 				font-weight: bold;
@@ -191,6 +193,66 @@ body {
 				font-size: rem(16);
 				color: $aw-color-gray-1;
 				margin-right: rem(10);
+			}
+		}
+		.my-order-box2 {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: rem(80);
+			margin: 0 rem(25);
+			.my-order-box2-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				.icon {
+					font-size: rem(30);
+					color: $aw-color-gray-2;
+					margin-bottom: rem(10);
+				}
+				span {
+					font-size: rem(16);
+					color: $aw-color-gray-1;
+				}
+			}
+		}
+	}
+	.my-order-box3-item {
+		height: rem(100);
+		margin: 0 rem(25);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			width: rem(60);
+			height: rem(60);
+		}
+		.info {
+			height: rem(60);
+			background-color: $pickCodeBgColor;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			span {
+				&:nth-child(1) {
+					display: flex;
+					justify-content: space-between;
+					font-size: rem(16);
+					margin: 0 rem(10);
+					color: $aw-color-gray-1;
+				}
+			}
+			.tips {
+				font-size: rem(14);
+				color: $aw-color-gray-2;
+				margin: rem(5) rem(10);
+				// 文本超出一行宽度使用省略号
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
 			}
 		}
 	}
