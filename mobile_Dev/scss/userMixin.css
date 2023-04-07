@@ -78,7 +78,7 @@ a:hover {
   width: 4rem;
   height: 3rem;
   line-height: 3rem;
-  color: #b4a1ff;
+  color: #FEF1E7;
   font-size: 2.5rem;
 }
 .top-roof .search-box {
@@ -106,7 +106,7 @@ a:hover {
 .top-roof .search-box .search .search-btn {
   position: absolute;
   right: 3rem;
-  border: 0.05rem solid #909090;
+  border: none;
   width: 3rem;
   height: 2rem;
   line-height: 2rem;
@@ -115,7 +115,7 @@ a:hover {
   border-left: none;
   font-size: 0.7rem;
   color: #ffffff;
-  background: #ffc300;
+  background: #d0d0d0;
 }
 .top-roof .fa-house {
   font-size: 1rem;

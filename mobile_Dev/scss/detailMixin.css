@@ -78,7 +78,7 @@ a:hover {
   width: 4rem;
   height: 3rem;
   line-height: 3rem;
-  color: #b4a1ff;
+  color: #FEF1E7;
   font-size: 2.5rem;
 }
 .top-roof .search-box {
@@ -106,7 +106,7 @@ a:hover {
 .top-roof .search-box .search .search-btn {
   position: absolute;
   right: 3rem;
-  border: 0.05rem solid #909090;
+  border: none;
   width: 3rem;
   height: 2rem;
   line-height: 2rem;
@@ -115,7 +115,7 @@ a:hover {
   border-left: none;
   font-size: 0.7rem;
   color: #ffffff;
-  background: #ffc300;
+  background: #d0d0d0;
 }
 .top-roof .fa-house {
   font-size: 1rem;
@@ -262,4 +262,214 @@ body {
 .header-box .header .header-right:nth-child(3),
 .header-box .header .header-center:nth-child(3) {
   font-size: 1.25rem;
+}
+
+.shopCar-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 2.2rem;
+  width: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* 配送方式 */
+}
+.shopCar-box .shopcar-item {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25rem;
+}
+.shopCar-box .shopcar-item .shopcar-item-center img {
+  width: 5.75rem;
+}
+.shopCar-box .shopcar-item .shopcar-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 5rem;
+  margin-left: 0.25rem;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-center-bottom {
+  margin-top: 0.25rem;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-center-bottom span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-top {
+  color: #ff2400;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-left {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-left .shopcar-item-right-bottom-left-btn {
+  width: 1.1rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-left .shopcar-item-right-bottom-left-num {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-left .shopcar-item-right-bottom-right-btn {
+  width: 1.1rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+.shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-right-bottom .shopcar-item-right-bottom-right {
+  font-size: 0.8rem;
+  margin-right: 4rem;
+}
+.shopCar-box .shopcar-delivery {
+  width: 100%;
+  height: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: 0.6rem 0;
+}
+.shopCar-box .shopcar-delivery .shopcar-delivery-title span:last-child {
+  font-size: 0.7rem;
+  color: #3f3f3f;
+}
+.shopCar-box .shopcar-pay {
+  width: 100%;
+  height: 8rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-title {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-title span {
+  font-size: 0.8rem;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin: 0.5rem 0;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5.25rem;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-right img {
+  width: 2rem;
+  height: 2rem;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-right label {
+  font-size: 0.7rem;
+  color: #3f3f3f;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-left input {
+  width: 1rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-left input:checked {
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+.shopCar-box .shopcar-pay .shopcar-pay-content .shopcar-pay-content-item .shopcar-pay-content-item-left input:checked:after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shopCar-box .shopcar-phone {
+  height: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: 0.6rem 0;
+}
+.shopCar-box .shopcar-phone .shopcar-phone-title span {
+  font-size: 0.8rem;
+}
+.shopCar-box .shopcar-phone .shopcar-phone-content span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.shopCar-box .shopcar-leave {
+  width: 90%;
+  height: 8rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+}
+.shopCar-box .shopcar-leave .shopcar-leave-title {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.shopCar-box .shopcar-leave .shopcar-leave-title span {
+  font-size: 0.8rem;
+}
+.shopCar-box .shopcar-leave .shopcar-leave-content {
+  width: 100%;
+  height: 6rem;
+  padding: 0 0.5rem;
+}
+.shopCar-box .shopcar-leave .shopcar-leave-content textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  color: #3f3f3f;
 }/*# sourceMappingURL=detailMixin.css.map */
