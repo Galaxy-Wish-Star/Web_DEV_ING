@@ -295,6 +295,11 @@ body {
 }
 .shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-center-bottom {
   margin-top: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .shopCar-box .shopcar-item .shopcar-item-right .shopcar-item-center-bottom span {
   font-size: 0.8rem;
@@ -472,4 +477,51 @@ body {
   padding: 0.5rem;
   font-size: 0.7rem;
   color: #3f3f3f;
+}
+.shopCar-box .shopcar-pay-btn {
+  height: 4rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: 0.6rem 0;
+}
+.shopCar-box .shopcar-pay-btn .payBtn {
+  width: 20%;
+  height: 2rem;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 0.25rem;
+}
+.shopCar-box .shopcar-pay-btn .payBtn:active {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: #dddddd;
+}
+.shopCar-box .shopcar-pay-btn .shopcar-pay-btn-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopCar-box .shopcar-pay-btn .shopcar-pay-btn-content span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.shopCar-box .shopcar-pay-btn .shopcar-pay-btn-content p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+.shopCar-box .shopcar-pay-btn .shopcar-pay-btn-right {
+  width: 5rem;
+  height: 2rem;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 0.25rem;
 }/*# sourceMappingURL=detailMixin.css.map */

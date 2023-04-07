@@ -14,3 +14,17 @@ $(function () {
 		.siblings()
 		.removeClass("active");
 });
+// header-left返回上一页
+document.addEventListener('DOMContentLoaded', function () {
+	let back = document.getElementsByClassName('header-left')
+	back[0].addEventListener('click', function () {
+		window.history.back()
+	})
+})
+// header-right重定向至http://127.0.0.1:8080/index.html
+document.addEventListener('DOMContentLoaded', function () {
+	let back = document.getElementsByClassName('header-right')
+	back[0].addEventListener('click', function () {
+		window.location.href = 'http://127.0.0.1:8080/index.html'
+	})
+})
