@@ -1,0 +1,346 @@
+@import "base/color";
+@import "base/global";
+@import "base/reset";
+// 自动计算html字体大小，基准字体大小为20px
+//自动计算rem函数
+@function rem($px) {
+	@return ($px / 20) * 1rem;
+}
+body {
+	width: 100%;
+	height: 100%;
+}
+// 顶部
+.header-box {
+	// 固定定位
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: rem(80);
+	// 超出范围滚动条
+	overflow-x: auto;
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.header {
+		padding-bottom: rem(10);
+		width: 100%;
+		height: rem(100);
+		background: linear-gradient(
+			65deg,
+			$userCenterTopBgColor,
+			$userCenterTopBgColor2
+		);
+		display: flex;
+		justify-content: space-between;
+		.user-img {
+			display: flex;
+			justify-content: center;
+			margin: rem(5);
+			align-items: center;
+			img {
+				width: rem(80);
+			}
+		}
+		.user-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.user-info-box {
+				display: flex;
+				justify-content: space-between;
+				width: rem(370);
+				.user-name-box {
+					flex: 1;
+					.user-nick-name {
+						font-weight: bold;
+					}
+					span {
+						font-size: rem(22);
+						color: $aw-color-gray-1;
+					}
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					.user-name {
+						font-size: rem(16);
+						color: $aw-color-gray-3;
+						margin: rem(8);
+					}
+					.uer-info-data {
+						display: flex;
+						justify-content: space-between;
+						width: rem(200);
+						font-size: rem(16);
+						color: $aw-color-gray-3;
+						span {
+							font-size: rem(16);
+							color: $aw-color-gray-1;
+						}
+					}
+				}
+				position: relative;
+				.head-setting {
+					position: absolute;
+					top: rem(-6);
+					right: rem(10);
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					width: rem(140);
+					height: rem(60);
+					color: $aw-color-gray-1;
+					.head-setting-item {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						height: rem(50);
+					}
+				}
+			}
+		}
+	}
+	.user-center {
+		height: rem(160);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		.user-center-mask {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			// 渐变，右下至左上
+			background: linear-gradient(
+				45deg,
+				$userCenterTopBgColor,
+				$userCenterTopBgColor2
+			);
+			.user-center-item {
+				& > span:nth-child(2) {
+					width: rem(130);
+				}
+				// 圆角,左上右上
+				border-radius: rem(20) rem(20) 0 0;
+				width: rem(400);
+				height: rem(50);
+				background: linear-gradient(45deg, $vipBgColor, $vipBgColor2);
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				color: $aw-color-gray-9;
+				font-size: rem(18);
+				& > span:nth-child(2) {
+					// 文本超出范围使用省略号
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					width: rem(200);
+				}
+				.go-info {
+					width: rem(80);
+					line-height: rem(30);
+					height: rem(30);
+					border-radius: rem(15);
+					text-align: center;
+					font-size: rem(16);
+					color: $vipBgColor;
+					font-weight: bold;
+					background-color: $aw-color-gray-9;
+				}
+			}
+		}
+		.user-center-item-box {
+			width: 100%;
+			height: rem(80);
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: $ctrlBgColor;
+			// 圆角,只有左上右上
+			border-radius: rem(20) rem(20) 0 0;
+			.user-center-item-box-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				.icon {
+					font-size: rem(30);
+					color: $aw-color-gray-2;
+					margin-bottom: rem(10);
+				}
+				span {
+					font-size: rem(16);
+					color: $aw-color-gray-1;
+				}
+			}
+		}
+	}
+	.my-order {
+		// 圆角
+		border-radius: rem(20);
+		background-color: $ctrlBgColor2;
+		.my-order-box1 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: rem(50);
+			padding: 0 rem(10);
+			h3 {
+				font-size: rem(20);
+				font-weight: bold;
+				color: $aw-color-gray-1;
+				margin-left: rem(10);
+			}
+			span {
+				font-size: rem(16);
+				color: $aw-color-gray-1;
+				margin-right: rem(10);
+			}
+		}
+		.my-order-box2 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: rem(80);
+			margin: 0 rem(26);
+			.my-order-box2-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				.icon {
+					font-size: rem(30);
+					color: $aw-color-gray-2;
+					margin-bottom: rem(10);
+				}
+				span {
+					font-size: rem(16);
+					color: $aw-color-gray-1;
+				}
+			}
+		}
+	}
+	.my-order-box3-item {
+		height: rem(100);
+		margin: 0 rem(25);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			width: rem(60);
+			height: rem(60);
+		}
+		.info {
+			height: rem(60);
+			background-color: $pickCodeBgColor;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			span {
+				&:nth-child(1) {
+					display: flex;
+					justify-content: space-between;
+					font-size: rem(16);
+					margin: 0 rem(10);
+					font-weight: bold;
+					color: $aw-color-gray-1;
+				}
+			}
+			.tips {
+				font-size: rem(14);
+				color: $aw-color-gray-2;
+				margin: rem(5) rem(10);
+				// 文本超出一行宽度使用省略号
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+		}
+	}
+	.my-power {
+		margin-top: rem(10);
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: $ctrlBgColor2;
+		// 圆角,只有左上角和右上角有圆角
+		border-radius: rem(20) rem(20) 0 0;
+		.my-power-head {
+			width: rem(460);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: rem(50);
+			padding: 0 rem(10);
+			h3 {
+				font-size: rem(20);
+				font-weight: bold;
+				color: $aw-color-gray-1;
+				margin-left: rem(10);
+			}
+			span {
+				font-size: rem(16);
+				color: $aw-color-gray-1;
+				margin-right: rem(10);
+			}
+		}
+	}
+	.my-power-box {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: rem(80);
+		background-color: $ctrlBgColor2;
+		// 圆角,只有左下角和右下角有圆角
+		border-radius: 0 0 rem(20) rem(20);
+		.my-power-box-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			& > span:nth-child(1) {
+				font-size: rem(20);
+				color: $aw-color-gray-1;
+				font-weight: bold;
+			}
+			& > span:nth-child(2) {
+				margin-top: rem(15);
+				font-size: rem(14);
+				color: $aw-color-gray-2;
+			}
+		}
+	}
+	.my-power-box2 {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		border-radius: rem(20);
+		background-color: $ctrlBgColor2;
+		margin-bottom: rem(100);
+
+		.my-power-box2-item {
+			height: rem(100);
+			width: rem(100);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			img {
+				width: rem(40);
+				height: rem(40);
+			}
+			span {
+				font-size: rem(14);
+				color: $aw-color-gray-2;
+			}
+		}
+	}
+}

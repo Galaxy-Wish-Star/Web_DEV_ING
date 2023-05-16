@@ -1,0 +1,541 @@
+@charset "UTF-8";
+/*灰阶*/
+/*常用颜色*/
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+  font: 14px/1.14 arial, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+  color: #666;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a,
+a:hover {
+  color: #666;
+}
+
+.top-roof {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #ff0000;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-roof .logo {
+  text-align: center;
+  width: 4rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #FEF1E7;
+  font-size: 2.5rem;
+}
+.top-roof .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-roof .search-box .search {
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.top-roof .search-box .search .search-input {
+  border: 0.05rem solid #ffffff;
+  width: 14rem;
+  height: 2.055rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  border: 0.05rem solid #dddddd;
+  opacity: 0.9;
+}
+.top-roof .search-box .search .search-btn {
+  position: absolute;
+  right: 3rem;
+  border: none;
+  width: 3rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  border-left: none;
+  font-size: 0.7rem;
+  color: #ffffff;
+  background: #d0d0d0;
+}
+.top-roof .fa-house {
+  font-size: 1rem;
+  color: #ffffff;
+  width: 3rem;
+  opacity: 0.9;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+.footer .footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+}
+.footer .footer-item .shopCar-num {
+  position: absolute;
+  top: -0.15rem;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ff2400;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.footer .footer-item .icon {
+  font-size: 1.5rem;
+}
+.footer .active {
+  color: #ff2400;
+}
+
+/*灰阶*/
+/*常用颜色*/
+/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header-box .header {
+  padding-bottom: 0.5rem;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(65deg, #FEF1E7, #FDE1B2);
+  display: flex;
+  justify-content: space-between;
+}
+.header-box .header .user-img {
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem;
+  align-items: center;
+}
+.header-box .header .user-img img {
+  width: 4rem;
+}
+.header-box .header .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-box .header .user-info .user-info-box {
+  display: flex;
+  justify-content: space-between;
+  width: 18.5rem;
+  position: relative;
+}
+.header-box .header .user-info .user-info-box .user-name-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-box .header .user-info .user-info-box .user-name-box .user-nick-name {
+  font-weight: bold;
+}
+.header-box .header .user-info .user-info-box .user-name-box span {
+  font-size: 1.1rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .user-name-box .user-name {
+  font-size: 0.8rem;
+  color: #909090;
+  margin: 0.4rem;
+}
+.header-box .header .user-info .user-info-box .user-name-box .uer-info-data {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  font-size: 0.8rem;
+  color: #909090;
+}
+.header-box .header .user-info .user-info-box .user-name-box .uer-info-data span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .head-setting {
+  position: absolute;
+  top: -0.3rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 7rem;
+  height: 3rem;
+  color: #3f3f3f;
+}
+.header-box .header .user-info .user-info-box .head-setting .head-setting-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 2.5rem;
+}
+.header-box .user-center {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-box .user-center .user-center-mask {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(45deg, #FEF1E7, #FDE1B2);
+}
+.header-box .user-center .user-center-mask .user-center-item {
+  border-radius: 1rem 1rem 0 0;
+  width: 20rem;
+  height: 2.5rem;
+  background: linear-gradient(45deg, #FE6114, #FE8115);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+.header-box .user-center .user-center-mask .user-center-item > span:nth-child(2) {
+  width: 6.5rem;
+}
+.header-box .user-center .user-center-mask .user-center-item > span:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 10rem;
+}
+.header-box .user-center .user-center-mask .user-center-item .go-info {
+  width: 4rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FE6114;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+.header-box .user-center .user-center-item-box {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F9F8F6;
+  border-radius: 1rem 1rem 0 0;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item .icon {
+  font-size: 1.5rem;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+.header-box .user-center .user-center-item-box .user-center-item-box-item span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.header-box .my-order {
+  border-radius: 1rem;
+  background-color: #FEFEFE;
+}
+.header-box .my-order .my-order-box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+}
+.header-box .my-order .my-order-box1 h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3f3f3f;
+  margin-left: 0.5rem;
+}
+.header-box .my-order .my-order-box1 span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+  margin-right: 0.5rem;
+}
+.header-box .my-order .my-order-box2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  margin: 0 1.3rem;
+}
+.header-box .my-order .my-order-box2 .my-order-box2-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-box .my-order .my-order-box2 .my-order-box2-item .icon {
+  font-size: 1.5rem;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+.header-box .my-order .my-order-box2 .my-order-box2-item span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+}
+.header-box .my-order-box3-item {
+  height: 5rem;
+  margin: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-box .my-order-box3-item img {
+  width: 3rem;
+  height: 3rem;
+}
+.header-box .my-order-box3-item .info {
+  height: 3rem;
+  background-color: #F7F7F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-box .my-order-box3-item .info span:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+.header-box .my-order-box3-item .info .tips {
+  font-size: 0.7rem;
+  color: #606060;
+  margin: 0.25rem 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.header-box .my-power {
+  margin-top: 0.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FEFEFE;
+  border-radius: 1rem 1rem 0 0;
+}
+.header-box .my-power .my-power-head {
+  width: 23rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+}
+.header-box .my-power .my-power-head h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3f3f3f;
+  margin-left: 0.5rem;
+}
+.header-box .my-power .my-power-head span {
+  font-size: 0.8rem;
+  color: #3f3f3f;
+  margin-right: 0.5rem;
+}
+.header-box .my-power-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  background-color: #FEFEFE;
+  border-radius: 0 0 1rem 1rem;
+}
+.header-box .my-power-box .my-power-box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-box .my-power-box .my-power-box-item > span:nth-child(1) {
+  font-size: 1rem;
+  color: #3f3f3f;
+  font-weight: bold;
+}
+.header-box .my-power-box .my-power-box-item > span:nth-child(2) {
+  margin-top: 0.75rem;
+  font-size: 0.7rem;
+  color: #606060;
+}
+.header-box .my-power-box2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  background-color: #FEFEFE;
+  margin-bottom: 5rem;
+}
+.header-box .my-power-box2 .my-power-box2-item {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-box .my-power-box2 .my-power-box2-item img {
+  width: 2rem;
+  height: 2rem;
+}
+.header-box .my-power-box2 .my-power-box2-item span {
+  font-size: 0.7rem;
+  color: #606060;
+}/*# sourceMappingURL=userMixin.css.map */

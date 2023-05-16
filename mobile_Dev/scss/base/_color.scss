@@ -1,0 +1,60 @@
+$testColor: #ff0000;
+$logoColor: #FEF1E7;
+
+//body颜色
+$bodyColor: #f1f1f1;
+//顶部红色
+$topColor: #ff0000;
+//搜索按钮颜色
+$searchBtnColor: #d0d0d0;
+//精品推荐商品文字颜色
+$recommendColor: #001234;
+//精品推荐商品价格颜色
+$recommendPriceColor: #ff2400;
+
+//用户中心头部背景颜色
+$userCenterTopBgColor: #FEF1E7; 
+$userCenterTopBgColor2: #FDE1B2;
+//会员背景颜色
+$vipBgColor: #FE6114;
+$vipBgColor2: #FE8115;
+// ctrl背景颜色
+$ctrlBgColor: #F9F8F6;
+$ctrlBgColor2: #FEFEFE;
+// 取件码背景颜色
+$pickCodeBgColor: #F7F7F9;
+
+/*灰阶*/
+$aw-color-gray-0: #000000;
+$aw-color-gray-1: #3f3f3f;
+$aw-color-gray-2: #606060;
+$aw-color-gray-3: #909090;
+$aw-color-gray-4: #c0c0c0;
+$aw-color-gray-5: #d0d0d0;
+$aw-color-gray-6: #dddddd;
+$aw-color-gray-7: #f0f0f0;
+$aw-color-gray-8: #f9f9f9;
+$aw-color-gray-9: #ffffff;
+
+/*常用颜色*/
+$aw-color-blue: #0078d4;
+$aw-color-blue-light: #05a6f0;
+$aw-color-blue-dark: #106ebe;
+$aw-color-red: #a4262c;
+$aw-color-red-light: #ae383e;
+$aw-color-red-dark: #932227;
+$aw-color-yellow: #ffe092;
+$aw-color-yellow-light: #ffd56c;
+$aw-color-yellow-dark: #e0b036;
+$aw-color-green: #498205;
+$aw-color-green-light: #5a9117;
+$aw-color-green-dark: #386304;
+$aw-color-orange: #ca5010;
+$aw-color-orange-light: #d06228;
+$aw-color-orange-dark: #993e0c;
+
+// 自动计算html字体大小，基准字体大小为20px
+//自动计算rem函数
+@function rem($px) {
+	@return ($px / 20) * 1rem;
+}

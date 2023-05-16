@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+	box-sizing: content-box;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: inherit;
+}
+a,
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+	font-weight: bold;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+	text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+	font: 14px/1.14 arial, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+	color: #666;
+	outline: 0;
+}
+
+body {
+	background: #fff;
+}
+
+a,
+a:hover {
+	color: #666;
+}
+
+// 顶部
+.top-roof {
+	//固定定位固定至顶部
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: $topColor;
+	height: rem(60);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.logo {
+		text-align: center;
+		width: rem(80);
+		height: rem(60);
+		line-height: rem(60);
+		color: $logoColor;
+		font-size: rem(50);
+	}
+	//搜索框
+	.search-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.search {
+			width: rem(320);
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			.search-input {
+				border: 0.05rem solid $aw-color-gray-9;
+				width: rem(280);
+				height: rem(41.1);
+				line-height: rem(40);
+				padding: 0 rem(10);
+				border-radius: 0.25rem;
+				font-size: rem(14);
+				border: 0.05rem solid $aw-color-gray-6;
+				opacity: 0.9;
+			}
+			.search-btn {
+				position: absolute;
+				right: rem(60);
+				border: none;
+				width: rem(60);
+				height: rem(40);
+				line-height: rem(40);
+				text-align: center;
+				border-radius: 0.25rem;
+				border-left: none;
+				font-size: rem(14);
+				color: $aw-color-gray-9;
+				background: $searchBtnColor;
+			}
+		}
+	}
+	.fa-house {
+		font-size: rem(20);
+		color: $aw-color-gray-9;
+		width: rem(60);
+		opacity: 0.9;
+	}
+}
+
+// 底部
+.footer {
+	// 固定定位
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: rem(80);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: $aw-color-gray-9;
+	.footer-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: rem(60);
+		height: rem(60);
+		position: relative;
+		// 购物车右上数量气泡
+		.shopCar-num{
+			position: absolute;
+			top: rem(-3);
+			right: rem(-10);
+			width: rem(20);
+			height: rem(20);
+			line-height: rem(20);
+			text-align: center;
+			border-radius: 50%;
+			background-color: $recommendPriceColor;
+			color: #fff;
+			font-size: rem(12);
+		}
+		.icon {
+			font-size: rem(30);
+		}
+	}
+	// 选中的footer-item的颜色为红色
+	.active {
+		color: $recommendPriceColor;
+	}
+}
